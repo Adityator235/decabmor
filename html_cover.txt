@@ -1,0 +1,27 @@
+<div class="cover-page">
+  <div class="cover-hero">
+    <img src="PH_STOREFRONT" alt="StarCare Pharmacy storefront">
+    <div class="cover-hero-overlay">
+      <h2>StarCare Pharmacy</h2>
+      <div class="tagline">"Personal Care, Like Family..."</div>
+    </div>
+  </div>
+  <div class="cover-body">
+    <div class="cover-deca">
+      <div class="deca-line"></div>
+      <img src="PH_DECA" alt="DECA logo">
+      <div class="deca-line"></div>
+    </div>
+    <div class="cover-divider"></div>
+    <div class="cover-title">"Project Swastik": Rebuilding Customer Loyalty at StarCare Pharmacy Through Personalized Care, Transparent Communication, and Community Connection</div>
+    <div class="cover-meta">
+      <strong>Business:</strong> StarCare Pharmacy (StarcareRx)<br>
+      <strong>Location:</strong> 210 S. Preston Rd, Suite B, Prosper, TX 75078<br>
+      <strong>Service Area:</strong> Prosper, Texas and surrounding Collin County<br>
+      <strong>Prepared by:</strong> [Your Name]<br>
+      <strong>Organization:</strong> DECA, [School Name]<br>
+      <strong>Event:</strong> Panther Creek High School - Prosper, TX
+    </div>
+    <div class="cover-event">Buying and Merchandising Operations Research - 2026-2027 Season</div>
+  </div>
+</div>
