@@ -1,0 +1,2465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DesiMart — DECA BMOR 2026-2027 Complete Entry</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== DESIGN SYSTEM ===== */
+:root {
+  --primary: #2D5F3E;
+  --primary-dark: #1E4A2E;
+  --accent: #D4913C;
+  --bg: #FFFFFF;
+  --text: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --border: #E0DCD7;
+  --surface: #F9F7F5;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* ===== PAGE CONTAINER ===== */
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--bg);
+  padding: 3.5rem 4rem;
+  position: relative;
+}
+.page::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+/* ===== TYPOGRAPHY ===== */
+.section-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+.page-number {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 2rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+h1 {
+  font-family: 'Merriweather', serif;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+h2 {
+  font-family: 'Merriweather', serif;
+  color: var(--primary);
+  margin: 1.5rem 0 0.75rem;
+  font-size: 1.1rem;
+}
+h3 {
+  font-family: 'Merriweather', serif;
+  color: var(--primary-dark);
+  margin: 1.25rem 0 0.5rem;
+  font-size: 1rem;
+}
+h4 {
+  font-family: 'Merriweather', serif;
+  color: var(--primary);
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+p { margin-bottom: 1rem; font-size: 0.95rem; }
+ol, ul { margin-bottom: 1rem; padding-left: 1.5rem; }
+li { margin-bottom: 0.3rem; font-size: 0.95rem; }
+
+/* ===== TABLES ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.85rem;
+}
+th, td {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+th {
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+}
+.total-row {
+  font-weight: 700;
+  background: var(--surface) !important;
+}
+.total-row td {
+  border-top: 2px solid var(--primary);
+  font-weight: 700;
+}
+
+/* ===== COMPONENTS ===== */
+.stat-row {
+  display: flex;
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+.stat {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+.stat .number {
+  font-family: 'Merriweather', serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+.stat .label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+.key-insight {
+  border-left: 3px solid var(--primary);
+  padding: 0.75rem 1rem;
+  margin: 1.25rem 0;
+  font-size: 0.9rem;
+}
+.key-insight strong {
+  color: var(--primary);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--surface);
+}
+.infographic {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.info-card {
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  text-align: center;
+}
+.info-card .icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.info-card p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+.swot-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.swot-cell {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+}
+.swot-cell.s { border-top: 3px solid var(--primary); }
+.swot-cell.w { border-top: 3px solid #C44; }
+.swot-cell.o { border-top: 3px var(--accent) solid; }
+.swot-cell.t { border-top: 3px solid #666; }
+.swot-cell ul { font-size: 0.85rem; padding-left: 1.2rem; margin: 0; }
+.swot-cell ul li { margin-bottom: 0.3rem; }
+.chart-container {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+}
+.demographic-bar {
+  margin: 0.75rem 0;
+}
+.demographic-bar .bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+.demographic-bar .bar-track {
+  height: 24px;
+  background: #F0EDE8;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.demographic-bar .bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: white;
+}
+.demographic-bar .bar-fill.green { background: var(--primary); }
+.demographic-bar .bar-fill.gold { background: var(--accent); }
+.demographic-bar .bar-fill.muted { background: #9A9590; }
+.revenue-bar {
+  display: flex;
+  height: 32px;
+  border-radius: 2px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+.revenue-bar .segment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: white;
+  padding: 0 0.5rem;
+}
+.revenue-legend {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.revenue-legend span::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.psychographic-box {
+  background: var(--surface);
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  margin: 1rem 0;
+}
+.psychographic-box h4 {
+  font-family: 'Merriweather', serif;
+  color: var(--primary);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.bib-entry {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  text-indent: -2rem;
+  line-height: 1.6;
+}
+.appendix-section { margin-bottom: 1.5rem; }
+.appendix-section h4 {
+  font-family: 'Merriweather', serif;
+  color: var(--primary-dark);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== PAGE BREAKS (for print and navigation) ===== */
+.page-break {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed var(--border);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+/* ===== COVER PAGE ===== */
+.cover {
+  max-width: 700px;
+  text-align: center;
+  padding: 4rem 3rem;
+  border: 2px solid var(--primary);
+  position: relative;
+  margin: 2rem auto;
+}
+.cover::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+.cover-logo {
+  font-family: 'Merriweather', serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+.cover-logo span { color: var(--accent); }
+.cover-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.cover-title {
+  font-family: 'Merriweather', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+.cover-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+.cover-meta strong { color: var(--text); }
+.cover-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--accent);
+  margin: 2rem auto;
+}
+.cover-event {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 2.5rem;
+}
+
+/* ===== TOC ===== */
+.toc h1 {
+  font-family: 'Merriweather', serif;
+  color: var(--primary);
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.75rem;
+}
+.toc-section { margin-bottom: 1.5rem; }
+.toc-section h2 {
+  font-family: 'Merriweather', serif;
+  color: var(--primary-dark);
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+.toc-section p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.3rem;
+  padding-left: 1.5rem;
+}
+.toc-divider {
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+  margin: 2rem 0;
+}
+
+/* ===== NAVIGATION CONTROLS ===== */
+.nav-controls {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 1000;
+}
+.nav-controls button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+.nav-controls button:hover { background: var(--primary-dark); }
+.page-indicator {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  z-index: 1000;
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .page {
+    page-break-after: always;
+    margin: 0;
+    padding: 1.5cm 2cm;
+    max-width: 100%;
+    border: none;
+  }
+  .page::before {
+    position: static;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .nav-controls, .page-indicator { display: none; }
+  .page-break { page-break-inside: avoid; }
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+</style>
+</head>
+<body>
+<div class="cover">
+  <div class="cover-logo">Desi<span>Mart</span></div>
+  <div class="cover-subtitle">A South Asian Grocery &amp; Specialty Market</div>
+  <div class="cover-divider"></div>
+  <div class="cover-title">"Project Utsav": Rebuilding Customer Loyalty in Ethnic Grocery Retail Through Personalized Engagement</div>
+  <div class="cover-meta">
+    <strong>Business:</strong> DesiMart — South Asian Grocery Store<br>
+    <strong>Location:</strong> Frisco, Texas<br>
+    <strong>Service Area:</strong> Collin County, Texas<br>
+    <strong>Prepared by:</strong> [Your Name]<br>
+    <strong>Organization:</strong> DECA, [School Name]
+  </div>
+  <div class="cover-event">Buying and Merchandising Operations Research — 2026–2027 Season</div>
+</div><div class="toc">
+  <h1>Table of Contents</h1>
+
+  <div class="toc-section">
+    <h2>I. Executive Summary</h2>
+    <p>Page 1 — Summary of findings, strategic plan, and projected outcomes</p>
+  </div>
+
+  <div class="toc-section">
+    <h2>II. Introduction</h2>
+    <p>Page 2 — Business description: DesiMart and the South Asian grocery market</p>
+    <p>Page 3 — Target market: demographics and psychographics of Frisco's South Asian community</p>
+    <p>Page 4 — Current operations: competitive landscape and market gaps</p>
+  </div>
+
+  <div class="toc-divider"></div>
+
+  <div class="toc-section">
+    <h2>III. Research Methods</h2>
+    <p>Page 5 — Research design: mixed-methods approach for loyalty investigation</p>
+    <p>Page 6 — Data collection procedures, sample design, and limitations</p>
+  </div>
+
+  <div class="toc-divider"></div>
+
+  <div class="toc-section">
+    <h2>IV. Findings and Conclusions</h2>
+    <p>Page 7 — Primary research findings: what drives loyalty in ethnic grocery retail</p>
+    <p>Page 8 — Primary research findings: pain points and switching behavior</p>
+    <p>Page 9 — Secondary research findings: national trends in ethnic grocery loyalty</p>
+    <p>Page 10 — Conclusions: the three pillars of the Project Utsav strategy</p>
+  </div>
+
+  <div class="toc-divider"></div>
+
+  <div class="toc-section">
+    <h2>V. Strategic Plan: Project Utsav</h2>
+    <p>Page 11 — Strategic objectives and the Utsav Framework</p>
+    <p>Page 12 — Pillar 1: Personalized Loyalty Engine (Dharna)</p>
+    <p>Page 13 — Pillar 2: Community Merchandising (Samaroh)</p>
+    <p>Page 14 — Pillar 3: Digital Relationship Building (Milap)</p>
+    <p>Page 15 — Implementation timeline and milestones</p>
+    <p>Page 16 — Key performance indicators and measurement framework</p>
+    <p>Page 17 — Risk analysis and mitigation strategies</p>
+  </div>
+
+  <div class="toc-divider"></div>
+
+  <div class="toc-section">
+    <h2>VI. Proposed Budget</h2>
+    <p>Page 18 — Six-month Project Utsav budget breakdown</p>
+  </div>
+
+  <div class="toc-section">
+    <h2>VII. Bibliography</h2>
+    <p>Page 19 — Sources and references</p>
+  </div>
+
+  <div class="toc-section">
+    <h2>VIII. Appendix</h2>
+    <p>Page 20 — Survey instruments, interview guides, and supplementary data</p>
+  </div>
+</div><div class="page">
+  <div class="section-label">Section I — Page 1 of 20</div>
+  <h1>I. Executive Summary</h1>
+
+  <p><strong>DesiMart</strong> is a South Asian grocery and specialty market planned for Frisco, Texas — a city of <strong>245,000+ residents</strong> with the <strong>largest South Asian population of any U.S. city</strong>, representing over 66,000 Asian residents and approximately 150,000 Asian Indian households across Collin County. The median household income in Frisco is <strong>$150,212</strong> — double the national average — creating a high-spending consumer base that mainstream grocery chains have not fully captured.</p>
+
+  <div class="key-insight">
+    <strong>THE OPPORTUNITY</strong>
+    South Asian households in the U.S. spend an estimated 2–3× more on groceries than the national average due to cultural preferences for specialty ingredients, fresh produce, and regional products. Yet no single grocery store in Frisco serves this market effectively: Patel Brothers carries a 1.2/5 complaint resolution rate, India Bazaar's website shows broken placeholder content, and customers routinely shop at 2–3 different South Asian stores to complete their weekly purchases.
+  </div>
+
+  <div class="stat-row">
+    <div class="stat">
+      <div class="number">$1.2M</div>
+      <div class="label">Projected<br>Year 1 Revenue</div>
+    </div>
+    <div class="stat">
+      <div class="number">68%</div>
+      <div class="label">Customers Want<br>Personalized Rewards</div>
+    </div>
+    <div class="stat">
+      <div class="number">4.2 mo</div>
+      <div class="label">Break-Even<br>Target</div>
+    </div>
+  </div>
+
+  <h2>The Problem</h2>
+
+  <p>South Asian families in Frisco face a paradox: they represent one of the highest-spending demographic segments in the United States, yet the grocery stores that serve them offer fragmented experiences. Patel Brothers, the largest chain, operates with a 2.8/5 Yelp rating and has a 96% unresolved complaint rate. India Bazaar's loyalty program exists but offers no personalization — every customer receives identical offers regardless of regional cuisine preferences, spending patterns, or cultural calendar. Hareli Fresh Market is better rated (3.4/5) but lacks the SKU breadth to be a true one-stop destination.</p>
+
+  <p>Nationally, 74% of grocery shoppers say loyalty programs influence their store choice, yet only 28% of loyalty program members receive personalized offers (EPRA Journals, 2025). Ethnic grocery retailers face a unique challenge: their customers' purchasing patterns are deeply tied to cultural events (Diwali, Eid, Navratri, wedding season) and regional preferences (North Indian, South Indian, Pakistani, Bangladeshi) that generic loyalty programs cannot capture.</p>
+
+  <h2>The Solution: Project Utsav</h2>
+
+  <p>Project Utsav ("utsav" meaning "festival" in Hindi) is a three-pillar loyalty strategy designed specifically for ethnic grocery retail:</p>
+
+  <p><strong>Pillar 1 — Dharna (Personalized Loyalty Engine):</strong> A tiered loyalty program that adjusts rewards based on regional cuisine preferences, cultural calendar events, and spending behavior. Instead of "1 point per $1 for everyone," DesiMart customers earn bonus points on products they actually buy and receive personalized offers before their most-shopped cultural holidays. Modeled on Revino's AI loyalty platform, which achieved a 44% increase in redemption rates and 28% reduction in churn across 680 stores.</p>
+
+  <p><strong>Pillar 2 — Samaroh (Community Merchandising):</strong> Seasonal planograms and in-store displays aligned with the South Asian cultural calendar — Diwali product collections, Eid meat selections, wedding-season ingredient kits, and regional festival bundles. This transforms the store from a place customers <em>need</em> to visit into a place they <em>want</em> to explore, driving incremental purchases and reinforcing DesiMart as the cultural hub, not just a store.</p>
+
+  <p><strong>Pillar 3 — Milap (Digital Relationship Building):</strong> WhatsApp and SMS-based engagement with personalized product alerts, cultural event reminders, and exclusive member offers. Based on the Revino case study where personalized WhatsApp offers in 8 languages generated ₹18 crore in revenue in Month 1 alone. A mobile-first loyalty card (phone number–based, no app download required) removes the adoption barrier that plagues app-based programs in ethnic retail.</p>
+
+  <h2>Revenue Composition</h2>
+
+  <div class="revenue-bar">
+    <div class="segment grocery">58% Grocery</div>
+    <div class="segment specialty">22% Specialty</div>
+    <div class="segment prepared">20% Prepared</div>
+  </div>
+  <div class="revenue-legend">
+    <span class="grocery">Core Grocery (staples, rice, flour, oil)</span>
+    <span class="specialty">Specialty (regional snacks, spices, imports)</span>
+    <span class="prepared">Prepared (fresh rotis, samosas, juice)</span>
+  </div>
+
+  <div class="key-insight">
+    <strong>WHY THIS MODEL WORKS</strong>
+    Core grocery drives foot traffic with competitive pricing (low margin, high volume). Specialty items — regional snacks, imported spices, hard-to-find ingredients — generate 45–60% gross margins. Prepared foods (fresh rotis, samosas, lassi) achieve 60–75% margins and serve as loss leaders that draw customers daily. The loyalty program increases visit frequency across all three categories.
+  </div>
+
+  <h2>Projected Outcomes</h2>
+
+  <p>Project Utsav targets a <strong>22% increase in repeat visit rate</strong>, a <strong>15 percentage-point increase in loyalty program enrollment</strong> (targeting 60% of all transactions), and a <strong>12% increase in average basket size</strong> within six months of launch. Total projected Year 1 revenue: <strong>$1.2 million</strong>, with break-even achieved in <strong>4.2 months</strong>.</p>
+
+  <p><em>Note: All findings in this entry are based on secondary research and planned primary research. Primary research (customer surveys, competitor observations, and stakeholder interviews at Frisco-area South Asian grocery stores) is scheduled for completion before the final DECA round. Projections and strategic recommendations will be validated and refined with primary data.</em></p>
+</div><div class="page">
+  <div class="section-label">Section II — Page 2 of 20</div>
+  <h1>II. Introduction</h1>
+
+  <h2>A. Description of the Business</h2>
+
+  <p><strong>DesiMart</strong> is a South Asian grocery and specialty market planned for Frisco, Texas. The store will occupy approximately 3,500–4,500 square feet in a retail plaza accessible from Preston Road or U.S. Highway 380, primary arterial routes serving Frisco's commercial corridor. The business model centers on three product categories: core grocery staples (rice, flour, cooking oil, dal), specialty and imported goods (regional snacks, spices, frozen preparations, personal care), and prepared fresh foods (rotis, samosas, lassi, fresh-squeezed juice).</p>
+
+  <p>DesiMart's product assortment will carry approximately <strong>8,000–12,000 SKUs</strong>, spanning the full breadth of South Asian culinary traditions: North Indian (Punjabi, Hindi Belt), South Indian (Tamil, Kerala, Karnataka, Telangana), Pakistani, Bangladeshi, and Sri Lankan. This regional breadth is the key differentiator from competitors: India Bazaar excels at South Indian products but lacks North Indian variety; Hareli Fresh Market has strong North Indian selection but limited South Indian options. Most South Asian families shop at 2–3 stores because no single retailer carries their complete shopping list.</p>
+
+  <p>The store will operate daily from 9:00 AM to 10:00 PM, with Friday hours adjusted to accommodate prayer schedules. A prepared foods counter will offer fresh rotis, samosas, pakoras, and lassi throughout the day — a daily draw that drives foot traffic and impulse purchases. An in-store halal butcher counter and fresh produce section will serve as the primary grocery anchors.</p>
+
+  <div class="infographic">
+    <div class="info-card">
+      <div class="icon">🛒</div>
+      <h4>8,000–12,000 SKUs</h4>
+      <p>Full-spectrum South Asian grocery: North, South, Pakistani, Bangladeshi, Sri Lankan</p>
+    </div>
+    <div class="info-card">
+      <div class="icon">📍</div>
+      <h4>3,500–4,500 sq ft</h4>
+      <p>Plaza location on Preston Road or US-380 corridor, Frisco</p>
+    </div>
+    <div class="info-card">
+      <div class="icon">🕐</div>
+      <h4>9 AM – 10 PM Daily</h4>
+      <p>Extended hours with Friday prayer-time adjustments</p>
+    </div>
+  </div>
+
+  <h2>B. Target Market</h2>
+
+  <h3>Demographic Profile</h3>
+
+  <p>Frisco, Texas, is the strategic center of the largest South Asian community in the United States. The following table presents the key demographic data for the service area:</p>
+
+  <table>
+    <tr>
+      <th>Metric</th>
+      <th>Value</th>
+      <th>Source</th>
+    </tr>
+    <tr>
+      <td>Total Population (Frisco)</td>
+      <td>245,000+</td>
+      <td>U.S. Census Bureau, 2025</td>
+    </tr>
+    <tr>
+      <td>Asian Population</td>
+      <td>26.96–28.1% (~66,000)</td>
+      <td>Neilsberg, 2025</td>
+    </tr>
+    <tr>
+      <td>Asian Indian (Collin County)</td>
+      <td>~150,000 (2020–2024)</td>
+      <td>U.S. Census ACS</td>
+    </tr>
+    <tr>
+      <td>Median Household Income (Frisco)</td>
+      <td>$150,212</td>
+      <td>U.S. Census Bureau, 2025</td>
+    </tr>
+    <tr>
+      <td>Median Household Income (Indian American)</td>
+      <td>~$145,000</td>
+      <td>Pew Research, 2025</td>
+    </tr>
+    <tr>
+      <td>Frisco ISD South Asian Students</td>
+      <td>~44%</td>
+      <td>FRIS Data, 2025</td>
+    </tr>
+  </table>
+
+  <p>The South Asian population in Collin County <strong>doubled between 2020 and 2024</strong>, making it one of the fastest-growing demographic segments in Texas. This growth is not transient: Indian American households have the highest median income of any demographic group in the United States and spend significantly more on groceries than the national average.</p>
+
+  <h3>Market Segmentation</h3>
+
+  <p>DesiMart's customer base segments into three groups based on purchasing behavior and cultural engagement:</p>
+
+  <table>
+    <tr>
+      <th>Segment</th>
+      <th>Share of Customers</th>
+      <th>Weekly Spend</th>
+      <th>Key Characteristic</th>
+    </tr>
+    <tr>
+      <td>Established Families</td>
+      <td>55%</td>
+      <td>$150–$300</td>
+      <td>First-generation immigrants; deep regional preferences; shop 1–2×/week</td>
+    </tr>
+    <tr>
+      <td>Second-Generation / Students</td>
+      <td>25%</td>
+      <td>$50–$120</td>
+      <td>U.S.-born or recent arrivals; broader palate; influenced by UT Dallas student population</td>
+    </tr>
+    <tr>
+      <td>Cultural Adopters</td>
+      <td>20%</td>
+      <td>$30–$80</td>
+      <td>Non-South Asian customers drawn by ethnic food trends; occasional shoppers</td>
+    </tr>
+  </table>
+
+  <div class="page-break">— End of Page 2 —</div>
+</div><div class="page">
+  <div class="section-label">Section II — Page 3 of 20</div>
+  <h1>II. Introduction (continued)</h1>
+
+  <h2>B. Target Market (continued)</h2>
+
+  <h3>Market Sizing</h3>
+  <p>Based on demographic data for Frisco and Collin County, the following table presents the estimated addressable market for DesiMart:</p>
+
+  <table>
+    <tr>
+      <th>Segment</th>
+      <th>Population (15-min drive)</th>
+      <th>Weekly Grocery Spend</th>
+      <th>Annual Visits (Est.)</th>
+    </tr>
+    <tr>
+      <td>Established South Asian Families</td>
+      <td>~40,000 households</td>
+      <td>$150–$300/week</td>
+      <td>~100 (weekly)</td>
+    </tr>
+    <tr>
+      <td>Second-Generation / UT Dallas Students</td>
+      <td>~25,000</td>
+      <td>$50–$120/week</td>
+      <td>~52 (biweekly)</td>
+    </tr>
+    <tr>
+      <td>Cultural Adopters (all ethnicities)</td>
+      <td>~80,000</td>
+      <td>$30–$80/week</td>
+      <td>~26 (monthly)</td>
+    </tr>
+  </table>
+
+  <p>These figures represent the total addressable market within a 15-minute drive time of Frisco's commercial corridor. DesiMart's initial target is to capture <strong>3–5% of established South Asian households</strong> as regular weekly shoppers in Year 1, representing approximately 1,200–2,000 unique households and an estimated <strong>$6.2–$15.6 million</strong> in annual grocery spend within the service area.</p>
+
+  <h3>Projected Customer Mix</h3>
+  <div class="chart-container">
+    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; text-align: center;">Projected Customer Mix by Share of Transactions</p>
+    <div class="demographic-bar">
+      <div class="bar-label"><span>Established Families</span><span>55%</span></div>
+      <div class="bar-track"><div class="bar-fill green" style="width: 55%;">55%</div></div>
+    </div>
+    <div class="demographic-bar">
+      <div class="bar-label"><span>Second-Generation / Students</span><span>25%</span></div>
+      <div class="bar-track"><div class="bar-fill gold" style="width: 25%;">25%</div></div>
+    </div>
+    <div class="demographic-bar">
+      <div class="bar-label"><span>Cultural Adopters</span><span>20%</span></div>
+      <div class="bar-track"><div class="bar-fill muted" style="width: 20%;">20%</div></div>
+    </div>
+  </div>
+
+  <h3>Psychographic Profile</h3>
+  <p>Psychographic research indicates that the target market for DesiMart is motivated by several key factors:</p>
+
+  <div class="psychographic-box">
+    <h4>Cultural Authenticity</h4>
+    <p>South Asian grocery shoppers prioritize stores that reflect their regional identity. A Tamil family from Kerala expects different products than a Punjabi family from Lahore. The store that carries the specific brands, snacks, and preparations from a customer's home region earns disproportionate loyalty — not out of obligation, but out of genuine appreciation for their identity.</p>
+  </div>
+  <div class="psychographic-box">
+    <h4>Value and Trust</h4>
+    <p>South Asian consumers are highly price-conscious despite high incomes. They compare prices across stores, discuss value in community groups, and switch readily if they feel overcharged. Transparency in pricing and a hassle-free return policy are more important than low prices alone — the perception of fairness drives retention.</p>
+  </div>
+  <div class="psychographic-box">
+    <h4>Community and Belonging</h4>
+    <p>The South Asian grocery store functions as a community hub — a place where customers encounter familiar faces, learn about cultural events, and feel connected to their heritage. Stores that host cultural events, celebrate festivals, and sponsor community activities see higher loyalty than transactional retailers.</p>
+  </div>
+
+  <div class="page-break">— End of Page 3 —</div>
+</div><div class="page">
+  <div class="section-label">Section II — Page 4 of 20</div>
+  <h1>II. Introduction (continued)</h1>
+
+  <h2>C. Current Operations and Competitive Landscape</h2>
+
+  <p>South Asian grocery retail in Frisco is competitive but fragmented. Three chains dominate: <strong>Patel Brothers</strong> (largest selection, worst service), <strong>Hareli Fresh Market</strong> (best service, narrower selection), and <strong>India Bazaar</strong> (strong South Indian focus, broken digital presence). No single store has achieved the "one-stop destination" status that would capture the majority of weekly grocery spend from South Asian families.</p>
+
+  <h3>Competitor Comparison</h3>
+
+  <table>
+    <tr>
+      <th>Dimension</th>
+      <th>Patel Brothers</th>
+      <th>Hareli Fresh</th>
+      <th>India Bazaar</th>
+      <th>DesiMart (Planned)</th>
+    </tr>
+    <tr>
+      <td>Store Rating</td>
+      <td>2.8 / 5</td>
+      <td>3.4 / 5</td>
+      <td>2.5 / 5</td>
+      <td>Target: 4.0+</td>
+    </tr>
+    <tr>
+      <td>SKU Breadth</td>
+      <td>Wide (8,000+)</td>
+      <td>Medium (5,000)</td>
+      <td>Regional (6,000)</td>
+      <td>Wider (12,000)</td>
+    </tr>
+    <tr>
+      <td>Loyalty Program</td>
+      <td>Generic (1 pt/$1)</td>
+      <td>None</td>
+      <td>Generic (1 pt/$1)</td>
+      <td>Personalized (Dharna)</td>
+    </tr>
+    <tr>
+      <td>Personalization</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>Regional + Cultural</td>
+    </tr>
+    <tr>
+      <td>Regional Coverage</td>
+      <td>North-heavy</td>
+      <td>North-heavy</td>
+      <td>South-heavy</td>
+      <td>Full spectrum</td>
+    </tr>
+    <tr>
+      <td>Complaint Resolution</td>
+      <td>4% resolved</td>
+      <td>~30% resolved</td>
+      <td>~15% resolved</td>
+      <td>Target: 80%+</td>
+    </tr>
+    <tr>
+      <td>Digital Engagement</td>
+      <td>Broken website</td>
+      <td>Minimal</td>
+      <td>Broken website</td>
+      <td>WhatsApp + SMS</td>
+    </tr>
+    <tr>
+      <td>Cultural Events</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>Festival celebrations</td>
+    </tr>
+  </table>
+
+  <h3>Market Gap Analysis</h3>
+
+  <p>The competitive landscape reveals three clear gaps that DesiMart will exploit:</p>
+
+  <p><strong>Gap 1: Personalization.</strong> Every existing loyalty program in this space uses a flat "1 point per $1" model with identical rewards for every customer. This ignores the fundamental reality that a Tamil family from Chennai and a Punjabi family from Amritsar have almost zero overlap in their regular purchases. A personalized program that recognizes regional preferences and adjusts offers accordingly does not exist in this market.</p>
+
+  <p><strong>Gap 2: Cultural merchandising.</strong> No South Asian grocery store in Frisco creates seasonal displays aligned with the South Asian cultural calendar. Diwali (October/November), Eid al-Fitr, Navratri, and wedding season (November–February) are massive purchasing drivers — yet shelves remain static year-round. A store that transforms its floor plan to match the cultural calendar becomes the natural destination for every festive shopping trip.</p>
+
+  <p><strong>Gap 3: Customer service.</strong> With a 4% unresolved complaint rate, Patel Brothers' failure is the clearest signal in the market. South Asian consumers are highly communal — negative experiences spread through community groups, mosque/temple networks, and WhatsApp groups. A store built on service excellence and complaint resolution captures not just the customers it serves well, but the customers <em>other stores fail</em>.</p>
+
+  <h3>SWOT Analysis</h3>
+
+  <div class="swot-grid">
+    <div class="swot-cell s">
+      <h4>Strengths</h4>
+      <ul>
+        <li>Full-spectrum regional coverage (no competitor matches)</li>
+        <li>Personalized loyalty engine (first-mover advantage)</li>
+        <li>Cultural calendar merchandising (unique in market)</li>
+        <li>High-income target market ($150K median household)</li>
+      </ul>
+    </div>
+    <div class="swot-cell w">
+      <h4>Weaknesses</h4>
+      <ul>
+        <li>New entrant with no existing customer base</li>
+        <li>Limited initial marketing budget</li>
+        <li>Dependence on specific supplier relationships</li>
+        <li>No brand recognition in Year 1</li>
+      </ul>
+    </div>
+    <div class="swot-cell o">
+      <h4>Opportunities</h4>
+      <ul>
+        <li>Collin County South Asian population doubled 2020–2024</li>
+        <li>All competitors have broken loyalty programs</li>
+        <li>Online ethnic grocery delivery is growing</li>
+        <li>UT Dallas student market for ethnic food exploration</li>
+      </ul>
+    </div>
+    <div class="swot-cell t">
+      <h4>Threats</h4>
+      <ul>
+        <li>Existing chains could improve loyalty programs</li>
+        <li>Online Indian grocery delivery (BigBazaar, Apna Bazaar)</li>
+        <li>Supply chain disruptions affecting imports</li>
+        <li>Economic pressure reducing discretionary spend</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-break">— End of Page 4 —</div>
+</div><div class="page">
+  <div class="section-label">Section III — Page 5 of 20</div>
+  <h1>III. Research Methods</h1>
+
+  <h2>A. Research Design</h2>
+
+  <p>This study employs a <strong>mixed-methods research design</strong> combining quantitative surveys, qualitative interviews, and structured competitor observations to answer the central research question: <em>What drives customer loyalty and repeat engagement in South Asian grocery retail, and how can a personalized loyalty strategy strengthen retention in the Frisco, Texas market?</em></p>
+
+  <p>The research follows a three-phase approach:</p>
+
+  <table>
+    <tr>
+      <th>Phase</th>
+      <th>Method</th>
+      <th>Sample</th>
+      <th>Objective</th>
+    </tr>
+    <tr>
+      <td>Phase 1</td>
+      <td>Customer Survey</td>
+      <td>n = 150+</td>
+      <td>Quantify loyalty drivers, current shopping behavior, and loyalty program preferences</td>
+    </tr>
+    <tr>
+      <td>Phase 2</td>
+      <td>Competitor Observation</td>
+      <td>3 stores × 2 visits each</td>
+      <td>Document in-store experience, loyalty program presence, merchandising practices</td>
+    </tr>
+    <tr>
+      <td>Phase 3</td>
+      <td>Stakeholder Interviews</td>
+      <td>n = 8–10</td>
+      <td>Deep-dive into customer motivations, pain points, and cultural factors</td>
+    </tr>
+  </table>
+
+  <h2>B. Primary Research Plan</h2>
+
+  <h3>Phase 1: Customer Survey (n = 150+)</h3>
+
+  <p>The customer survey will be distributed through three channels to ensure a representative sample:</p>
+
+  <table>
+    <tr>
+      <th>Channel</th>
+      <th>Target n</th>
+      <th>Rationale</th>
+    </tr>
+    <tr>
+      <td>Online (Google Forms via community groups)</td>
+      <td>80–100</td>
+      <td>Reaches South Asian community groups on WhatsApp, Facebook, and Telegram; captures both established residents and recent arrivals</td>
+    </tr>
+    <tr>
+      <td>In-person (temple/community centers)</td>
+      <td>30–50</td>
+      <td>Temple congregations and cultural association meetings provide access to established families who may not participate in online surveys</td>
+    </tr>
+    <tr>
+      <td>In-store (at competitor locations)</td>
+      <td>20–30</td>
+      <td>Customers currently shopping at Patel Brothers, Hareli, and India Bazaar provide direct insight into current loyalty drivers and switching triggers</td>
+    </tr>
+  </table>
+
+  <p>The survey instrument will include 25–30 questions organized into five sections:</p>
+
+  <table>
+    <tr>
+      <th>Section</th>
+      <th>Question Types</th>
+      <th>Key Variables</th>
+    </tr>
+    <tr>
+      <td>A. Shopping Habits</td>
+      <td>Multiple choice, frequency</td>
+      <td>Store preference, visit frequency, average spend, number of stores shopped</td>
+    </tr>
+    <tr>
+      <td>B. Loyalty Program Awareness</td>
+      <td>Multiple choice, Likert scale</td>
+      <td>Awareness of existing programs, enrollment status, perceived value, redemption behavior</td>
+    </tr>
+    <tr>
+      <td>C. Loyalty Drivers</td>
+      <td>Likert scale (1–5), ranking</td>
+      <td>Price, product selection, freshness, service, cultural events, location, convenience</td>
+    </tr>
+    <tr>
+      <td>D. Personalization Preferences</td>
+      <td>Likert scale, multiple choice</td>
+      <td>Preference for personalized vs. generic rewards, preferred communication channel, regional product interest</td>
+    </tr>
+    <tr>
+      <td>E. Demographics</td>
+      <td>Categorical</td>
+      <td>Age, household size, regional identity (North/South Indian, Pakistani, etc.), length of U.S. residence</td>
+    </tr>
+  </table>
+
+  <div class="key-insight">
+    <strong>SAMPLE SIZE JUSTIFICATION</strong>
+    With an estimated population of 40,000 South Asian households within a 15-minute drive of Frisco's commercial corridor, a sample of n = 150 provides a margin of error of ±7.8% at 95% confidence level. This is sufficient for descriptive statistics and segment-level analysis.
+  </div>
+
+  <div class="page-break">— End of Page 5 —</div>
+</div><div class="page">
+  <div class="section-label">Section III — Page 6 of 20</div>
+  <h1>III. Research Methods (continued)</h1>
+
+  <h2>B. Primary Research Plan (continued)</h2>
+
+  <h3>Phase 2: Structured Competitor Observations</h3>
+
+  <p>Structured observations will be conducted at the three primary competitor stores in Frisco. Each store will be visited twice: once during a weekday afternoon (Tuesday, 2:00–4:00 PM) and once during a weekend morning (Saturday, 9:00–11:00 AM) to capture different shopping patterns.</p>
+
+  <table>
+    <tr>
+      <th>Observation Dimension</th>
+      <th>What Is Recorded</th>
+      <th>Why It Matters</th>
+    </tr>
+    <tr>
+      <td>Store layout and traffic flow</td>
+      <td>Entrance path, high-visibility zones, checkout placement</td>
+      <td>Identifies merchandising best practices and customer flow patterns</td>
+    </tr>
+    <tr>
+      <td>Loyalty program visibility</td>
+      <td>Signage at entrance, checkout, and throughout store</td>
+      <td>Measures how actively each store promotes its loyalty program</td>
+    </tr>
+    <tr>
+      <td>Seasonal merchandising</td>
+      <td>Presence of holiday displays, seasonal product clusters</td>
+      <td>Assesses whether competitors use cultural calendar for merchandising</td>
+    </tr>
+    <tr>
+      <td>Customer behavior</td>
+      <td>Average basket size, dwell time in sections, repeat visit patterns</td>
+      <td>Qualitative assessment of shopping habits and loyalty signals</td>
+    </tr>
+    <tr>
+      <td>Staff-customer interaction</td>
+      <td>Friendly greetings, issue resolution, product knowledge</td>
+      <td>Service quality is a key loyalty driver; observed directly</td>
+    </tr>
+    <tr>
+      <td>Product assortment</td>
+      <td>Regional representation, brand variety, fresh produce quality</td>
+      <td>Maps selection breadth and identifies gaps relative to customer needs</td>
+    </tr>
+  </table>
+
+  <h3>Phase 3: Stakeholder Interviews</h3>
+
+  <p>Semi-structured interviews will be conducted with 8–10 stakeholders from the South Asian community in Frisco. Interviewees will include:</p>
+
+  <table>
+    <tr>
+      <th>Stakeholder Group</th>
+      <th>Target n</th>
+      <th>Interview Focus</th>
+    </tr>
+    <tr>
+      <td>South Asian grocery shoppers (established families)</td>
+      <td>4</td>
+      <td>What makes them loyal to a store? What would make them switch? How do they learn about new stores?</td>
+    </tr>
+    <tr>
+      <td>Second-generation / UT Dallas students</td>
+      <td>2</td>
+      <td>What drives their store choice? How do they differ from first-generation shoppers?</td>
+    </tr>
+    <tr>
+      <td>Store employees (South Asian grocery)</td>
+      <td>2</td>
+      <td>What do they observe about customer preferences, peak times, and loyalty signals?</td>
+    </tr>
+    <tr>
+      <td>Small business owners (South Asian retail, Frisco)</td>
+      <td>2</td>
+      <td>What loyalty strategies work in ethnic retail? What have they seen succeed or fail?</td>
+    </tr>
+  </table>
+
+  <p>Each interview will last 20–30 minutes and will be conducted in person or via video call. Interviews will be guided by a semi-structured protocol with 8–10 open-ended questions, allowing follow-up probes based on individual responses.</p>
+
+  <h2>C. Secondary Research</h2>
+
+  <p>Secondary research will draw on peer-reviewed academic journals, industry reports, government demographic data, and published case studies to contextualize primary findings. Key sources include:</p>
+
+  <table>
+    <tr>
+      <th>Source Category</th>
+      <th>Examples</th>
+      <th>Purpose</th>
+    </tr>
+    <tr>
+      <td>Academic journals</td>
+      <td>Journal of Retailing, Journal of Consumer Research</td>
+      <td>Theoretical framework for loyalty drivers in ethnic retail</td>
+    </tr>
+    <tr>
+      <td>Industry reports</td>
+      <td>KPMG India CX Report, EPRA Journals, Kellogg School of Management</td>
+      <td>Market trends in ethnic grocery loyalty programs</td>
+    </tr>
+    <tr>
+      <td>Government data</td>
+      <td>U.S. Census Bureau, American Community Survey</td>
+      <td>Demographic trends for Frisco and Collin County</td>
+    </tr>
+    <tr>
+      <td>Case studies</td>
+      <td>Revino (AI loyalty platform), Reliance Retail (CRM)</td>
+      <td>Real-world examples of successful loyalty strategies in ethnic grocery</td>
+    </tr>
+  </table>
+
+  <h2>D. Limitations</h2>
+
+  <p>This study has three limitations. First, the survey sample (n = 150) is not a probability sample — it is a convenience sample distributed through community channels. Results are descriptive, not inferential; they indicate direction and magnitude but should not be generalized to the entire South Asian population of Texas. Second, competitor observations are conducted by a single observer and are subject to observer bias. Third, self-reported survey data may be subject to response bias (e.g., overreporting loyalty to a preferred store).</p>
+
+  <p>These limitations will be mitigated through triangulation: findings from surveys, observations, and interviews will be cross-referenced to identify convergent patterns. Where primary data is limited, secondary sources will be used to validate or challenge initial conclusions.</p>
+
+  <div class="key-insight">
+    <strong>ETHICAL CONSIDERATIONS</strong>
+    All survey participants will provide informed consent. Responses will be anonymized and used solely for academic purposes. Competitor observations will be conducted in public areas of each store without recording private information. Interview participants will be informed that their responses may be cited in the final entry but will not be attributed by name.
+  </div>
+
+  <div class="page-break">— End of Page 6 —</div>
+</div><div class="page">
+  <div class="section-label">Section IV — Page 7 of 20</div>
+  <h1>IV. Findings and Conclusions</h1>
+
+  <h2>A. Primary Research Findings: What Drives Loyalty in Ethnic Grocery Retail</h2>
+
+  <p><em>Note: The following findings are based on secondary research and preliminary community conversations. They will be validated and refined with primary data collected through customer surveys (n = 150+), competitor observations, and stakeholder interviews before the final DECA round.</em></p>
+
+  <h3>Finding 1: Product Selection Is the Primary Loyalty Driver</h3>
+
+  <p>Across all secondary sources, the #1 factor driving South Asian grocery shoppers to a particular store is <strong>product selection</strong> — specifically, the ability to find the brands, preparations, and ingredients from their home region. A 2025 EPRA Journals study of supermarket loyalty found that 74% of customers cite "product availability" as the most important factor in store loyalty, followed by "price fairness" (62%) and "customer service" (48%).</p>
+
+  <p>This finding has a critical implication for DesiMart: <strong>carrying the full regional spectrum is not just a competitive advantage — it is a loyalty prerequisite.</strong> A Tamil family will not remain loyal to a store that lacks coconut-based preparations. A Punjabi family will not return if their favorite Chandni or Bikanervali products are absent. DesiMart's planned 12,000-SKU assortment spanning North, South, Pakistani, and Bangladeshi products directly addresses this finding.</p>
+
+  <h3>Finding 2: Price Fairness Trumps Absolute Low Price</h3>
+
+  <p>South Asian grocery shoppers are highly price-aware but not necessarily price-sensitive. The Kellogg School of Management (2024) found that South Asian consumers will pay a premium at a store they perceive as <em>fair</em> — but will switch immediately if they feel <em>overcharged</em>. A KPMG India CX Report (2025) found that 12% of grocery shoppers will switch stores within a single visit if they discover a better price elsewhere — and 78% of them tell at least one other person about the overcharge.</p>
+
+  <p>This explains Patel Brothers' paradox: despite having the widest selection and competitive baseline pricing, their 2.8/5 Yelp rating and 96% unresolved complaint rate suggest a pattern of perceived price unfairness (billing errors, inflated prices on staple items) that erodes trust faster than any loyalty program can rebuild it.</p>
+
+  <div class="key-insight">
+    <strong>IMPLICATION FOR DESIMART</strong>
+    DesiMart's loyalty strategy cannot begin with a rewards card. It must begin with transparent, fair pricing on core staples (rice, flour, oil, dal) — the "trust anchors" that signal fairness. Once trust is established, the personalized loyalty engine (Dharna) amplifies retention by rewarding repeat behavior.
+  </div>
+
+  <h3>Finding 3: Personalization Is the Missing Layer</h3>
+
+  <p>The most striking gap in the current market is personalization. The EPRA study found that while 67% of grocery loyalty program members actively use their rewards, only 28% receive personalized offers. The Revino case study demonstrates the upside: personalized WhatsApp offers in 8 languages generated ₹18 crore in revenue in Month 1 across 680 stores, and AI-driven personalization increased redemption rates from 18% to 26% (+44%) while reducing churn by 28%.</p>
+
+  <p>In the South Asian grocery context, personalization has two dimensions:</p>
+
+  <table>
+    <tr>
+      <th>Dimension</th>
+      <th>Example</th>
+      <th>Current Market</th>
+    </tr>
+    <tr>
+      <td>Regional preference</td>
+      <td>A Tamil family gets offers on coconut milk, raw mango, and idli mix; a Punjabi family gets offers on makki di roti, sarson ka saag, and lassi powder</td>
+      <td>Identical offers for everyone</td>
+    </tr>
+    <tr>
+      <td>Cultural calendar</td>
+      <td>Two weeks before Diwali, all members receive offers on sweets, dry fruits, and new clothing. Two weeks before Eid, offers on halal meat and sheer khurma ingredients</td>
+      <td>No calendar-based triggers</td>
+    </tr>
+  </table>
+
+  <p><strong>No South Asian grocery store in Frisco offers personalized loyalty.</strong> This is DesiMart's single largest competitive advantage.</p>
+
+  <div class="page-break">— End of Page 7 —</div>
+</div><div class="page">
+  <div class="section-label">Section IV — Page 8 of 20</div>
+  <h1>IV. Findings and Conclusions (continued)</h1>
+
+  <h3>Finding 4: Community Engagement Drives Emotional Loyalty</h3>
+
+  <p>South Asian grocery stores function as <strong>cultural anchors</strong> — community spaces where customers feel a sense of belonging. The Kellogg School of Management (2024) found that stores hosting cultural events, celebrating festivals, and sponsoring community activities see significantly higher loyalty than transactional retailers. This is not incidental: the South Asian shopping experience is deeply social. Customers shop in groups, discuss purchases in community WhatsApp groups, and recommend stores through mosque/temple networks.</p>
+
+  <p>A store that transforms its floor plan for Diwali, hosts an Eid celebration, or sponsors a Diwali-Eid Iftar event does not just sell products — it builds <strong>emotional loyalty</strong>. Customers who feel emotionally connected to a brand are 302% more likely to become repeat buyers (Kyruu, 2025). For DesiMart, this means the store is not just a place to buy rice — it is a place that <em>understands</em> the customer's culture, celebrates their festivals, and reflects their identity.</p>
+
+  <h3>Finding 5: Digital Engagement Is the Next Frontier</h3>
+
+  <p>Despite the highly digital nature of the South Asian community in the U.S., no South Asian grocery store in Frisco has a meaningful digital engagement strategy. Patel Brothers' rewards page displays placeholder text. India Bazaar's website is broken. Hareli Fresh Market's digital presence is limited to a Google Business listing.</p>
+
+  <p>This is striking given that the Indian grocery e-commerce market is projected to reach significant values by 2025–2026, and that South Asian Americans are among the most digitally engaged demographic groups in the U.S. The Revino case study demonstrated that personalized WhatsApp offers — the messaging app most South Asian families already use daily — generated ₹18 crore in revenue in Month 1. A mobile-first loyalty card (phone number–based, no app download) removes the adoption barrier that plagues app-based programs.</p>
+
+  <h3>Finding 6: Switching Is Easy — Loyalty Must Be Earned Weekly</h3>
+
+  <p>South Asian grocery shoppers in Frisco shop at 2–3 stores because no single store earns 100% of their business. This switching behavior is rational: each store has regional strengths and gaps. But it also means that <strong>loyalty is fragile</strong> — it must be earned every week through consistent product availability, fair pricing, and positive service interactions.</p>
+
+  <div class="chart-container">
+    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; text-align: center;">Key Loyalty Drivers — Ranked by Importance (Secondary Research Synthesis)</p>
+    <div class="demographic-bar">
+      <div class="bar-label"><span>Product availability / regional variety</span><span>74%</span></div>
+      <div class="bar-track"><div class="bar-fill green" style="width: 74%;">74%</div></div>
+    </div>
+    <div class="demographic-bar">
+      <div class="bar-label"><span>Price fairness / transparency</span><span>62%</span></div>
+      <div class="bar-track"><div class="bar-fill gold" style="width: 62%;">62%</div></div>
+    </div>
+    <div class="demographic-bar">
+      <div class="bar-label"><span>Customer service quality</span><span>48%</span></div>
+      <div class="bar-track"><div class="bar-fill muted" style="width: 48%;">48%</div></div>
+    </div>
+    <div class="demographic-bar">
+      <div class="bar-label"><span>Cultural relevance / community engagement</span><span>41%</span></div>
+      <div class="bar-track"><div class="bar-fill green" style="width: 41%;">41%</div></div>
+    </div>
+    <div class="demographic-bar">
+      <div class="bar-label"><span>Loyalty program value</span><span>35%</span></div>
+      <div class="bar-track"><div class="bar-fill gold" style="width: 35%;">35%</div></div>
+    </div>
+    <div class="demographic-bar">
+      <div class="bar-label"><span>Personalized offers</span><span>28% receive them</span></div>
+      <div class="bar-track"><div class="bar-fill muted" style="width: 28%;">28%</div></div>
+    </div>
+  </div>
+
+  <div class="key-insight">
+    <strong>THE LOYALTY HIERARCHY</strong>
+    Product availability is the foundation — without it, nothing else matters. Price fairness is the second layer. Only at the third layer does customer service matter. Loyalty programs sit at the fifth layer: they amplify retention for customers who are already satisfied with product, price, and service. DesiMart's strategy addresses all five layers in sequence.
+  </div>
+
+  <div class="page-break">— End of Page 8 —</div>
+</div><div class="page">
+  <div class="section-label">Section IV — Page 9 of 20</div>
+  <h1>IV. Findings and Conclusions (continued)</h1>
+
+  <h2>B. Secondary Research Findings: National Trends in Ethnic Grocery Loyalty</h2>
+
+  <h3>Trend 1: The "Indian Share of Wallet" Is a $10B Opportunity</h3>
+
+  <p>The Kellogg School of Management (2024) published a detailed analysis of the South Asian diaspora's retail impact. Key findings: the 5.1 million South Asians in the U.S. represent a consumer market with average household income of ~$150,000 — double the national average. South Asian grocery spending alone is estimated at $30–40 billion annually, with ethnic grocery stores outperforming mainstream chains on customer loyalty metrics (repeat visit rate, basket size, program engagement).</p>
+
+  <p>However, the same report warns that mainstream retailers (Whole Foods, Kroger, Walmart) are beginning to stock South Asian products in their regular aisles, eroding the "exclusive destination" advantage that ethnic grocery stores have historically enjoyed. DesiMart's response: carry the <em>authentic</em> brands and regional products that mainstream chains cannot — the specific brands, preparations, and ingredients that only a dedicated South Asian grocer stocks.</p>
+
+  <h3>Trend 2: AI-Driven Loyalty Programs Are Outperforming Traditional Models</h3>
+
+  <p>The Revino case study (2025) provides the strongest evidence for personalized loyalty in ethnic grocery retail. An AI-powered loyalty platform deployed across 680 Indian supermarket stores achieved:</p>
+
+  <table>
+    <tr>
+      <th>Metric</th>
+      <th>Before</th>
+      <th>After</th>
+      <th>Change</th>
+    </tr>
+    <tr>
+      <td>Loyalty redemption rate</td>
+      <td>18%</td>
+      <td>26%</td>
+      <td>+44%</td>
+    </tr>
+    <tr>
+      <td>Customer churn</td>
+      <td>Baseline</td>
+      <td>-28%</td>
+      <td>28% reduction</td>
+    </tr>
+    <tr>
+      <td>Average basket size</td>
+      <td>Baseline</td>
+      <td>+₹340</td>
+      <td>~8% increase</td>
+    </tr>
+    <tr>
+      <td>WhatsApp offer revenue (Month 1)</td>
+      <td>N/A</td>
+      <td>₹18 crore</td>
+      <td>New revenue channel</td>
+    </tr>
+  </table>
+
+  <p>The key mechanism: AI-driven segmentation classified customers into "Ambassadors" (loyal), "Switchers" (deal-seeking), and "Critics" (dissatisfied but silent), then tailored offers and communication channels to each segment. WhatsApp was the dominant channel (used by 95% of South Asian smartphone users), with offers in 8 regional languages.</p>
+
+  <h3>Trend 3: Subscription and Delivery Models Are Reshaping Loyalty</h3>
+
+  <p>KPMG's India CX Report (2025) found that subscription-based free delivery and loyalty memberships are becoming key retention drivers in grocery retail. Online ethnic grocery delivery platforms (BigBazaar, Apna Bazaar, Nila Foods) are gaining share by offering convenience that physical stores cannot match. However, they cannot replicate the in-store experience — the tactile product inspection, the fresh produce selection, the social atmosphere — that drives loyalty in physical ethnic grocery retail.</p>
+
+  <p><strong>Implication:</strong> DesiMart's strategy should not treat online delivery as a competitor. It should treat it as a complement. The physical store builds emotional loyalty through experience; the delivery app (planned for Year 2) extends reach to customers who cannot visit in person.</p>
+
+  <h3>Trend 4: Community-Centric Retail Outperforms Transactional Retail</h3>
+
+  <p>The Kellogg analysis found that South Asian grocery stores positioned as "retail hubs" near temples and community centers see 20–30% higher customer retention than those in isolated locations. Stores that sponsor cultural events, host festival celebrations, and maintain relationships with community organizations see disproportionately high loyalty among "Ambassador" customers — the 20% of customers who generate 40% of revenue through frequent visits and above-average basket sizes.</p>
+
+  <div class="key-insight">
+    <strong>THE LOYALTY PARADOX</strong>
+    The customers who are most valuable to a grocery store (frequent visitors, high spenders, program-engaged) are also the most likely to switch if a competitor offers a marginal improvement. Loyalty in ethnic grocery is not automatic — it must be continuously earned through product availability, price fairness, service quality, and cultural relevance. The stores that understand this will retain their best customers. The stores that don't will lose them to the store down the street.
+  </div>
+
+  <div class="page-break">— End of Page 9 —</div>
+</div><div class="page">
+  <div class="section-label">Section IV — Page 10 of 20</div>
+  <h1>IV. Findings and Conclusions (continued)</h1>
+
+  <h2>C. Conclusions: The Three Pillars of Project Utsav</h2>
+
+  <p>The research findings converge on three strategic imperatives. Together, they form the foundation of Project Utsav — DesiMart's loyalty strategy for the first six months of operation.</p>
+
+  <h3>Pillar 1: Personalization Is the Single Largest Untapped Lever</h3>
+
+  <p>Every existing South Asian grocery loyalty program in Frisco uses a flat, one-size-fits-all model. Yet the research is clear: personalized offers increase redemption by 44%, reduce churn by 28%, and drive new revenue through targeted messaging (Revino, 2025). South Asian customers' purchasing patterns are deeply tied to regional preferences and cultural calendars — a dimension no current program captures. <strong>A personalized loyalty engine that recognizes these patterns is the largest competitive advantage DesiMart can build.</strong></p>
+
+  <h3>Pillar 2: Cultural Merchandising Creates Emotional Connection</h3>
+
+  <p>South Asian grocery shopping is not a transactional activity — it is a cultural practice. Customers who feel seen and celebrated by a store are 302% more likely to become repeat buyers (Kyruu, 2025). Seasonal planograms aligned with the South Asian cultural calendar transform the store from a utility into a destination. <strong>A store that transforms for Diwali, celebrates Eid, and sponsors community events does not just sell products — it builds belonging.</strong></p>
+
+  <h3>Pillar 3: Digital Engagement Is the Retention Multiplier</h3>
+
+  <p>No South Asian grocery store in Frisco has a meaningful digital engagement strategy. Yet WhatsApp is the messaging app of choice for 95% of South Asian smartphone users, and personalized WhatsApp offers generated ₹18 crore in Month 1 in the Revino case study. <strong>A mobile-first, WhatsApp-based loyalty engagement system reaches customers where they already are — without requiring an app download.</strong></p>
+
+  <div class="key-insight">
+    <strong>THE UTSAPV FRAMEWORK</strong>
+    These three pillars — Dharna (Personalized Loyalty Engine), Samaroh (Community Merchandising), and Milap (Digital Relationship Building) — are interdependent. Personalization without cultural relevance is just targeted advertising. Cultural merchandising without digital engagement reaches fewer people. Digital engagement without personalization is just noise. Together, they form a loyalty system that is greater than the sum of its parts.
+  </div>
+
+  <p>The next section (V. Strategic Plan) details each pillar: the specific activities, timelines, resource requirements, and key performance indicators that will transform these findings into measurable business outcomes.</p>
+
+  <p>The strategic plan is designed for a six-month implementation window, with measurable milestones at Months 1, 3, and 6. Key performance indicators include repeat visit rate, loyalty program enrollment, average basket size, customer churn rate, and Net Promoter Score (NPS). Each KPI is tied to a specific pillar, enabling precise measurement of each strategy's contribution to overall retention.</p>
+
+  <div class="page-break">— End of Page 10 —</div>
+</div><div class="page">
+  <div class="section-label">Section V — Page 11 of 20</div>
+  <h1>V. Strategic Plan: Project Utsav</h1>
+
+  <h2>A. Strategic Objectives</h2>
+
+  <p>Project Utsav is a six-month loyalty strategy designed to achieve the following measurable objectives:</p>
+
+  <table>
+    <tr>
+      <th>Objective</th>
+      <th>Baseline</th>
+      <th>6-Month Target</th>
+      <th>Measurement</th>
+    </tr>
+    <tr>
+      <td>Repeat visit rate</td>
+      <td>Unknown (new store)</td>
+      <td>65% of customers visit 2+ times/month</td>
+      <td>Loyalty card transaction data</td>
+    </tr>
+    <tr>
+      <td>Loyalty program enrollment</td>
+      <td>0%</td>
+      <td>60% of all transactions</td>
+      <td>Loyalty card sign-ups / total transactions</td>
+    </tr>
+    <tr>
+      <td>Average basket size</td>
+      <td>Industry avg: $42</td>
+      <td>$47 (+12%)</td>
+      <td>POS system data</td>
+    </tr>
+    <tr>
+      <td>Customer churn rate</td>
+      <td>Unknown (new store)</td>
+      <td>&lt;15% monthly churn</td>
+      <td>Repeat purchase analysis</td>
+    </tr>
+    <tr>
+      <td>Net Promoter Score (NPS)</td>
+      <td>Not applicable</td>
+      <td>+45 (good)</td>
+      <td>Quarterly customer survey</td>
+    </tr>
+  </table>
+
+  <h2>B. The Utsav Framework</h2>
+
+  <p>The Utsav Framework organizes three strategies into interdependent pillars. Each pillar targets a specific layer of the customer loyalty hierarchy established in Section IV:</p>
+
+  <table>
+    <tr>
+      <th>Pillar</th>
+      <th>Sanskrit Name</th>
+      <th>Meaning</th>
+      <th>Loyalty Layer</th>
+      <th>Primary KPI</th>
+    </tr>
+    <tr>
+      <td><strong>Dharna</strong></td>
+      <td>धारणा</td>
+      <td>Focus / Perception</td>
+      <td>Personalized rewards &amp; recognition</td>
+      <td>Enrollment rate, redemption rate</td>
+    </tr>
+    <tr>
+      <td><strong>Samaroh</strong></td>
+      <td>समारोह</td>
+      <td>Celebration</td>
+      <td>Cultural relevance &amp; emotional connection</td>
+      <td>Basket size, seasonal sales lift</td>
+    </tr>
+    <tr>
+      <td><strong>Milap</strong></td>
+      <td>मिलाप</td>
+      <td>Union / Connection</td>
+      <td>Digital engagement &amp; relationship building</td>
+      <td>Message open rate, click-through rate</td>
+    </tr>
+  </table>
+
+  <div class="key-insight">
+    <strong>WHY "UTSAV"?</strong>
+    Utsav (उत्सव) means "festival" in Hindi — a word that captures the essence of South Asian grocery shopping: it is not a chore, it is a celebration of culture, community, and identity. Project Utsav is named for the experience DesiMart will create: a store that feels like a festival every time you walk in.
+  </div>
+
+  <h2>C. Pillar 1: Dharna — Personalized Loyalty Engine</h2>
+
+  <p><strong>Dharna</strong> is a tiered loyalty program that adjusts rewards based on three customer dimensions: regional cuisine preferences, cultural calendar events, and spending behavior.</p>
+
+  <h3>How Dharna Works</h3>
+
+  <p>Unlike the flat "1 point per $1" model used by Patel Brothers and India Bazaar, Dharna uses a <strong>weighted point system</strong> that rewards customers for the products they actually buy:</p>
+
+  <table>
+    <tr>
+      <th>Customer Segment</th>
+      <th>Base Points</th>
+      <th>Regional Bonus</th>
+      <th>Cultural Bonus</th>
+      <th>Effective Rate</th>
+    </tr>
+    <tr>
+      <td>North Indian shopper</td>
+      <td>1 pt / $1</td>
+      <td>3× on North Indian products</td>
+      <td>2× before Diwali/Holi</td>
+      <td>1–6 pts / $1</td>
+    </tr>
+    <tr>
+      <td>South Indian shopper</td>
+      <td>1 pt / $1</td>
+      <td>3× on South Indian products</td>
+      <td>2× before Onam/Vishu</td>
+      <td>1–6 pts / $1</td>
+    </tr>
+    <tr>
+      <td>Pakistani shopper</td>
+      <td>1 pt / $1</td>
+      <td>3× on Pakistani products</td>
+      <td>2× before Eid/Ramadan</td>
+      <td>1–6 pts / $1</td>
+    </tr>
+    <tr>
+      <td>Cultural Adopter</td>
+      <td>1 pt / $1</td>
+      <td>2× on featured products</td>
+      <td>1.5× on all festival items</td>
+      <td>1–3 pts / $1</td>
+    </tr>
+  </table>
+
+  <p><strong>Tier structure:</strong></p>
+
+  <table>
+    <tr>
+      <th>Tier</th>
+      <th>Requirement</th>
+      <th>Benefits</th>
+    </tr>
+    <tr>
+      <td>Seed</td>
+      <td>Sign up (automatic)</td>
+      <td>Welcome gift: 50 bonus points ($1 credit)</td>
+    </tr>
+    <tr>
+      <td>Spice</td>
+      <td>$500 spent in 6 months</td>
+      <td>2× points on cultural bonuses, early festival sale access</td>
+    </tr>
+    <tr>
+      <td>Turmeric</td>
+      <td>$1,500 spent in 6 months</td>
+      <td>3× points on cultural bonuses, free monthly prepared item, birthday gift</td>
+    </tr>
+    <tr>
+      <td>Saffron</td>
+      <td>$3,000 spent in 6 months</td>
+      <td>5× points on cultural bonuses, VIP event invitations, annual gift basket</td>
+    </tr>
+  </table>
+
+  <p><strong>Implementation timeline:</strong> Dharna will launch in Month 1, with point multipliers activated progressively: base tiered rates in Month 1, regional bonuses in Month 2, cultural calendar bonuses in Month 3 (aligned with the first major festival).</p>
+
+  <div class="page-break">— End of Page 11 —</div>
+</div><div class="page">
+  <div class="section-label">Section V — Page 12 of 20</div>
+  <h1>V. Strategic Plan (continued)</h1>
+
+  <h2>D. Pillar 2: Samaroh — Community Merchandising</h2>
+
+  <p><strong>Samaroh</strong> is a seasonal merchandising strategy that aligns the store's floor plan, product displays, and promotional activities with the South Asian cultural calendar. The goal: transform the store from a place customers <em>need</em> to visit into a place they <em>want</em> to explore.</p>
+
+  <h3>The South Asian Cultural Calendar — Merchandising Impact</h3>
+
+  <p>The South Asian cultural calendar drives massive, predictable spikes in grocery spending. The following table maps the six highest-impact cultural events to their merchandising implications:</p>
+
+  <table>
+    <tr>
+      <th>Event</th>
+      <th>Timing</th>
+      <th>Key Product Categories</th>
+      <th>Estimated Sales Lift</th>
+    </tr>
+    <tr>
+      <td><strong>Diwali</strong> (Festival of Lights)</td>
+      <td>October–November</td>
+      <td>Sweets, dry fruits, ghee, special flours, new clothing, home decor</td>
+      <td>+40–60%</td>
+    </tr>
+    <tr>
+      <td><strong>Eid al-Fitr</strong> (End of Ramadan)</td>
+      <td>March–April (varies)</td>
+      <td>Halal meat, sheer khurma, biryani mix, sweet packs, new clothing</td>
+      <td>+30–50%</td>
+    </tr>
+    <tr>
+      <td><strong>Wedding Season</strong> (November–February)</td>
+      <td>Continuous (peak Dec–Jan)</td>
+      <td>Premium ingredients, catering supplies, gift items, bulk purchases</td>
+      <td>+25–40%</td>
+    </tr>
+    <tr>
+      <td><strong>Navratri / Dussehra</strong></td>
+      <td>September–October</td>
+      <td>Fasting foods (singhar atta, kuttu atta), sweets, puja supplies</td>
+      <td>+20–35%</td>
+    </tr>
+    <tr>
+      <td><strong>Holi</strong> (Festival of Colors)</td>
+      <td>March</td>
+      <td>Gujiya mix, thandai ingredients, sweet packs, colored drinks</td>
+      <td>+15–25%</td>
+    </tr>
+    <tr>
+      <td><strong>Ramadan</strong> (Month of Fasting)</td>
+      <td>February–March (varies)</td>
+      <td>Dates, premium meat, iftar packs, instant foods, beverages</td>
+      <td>+20–30%</td>
+    </tr>
+  </table>
+
+  <h3>Samaroh Execution Plan</h3>
+
+  <p>For each major event, DesiMart will implement a <strong>festival planogram</strong> — a temporary reconfiguration of the store floor that creates an immersive, culturally resonant shopping experience:</p>
+
+  <table>
+    <tr>
+      <th>Component</th>
+      <th>Description</th>
+      <th>Loyalty Impact</th>
+    </tr>
+    <tr>
+      <td>Festival entrance display</td>
+      <td>Decorated entrance with seasonal themes (diyas for Diwali, crescent moon for Eid)</td>
+      <td>First-impression emotional connection; encourages photo sharing on social media</td>
+    </tr>
+    <tr>
+      <td>Curated product clusters</td>
+      <td>All products needed for a specific festival recipe or celebration grouped together (e.g., "Diwali Sweet Kit": ghee, khoya, dry fruits, food coloring, packaging)</td>
+      <td>Increases basket size through cross-category discovery; reduces customer effort</td>
+    </tr>
+    <tr>
+      <td>Regional spotlight</td>
+      <td>Each month, a different South Asian region is highlighted (Punjabi month, Tamil month, Bengali month) with products, signage, and samples from that region</td>
+      <td>Reinforces DesiMart's regional breadth; makes customers feel seen</td>
+    </tr>
+    <tr>
+      <td>Festival-exclusive offers</td>
+      <td>Loyalty members receive double points on festival-related purchases during the event window</td>
+      <td>Ties Samaroh to Dharna; incentivizes loyalty enrollment</td>
+    </tr>
+    <tr>
+      <td>In-store sampling</td>
+      <td>Weekly sampling of festival-related products (e.g., Diwali sweet samples, Eid biscuit packs)</td>
+      <td>Drives trial of new products; increases dwell time and impulse purchases</td>
+    </tr>
+  </table>
+
+  <div class="key-insight">
+    <strong>THE SAMAROH- DHARNA FEEDBACK LOOP</strong>
+    Samaroh drives foot traffic and basket size. Dharna captures the data from those trips — which products each customer buys, which festivals they celebrate, how much they spend. That data feeds back into Dharna's personalization engine, making future offers more accurate. The loop reinforces itself: better data → better offers → higher redemption → more engagement → more data.
+  </div>
+
+  <div class="page-break">— End of Page 12 —</div>
+</div><div class="page">
+  <div class="section-label">Section V — Page 13 of 20</div>
+  <h1>V. Strategic Plan (continued)</h1>
+
+  <h2>E. Pillar 3: Milap — Digital Relationship Building</h2>
+
+  <p><strong>Milap</strong> is a digital engagement strategy built on the platforms South Asian customers already use daily. No app downloads. No email newsletters. Just WhatsApp and SMS — the channels that reach 95% of the target audience.</p>
+
+  <h3>Channel Strategy</h3>
+
+  <table>
+    <tr>
+      <th>Channel</th>
+      <th>Reach</th>
+      <th>Purpose</th>
+      <th>Frequency</th>
+    </tr>
+    <tr>
+      <td><strong>WhatsApp Business</strong></td>
+      <td>95% of smartphone users</td>
+      <td>Personalized offers, festival greetings, new product alerts</td>
+      <td>2–3×/week</td>
+    </tr>
+    <tr>
+      <td><strong>SMS</strong></td>
+      <td>100% of phone users</td>
+      <td>Point balance updates, tier upgrades, expiration alerts</td>
+      <td>As needed</td>
+    </tr>
+    <tr>
+      <td><strong>Google Business Profile</strong></td>
+      <td>Local search visitors</td>
+      <td>Reviews, community posts, event announcements</td>
+      <td>1×/week</td>
+    </tr>
+  </table>
+
+  <h3>WhatsApp Engagement Plan</h3>
+
+  <p>The WhatsApp strategy is the core of Milap. It has three components:</p>
+
+  <table>
+    <tr>
+      <th>Component</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+    <tr>
+      <td><strong>Personalized offers</strong></td>
+      <td>AI-driven product recommendations based on purchase history, sent via WhatsApp</td>
+      <td>"Hi Priya! Your favorite Patanjali Atta is back in stock. Show this message for 10% off your next purchase."</td>
+    </tr>
+    <tr>
+      <td><strong>Festival countdown</strong></td>
+      <td>Build anticipation for upcoming cultural events with themed offers</td>
+      <td>"3 days until Diwali! 🪔 Stock up on sweets, dry fruits, and ghee. Use code DIWALI10 for $10 off $75+."</td>
+    </tr>
+    <tr>
+      <td><strong>Point updates</strong></td>
+      <td>Automatic notifications when points are earned, nearing redemption, or expiring</td>
+      <td>"You've earned 250 points this month, Rahul! That's $5 off. Redeem before Dec 31."</td>
+    </tr>
+  </table>
+
+  <h3>Loyalty Card Design</h3>
+
+  <p>The DesiMart loyalty card is <strong>mobile-first</strong>: no physical card required. Customers sign up with their phone number, and their card is their phone. At checkout, they simply provide their number, and points are automatically credited.</p>
+
+  <p><strong>Sign-up process:</strong></p>
+  <ol style="margin-left: 1.5rem; margin-bottom: 1rem; font-size: 0.95rem;">
+    <li>Customer provides phone number at checkout or scans QR code at entrance</li>
+    <li>Receives automated WhatsApp welcome message with 50 bonus points ($1 credit)</li>
+    <li>First message includes personalized offer based on their region (if known) or a general welcome offer</li>
+    <li>Subsequent messages are personalized based on purchase history</li>
+  </ol>
+
+  <h3>Community Building Through Digital Channels</h3>
+
+  <p>Beyond transactions, Milap will build community through:</p>
+
+  <table>
+    <tr>
+      <th>Initiative</th>
+      <th>Description</th>
+      <th>Expected Outcome</th>
+    </tr>
+    <tr>
+      <td>DesiMart Recipe Club</td>
+      <td>Weekly recipe shared via WhatsApp with product list; customers who purchase all ingredients earn bonus points</td>
+      <td>Increases engagement frequency; drives incremental basket size</td>
+    </tr>
+    <tr>
+      <td>Regional Spotlights</td>
+      <td>Monthly feature on a South Asian region's cuisine, culture, and products; shared as WhatsApp-forwardable message</td>
+      <td>Builds cultural connection; encourages sharing beyond existing customer base</td>
+    </tr>
+    <tr>
+      <td>Community Reviews</td>
+      <td>Post-visit WhatsApp survey: "How was your DesiMart experience?" — responses posted to Google Business Profile</td>
+      <td>Improves online reputation; provides real-time service quality data</td>
+    </tr>
+  </table>
+
+  <div class="key-insight">
+    <strong>WHY WHATSAPP, NOT EMAIL?</strong>
+    South Asian Americans are among the most active WhatsApp users in the U.S. — the app is used for everything from family group chats to business communication to news sharing. An email newsletter has an open rate of ~20%. A WhatsApp message has a 98% open rate. For a grocery store that needs to reach customers at the moment they're planning their next meal, WhatsApp is the channel that matters.
+  </div>
+
+  <div class="page-break">— End of Page 13 —</div>
+</div><div class="page">
+  <div class="section-label">Section V — Page 14 of 20</div>
+  <h1>V. Strategic Plan (continued)</h1>
+
+  <h2>F. Implementation Timeline</h2>
+
+  <p>Project Utsav will be implemented over six months, with each pillar activated progressively to allow for learning and adjustment:</p>
+
+  <table>
+    <tr>
+      <th>Timeline</th>
+      <th>Activity</th>
+      <th>Pillar</th>
+      <th>Milestone</th>
+    </tr>
+    <tr>
+      <td><strong>Month 1</strong></td>
+      <td>Launch Dharna tiered loyalty program; set up WhatsApp Business account; begin sign-ups at checkout</td>
+      <td>Dharna</td>
+      <td>500 loyalty members enrolled</td>
+    </tr>
+    <tr>
+      <td><strong>Month 1</strong></td>
+      <td>Finalize first festival planogram (Diwali or seasonal equivalent); order display materials</td>
+      <td>Samaroh</td>
+      <td>Planogram design approved</td>
+    </tr>
+    <tr>
+      <td><strong>Month 2</strong></td>
+      <td>Activate regional bonus multipliers in Dharna; begin personalized WhatsApp offers</td>
+      <td>Dharna, Milap</td>
+      <td>Regional bonuses live; 500+ messages sent</td>
+    </tr>
+    <tr>
+      <td><strong>Month 2</strong></td>
+      <td>Launch DesiMart Recipe Club via WhatsApp</td>
+      <td>Milap</td>
+      <td>First recipe shared; track redemption</td>
+    </tr>
+    <tr>
+      <td><strong>Month 3</strong></td>
+      <td>Activate cultural calendar bonuses in Dharna (aligned with first major festival)</td>
+      <td>Dharna, Samaroh</td>
+      <td>Festival planogram installed; cultural bonuses live</td>
+    </tr>
+    <tr>
+      <td><strong>Month 3</strong></td>
+      <td>Conduct first quarterly customer survey (n = 50); analyze NPS</td>
+      <td>All</td>
+      <td>Baseline NPS measured; survey insights documented</td>
+    </tr>
+    <tr>
+      <td><strong>Month 4</strong></td>
+      <td>Review Dharna data; refine personalization algorithms; adjust tier thresholds based on actual spending patterns</td>
+      <td>Dharna</td>
+      <td>Personalization accuracy improved; redemption rate tracked</td>
+    </tr>
+    <tr>
+      <td><strong>Month 4</strong></td>
+      <td>Launch second festival planogram; evaluate first festival's impact on sales and engagement</td>
+      <td>Samaroh</td>
+      <td>Festival impact report completed</td>
+    </tr>
+    <tr>
+      <td><strong>Month 5</strong></td>
+      <td>Expand WhatsApp outreach to non-loyalty members via Google Business Profile referrals</td>
+      <td>Milap</td>
+      <td>WhatsApp list grows to 1,000+ contacts</td>
+    </tr>
+    <tr>
+      <td><strong>Month 6</strong></td>
+      <td>Comprehensive six-month review: all KPIs assessed; strategy refined for Months 7–12</td>
+      <td>All</td>
+      <td>Six-month report; Year 1 full strategy finalized</td>
+    </tr>
+  </table>
+
+  <h2>G. Resource Requirements</h2>
+
+  <p>Project Utsav requires the following resources across its three pillars:</p>
+
+  <table>
+    <tr>
+      <th>Resource</th>
+      <th>Pillar</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>Loyalty management software</td>
+      <td>Dharna</td>
+      <td>Cloud-based POS-integrated loyalty platform (e.g., LoyaltyLion, Smile.io) with API access for WhatsApp integration</td>
+    </tr>
+    <tr>
+      <td>WhatsApp Business API</td>
+      <td>Milap</td>
+      <td>Business API subscription for automated messaging, template messages, and analytics</td>
+    </tr>
+    <tr>
+      <td>Visual merchandiser</td>
+      <td>Samaroh</td>
+      <td>Part-time consultant or in-house staff time for festival planogram design and installation</td>
+    </tr>
+    <tr>
+      <td>Printed materials</td>
+      <td>All</td>
+      <td>QR code signs, festival banners, recipe cards, tier status cards for checkout counter</td>
+    </tr>
+    <tr>
+      <td>Staff training</td>
+      <td>All</td>
+      <td>All staff trained on loyalty program operations, WhatsApp tool, and festival planogram changes</td>
+    </tr>
+  </table>
+
+  <div class="key-insight">
+    <strong>THE DATA ADVANTAGE</strong>
+    Every pillar feeds data into the others. Dharna captures purchase data. Samaroh tests which cultural events drive the most engagement. Milap measures which messages generate the most clicks. Together, they create a loyalty intelligence system that grows more accurate with every month — and becomes a competitive moat that competitors cannot replicate quickly.
+  </div>
+
+  <div class="page-break">— End of Page 14 —</div>
+</div><div class="page">
+  <div class="section-label">Section V — Page 15 of 20</div>
+  <h1>V. Strategic Plan (continued)</h1>
+
+  <h2>H. Key Performance Indicators</h2>
+
+  <p>Project Utsav's success will be measured across five key performance indicators (KPIs), each tied to a specific pillar and measured at specific intervals:</p>
+
+  <h3>Primary KPIs</h3>
+
+  <table>
+    <tr>
+      <th>KPI</th>
+      <th>Definition</th>
+      <th>Target (6 Months)</th>
+      <th>Pillar</th>
+      <th>Measurement Frequency</th>
+    </tr>
+    <tr>
+      <td><strong>Repeat Visit Rate</strong></td>
+      <td>% of unique loyalty members who visit 2+ times per month</td>
+      <td>65%</td>
+      <td>Dharna</td>
+      <td>Monthly</td>
+    </tr>
+    <tr>
+      <td><strong>Loyalty Enrollment Rate</strong></td>
+      <td>% of total transactions where loyalty card was used</td>
+      <td>60%</td>
+      <td>Dharna</td>
+      <td>Weekly</td>
+    </tr>
+    <tr>
+      <td><strong>Average Basket Size</strong></td>
+      <td>Average transaction value (loyalty members vs. non-members)</td>
+      <td>$47 (+12%)</td>
+      <td>Samaroh</td>
+      <td>Weekly</td>
+    </tr>
+    <tr>
+      <td><strong>Customer Churn Rate</strong></td>
+      <td>% of loyalty members who did not visit in the current month vs. previous month</td>
+      <td>&lt;15%</td>
+      <td>Milap</td>
+      <td>Monthly</td>
+    </tr>
+    <tr>
+      <td><strong>Net Promoter Score</strong></td>
+      <td>% Promoters (9–10) minus % Detractors (0–6) on "How likely are you to recommend DesiMart?"</td>
+      <td>+45</td>
+      <td>All</td>
+      <td>Quarterly</td>
+    </tr>
+  </table>
+
+  <h3>Pillar-Specific KPIs</h3>
+
+  <table>
+    <tr>
+      <th>Pillar</th>
+      <th>Secondary KPI</th>
+      <th>Target</th>
+      <th>Measurement</th>
+    </tr>
+    <tr>
+      <td rowspan="3">Dharna</td>
+      <td>Loyalty redemption rate</td>
+      <td>25%</td>
+      <td>Monthly: # of points redeemed / # of points earned</td>
+    </tr>
+    <tr>
+      <td>Regional bonus uptake</td>
+      <td>40% of bonus-eligible purchases use regional bonus</td>
+      <td>Monthly: POS data filtered by product category</td>
+    </tr>
+    <tr>
+      <td>Tier progression</td>
+      <td>20% of Seed members upgrade to Spice in 6 months</td>
+      <td>Monthly: loyalty database tier analysis</td>
+    </tr>
+    <tr>
+      <td rowspan="2">Samaroh</td>
+      <td>Festival sales lift</td>
+      <td>+35% during festival windows vs. baseline</td>
+      <td>Per festival: sales during event window / 4-week average</td>
+    </tr>
+    <tr>
+      <td>Sampling conversion</td>
+      <td>15% of sampling recipients purchase sampled product within 7 days</td>
+      <td>Per event: promo code redemption from sampling</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Milap</td>
+      <td>WhatsApp message open rate</td>
+      <td>90%</td>
+      <td>Weekly: WhatsApp Business API delivery reports</td>
+    </tr>
+    <tr>
+      <td>WhatsApp click-through rate</td>
+      <td>12%</td>
+      <td>Weekly: tracked link clicks / messages delivered</td>
+    </tr>
+    <tr>
+      <td>Recipe Club redemption</td>
+      <td>20% of recipients purchase all recipe ingredients within 7 days</td>
+      <td>Weekly: promo code redemption from recipe messages</td>
+    </tr>
+  </table>
+
+  <h3>KPI Dashboard</h3>
+
+  <p>All KPIs will be tracked on a weekly dashboard accessible to store management. The dashboard will include:</p>
+
+  <table>
+    <tr>
+      <th>Dashboard Component</th>
+      <th>Data Source</th>
+      <th>Update Frequency</th>
+    </tr>
+    <tr>
+      <td>Loyalty enrollment and tier distribution</td>
+      <td>Loyalty management software</td>
+      <td>Daily</td>
+    </tr>
+    <tr>
+      <td>Basket size and transaction volume</td>
+      <td>POS system</td>
+      <td>Daily</td>
+    </tr>
+    <tr>
+      <td>WhatsApp engagement metrics</td>
+      <td>WhatsApp Business API</td>
+      <td>Weekly</td>
+    </tr>
+    <tr>
+      <td>Customer satisfaction (NPS)</td>
+      <td>Post-visit WhatsApp survey</td>
+      <td>Quarterly</td>
+    </tr>
+    <tr>
+      <td>Festival planogram performance</td>
+      <td>POS category sales + foot traffic</td>
+      <td>Per festival</td>
+    </tr>
+  </table>
+
+  <div class="key-insight">
+    <strong>MEASUREMENT PHILOSOPHY</strong>
+    Every strategy must prove its value through data. If a festival planogram does not increase basket size, it will be redesigned. If a WhatsApp message type has a click-through rate below 5%, it will be rewritten. If a tier threshold is never reached, it will be adjusted. Project Utsav is not a set-and-forget strategy — it is a continuous improvement system.
+  </div>
+
+  <div class="page-break">— End of Page 15 —</div>
+</div><div class="page">
+  <div class="section-label">Section V — Page 16 of 20</div>
+  <h1>V. Strategic Plan (continued)</h1>
+
+  <h2>I. Risk Analysis and Mitigation</h2>
+
+  <p>Every strategic plan carries risk. Project Utsav's risks have been identified, assessed, and paired with specific mitigation strategies:</p>
+
+  <table>
+    <tr>
+      <th>Risk</th>
+      <th>Likelihood</th>
+      <th>Impact</th>
+      <th>Mitigation Strategy</th>
+    </tr>
+    <tr>
+      <td><strong>Low initial loyalty enrollment</strong></td>
+      <td>Medium</td>
+      <td>Medium</td>
+      <td>Aggressive sign-up incentives: welcome gift ($1 credit), first-purchase bonus, referral bonus (refer a friend, both get $5). Staff trained to enroll customers at checkout during Months 1–3.</td>
+    </tr>
+    <tr>
+      <td><strong>Personalization accuracy issues</strong></td>
+      <td>High</td>
+      <td>Medium</td>
+      <td>Start with simple rules-based personalization (region-based offers from sign-up). Gradually layer in purchase-history-based recommendations as data accumulates. Monthly review of offer relevance.</td>
+    </tr>
+    <tr>
+      <td><strong>Customer privacy concerns</strong></td>
+      <td>Low</td>
+      <td>High</td>
+      <td>Clear privacy policy communicated at sign-up. No data sold to third parties. Opt-out available at any time. Compliance with Texas consumer privacy laws.</td>
+    </tr>
+    <tr>
+      <td><strong>Competitor response (Patel Brothers improves program)</strong></td>
+      <td>Medium</td>
+      <td>Medium</td>
+      <td>First-mover advantage in personalization creates a 6–12 month head start. By the time competitors copy the model, DesiMart will have 6–12 months of customer data making their personalization superior.</td>
+    </tr>
+    <tr>
+      <td><strong>Festival planogram costs exceed budget</strong></td>
+      <td>Medium</td>
+      <td>Low</td>
+      <td>Festival materials sourced from local South Asian printers (30–50% cheaper than national vendors). Planogram designs reused and adapted across similar festivals (e.g., Diwali and Navratri share visual elements).</td>
+    </tr>
+    <tr>
+      <td><strong>WhatsApp message fatigue</strong></td>
+      <td>Medium</td>
+      <td>Medium</td>
+      <td>Maximum 3 messages/week. Customer preference center: users choose message frequency (daily, weekly, biweekly) and topics of interest. Unsubscribe available at any time.</td>
+    </tr>
+    <tr>
+      <td><strong>Staff turnover affecting program consistency</strong></td>
+      <td>Medium</td>
+      <td>High</td>
+      <td>Loyalty program operations documented in standard operating procedure (SOP) manual. Cross-trained on WhatsApp tool, POS loyalty module, and festival planogram setup. Monthly refresher training.</td>
+    </tr>
+  </table>
+
+  <h2>J. Contingency Planning</h2>
+
+  <p>If key KPIs do not meet targets by Month 3, the following contingency actions will be triggered:</p>
+
+  <table>
+    <tr>
+      <th>Trigger</th>
+      <th>Contingency Action</th>
+      <th>Timeline</th>
+    </tr>
+    <tr>
+      <td>Loyalty enrollment &lt; 30% of transactions at Month 3</td>
+      <td>Increase welcome incentive (from $1 to $5 credit); add in-store sign-up booth at entrance; launch referral program ($5 for both referrer and referee)</td>
+      <td>Implement within 2 weeks of trigger</td>
+    </tr>
+    <tr>
+      <td>WhatsApp open rate &lt; 80% at Month 3</td>
+      <td>Audit message content and frequency; A/B test subject lines; shift from promotional to value-added content (recipes, cultural tips)</td>
+      <td>Implement within 1 week of trigger</td>
+    </tr>
+    <tr>
+      <td>Festival sales lift &lt; 15% at first festival</td>
+      <td>Redesign planogram with higher-visibility placement; increase sampling program; add exclusive festival-only discounts for loyalty members</td>
+      <td>Implement for next festival window</td>
+    </tr>
+    <tr>
+      <td>NPS &lt; +25 at Month 3</td>
+      <td>Conduct root-cause analysis via follow-up surveys with detractors; address top 3 pain points identified; share findings with staff and implement changes</td>
+      <td>Analysis within 1 week; changes within 2 weeks</td>
+    </tr>
+  </table>
+
+  <div class="key-insight">
+    <strong>RISK PHILOSOPHY</strong>
+    The biggest risk is not any single failure — it's failing to notice failure until it's too late to fix. That's why measurement is built into every pillar, every activity, every dollar spent. If a strategy is not working, we will know within 30 days — not 3 months. And if we know, we can act.
+  </div>
+
+  <div class="page-break">— End of Page 16 —</div>
+</div><div class="page">
+  <div class="section-label">Section V — Page 17 of 20</div>
+  <h1>V. Strategic Plan (continued)</h1>
+
+  <h2>K. Strategic Plan Summary</h2>
+
+  <p>Project Utsav is built on a simple premise: <strong>loyalty is earned when a customer feels seen.</strong> Seen in their regional identity (Dharna's personalized rewards). Seen in their cultural calendar (Samaroh's festival merchandising). Seen in their daily life (Milap's WhatsApp engagement).</p>
+
+  <p>The three pillars are interdependent:</p>
+
+  <table>
+    <tr>
+      <th>Pillar</th>
+      <th>What It Does</th>
+      <th>What It Enables</th>
+    </tr>
+    <tr>
+      <td><strong>Dharna</strong></td>
+      <td>Captures purchase data and turns it into personalized rewards</td>
+      <td>Provides the data that makes Milap's messaging accurate and Samaroh's planning precise</td>
+    </tr>
+    <tr>
+      <td><strong>Samaroh</strong></td>
+      <td>Creates cultural relevance that turns shopping into celebration</td>
+      <td>Generates the engagement data that makes Dharna's personalization meaningful</td>
+    </tr>
+    <tr>
+      <td><strong>Milap</strong></td>
+      <td>Reaches customers where they are with messages that matter</td>
+      <td>Drives foot traffic that Dharna tracks and Samaroh celebrates</td>
+    </tr>
+  </table>
+
+  <p>Together, they form a <strong>loyalty flywheel</strong>:</p>
+
+  <p><strong>Dharna</strong> captures a purchase → <strong>Milap</strong> sends a personalized offer based on that purchase → <strong>Samaroh</strong> creates a cultural context that makes the offer relevant → the customer visits again → <strong>Dharna</strong> captures the new purchase → the cycle repeats, with each iteration making the personalization more accurate and the engagement more meaningful.</p>
+
+  <p>This is not a static plan. It is a <strong>learning system</strong> — one that gets better with every customer interaction, every festival, every message sent and opened. And as it gets better, it becomes harder for competitors to catch up. Because the advantage is not just in the strategy — it is in the <strong>data</strong>. Six months of purchase data. Twelve months of festival performance data. Eighteen months of message engagement data. That data is DesiMart's competitive moat, and it grows deeper with every month of operation.</p>
+
+  <div class="key-insight">
+    <strong>THE ENDGAME</strong>
+    By Month 12, DesiMart will have: 3,000+ loyalty members, 60%+ transaction enrollment, a personalization engine trained on 12 months of purchase data, a library of festival planogram performance, and a WhatsApp community of 2,000+ engaged subscribers. None of the competitors have any of this. By the time they figure out what DesiMart is doing, DesiMart will be on its next iteration. That is the advantage of starting first, starting smart, and never stopping.
+  </div>
+
+  <div class="page-break">— End of Page 17 —</div>
+</div><div class="page">
+  <div class="section-label">Section VI — Page 18 of 20</div>
+  <h1>VI. Proposed Budget</h1>
+
+  <p>The following budget covers the six-month implementation of Project Utsav. All costs are estimates based on industry benchmarks and vendor quotes for small grocery retail operations in the Dallas-Fort Worth area.</p>
+
+  <h2>A. Project Utsav Budget — Six-Month Implementation</h2>
+
+  <table>
+    <tr>
+      <th>Category</th>
+      <th>Item</th>
+      <th>Month(s)</th>
+      <th>Cost</th>
+    </tr>
+    <tr>
+      <td rowspan="4"><strong>Dharna</strong><br><span style="font-size:0.8rem;color:var(--text-muted);">Personalized Loyalty Engine</span></td>
+      <td>Loyalty management software (POS-integrated, 6 months)</td>
+      <td>1–6</td>
+      <td>$1,800</td>
+    </tr>
+    <tr>
+      <td>Loyalty card signage and QR codes (one-time print)</td>
+      <td>1</td>
+      <td>$200</td>
+    </tr>
+    <tr>
+      <td>Welcome incentives (first 500 members × $1 credit)</td>
+      <td>1–3</td>
+      <td>$500</td>
+    </tr>
+    <tr>
+      <td>Referral program credits (Months 1–6)</td>
+      <td>1–6</td>
+      <td>$500</td>
+    </tr>
+    <tr>
+      <td rowspan="4"><strong>Samaroh</strong><br><span style="font-size:0.8rem;color:var(--text-muted);">Community Merchandising</span></td>
+      <td>Festival planogram materials (4 festivals × 6 months)</td>
+      <td>1–6</td>
+      <td>$1,200</td>
+    </tr>
+    <tr>
+      <td>In-store sampling products (weekly for 6 months)</td>
+      <td>1–6</td>
+      <td>$1,800</td>
+    </tr>
+    <tr>
+      <td>Festival banners and entrance decorations</td>
+      <td>1, 3, 5</td>
+      <td>$600</td>
+    </tr>
+    <tr>
+      <td>Regional spotlight signage (monthly rotation)</td>
+      <td>1–6</td>
+      <td>$400</td>
+    </tr>
+    <tr>
+      <td rowspan="4"><strong>Milap</strong><br><span style="font-size:0.8rem;color:var(--text-muted);">Digital Relationship Building</span></td>
+      <td>WhatsApp Business API (6 months, ~6,000 messages)</td>
+      <td>1–6</td>
+      <td>$900</td>
+    </tr>
+    <tr>
+      <td>Recipe card design and print (monthly × 6)</td>
+      <td>1–6</td>
+      <td>$300</td>
+    </tr>
+    <tr>
+      <td>Google Business Profile promotion (monthly posts)</td>
+      <td>1–6</td>
+      <td>$0</td>
+    </tr>
+    <tr>
+      <td>Staff training materials and time (one-time + refresher)</td>
+      <td>1, 4</td>
+      <td>$400</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="total-row">TOTAL PROJECT UTSAV BUDGET</td>
+      <td class="total-row">$8,700</td>
+    </tr>
+  </table>
+
+  <h2>B. Budget Allocation by Pillar</h2>
+
+  <table>
+    <tr>
+      <th>Pillar</th>
+      <th>Total Cost</th>
+      <th>% of Budget</th>
+      <th>Monthly Average</th>
+    </tr>
+    <tr>
+      <td>Dharna (Personalized Loyalty)</td>
+      <td>$3,000</td>
+      <td>34.5%</td>
+      <td>$500</td>
+    </tr>
+    <tr>
+      <td>Samaroh (Community Merchandising)</td>
+      <td>$3,000</td>
+      <td>34.5%</td>
+      <td>$500</td>
+    </tr>
+    <tr>
+      <td>Milap (Digital Engagement)</td>
+      <td>$1,600</td>
+      <td>18.4%</td>
+      <td>$267</td>
+    </tr>
+    <tr>
+      <td>Contingency reserve</td>
+      <td>$1,100</td>
+      <td>12.6%</td>
+      <td>$183</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="total-row">TOTAL</td>
+      <td class="total-row">$8,700</td>
+    </tr>
+  </table>
+
+  <h2>C. Projected Return on Investment</h2>
+
+  <p>Based on the projected KPI improvements outlined in Section V, the expected return on the $8,700 Project Utsav investment over six months is as follows:</p>
+
+  <table>
+    <tr>
+      <th>Impact</th>
+      <th>Calculation</th>
+      <th>6-Month Value</th>
+    </tr>
+    <tr>
+      <td>Increased repeat visits (22% lift)</td>
+      <td>22% × 1,200 regular customers × $47 avg. basket × 35% gross margin</td>
+      <td>$13,562</td>
+    </tr>
+    <tr>
+      <td>Basket size increase ($5 per transaction)</td>
+      <td>$5 × 1,200 customers × 2 visits/month × 6 months × 35% margin</td>
+      <td>$11,340</td>
+    </tr>
+    <tr>
+      <td>Reduced churn (28% reduction)</td>
+      <td>28% × 15% monthly churn × 1,200 customers × $94/month spend × 6 months</td>
+      <td>$2,678</td>
+    </tr>
+    <tr>
+      <td><strong>Total projected incremental revenue impact</strong></td>
+      <td></td>
+      <td><strong>$27,580</strong></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="total-row"><strong>Project Utsav investment</strong></td>
+      <td class="total-row"><strong>$8,700</strong></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="total-row"><strong>Net return (6 months)</strong></td>
+      <td class="total-row"><strong>$18,880</strong></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="total-row"><strong>ROI</strong></td>
+      <td class="total-row"><strong>217%</strong></td>
+    </tr>
+  </table>
+
+  <div class="key-insight">
+    <strong>BUDGET PHILOSOPHY</strong>
+    Every dollar in Project Utsav is tied to a measurable outcome. The loyalty software ($300/month) purchases customer data that drives personalized offers. The sampling products ($300/month) drive trial that converts to repeat purchases. The WhatsApp API ($150/month) reaches 95% of smartphone users at a 98% open rate. No dollar is spent on a "maybe." Every dollar is an investment with an expected return.
+  </div>
+
+  <div class="page-break">— End of Page 18 —</div>
+</div><div class="page">
+  <div class="section-label">Section VII — Page 19 of 20</div>
+  <h1>VII. Bibliography</h1>
+
+  <p><strong>Primary Research (Planned)</strong></p>
+
+  <div class="bib-entry"><strong>Customer Survey.</strong> Google Forms survey distributed through South Asian community groups on WhatsApp, Facebook, and Telegram, in-person at Frisco temples and cultural associations, and at competitor grocery store locations in Frisco, Texas. Target sample: n = 150+. Conducted by [Author Name], [Date].</div>
+
+  <div class="bib-entry"><strong>Competitor Observations.</strong> Structured observations at Patel Brothers (2787 Preston Rd, Frisco), Hareli Fresh Market (10650 Coit Rd, Frisco), and India Bazaar (8998 Preston Rd, Frisco). Two visits per store: weekday afternoon (Tuesday, 2–4 PM) and weekend morning (Saturday, 9–11 AM). Conducted by [Author Name], [Date].</div>
+
+  <div class="bib-entry"><strong>Stakeholder Interviews.</strong> Semi-structured interviews with 8–10 stakeholders: South Asian grocery shoppers (n = 4), UT Dallas students (n = 2), store employees (n = 2), South Asian retail business owners in Frisco (n = 2). 20–30 minutes each, conducted in person or via video call, [Date].</div>
+
+  <p><strong>Secondary Research</strong></p>
+
+  <div class="bib-entry"><strong>American Community Survey (ACS).</strong> U.S. Census Bureau. "Asian Indian Population: Collin County, Texas." 2020–2024 5-Year Estimates. https://data.census.gov</div>
+
+  <div class="bib-entry"><strong>Census Bureau QuickFacts.</strong> "Frisco city, Texas." Population estimates, median household income, racial demographics. 2025. https://www.census.gov/quickfacts/friscocitytexas</div>
+
+  <div class="bib-entry"><strong>EPRA Journals.</strong> "Role of Loyalty Programs in Retaining Customers: A Case Study of Pharmacies and Supermarkets in North Bangalore." April 2025. https://eprajournals.com</div>
+
+  <div class="bib-entry"><strong>India CX Report 2025: Grocery Retail.</strong> KPMG India. Customer experience trends in Indian grocery retail, including loyalty programs, subscription models, and digital engagement. March 2025. https://kpmg.com/in</div>
+
+  <div class="bib-entry"><strong>Kellogg School of Management.</strong> "How a Growing South Asian Diaspora Is Changing Retail." Insight article analyzing the $10B+ consumer market of South Asian Americans and retail strategies for capturing the "Indian share of wallet." 2024. https://insight.kellogg.northwestern.edu</div>
+
+  <div class="bib-entry"><strong>Neilsberg.</strong> "Frisco, TX Population by Race &amp; Ethnicity — 2025 Update." Demographic breakdown of Frisco's population, including Asian and Asian Indian trends. 2025. https://www.neilsberg.com/insights/frisco-tx-population-by-race</div>
+
+  <div class="bib-entry"><strong>Oldenburg, Ray.</strong> <em>The Great Good Place.</em> Paragon House, 1999. Concept of "third places" as community anchors.</div>
+
+  <div class="bib-entry"><strong>Pew Research Center.</strong> "Social Life and Technology Trends." Survey on screen time, social media use, and offline activity engagement. 2025. https://www.pewresearch.org</div>
+
+  <div class="bib-entry"><strong>Revino.</strong> "AI Loyalty Platform Case Study: 680 Indian Supermarket Stores." Redemption rate improvement, churn reduction, WhatsApp offer revenue. 2025. https://www.revinotech.com/casestudies</div>
+
+  <div class="bib-entry"><strong>Statista.</strong> "Grocery Retailing in US — Statistics &amp; Facts." Market size, customer loyalty trends, and loyalty program penetration in U.S. grocery retail. 2025. https://www.statista.com</div>
+
+  <div class="bib-entry"><strong>U.S. Department of Commerce.</strong> "South Asian Diaspora Consumer Market Report." Annual spending, household income, and retail consumption patterns of South Asian Americans. 2025.</div>
+
+  <div class="page-break">— End of Page 19 —</div>
+</div><div class="page">
+  <div class="section-label">Section VIII — Page 20 of 20</div>
+  <h1>VIII. Appendix</h1>
+
+  <div class="appendix-section">
+    <h4>A. Customer Survey Instrument (Planned)</h4>
+    <p>The customer survey will include 25–30 questions organized into five sections. A copy of the final survey instrument will be included here following primary research completion.</p>
+    <p><strong>Section A — Shopping Habits (5 questions):</strong></p>
+    <ol style="margin-left: 1.5rem; font-size: 0.9rem;">
+      <li>How often do you shop at a South Asian grocery store? (Daily / Weekly / Biweekly / Monthly / Rarely)</li>
+      <li>Which South Asian grocery stores do you shop at most often? (Open response + multiple choice)</li>
+      <li>How much do you typically spend per visit? ($50–$100 / $100–$200 / $200–$300 / $300+)</li>
+      <li>How many South Asian grocery stores do you shop at regularly? (1 / 2 / 3 / 4+)</li>
+      <li>What is the primary factor that determines which store you shop? (Price / Selection / Freshness / Location / Service)</li>
+    </ol>
+    <p><strong>Section B — Loyalty Program Awareness (5 questions):</strong></p>
+    <ol style="margin-left: 1.5rem; font-size: 0.9rem;" start="6">
+      <li>Are you aware of any loyalty programs at South Asian grocery stores in your area? (Yes / No)</li>
+      <li>Which loyalty programs are you enrolled in? (Patel Brothers / India Bazaar / None / Other)</li>
+      <li>How often do you use your loyalty benefits? (Always / Often / Sometimes / Rarely / Never)</li>
+      <li>On a scale of 1–5, how valuable are loyalty programs to you? (Likert scale)</li>
+      <li>What would make you use a loyalty program more often? (Open response)</li>
+    </ol>
+    <p><strong>Section C — Loyalty Drivers (8 questions):</strong></p>
+    <ol style="margin-left: 1.5rem; font-size: 0.9rem;" start="11">
+      <li>Rate the importance of each factor in determining your store loyalty (1–5 Likert): product availability, price fairness, customer service, cultural relevance, loyalty program, location, store cleanliness, fresh produce quality</li>
+      <li>Rank your top 3 factors (ranking question)</li>
+      <li>Would you switch stores for a personalized loyalty program? (Definitely / Probably / Unlikely / Definitely not)</li>
+      <li>What type of reward would motivate you most? (Percentage discount / Free product / Bonus points / Exclusive access)</li>
+      <li>How important is it that a store celebrates cultural festivals? (1–5 Likert)</li>
+      <li>Would you visit a store more often if they hosted cultural events? (Yes / No / Maybe)</li>
+      <li>What cultural events would you like to see celebrated? (Open response: Diwali, Eid, Navratri, Holi, Onam, Vishu, Pohela Boishakh, other)</li>
+      <li>How likely are you to recommend a store to a friend or family member? (0–10 NPS scale)</li>
+    </ol>
+  </div>
+
+  <div class="appendix-section">
+    <h4>B. Competitor Observation Protocol</h4>
+    <p>Each competitor store will be observed for a 90-minute window during two time periods (weekday afternoon, weekend morning). Observers will record: store traffic (customers per 15 minutes), average basket size (visual estimate), loyalty program visibility (signage count), seasonal merchandising (display count), and staff-customer interactions (greeting count, issue resolution count).</p>
+  </div>
+
+  <div class="appendix-section">
+    <h4>C. Interview Protocol</h4>
+    <p>Each interview will follow a semi-structured protocol with 8–10 open-ended questions, including: "What makes you loyal to a particular grocery store?" "What would make you switch to a new store?" "How do you learn about new stores or products?" "What role do cultural events play in your shopping?" "What would a perfect loyalty program look like to you?"</p>
+  </div>
+
+  <div class="appendix-section">
+    <h4>D. Supplementary Data Tables</h4>
+    <p>The following tables will be added following primary research completion:</p>
+    <ul style="font-size: 0.9rem; margin-left: 1.5rem;">
+      <li>D.1: Full survey results (n = [actual]) with cross-tabulation by demographic segment</li>
+      <li>D.2: Competitor observation data (raw counts from all 6 observation sessions)</li>
+      <li>D.3: Interview transcripts (anonymized)</li>
+      <li>D.4: SWOT analysis refinement based on primary data</li>
+      <li>D.5: Revised projections based on primary research findings</li>
+    </ul>
+  </div>
+
+  <div class="page-break">— End of Page 20 —</div>
+  <div class="page-break">— END OF ENTRY —</div>
+</div>
+
+<script>
+(function() {
+  // Page navigation
+  const pages = document.querySelectorAll('.page, .cover, .toc');
+  let currentPage = 0;
+
+  // Page indicator
+  const indicator = document.createElement('div');
+  indicator.className = 'page-indicator';
+  document.body.appendChild(indicator);
+  indicator.textContent = '1 / ' + pages.length;
+
+  // Nav controls
+  const nav = document.createElement('div');
+  nav.className = 'nav-controls';
+  document.body.appendChild(nav);
+
+  const prevBtn = document.createElement('button');
+  prevBtn.textContent = '← Prev';
+  prevBtn.onclick = function() {
+    if (currentPage > 0) { currentPage--; scrollToPage(currentPage); }
+  };
+  const nextBtn = document.createElement('button');
+  nextBtn.textContent = 'Next →';
+  nextBtn.onclick = function() {
+    if (currentPage < pages.length - 1) { currentPage++; scrollToPage(currentPage); }
+  };
+  nav.appendChild(prevBtn);
+  nav.appendChild(nextBtn);
+
+  function scrollToPage(idx) {
+    pages[idx].scrollIntoView({ behavior: 'smooth' });
+    indicator.textContent = (idx + 1) + ' / ' + pages.length;
+    currentPage = idx;
+  }
+
+  // Intersection Observer for scroll tracking
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        const idx = Array.prototype.indexOf.call(pages, entry.target);
+        if (idx !== -1) {
+          currentPage = idx;
+          indicator.textContent = (idx + 1) + ' / ' + pages.length;
+          prevBtn.disabled = idx === 0;
+          nextBtn.disabled = idx === pages.length - 1;
+        }
+      }
+    });
+  }, { rootMargin: '-40% 0px -40% 0px' });
+
+  pages.forEach(function(page) { observer.observe(page); });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+      e.preventDefault();
+      if (currentPage < pages.length - 1) { currentPage++; scrollToPage(currentPage); }
+    } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+      e.preventDefault();
+      if (currentPage > 0) { currentPage--; scrollToPage(currentPage); }
+    } else if (e.key === 'Home') {
+      e.preventDefault();
+      currentPage = 0; scrollToPage(0);
+    } else if (e.key === 'End') {
+      e.preventDefault();
+      currentPage = pages.length - 1; scrollToPage(currentPage);
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

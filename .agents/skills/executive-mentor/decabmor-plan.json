@@ -1,0 +1,70 @@
+{
+    "decision": "DECA BMOR: Board Game Cafe Business Plan — Stress Test All Assumptions",
+    "criteria": [
+        {
+            "name": "Data Quality",
+            "weight": 0.25,
+            "description": "Are sources reliable, cited, and verifiable?"
+        },
+        {
+            "name": "Financial Credibility",
+            "weight": 0.20,
+            "description": "Do the numbers hold up to scrutiny?"
+        },
+        {
+            "name": "Market Logic",
+            "weight": 0.20,
+            "description": "Does the market opportunity actually exist?"
+        },
+        {
+            "name": "Strategy Coherence",
+            "weight": 0.15,
+            "description": "Do the pillars connect to the findings?"
+        },
+        {
+            "name": "Execution Feasibility",
+            "weight": 0.10,
+            "description": "Can a high school team actually do this?"
+        },
+        {
+            "name": "Judge Appeal",
+            "weight": 0.10,
+            "description": "Will DECA judges reward this?"
+        }
+    ],
+    "options": [
+        {
+            "name": "Current Plan (Turn the P.A.G.E.)",
+            "scores": {
+                "Data Quality": 6,
+                "Financial Credibility": 4,
+                "Market Logic": 8,
+                "Strategy Coherence": 7,
+                "Execution Feasibility": 5,
+                "Judge Appeal": 7
+            }
+        },
+        {
+            "name": "Simplified Plan (Focus on 2 Pillars)",
+            "scores": {
+                "Data Quality": 8,
+                "Financial Credibility": 7,
+                "Market Logic": 7,
+                "Strategy Coherence": 9,
+                "Execution Feasibility": 9,
+                "Judge Appeal": 8
+            }
+        },
+        {
+            "name": "Community-First Plan (Drop P.A.G.E., Focus on Events)",
+            "scores": {
+                "Data Quality": 7,
+                "Financial Credibility": 6,
+                "Market Logic": 7,
+                "Strategy Coherence": 8,
+                "Execution Feasibility": 8,
+                "Judge Appeal": 7
+            }
+        }
+    ]
+}

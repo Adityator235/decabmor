@@ -1,0 +1,2440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Game Table &mdash; Complete DECA BMOR Entry</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #2D5F3E;
+    --primary-dark: #1E4A2E;
+    --accent: #D4913C;
+    --bg: #FFFFFF;
+    --text: #1A1A1A;
+    --text-muted: #6B6B6B;
+    --border: #E0DCD7;
+    --surface: #F9F7F5;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  .page {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    background: var(--bg);
+    padding: 3.5rem 4rem;
+    position: relative;
+    page-break-after: always;
+    break-after: page;
+  }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+  .page::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+  }
+
+  h1 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary);
+    margin: 1.5rem 0 0.75rem;
+    font-size: 1.1rem;
+  }
+  h3 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary-dark);
+    margin: 1.25rem 0 0.5rem;
+    font-size: 1rem;
+  }
+  h4 {
+    font-family: 'Merriweather', serif;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  p { margin-bottom: 1rem; font-size: 0.95rem; }
+  p:last-child { margin-bottom: 0; }
+
+  .section-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .page-number {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 2rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.25rem 0;
+    font-size: 0.85rem;
+  }
+  th, td {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border);
+    text-align: left;
+  }
+  th {
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+  }
+
+  .stat-row {
+    display: flex;
+    gap: 1rem;
+    margin: 1.25rem 0;
+  }
+  .stat {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+  }
+  .stat .number {
+    font-family: 'Merriweather', serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+  .stat .label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    line-height: 1.3;
+  }
+
+  .key-insight {
+    border-left: 3px solid var(--primary);
+    padding: 0.75rem 1rem;
+    margin: 1.25rem 0;
+    font-size: 0.9rem;
+  }
+  .key-insight strong {
+    color: var(--primary);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: var(--surface);
+    border-radius: 4px;
+  }
+
+  .page-break {
+    margin: 2.5rem 0;
+    padding-top: 1.5rem;
+    border-top: 2px dashed var(--border);
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-style: italic;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .bar-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1rem 0;
+  }
+  .bar-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .bar-label {
+    width: 140px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .bar-track {
+    flex: 1;
+    height: 28px;
+    background: #F0EDE8;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+  }
+  .bar-fill {
+    height: 100%;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: white;
+  }
+  .bar-fill.green { background: var(--primary); }
+  .bar-fill.gold { background: var(--accent); }
+  .bar-fill.muted { background: #9A9590; }
+
+  .revenue-bar {
+    display: flex;
+    height: 32px;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 1rem 0;
+  }
+  .revenue-bar .segment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: white;
+    padding: 0 0.5rem;
+  }
+  .revenue-bar .fg { background: var(--primary); flex: 0.65; }
+  .revenue-bar .fc { background: var(--accent); flex: 0.25; }
+  .revenue-bar .fr { background: #9A9590; flex: 0.10; }
+  .revenue-legend {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+  }
+  .revenue-legend span::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 4px;
+    vertical-align: middle;
+  }
+  .revenue-legend .fg::before { background: var(--primary); }
+  .revenue-legend .fc::before { background: var(--accent); }
+  .revenue-legend .fr::before { background: #9A9590; }
+
+  .infographic {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .info-card {
+    padding: 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    text-align: center;
+  }
+  .info-card .icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+  .info-card h4 { font-size: 0.9rem; margin-bottom: 0.3rem; color: var(--primary); }
+  .info-card p { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0; }
+
+  .competitor-row {
+    display: grid;
+    grid-template-columns: 120px 1fr 1fr 1fr;
+    gap: 0.5rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.85rem;
+    align-items: start;
+  }
+  .competitor-row.header {
+    font-weight: 600;
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+  }
+  .competitor-name { font-weight: 600; color: var(--text); }
+  .competitor-row p { font-size: 0.8rem; margin-bottom: 0; color: var(--text-muted); }
+
+  .gap-callout {
+    background: var(--surface);
+    padding: 1.25rem;
+    border-left: 4px solid var(--accent);
+    margin: 1.5rem 0;
+  }
+  .gap-callout h4 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .method-card {
+    background: var(--surface);
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  .method-card .status {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .method-card .status.completed { background: #E8F5E9; color: #2E7D32; }
+  .method-card .status.planned { background: #FFF3E0; color: #E65100; }
+
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+    margin: 1.5rem 0;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 1.25rem;
+    padding-left: 1rem;
+  }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -1.25rem;
+    top: 0.4rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--primary);
+    border: 2px solid var(--bg);
+  }
+  .timeline-item .week {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .timeline-item p { font-size: 0.85rem; margin-bottom: 0; }
+
+  .pillar-card {
+    background: var(--surface);
+    padding: 1.25rem;
+    border-left: 3px solid var(--primary);
+    margin-bottom: 1.25rem;
+  }
+  .pillar-card h3 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary);
+    margin-top: 0;
+    font-size: 1rem;
+  }
+  .pillar-card .pillar-letter {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    font-family: 'Merriweather', serif;
+    font-weight: 900;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 0;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .tier-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.8rem;
+  }
+  .tier-table th, .tier-table td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border);
+    text-align: left;
+  }
+  .tier-table th { background: var(--primary); color: white; }
+
+  .total-row td {
+    font-weight: 700;
+    border-top: 2px solid var(--primary);
+    background: var(--surface);
+  }
+
+  .swot-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin: 1.25rem 0;
+  }
+  .swot-cell {
+    padding: 1.25rem;
+    background: var(--bg);
+  }
+  .swot-cell h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid;
+  }
+  .swot-cell.strengths h3 { color: var(--primary); border-color: var(--primary); }
+  .swot-cell.weaknesses h3 { color: var(--accent); border-color: var(--accent); }
+  .swot-cell.opportunities h3 { color: #2D8F3E; border-color: #2D8F3E; }
+  .swot-cell.threats h3 { color: #C0392B; border-color: #C0392B; }
+  .swot-cell ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-size: 0.85rem;
+  }
+  .swot-cell li { margin-bottom: 0.5rem; line-height: 1.5; }
+
+  .cover-page {
+    max-width: 750px;
+    width: 100%;
+    text-align: center;
+    padding: 5rem 3.5rem;
+    border: 1px solid var(--border);
+    position: relative;
+    margin: 0 auto 3rem;
+    page-break-after: always;
+    break-after: page;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .cover-page::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+  }
+  .cover-page .event-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 2.5rem;
+  }
+  .cover-page .business-name {
+    font-family: 'Merriweather', serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--primary);
+    line-height: 1.15;
+    margin-bottom: 0.5rem;
+  }
+  .cover-page .business-tagline {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+    letter-spacing: 0.02em;
+  }
+  .cover-page .divider {
+    width: 50px;
+    height: 2px;
+    background: var(--accent);
+    margin: 2.5rem auto;
+  }
+  .cover-page .meta {
+    font-size: 0.9rem;
+    line-height: 2;
+    color: var(--text);
+  }
+  .cover-page .meta strong { font-weight: 600; }
+  .cover-page .topic {
+    font-family: 'Merriweather', serif;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 3rem;
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  .toc-page {
+    max-width: 650px;
+    margin: 0 auto 3rem;
+    page-break-after: always;
+    break-after: page;
+  }
+  .toc-title {
+    font-family: 'Merriweather', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.3rem;
+  }
+  .toc-subtitle {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+  .toc-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.6rem 0;
+    border-bottom: 1px dotted var(--border);
+    font-size: 0.9rem;
+  }
+  .toc-section:last-child { border-bottom: none; }
+  .toc-label { font-weight: 500; color: var(--text); }
+  .toc-label.sub { padding-left: 1.5rem; font-weight: 400; font-size: 0.85rem; color: var(--text-muted); }
+  .toc-page-num {
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    margin-left: 1rem;
+  }
+  .toc-divider {
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+    margin: 1.5rem 0;
+  }
+  .toc-note {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .citation {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+  .citation:last-child { border-bottom: none; }
+  .citation-number { font-weight: 700; color: var(--primary); margin-right: 0.5rem; }
+
+  .survey-question {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+  }
+  .survey-question:last-child { border-bottom: none; }
+  .q-number { font-weight: 700; color: var(--primary); margin-right: 0.5rem; }
+  .q-type {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-style: italic;
+    display: block;
+    margin-top: 0.25rem;
+  }
+
+  .kpi-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.25rem 0;
+    font-size: 0.85rem;
+  }
+  .kpi-table th, .kpi-table td {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border);
+    text-align: left;
+  }
+  .kpi-table th { background: var(--primary); color: white; font-weight: 600; }
+  .kpi-table .metric { font-weight: 600; color: var(--primary-dark); }
+
+  .channel-card {
+    background: var(--surface);
+    padding: 1rem;
+    border-left: 3px solid var(--primary);
+    margin-bottom: 1rem;
+  }
+  .channel-card h4 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary);
+    margin-top: 0;
+    font-size: 0.95rem;
+  }
+  .channel-card p { font-size: 0.85rem; margin-bottom: 0; }
+
+  .psychographic-box {
+    background: var(--surface);
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    margin: 1rem 0;
+  }
+  .psychographic-box h4 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .chart-container {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+  }
+
+  .demographic-bar { margin: 0.75rem 0; }
+  .demographic-bar .bar-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+  }
+  .demographic-bar .bar-track {
+    height: 24px;
+    background: #F0EDE8;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .demographic-bar .bar-fill {
+    height: 100%;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: white;
+  }
+  .demographic-bar .bar-fill.green { background: var(--primary); }
+  .demographic-bar .bar-fill.gold { background: var(--accent); }
+  .demographic-bar .bar-fill.muted { background: #9A9590; }
+
+  .detail-box {
+    background: #F9F7F2;
+    padding: 1.25rem;
+    border-left: 4px solid var(--accent);
+    margin-bottom: 1.25rem;
+  }
+  .detail-box h3 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary);
+    margin-top: 0;
+    font-size: 1rem;
+  }
+
+  @media print {
+    body { background: white; }
+    .page, .cover-page, .toc-page {
+      margin: 0;
+      padding: 2rem 2.5rem;
+      border: none;
+      page-break-after: always;
+      break-after: page;
+      box-shadow: none;
+    }
+    .no-print { display: none !important; }
+  }
+
+  .nav-controls {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .nav-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: box-shadow 0.2s;
+  }
+  .nav-btn:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+  .page-indicator {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    background: var(--bg);
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+</style>
+</head>
+<body>
+
+<div class="no-print" style="position:fixed;top:0.5rem;left:2.5rem;font-size:0.65rem;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase;z-index:999;">
+  The Game Table &mdash; DECA BMOR 2026&ndash;2027 &nbsp;|&nbsp; <a href="#" onclick="window.print();return false;" style="color:var(--primary);">Print to PDF</a>
+</div>
+
+<div class="cover-page">
+Buying and Merchandising Operations — Research Event
+  <h1>The Game Table
+  <p>Board Game Cafe & Retail — Frisco, Texas
+  
+  
+    <strong>Prepared by:   [Your Team Name]<br>
+    <strong>School:   [High School Name]<br>
+    <strong>Address:   [School Address], Frisco, TX 75034<br>
+    <strong>Date:   October 2026
+  
+  
+    Rebuilding Customer Loyalty and Spending<br>
+    2026–2027 DECA Competition Year
+</div>
+
+<div class="toc-page">
+<h1>Table of Contents
+  <p>The Game Table — DECA BMOR 2026–2027
+
+  
+    <span>I.  Executive Summary
+    <span>1
+  
+  
+
+  
+    <span>II.  Introduction
+    <span>2
+  
+  
+    <span>A.  Description of the business
+    <span>2
+  
+  
+    <span>B.  Target market
+    <span>3
+  
+  
+    <span>C.  Current loyalty strategy
+    <span>4
+  
+  
+
+  
+    <span>III.  Research Methods Used in the Study
+    <span>5
+  
+  
+    <span>A.  Rationale of research methodologies
+    <span>5
+  
+  
+    <span>B.  Process used to conduct research
+    <span>6
+  
+  
+
+  
+    <span>IV.  Findings and Conclusions of the Study
+    <span>7
+  
+  
+    <span>A.  Findings of the research study
+    <span>7
+  
+  
+    <span>B.  Conclusions based on the findings
+    <span>10
+  
+  
+
+  
+    <span>V.  Proposed Strategic Plan
+    <span>12
+  
+  
+    <span>A.  Objectives and rationale
+    <span>12
+  
+  
+    <span>B.  Proposed activities and timelines
+    <span>15
+  
+  
+    <span>C.  Metrics and KPIs
+    <span>17
+  
+  
+
+  
+    <span>VI.  Proposed Budget
+    <span>18
+  
+  
+
+  
+    <span>VII.  Bibliography
+    <span>19
+  
+  
+
+  
+    <span>VIII.  Appendix
+    <span>20
+  
+  
+    <span>A.  Survey instrument
+    <span>20
+  
+  
+    <span>B.  Planned primary research
+    <span>20
+  
+
+  <p>Note: This entry is submitted for the preliminary round. Primary research (customer surveys, competitor observations, and owner interviews) is planned for completion before the final round. All findings are based on secondary research unless otherwise noted.
+</div>
+
+<div class="page">
+Section I — Page 1 of 20
+  <h1>I. Executive Summary
+
+  <p><strong>The Game Table is a board game cafe and retail concept planned for Frisco, Texas — a city of 210,000+ residents with the largest South Asian population of any U.S. city and a median household income of $105,000. The Game Table combines three revenue streams — food and beverage (65%), cover charges for access to our library of 300–800 curated board games (25%), and retail sale of new and pre-owned games (10%) — to create a resilient business model that captures spending from families, college students, and adult hobbyists across the full daytime and evening hours.
+
+  
+    <strong>THE OPPORTUNITY
+    Screen fatigue is driving 53% of consumers to seek offline social activities — a 20-point increase in two years (Pew Research Center, 2025). No board game cafe in Frisco serves the 10 AM – 4 PM daytime window, leaving an estimated 30% of weekly capacity underutilized by competitors.
+  
+
+  
+    
+      $201K
+      Estimated<br>Startup Costs
+    
+    
+      $282K
+      Projected<br>Year 1 Revenue
+    
+    
+      Q2
+      Break-Even<br>Target
+    
+  
+
+  <h2>The Problem
+
+  <p>Board gamers in North America spend an average of $497 per year on hobbies (Statista, 2025), yet the primary entertainment options in Frisco are designed for screen-based activities. Existing board game cafes — including Nerdvana, the area's only competitor — operate exclusively during evening and weekend hours, effectively abandoning the 10 AM to 4 PM daytime window where families, remote workers, and college students are available to visit.
+
+  <p>Additionally, the rising cost of new board games — average $54 per game with premium titles exceeding $100 — creates a barrier to entry for the core demographic of teenagers and young adults. The pre-owned market exists but is fragmented across eBay, Facebook Marketplace, and local game stores with no quality guarantee or return policy.
+
+  <h2>The Solution
+
+  <p>The Game Table solves both problems through a retail + experience hybrid model:
+
+  <p><strong>Daytime access. By opening at 10 AM on weekdays — two hours before the typical board game cafe — The Game Table captures a temporal gap that no local competitor is exploiting. This window serves parents with young children, UT Dallas students between classes, and remote workers seeking a daytime social activity.
+
+  <p><strong>Pre-owned marketplace. A curated buy-back and resale program lets customers trade games at fair prices, reducing their cost of participation while generating 40–55% gross margins on pre-owned sales for The Game Table.
+
+  <p><strong>Turn the P.A.G.E. loyalty campaign. A four-pillar strategy (Pre-Owned Marketplace, App-Based Transparency, Giving & Awareness, Employee Engagement) rebuilds customer loyalty through community engagement rather than transactional discounts — directly addressing the research finding that 68% of customers cite "community feel" as their top loyalty driver (Loyalty Pass, 2025).
+
+  <h2>Revenue Composition
+
+  
+    65% F&B
+    25% Cover
+    10% Retail
+  
+  
+    <span>Food & Beverage
+    <span>Cover Charges
+    <span>Retail Sales
+  
+
+  
+    <strong>WHY THIS MODEL WORKS
+    Food and beverage generates the highest margins in the cafe business (75–85% on coffee, 60–70% on food). Cover charges drive profit with near-zero marginal cost. Retail creates an additional revenue stream and positions The Game Table as a store, not just an experience — diversifying risk if foot traffic underperforms.
+  
+
+  <h2>Investment and Returns
+
+  <p>Total estimated startup costs range from <strong>$201,000 to $460,000 depending on location, lease terms, and build-out scope in the Frisco area. The Turn the P.A.G.E. loyalty campaign requires an additional <strong>$8,700 in dedicated marketing investment over the first six months.
+
+  <p><em>Note: Revenue projections are based on industry benchmarks for board game cafes and experiential retail. Actual results will vary based on location, execution, and market conditions. All projections will be refined following primary research completion before the final round.
+
+  
+    <strong>Important: All findings in this entry are based on secondary research. Primary research (customer surveys, competitor observations, and stakeholder interviews) is planned for completion before the final DECA round. Projections and strategic recommendations will be validated and refined with primary data.
+</div>
+
+<div class="page">
+Section II — Page 2 of 20
+  <h1>II. Introduction
+
+  <h2>A. Description of the Business
+
+  <p>The Game Table is a board game cafe and retail store planned for Frisco, Texas. The business model operates on three revenue streams: a cover charge that grants customers access to a library of 300 to 800 board games, food and beverage sales, and retail game merchandise. The facility will occupy approximately 2,500 square feet, featuring communal tables for group play, intimate seating areas for couples and small parties, and retail shelving displaying games for purchase.
+
+  <p>The food and beverage program is designed to complement the gaming experience. The menu will feature 12 to 20 items specifically selected for their compatibility with gameplay — flatbreads, pretzels, charcuterie boards, and grain bowls. Items that are excessively saucy or greasy have been excluded, as they interfere with the ability to handle cards and game pieces cleanly. The beverage program will include specialty coffee, craft sodas, tea service, and beer and wine where licensing permits.
+
+  <p>The purpose of The Game Table extends beyond traditional retail. It functions as a "third place" — a social surrounding separate from the two usual social environments of home and the workplace (Oldenburg, 1999). Customers come to play games, meet new people, celebrate birthdays, and engage in face-to-face interaction. The business generates revenue through food sales and game purchases, but its competitive advantage lies in its role as a community gathering space.
+
+  
+    
+      🎲
+      <h4>300–800 Games
+      <p>Library size spanning strategy, party, cooperative, and classic genres
+    
+    
+      ☕
+      <h4>12–20 Menu Items
+      <p>Gameplay-friendly foods with 75–85% margin on beverages
+    
+    
+      📍
+      <h4>2,500 Sq Ft
+      <p>Communal tables, intimate seating, and retail shelving
+    
+  
+
+  <h2>B. Target Market
+
+  <p>The Game Table's primary customer base consists of three segments, organized around visit units rather than individuals. Because a significant portion of weekday traffic will be families with children, the business models visit units (parent + children) as the core economic driver. Each visit unit generates revenue from multiple cover charges and higher F&B orders than a single customer.
+
+  <p>The target market has been segmented into three distinct customer groups based on age, visitation frequency, and average spend per visit:
+
+  <table>
+    <tr>
+      <th>Customer Group
+      <th>Age Range
+      <th>Visits Per Year
+      <th>Avg. Spend / Visit
+    
+    <tr>
+      <td>Young Adults (UT Dallas Students)
+      <td>18–24
+      <td>12–24
+      <td>$15–$25
+    
+    <tr>
+      <td>Millennial Parents
+      <td>28–42
+      <td>8–12
+      <td>$45–$65
+    
+    <tr>
+      <td>Adult Hobbyists
+      <td>25–50
+      <td>4–8
+      <td>$30–$45
+    
+  
+
+  <p><strong>Young Adults (UT Dallas Students) represent approximately 35% of projected foot traffic. They are expected to visit 12 to 24 times per year, spending $15 to $25 per visit on cover charges and food or beverages. While their individual spend is moderate, their high visitation frequency provides a steady base of recurring revenue and contributes to a vibrant store atmosphere. UT Dallas's 30,000+ student body provides a large pool within a 15-minute drive.
+
+  <p><strong>Millennial Parents represent approximately 45% of projected foot traffic and are the highest-value segment. A parent-child visit unit (2 adults + 1–3 children) generates $45–$65 per visit — significantly above the business average. They visit 8 to 12 times per year, primarily on weekends and weekday afternoons. This segment drives the majority of F&B revenue and is the primary target for the daytime window (10 AM – 4 PM).
+
+  <p><strong>Adult Hobbyists represent approximately 20% of foot traffic. They visit 4 to 8 times per year, typically on weekday evenings for structured game nights. Their per-visit spend is moderate ($30–$45), but they are the primary purchasers of new and pre-owned games, making them critical to the retail component of the business.
+
+  — End of Page 2 —
+</div>
+
+<div class="page">
+Section II — Page 3 of 20
+  <h1>II. Introduction (continued)
+
+  <h2>B. Target Market (continued)
+
+  <h3>Market Sizing
+  <p>Based on the demographic data for Frisco, Texas, and the surrounding Denton County area, the following table presents the estimated addressable market for The Game Table:
+
+  <table>
+    <tr>
+      <th>Segment
+      <th>Population (Denton County)
+      <th>Estimated % Capturing
+      <th>Annual Visits (Est.)
+    
+    <tr>
+      <td>UT Dallas Students (18–24)
+      <td>~30,000 (on-campus)
+      <td>3%
+      <td>~2,700
+    
+    <tr>
+      <td>Millennial Families (28–42)
+      <td>~95,000
+      <td>2%
+      <td>~3,800
+    
+    <tr>
+      <td>Adult Hobbyists (25–50)
+      <td>~140,000
+      <td>1%
+      <td>~1,400
+    
+  
+
+  <p>These figures represent the total addressable market within a 15-minute drive time of Frisco. The Game Table's initial target is to capture 1–2% of this market in its first year of operation, representing approximately 4,000 to 8,000 unique visits across all segments.
+
+  <h3>Projected Visit Mix
+  
+    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; text-align: center;">Projected Customer Mix by Visit Unit
+    
+      <span>Millennial Parents (family units)<span>45%
+      45%
+    
+    
+      <span>UT Dallas Students<span>35%
+      35%
+    
+    
+      <span>Adult Hobbyists<span>20%
+      20%
+    
+  
+
+  <h3>Psychographic Profile
+  <p>Psychographic research indicates that the target market for The Game Table is motivated by several key factors:
+
+  
+    <h4>Screen Fatigue
+    <p>53% of consumers report actively trying to reduce their screen time, up 20 percentage points from two years ago (Pew Research Center, 2025). This trend is most pronounced among Millennials with children and Gen Z college students — the two segments that form The Game Table's core audience.
+  
+  
+    <h4>Community Orientation
+    <p>Customers in this demographic value face-to-face social interaction and seek out experiences that provide a sense of belonging. Board game cafes function as community hubs where regular customers develop relationships with staff and other patrons.
+  
+  
+    <h4>Cultural Engagement
+    <p>Frisco's large South Asian population (the largest in the United States) represents an opportunity for culturally themed programming, including South Asian board games, cultural game nights, and community partnerships with local organizations.
+  
+
+  — End of Page 3 —
+</div>
+
+<div class="page">
+Section II — Page 4 of 20
+  <h1>II. Introduction (continued)
+
+  <h2>C. Current Business Strategy for Customer Loyalty
+
+  <p>At the time of this preliminary entry, The Game Table is in the planning phase and has not yet launched operations. Consequently, no formal customer loyalty strategy has been implemented. However, based on secondary research into industry best practices and competitive analysis of existing board game cafes in the Dallas–Fort Worth metroplex, a preliminary loyalty framework has been developed.
+
+  <h3>Competitive Landscape Analysis
+  <p>Three board game businesses operate within the Frisco and greater DFW market. Each has identified limitations in their customer loyalty approach, representing an opportunity for The Game Table to differentiate:
+
+  
+    Competitor
+    Current Hours
+    Loyalty Approach
+    Limitation
+  
+  
+    Nerdvana
+    Opens 4:00 PM
+    Walk-in only; no reservations
+    No daytime service, no app, no loyalty program
+  
+  
+    Texas Tabletop Society
+    6:00–10:00 PM (weekdays); Members-only Sundays
+    Membership-based model
+    Limited staff interaction; no digital presence
+  
+  
+    Farm+Feed
+    Restaurant model hours
+    Integrated dining experience
+    Gaming restaurant format; not community-focused
+  
+
+  
+    <h4>Identified Market Gap
+    <p style="font-size: 0.9rem; margin-bottom: 0;">No competitor in Frisco serves customers during daytime hours (10:00 AM – 4:00 PM). This represents a significant opportunity for The Game Table to capture a captive audience of families, students, and working professionals who prefer daytime social activities. Additionally, none of the competitors have implemented digital loyalty tools such as mobile apps, push notifications, or online community engagement platforms.
+  
+
+  <h3>Proposed Initial Loyalty Strategy
+  <p>Upon launch, The Game Table will implement a foundational loyalty program consisting of a points-based system. Customers will earn one point for every dollar spent on food, beverages, and retail purchases. Points can be redeemed for free drink items, discounted cover charges, or discounts on retail game purchases. The specific parameters of this program will be refined based on primary research data to be collected before the final round.
+
+  <p>This initial loyalty strategy serves as the foundation upon which the "Turn the P.A.G.E." campaign will be built. The full strategic plan, detailed in Section V of this entry, expands this basic points system into a comprehensive four-pillar approach encompassing pre-owned game sales, app-based engagement, community giving, and employee engagement.
+
+  <h3>Industry Benchmark: Board Game Cafe Loyalty Practices
+  <p>Research into successful board game cafe operations reveals that the most effective loyalty programs share common characteristics:
+
+  <table>
+    <tr>
+      <th>Loyalty Practice
+      <th>Prevalence Among Top Cafes
+      <th>The Game Table Plan
+    
+    <tr>
+      <td>Points-based rewards
+      <td>92%
+      <td>Implement at launch
+    
+    <tr>
+      <td>Mobile app / digital presence
+      <td>45%
+      <td>Launch Q3 2027
+    
+    <tr>
+      <td>Community events
+      <td>78%
+      <td>Monthly events planned
+    
+    <tr>
+      <td>Member-only perks
+      <td>65%
+      <td>Tiered membership planned
+    
+    <tr>
+      <td>Social media engagement
+      <td>88%
+      <td>Active presence planned
+    
+  
+
+  <p>Source: Loyalty Pass (2025); Reward Loyalty (2025); VoxBooster (2026)
+</div>
+
+<div class="page">
+Section III — Page 5 of 20
+  <h1>III. Research Methods Used in the Study
+
+  <h2>A. Rationale of Research Methodologies
+
+  <p>To investigate what drives customer loyalty and spending at The Game Table, this study employs a mixed-methods research design combining both primary research (data collected directly by the researchers) and secondary research (data compiled and published by other organizations). The rationale for using both approaches is that secondary research establishes the broader industry context and market trends, while primary research provides specific, actionable insights about the Frisco, Texas market and the target customer demographics.
+
+  <h3>Secondary Research (Completed)
+
+  <p>Secondary research forms the foundation of this study and has been completed in full. The following sources were consulted:
+
+  <table>
+    <tr>
+      <th>Data Source
+      <th>Type
+      <th>Application
+    
+    <tr>
+      <td>ICv2 Hobby Games White Paper (2026)
+      <td>Industry report
+      <td>Market size, growth rate, hobby game trends
+    
+    <tr>
+      <td>Market Intel O Board Game Bar Report (2025)
+      <td>Market research
+      <td>Industry projections, revenue benchmarks
+    
+    <tr>
+      <td>U.S. Bureau of Labor Statistics / FRED
+      <td>Government data
+      <td>Sectoral output for hobby, toy, and game stores (NAICS 451120)
+    
+    <tr>
+      <td>Loyalty Pass Board Game Cafe Guide (2025)
+      <td>Industry analysis
+      <td>Loyalty program best practices, retention rates
+    
+    <tr>
+      <td>Reward Loyalty Case Studies (2025)
+      <td>Case study
+      <td>Customer retention strategies for experiential retail
+    
+    <tr>
+      <td>VoxBooster Board Game Cafe Statistics (2026)
+      <td>Industry data
+      <td>Revenue breakdowns, F&B margins, operational metrics
+    
+    <tr>
+      <td>Seattle Times (2025)
+      <td>Journalistic
+      <td>Screen fatigue trends, consumer behavior shifts
+    
+  
+
+  <h3>Primary Research (Planned)
+
+  <p>Primary research has been designed and planned for completion before the final round. The following methods will be employed:
+
+  
+    <span>Planned
+    <h4>Online Survey
+    <p style="font-size: 0.9rem; margin-bottom: 0;">A 20-question survey will be distributed via Google Forms to at least 100 respondents in the Frisco area. The survey covers four domains: screen time habits, interest in board game cafes, spending patterns at local businesses, and factors influencing customer loyalty. Distribution channels include Instagram, class groups, UT Dallas student forums, and South Asian community organizations in Frisco.
+  
+
+  
+    <span>Planned
+    <h4>Competitor Observation
+    <p style="font-size: 0.9rem; margin-bottom: 0;">Systematic observation of Nerdvana (Frisco), Texas Tabletop Society (Plano), and Farm+Feed (multiple locations) to document operating hours, customer demographics, pricing structures, atmosphere, and customer–staff interactions. Observations will be recorded using a standardized field note template.
+  
+
+  
+    <span>Planned
+    <h4>Owner / Manager Interview
+    <p style="font-size: 0.9rem; margin-bottom: 0;">A semi-structured interview with a board game cafe owner or manager (local or regional) to gain insight into operational challenges, customer retention strategies, and loyalty program effectiveness. Interview questions will follow a prepared protocol with open-ended follow-up prompts.
+  
+
+  
+    <span>Planned
+    <h4>Customer Interviews
+    <p style="font-size: 0.9rem; margin-bottom: 0;">Ten to fifteen face-to-face or phone interviews with individuals who play board games or visit cafes in the Frisco area. Questions will explore motivations for visiting game cafes, factors driving loyalty, and barriers to entry. Interviews will be audio-recorded (with consent) and transcribed for thematic analysis.
+  
+
+  — End of Page 5 —
+</div>
+
+<div class="page">
+Section III — Page 6 of 20
+  <h1>III. Research Methods (continued)
+
+  <h2>B. Process Used to Conduct the Selected Research Methods
+
+  <p>The research study follows a structured six-phase process. Phase 1 (secondary research) has been completed. Phases 2 through 6 are planned for execution before the final round, with an estimated completion timeline of four weeks.
+
+  <h3>Research Timeline
+
+  
+    
+      Phase 1 — Completed
+      <p><strong>Secondary Research (Week 1): Review of industry reports, government data, and academic studies related to the board game cafe market, customer loyalty, and screen fatigue trends. Key data points were extracted and organized into thematic categories: market size and growth, customer demographics, revenue models, and competitive landscape.
+    
+    
+      Phase 2 — Planned
+      <p><strong>Survey Design (Week 2): Development of a 20-question survey using Google Forms. The survey instrument was designed across four domains: (1) screen time habits, (2) interest in board game cafes, (3) spending patterns at local businesses, and (4) factors influencing customer loyalty. The survey will be pilot-tested with five individuals to ensure clarity and validity before full distribution.
+    
+    
+      Phase 3 — Planned
+      <p><strong>Survey Distribution (Weeks 2–3): Distribution of the survey through Instagram, class groups, UT Dallas student forums, and South Asian community organizations in Frisco. Target sample size: 100+ respondents aged 13–35. Efforts will be made to ensure demographic balance across age groups, gender, and cultural background.
+    
+    
+      Phase 4 — Planned
+      <p><strong>Competitor Observation (Week 3): On-site visits to Nerdvana (Frisco), Texas Tabletop Society (Plano), and Farm+Feed (multiple locations). Standardized field notes will be used to document operating hours, customer demographics, pricing, atmosphere, customer–staff interactions, and identified gaps.
+    
+    
+      Phase 5 — Planned
+      <p><strong>Owner and Customer Interviews (Weeks 3–4): Semi-structured interviews with one board game cafe owner or manager, and 10–15 customers or potential customers. Interview protocols have been prepared with open-ended questions designed to elicit detailed responses about loyalty motivations and barriers to entry.
+    
+    
+      Phase 6 — Planned
+      <p><strong>Data Analysis and Synthesis (Week 4): Survey data will be entered into a spreadsheet and analyzed for patterns and correlations. Qualitative interview data will be transcribed and coded for recurring themes. Findings from primary research will be triangulated with secondary research data to validate conclusions and refine the strategic plan.
+    
+  
+
+  <h3>Research Design Summary
+  <table>
+    <tr>
+      <th>Aspect
+      <th>Approach
+    
+    <tr>
+      <td>Research Design
+      <td>Mixed-methods (quantitative survey + qualitative interviews + observation)
+    
+    <tr>
+      <td>Population
+      <td>Residents of Frisco and surrounding DFW areas, ages 13–50
+    
+    <tr>
+      <td>Sample Size
+      <td>100+ survey respondents; 10–15 interview participants; 1 owner interview
+    
+    <tr>
+      <td>Sampling Method
+      <td>Convenience sampling for survey; purposive sampling for interviews
+    
+    <tr>
+      <td>Data Collection Tools
+      <td>Google Forms survey, standardized observation template, interview protocols
+    
+    <tr>
+      <td>Data Analysis
+      <td>Descriptive statistics for survey data; thematic analysis for interview data
+    
+    <tr>
+      <td>Limitations
+      <td>Sample may overrepresent high school and university students; efforts will be made to diversify through community organization outreach
+    
+  
+
+  <p>The mixed-methods design ensures that findings are both broad (supported by quantitative survey data from 100+ respondents) and deep (supported by qualitative insights from interviews and direct observation). This approach increases the validity and reliability of the study's conclusions.
+</div>
+
+<div class="page">
+Section IV — Page 7 of 20
+  <h1>IV. Findings & Conclusions
+
+  <p>Based on secondary research, the following findings define the market opportunity for The Game Table. <em>All findings are based on secondary research unless otherwise noted. Primary research is planned for completion before the final round.
+
+  <h2>Finding 1: Screen Fatigue Is Driving Offline Social Activity
+
+  
+    
+      53%
+      Of consumers are<br>trying to reduce<br>screen time
+    
+    
+      +20pts
+      Increase in<br>screen-conscious<br>consumers in 2 yrs
+    
+  
+
+  <p>The average American spends 7+ hours per day on screens (Pew Research Center, 2025), and 53% of consumers report actively trying to reduce their screen time — a 20-point increase from just two years ago. This "screen fatigue" trend is driving demand for offline social activities that provide similar dopamine and social reward as digital entertainment without the screen.
+
+  
+    
+      Board games
+      62% interest
+    
+    
+      Sports
+      55% interest
+    
+    
+      Live music
+      48% interest
+    
+    
+      Reading
+      35% interest
+    
+  
+
+  <p>Board games sit at the intersection of this trend: they provide social connection, cognitive engagement, and experiential novelty — all without a screen. The board game industry has proven resilient during the digital age, growing from $10.8B in 2020 to $14.4B in 2025 (Statista, 2025), as consumers discovered that tabletop gaming offers something screens cannot: face-to-face interaction.
+
+  
+    <strong>STRATEGIC IMPLICATION
+    The Game Table is positioned to capture the screen-fatigue trend by offering an offline social experience that feels as engaging as digital entertainment but creates real-world connections. This is not a niche hobby — it is a response to a broad consumer shift.
+  
+
+  <h2>Finding 2: Food & Beverage Drives Cafe Profitability
+
+  
+    
+      65%
+      Of revenue from<br>F&B in successful<br>game cafes
+    
+    
+      75–85%
+      Gross margin on<br>coffee and<br>beverages
+    
+  
+
+  <p>Successful board game cafes generate 60–70% of total revenue from food and beverage sales, with coffee and beverage margins reaching 75–85% (VoxBooster, 2026; Business Plan Templates, 2025). Cover charges and retail contribute the remainder, but F&B is the profit engine that makes the model viable.
+
+  <p>The implication for The Game Table is clear: the menu must be designed for high margins and fast service. Coffee, tea, and simple prepared foods (pastries, sandwiches, pretzels) generate the highest margins while supporting 3+ hour stays without requiring kitchen infrastructure beyond an espresso machine and convection oven.
+
+  
+    <strong>Note: Revenue composition benchmarks are based on industry reports for board game cafes and experiential retail. The Game Table's final menu and pricing will be validated through primary research with the Frisco market.
+</div>
+
+<div class="page">
+Section IV — Pages 8–9 of 20
+  <h1>IV. Findings & Conclusions (continued)
+
+  <h2>Finding 3: The Board Game Industry Is Growing at 9.2% Annually
+
+  
+    
+      $1.74B
+      U.S. board game<br>industry value<br>(2025)
+    
+    
+      9.2%
+      Annual growth rate<br>(CAGR 2025–2034)
+    
+    
+      $3.84B
+      Projected industry<br>value by 2034
+    
+  
+
+  <p>The North American board game market is expanding rapidly, driven by the same screen-fatigue trend that benefits The Game Table directly. New game releases have increased 40% since 2020, and the rise of "tabletop cafes" — venues that combine food service with game rental — is one of the fastest-growing sub-segments in experiential retail (ICv2, 2025).
+
+  <p>Key insight for The Game Table: this growth is not limited to hardcore gamers. "Wargame" and complex strategy game sales — traditionally the domain of dedicated enthusiasts — are growing fastest, indicating that new customers are entering the hobby at a higher level of engagement than in the past. This bodes well for a cafe model that emphasizes game variety and depth.
+
+  <h2>Finding 4: A Daytime Market Gap Exists in Frisco
+
+  
+    <strong>THE DAYTIME GAP
+    Nerdvana, the area's only board game cafe, operates from 2 PM – 11 PM on weekdays. The 10 AM – 2 PM window is entirely unserved. For a business with 2,500–3,000 sq ft and 50–75 seats, this represents approximately 20–25% of weekly operating hours with zero local competition.
+  
+
+  <p>Competitor analysis reveals that Nerdvana — the sole board game cafe in Frisco — operates from 2 PM to 11 PM on weekdays and 11 AM to 11 PM on weekends. The 10 AM to 2 PM weekday window is entirely unserved by any board game cafe in the metropolitan area.
+
+  <p>This daytime gap serves three distinct customer segments:
+
+  
+    
+      Families w/ kids
+      Primary target
+    
+    
+      UT Dallas students
+      Between classes
+    
+    
+      Remote workers
+      Daytime social
+    
+  
+
+  <p><strong>Families with young children are the largest daytime segment. Frisco has 41,000+ residents under 18, and parents typically seek structured offline activities during daytime hours. A board game cafe offers a controlled, social environment that parents value for both entertainment and cognitive development.
+
+  <p><strong>UT Dallas students (30,000+ enrollment) have class schedules that create natural daytime gaps. An affordable, social daytime activity fills a need that current evening-only cafes cannot address.
+
+  <p><strong>Remote workers and stay-at-home parents represent an emerging daytime segment seeking low-commitment social interaction — the ability to be around people without the pressure of a full outing. Board games provide structured socialization at a comfortable pace.
+
+  — End of Page 8 —
+  — Start of Page 9 —
+
+  <h2>Finding 5: Loyalty Is Driven by Community, Not Discounts
+
+  
+    
+      68%
+      Cite "community<br>feel" as top<br>loyalty driver
+    
+    
+      34%
+      Cite "loyalty<br>program" as<br>secondary driver
+    
+  
+
+  <p>Research from Loyalty Pass (2025) and Business Plan Templates (2025) consistently shows that the single most important factor driving repeat visits to experiential retail businesses is <strong>community — not price, not location, not rewards programs. Customers who feel they belong to a community around a business visit 2.5x more frequently and spend 31% more per visit than transactional customers (Loyalty Pass, 2025).
+
+  <p>This finding directly informs the Turn the P.A.G.E. strategy: loyalty points tied to spending alone are insufficient. The program must reward community behaviors — attending events, bringing friends, teaching games, volunteering — to build the kind of attachment that drives genuine repeat business.
+
+  <h2>Conclusions
+
+  <p>Four conclusions emerge from these findings:
+
+  <p><strong>Conclusion 1: The timing is right. Screen fatigue is at an all-time high, the board game industry is growing at 9.2% annually, and Frisco's demographics (young families, college students, high income) align perfectly with the board game cafe model.
+
+  <p><strong>Conclusion 2: The daytime gap is real and actionable. No competitor serves 10 AM – 2 PM on weekdays. This is a defensible window — competitors have chosen not to serve it, likely because evening-only models maximize margin per square foot. The Game Table's full-day model is a deliberate differentiator.
+
+  <p><strong>Conclusion 3: Community beats discounts. The loyalty strategy must prioritize social connection over transactional rewards. The P.A.G.E. campaign is designed around this principle.
+
+  <p><strong>Conclusion 4: Primary research is essential. All findings are based on secondary research. Primary research — customer surveys, competitor observations, and stakeholder interviews — is required to validate these conclusions with Frisco-specific data before final strategic decisions are made.
+
+  
+    <strong>Note: All findings and conclusions in this section are based on secondary research. Primary research is planned for completion before the final round. Projections and strategic recommendations will be refined with primary data.
+</div>
+
+<div class="page">
+Section IV — Page 10 of 20
+  <h1>IV. Findings & Conclusions (continued)
+
+  <h2>Finding 6: The Pre-Owned Games Market Is Fragmented
+
+  <p>The secondary market for board games — eBay, Facebook Marketplace, local game store trade-ins — is large but unorganized. No single platform offers both the selection of eBay and the quality guarantee of a specialty retailer. Newzoo (2025) estimates that 30–40% of all board game transactions are secondhand, representing an estimated $500M+ annual market in North America alone.
+
+  <p>This fragmentation is an opportunity: The Game Table's curated pre-owned marketplace, with condition grading and a satisfaction guarantee, fills a gap that eBay and Marketplace do not address. Customers who buy pre-owned in-store can try the game before purchasing — a significant advantage over online marketplaces.
+
+  
+    <strong>Note: The 30–40% secondhand market estimate is based on Newzoo industry reporting. Primary research will validate the actual size and willingness-to-pay of the pre-owned market in the Frisco area.
+  
+
+  <h2>SWOT Analysis
+
+  
+    
+      <h3>Strengths
+      <ul>
+        <li>First-mover advantage in Frisco's daytime board game cafe market
+        <li>High-margin F&B model (75–85% on coffee)
+        <li>Pre-owned marketplace creates recurring revenue and foot traffic
+        <li>Location in Frisco — high income, young demographic, largest South Asian population in U.S.
+        <li>Multi-revenue model reduces dependence on any single stream
+      
+    
+    
+      <h3>Weaknesses
+      <ul>
+        <li>New entrant with no brand recognition or existing customer base
+        <li>Reliance on unproven revenue projections
+        <li>Limited operating capital for a high-fixed-cost business
+        <li>Team lacks prior experience in F&B operations or retail management
+        <li>Daytime hours have lower average spend per customer than evenings
+      
+    
+    
+      <h3>Opportunities
+      <ul>
+        <li>Screen fatigue trend accelerating (+20 pts in 2 years)
+        <li>No competitor serves 10 AM – 2 PM on weekdays
+        <li>UT Dallas partnership potential for student traffic and hiring
+        <li>South Asian cultural programming differentiates from generic cafes
+        <li>Private events and tournament hosting add revenue streams
+        <li>Pre-owned market is fragmented — first organized player wins
+      
+    
+    
+      <h3>Threats
+      <ul>
+        <li>Nerdvana could extend hours to capture daytime window
+        <li>Economic downturn reducing discretionary spending on entertainment
+        <li>Rising commercial rent in Frisco increasing fixed costs
+        <li>Supply chain disruptions affecting game inventory costs
+        <li>Changing consumer habits reducing interest in tabletop gaming
+        <li>Regulatory changes affecting food service or business licensing
+      
+    
+  
+
+  
+    <strong>Note: This SWOT analysis is based on secondary research and team assessment. Primary research findings will be used to validate and prioritize each factor before the final round.
+</div>
+
+<div class="page">
+Section IV — Page 10 of 20
+  <h1>IV. Findings and Conclusions (continued)
+
+  <h3>SWOT Analysis
+
+  <p>The following SWOT analysis summarizes the internal strengths and weaknesses, as well as external opportunities and threats, identified through this research study.
+
+  
+    
+      <h4>Strengths
+      <ul>
+        <li>Unique concept in the Frisco market with no direct daytime competitor
+        <li>High-margin food and beverage program (75–85% on coffee)
+        <li>Strategic proximity to UT Dallas (38,000+ students, 15 minutes away)
+        <li>Large South Asian population in Frisco — the largest in the United States
+        <li>Board game industry growing at 9.2% CAGR through 2034
+        <li>Multi-revenue model (cover charges, F&B, retail, events) reduces risk
+      
+    
+    
+      <h4>Weaknesses
+      <ul>
+        <li>New business with no existing customer base or brand recognition
+        <li>High initial startup costs ($201,000–$460,000)
+        <li>Dependent on foot traffic and location selection
+        <li>Requires trained staff capable of managing both cafe and game operations
+        <li>Limited initial game library (300–800 titles) compared to established competitors
+      
+    
+    
+      <h4>Opportunities
+      <ul>
+        <li>No competitor currently serves the 10:00 AM – 4:00 PM daytime window
+        <li>Pre-owned game market growing 5.5% annually ($45B projected value)
+        <li>Birthday parties and private event hosting (high-margin revenue)
+        <li>UT Dallas student workforce and customer base
+        <li>Cultural programming targeting Frisco's South Asian community
+        <li>Screen fatigue trend accelerating (+20 points in two years)
+      
+    
+    
+      <h4>Threats
+      <ul>
+        <li>Established competitors (Nerdvana, Texas Tabletop) may expand hours
+        <li>Frisco commercial rent is 11–32% above the national average
+        <li> tariffs may increase the cost of importing board games
+        <li>Economic downturn could reduce discretionary spending
+        <li>Screen fatigue trend could reverse if compelling digital alternatives emerge
+      
+    
+  
+
+  
+    <strong>Note: This SWOT analysis is based on secondary research conducted to date. Primary research (competitor observations and customer interviews) will be used to validate and expand these findings before the final round.
+</div>
+
+<div class="page">
+Section V — Pages 12–13 of 20
+  <h1>V. Strategic Plan: Turn the P.A.G.E.
+
+  <p>Based on the research findings, The Game Table will implement a loyalty and growth strategy built on four interconnected pillars. This <strong>"Turn the P.A.G.E." campaign is designed to rebuild customer loyalty through genuine community engagement and sustainable business practices — not transactional discounts that attract price-sensitive customers without building real attachment.
+
+  
+    
+      P
+      Pre-Owned<br>Marketplace
+    
+    
+      A
+      App-Based<br>Transparency
+    
+    
+      G
+      Giving &<br>Awareness
+    
+    
+      E
+      Employee<br>Engagement
+    
+  
+
+  <h2>Pillar 1: Pre-Owned Marketplace
+
+  
+    <h3><span>P Reduce the Cost of Participation
+    <p>The Game Table will operate a <strong>pre-owned game marketplace where customers can buy, sell, and trade board games at fair prices. The average board game costs $54 new, with premium titles exceeding $100 — a significant barrier for the student and young-family demographics that form our core market (Newzoo, 2025).
+    <p><strong>How it works: Customers bring in gently used games for evaluation. The Game Table purchases them at 30–40% of retail price and resells them at 50–60% of retail, generating a 40–55% gross margin. Games are displayed in a dedicated "Pre-Owned Corner" with clear condition grading (Mint, Excellent, Good, Fair).
+    <p><strong>Buy-back rules: To prevent arbitrage (customers buying full-price games and immediately selling them back for store credit), buy-back credit is capped at $25 per month per member and requires participation in at least one community activity per quarter (attending a community night, hosting a game tutorial, or volunteering at an event). This ensures rewards go to genuinely engaged members, not opportunistic resellers.
+    <p><strong>Loyalty connection: Trade Nights — monthly events where customers can bring games to swap or purchase — create recurring foot traffic during the daytime window when no competitor is active. Pre-owned purchases also earn loyalty points at the same rate as new games, removing friction from the buy-back loop.
+  
+
+  <h2>Pillar 2: App-Based Transparency
+
+  
+    <h3><span>A Build Trust Through Open Communication
+    <p>The Game Table will launch a simple mobile-friendly web app that provides customers with real-time information: current game availability, wait times, upcoming event schedules, and their loyalty point balance. Research shows that 45% of successful board game cafes already use a mobile app or digital platform to enhance the customer experience (VoxBooster, 2026).
+    <p><strong>Features:
+    <p>• <strong>Game Search: Customers can search our catalog of 300–800 games and see real-time availability<br>
+    • <strong>Event Calendar: Upcoming game nights, tournaments, and community events with RSVP<br>
+    • <strong>Loyalty Dashboard: Track points, rewards, and pre-owned game transactions<br>
+    • <strong>Feedback Loop: One-tap rating system so customers can share their experience instantly
+    <p><strong>Loyalty connection: Transparency builds trust. When customers know exactly what to expect — wait times, game availability, pricing — they feel more confident returning. The app also serves as a digital touchpoint between visits, keeping The Game Table top-of-mind.
+  
+
+  — End of Page 12 —
+  — Start of Page 13 —
+
+  <h2>Pillar 3: Giving & Awareness
+
+  
+    <h3><span>G Give Back to Frisco — Specifically, Measurably
+    <p>The Game Table will commit 5% of monthly profits to <strong>named local Frisco organizations — not an abstract "community fund." Each quarter, members will vote on which organization receives the next donation. Potential recipients include:
+    <p>• <strong>Frisco Food Bank — hosting game nights as a fundraiser event<br>
+    • <strong>Liberty Nature Center — sponsoring STEM-through-games programs for local youth<br>
+    • <strong>Frisco ISD Special Education Programs — donating games and running therapeutic game sessions<br>
+    • <strong>Veterans United Home Loans community programs — hosting game nights for deployed-service families
+    <p><strong>Community voting: Loyalty members vote via the web app on the quarterly recipient. Results are published publicly: "Q1 2027 — $350 donated to Frisco Food Bank." This transparency turns charitable giving into a community achievement, not a marketing claim.
+    <p><strong>Initiatives:
+    <p>• <strong>Free Community Nights: One evening per month, open admission with no cover charge — targeting families who may not afford regular visits<br>
+    • <strong>Cultural Programming: Host South Asian board game nights celebrating traditional games like Pachisi and Snakes & Ladders, reflecting Frisco's diverse demographic makeup<br>
+    • <strong>Charity Tournaments: Monthly tournaments where entry fees go directly to the quarterly-voted charity
+    <p><strong>Loyalty connection: Customers stay loyal to businesses that share their values. By giving back to the Frisco community in a transparent, member-driven way, The Game Table becomes more than a cafe — it becomes a civic institution that members feel proud to support and eager to recommend.
+  
+
+  <h2>Pillar 4: Employee Engagement
+
+  
+    <h3><span>E Our Team Is Our First Customers
+    <p>Research consistently shows that the single most important factor driving customer loyalty is staff who know customers by name and genuinely care about their experience (Loyalty Pass, 2025; Business Plan Templates, 2025). Employee engagement is the foundation of everything else.
+    <p><strong>Initiatives:
+    <p>• <strong>Game Master Certification: Every employee completes a training program where they learn to teach 20+ games, ensuring every customer has a great experience<br>
+    • <strong>Employee Choice Nights: Each staff member picks one game night per month to design and host — building ownership and fresh energy<br>
+    • <strong>Customer Name Program: Employees are encouraged (not required) to learn regular customers' names and game preferences; recognition awards given monthly<br>
+    • <strong>Student Worker Program: Partner with UT Dallas to hire student workers who bring energy and board game expertise
+    <p><strong>Super-connector recognition: Beyond transactional rewards (points for spending), The Game Table will recognize members who create social value — the person who brings five friends to a game night, the regular who teaches newcomers how to play, the parent who volunteers at a community event. These "super-connectors" receive exclusive perks: early access to new games, invitations to private preview events, and a named spot on a "Community Builder" wall in-store. This leverages the psychological principle that intrinsic social recognition is a stronger loyalty driver than extrinsic discounts (Deci & Ryan, Self-Determination Theory, 2000).
+    <p><strong>Loyalty connection: When employees are engaged, customers feel it. A smiling Game Master who remembers your favorite game type creates an experience no discount code can replicate.
+  
+
+  
+    <strong>LOYALTY PROGRAM TIER STRUCTURE
+    To avoid the Overjustification Effect (where monetary rewards crowd out intrinsic motivation), loyalty points are earned for community behaviors, not just spending:
+    <br><br>
+    <table>
+      <tr>
+        <th>Behavior
+        <th>Points
+        <th>Rationale
+      
+      <tr>
+        <td>Each visit / cover charge
+        <td>10 pts
+        <td>Baseline — rewards attendance
+      
+      <tr>
+        <td>F&B purchase ($1 spent)
+        <td>1 pt
+        <td>Standard revenue share
+      
+      <tr>
+        <td>Bring a first-time guest
+        <td>25 pts
+        <td>Rewards social referral
+      
+      <tr>
+        <td>Host a game tutorial
+        <td>50 pts
+        <td>Rewards community contribution
+      
+      <tr>
+        <td>Attend community night
+        <td>15 pts
+        <td>Rewards engagement beyond spending
+      
+      <tr>
+        <td>Provide written game review
+        <td>20 pts
+        <td>Rewards content creation
+      
+    
+  
+
+  
+    <strong>Note: The Turn the P.A.G.E. campaign is a planned strategy based on secondary research. Implementation details and KPIs will be refined following primary research completion before the final round.
+</div>
+
+<div class="page">
+Section V — Pages 14–15 of 20
+  <h1>V. Strategic Plan (continued)
+
+  <h2>Implementation Timeline
+
+  <p>The Turn the P.A.G.E. campaign will be rolled out in three phases over the first six months of operation.
+
+  <h3>Phase 1: Foundation (Months 1–2)
+  
+    
+      Month 1
+      <p><strong>Launch pre-owned marketplace with initial inventory sourced from team networks and local game stores. Set up "Pre-Owned Corner" in-store. Begin basic loyalty sign-ups at the register.
+    
+    
+      Month 1–2
+      <p><strong>Develop mobile-friendly web app with game search, event calendar, and loyalty dashboard. Use low-cost no-code platform (Glide or Softr) to keep initial costs under $500.
+    
+    
+      Month 2
+      <p><strong>Launch Game Master Certification program. First cohort of employees completes training. Host first "Employee Choice Night."
+    
+  
+
+  <h3>Phase 2: Growth (Months 3–4)
+  
+    
+      Month 3
+      <p><strong>Launch first Community Game Night — free admission, games provided. Partner with one local organization (e.g., Frisco Food Bank) for the event. Begin UT Dallas student worker hiring.
+    
+    
+      Month 3–4
+      <p><strong>Roll out monthly tournaments with charity entry fees. Launch first "Trade Night" for pre-owned marketplace.
+    
+    
+      Month 4
+      <p><strong>Web app beta launch to loyalty members. Collect feedback and iterate.
+    
+  
+
+  <h3>Phase 3: Scale (Months 5–6)
+  
+    
+      Month 5
+      <p><strong>School partnerships with Frisco ISD formalized. Donate first batch of games. Host first educational game day.
+    
+    
+      Month 6
+      <p><strong>Full P.A.G.E. campaign review using KPIs (below). Refine strategy based on six months of data and primary research findings.
+    
+  
+
+  <h2>Key Performance Indicators (KPIs)
+
+  <p>The following KPIs will be tracked monthly to measure the success of the Turn the P.A.G.E. campaign.
+
+  <table>
+    <tr>
+      <th>KPI
+      <th>Month 3 Target
+      <th>Month 6 Target
+      <th>Measurement Tool
+    
+    <tr>
+      <td>Loyalty Program Sign-ups
+      <td>200 members
+      <td>500 members
+      <td>Web app dashboard
+    
+    <tr>
+      <td>Monthly Repeat Visit Rate
+      <td>30%
+      <td>45%
+      <td>POS system
+    
+    <tr>
+      <td>Pre-Owned Sales (monthly)
+      <td>$500
+      <td>$1,500
+      <td>POS system
+    
+    <tr>
+      <td>Community Night Attendance
+      <td>30 guests
+      <td>60 guests
+      <td>RSVP system
+    
+    <tr>
+      <td>Customer Satisfaction Score
+      <td>4.0 / 5.0
+      <td>4.5 / 5.0
+      <td>Web app feedback
+    
+    <tr>
+      <td>Private Events Booked (monthly)
+      <td>2 events
+      <td>4 events
+      <td>Reservation system
+    
+    <tr>
+      <td>Charity Voting Participation
+      <td>15% of members
+      <td>30% of members
+      <td>Web app dashboard
+    
+  
+
+  
+    <strong>Note: KPIs are projected targets based on industry benchmarks for board game cafes and experiential retail (VoxBooster, 2026; Business Plan Templates, 2025). Actual targets will be refined after primary research is completed.
+</div>
+
+<div class="page">
+Section V — Pages 16–17 of 20
+  <h1>V. Strategic Plan (continued)
+
+  <h2>Marketing Strategy: Reaching Our Customers
+
+  <p>The marketing strategy for The Game Table focuses on low-cost, high-intent channels that reach our target demographics where they are actively searching — not passively scrolling. The total marketing budget for the first six months is <strong>$4,000 (included within the P.A.G.E. campaign budget of $8,700), allocated across five channels.
+
+  
+    
+      $4K
+      Total 6-month<br>marketing budget
+    
+    
+      55%
+      Allocated to<br>high-intent<br>channels
+    
+    
+      25%
+      Allocated to<br>community<br>partnerships
+    
+    
+      20%
+      Allocated to<br>social media<br>& referral
+    
+  
+
+  <h3>Channel Breakdown
+
+  
+    <h4>1. Google Business Profile & Local SEO (30% — $1,200)
+    <p><strong>Primary acquisition channel. When families search "board game cafe Frisco" or "things to do near me," The Game Table must appear first. Budget covers Google Business Profile optimization, local directory listings, and review generation tools. Industry data shows 88% of local searches result in a visit or call within 48 hours (Google / NAPTTM, 2025).
+  
+
+  
+    <h4>2. UT Dallas Partnerships (25% — $1,000)
+    <p><strong>Targeted student acquisition. Sponsor UT Dallas student organization events, distribute flyers at campus events, and partner with the Student Government Association for cross-promotion. UT Dallas has 30,000+ students — a concentrated pool of our target demographic. Budget covers event booths, printed materials, and student ambassador program incentives.
+  
+
+  
+    <h4>3. Instagram & TikTok (20% — $800)
+    <p><strong>Brand awareness and community building. Content strategy: game reviews, customer spotlights, behind-the-scenes, new game arrivals, and event announcements. Paid ads will target a 15-mile radius around Frisco with interest-based targeting (board games, tabletop gaming, UT Dallas). Organic content will focus on user-generated content from customers — authentic photos and videos that feel real, not produced.
+  
+
+  
+    <h4>4. Community Events (15% — $600)
+    <p><strong>Direct customer acquisition through presence. Table at Frisco community festivals, UT Dallas new-student orientation events, and Frisco ISD school activities. Budget covers booth costs, printed materials, and sample offers (e.g., "First visit free" cards for attendees).
+  
+
+  
+    <h4>5. Referral Program (10% — $400)
+    <p><strong>"Bring a Friend" program: loyal customers who bring first-time guests both receive 10% off their tab. Incentivizes word-of-mouth marketing, which research shows is the most trusted form of advertising for local businesses (Loyalty Pass, 2025). Budget covers incentive credits and tracking materials.
+  
+
+  — End of Page 16 —
+  — Start of Page 17 —
+
+  <h2>Operational Plan: Supporting the Strategy
+
+  <p>The operational plan ensures that The Game Table has the infrastructure to deliver on its loyalty promises. Key operational decisions include:
+
+  <h3>Location and Hours
+  <table>
+    <tr>
+      <th>Factor
+      <th>Decision
+    
+    <tr>
+      <td><strong>Location
+      <td>Within 15 minutes of Frisco Square; proximity to UT Dallas preferred; 2,500–3,000 sq ft
+    
+    <tr>
+      <td><strong>Weekday Hours
+      <td>10:00 AM – 10:00 PM (capturing the daytime gap)
+    
+    <tr>
+      <td><strong>Weekend Hours
+      <td>9:00 AM – 11:00 PM
+    
+    <tr>
+      <td><strong>Staffing
+      <td>2 Game Masters per shift (minimum 3 staff per operating day); UT Dallas student workers for daytime shifts
+    
+    <tr>
+      <td><strong>Game Library
+      <td>Initial: 300–800 games; expand to 1,000+ within 12 months based on customer demand data
+    
+    <tr>
+      <td><strong>Private Events
+      <td>One private event room (10–20 guests); $500–$2,000 per event depending on size and F&B add-ons; projected 2–4 events/month by Month 6
+    
+  
+
+  <h3>Technology Infrastructure
+  <table>
+    <tr>
+      <th>System
+      <th>Purpose
+      <th>Estimated Cost
+    
+    <tr>
+      <td>POS System (Square)
+      <td>Transactions, loyalty tracking, customer data
+      <td>$60/month
+    
+    <tr>
+      <td>Web App (Glide)
+      <td>Game search, event RSVP, loyalty dashboard
+      <td>$49/month
+    
+    <tr>
+      <td>Social Media Scheduler
+      <td>Content calendar, automated posting
+      <td>$30/month
+    
+    <tr>
+      <td>Reservation System
+      <td>Table bookings, event management
+      <td>$25/month
+    
+  
+
+  
+    <strong>Note: The strategic plan outlined in this section is based on secondary research and industry benchmarks. All operational decisions, KPIs, and budget allocations will be refined following primary research completion before the final round.
+</div>
+
+<div class="page">
+Section V — Page 15 of 20
+  <h1>V. Proposed Strategic Plan (continued)
+
+  <h2>B. Proposed Activities and Timelines (continued)
+
+  
+    <h3>P — Pre-Owned Game Marketplace: Detailed Plan
+    <p>In Q1, we will research how to buy and sell used games. We will look at ISBN numbers so we can price games fairly. We will buy our first batch of games from customers and put them on a special shelf in the store. By Q2, the pre-owned marketplace will be open and customers can start selling their old games back to us.
+    <p>In Q3 and Q4, we will track how many games we buy and sell each month. If customers are selling us more games than we can keep in stock, we may need to expand the program or find other ways to sell them.
+  
+
+  
+    <h3>A — App-Based Transparency: Detailed Plan
+    <p>In Q1, we will research app platforms and decide which one to use. We plan to use a simple off-the-shelf app platform rather than building something custom because it will be cheaper and faster. By Q2, we will start building the app and test it with a small group of customers.
+    <p>In Q3 and Q4, we will launch the app to all customers. The app will send push notifications about new games, events, and special deals. Customers will also be able to vote on which games we should buy next and check their loyalty points balance.
+  
+
+  — End of Page 15 —
+</div>
+
+<div class="page">
+Section V — Page 16 of 20
+  <h1>V. Proposed Strategic Plan (continued)
+
+  
+    <h3>G — Giving and Awareness: Detailed Plan
+    <p>Each month, we will pick a different cause to support. In the first quarter, we will choose our first three causes — maybe a local food bank, a mental health organization, and a school club. We will put up displays in the store about each cause and offer a round-up option at checkout.
+    <p>In Q4, we will focus on holiday giving by donating to shelters and families in need during the winter season. This keeps the program fresh and gives customers a reason to come back every month to see what cause we are supporting.
+  
+
+  
+    <h3>E — Employee Engagement: Detailed Plan
+    <p>Every week, one employee will get a $50 gift card bonus for great customer service. We will rotate tasks so employees do not get bored doing the same thing every day. We will also give employees volunteer time off so they can do community service and come back feeling good about themselves.
+    <p>In Q4, we will do an annual review to see what is working and what needs to change. If employees are still happy and customers are saying nice things about our staff, we know the program is working.
+  
+
+  <h2>C. Proposed Metrics and Key Performance Indicators (KPIs)
+  <p>These are the numbers we will track to see if our plan is working. Each KPI has a target and a way to measure it.
+
+  <table>
+    <tr>
+      <th>KPI
+      <th>Target
+      <th>How We Measure It
+    
+    <tr>
+      <td>Customer Return Rate
+      <td>60% return within 90 days
+      <td>Loyalty program sign-ups and visit tracking
+    
+    <tr>
+      <td>Pre-Owned Game Transactions
+      <td>50+ games bought/sold per month
+      <td>Point of sale system records
+    
+    <tr>
+      <td>App Adoption Rate
+      <td>60% of customers download the app
+      <td>App Store download numbers vs. total customers
+    
+    <tr>
+      <td>Awareness Month Participation
+      <td>40% participate in round-up donations
+      <td>Checkout transaction data
+    
+    <tr>
+      <td>Employee Retention Rate
+      <td>90% stay past 6 months
+      <td>HR records and exit interviews
+    
+    <tr>
+      <td>Customer Satisfaction Score
+      <td>Above 4.5 out of 5.0
+      <td>Google Maps reviews, in-store surveys
+    
+    <tr>
+      <td>Average Spend Per Customer
+      <td>$35 per visit
+      <td>Point of sale system average
+    
+    <tr>
+      <td>Net Promoter Score (NPS)
+      <td>Above 50
+      <td>Quarterly customer surveys
+</div>
+
+<div class="page">
+Section VI — Page 18 of 20
+  <h1>VI. Budget: The P.A.G.E. Campaign & Revenue Projections
+
+  <p>This budget covers the first six months of the Turn the P.A.G.E. loyalty campaign. It is separate from the total startup costs for The Game Table ($201,000–$460,000, depending on location and build-out). The campaign budget of <strong>$8,700 is allocated across the four P.A.G.E. pillars and the marketing channels that support them.
+
+  
+    
+      $8.7K
+      P.A.G.E.<br>campaign budget
+    
+    
+      $201K
+      Total startup<br>costs (low end)
+    
+    
+      $282K
+      Projected<br>Year 1 revenue
+    
+  
+
+  <h2>P.A.G.E. Campaign Budget Breakdown
+
+  <table>
+    <tr>
+      <th>Pillar
+      <th>Expense Category
+      <th style="text-align:right">Amount
+    
+    <tr>
+      <td rowspan="3"><strong>P – Pre-Owned
+      <td>Initial pre-owned game inventory purchase
+      <td style="text-align:right">$2,000
+    
+    <tr>
+      <td>Pre-Owned Corner shelving and signage
+      <td style="text-align:right">$500
+    
+    <tr>
+      <td>Trade Night event supplies
+      <td style="text-align:right">$300
+    
+    <tr>
+      <td rowspan="3"><strong>A – App-Based
+      <td>Web app development (Glide premium, 6 months)
+      <td style="text-align:right">$300
+    
+    <tr>
+      <td>App design and content creation
+      <td style="text-align:right">$400
+    
+    <tr>
+      <td>Push notification and SMS tools
+      <td style="text-align:right">$200
+    
+    <tr>
+      <td rowspan="3"><strong>G – Giving & Awareness
+      <td>Community Game Night events (4 events)
+      <td style="text-align:right">$1,200
+    
+    <tr>
+      <td>Charity tournament prizes and supplies
+      <td style="text-align:right">$600
+    
+    <tr>
+      <td>Printed materials (flyers, posters, banners)
+      <td style="text-align:right">$500
+    
+    <tr>
+      <td rowspan="3"><strong>E – Employee Engagement
+      <td>Game Master Certification materials
+      <td style="text-align:right">$300
+    
+    <tr>
+      <td>Employee recognition awards
+      <td style="text-align:right">$400
+    
+    <tr>
+      <td>UT Dallas recruitment and student worker onboarding
+      <td style="text-align:right">$200
+    
+    <tr>
+      <td colspan="2"><strong>Total P.A.G.E. Campaign Budget
+      <td style="text-align:right"><strong>$8,700
+    
+  
+
+  <h2>Marketing Channel Allocation
+
+  <p>The $4,000 marketing component (included within the P.A.G.E. budget above) is allocated across channels based on target audience reach and cost efficiency for a local experiential retail business.
+
+  
+    
+      Google Business Profile
+      30% ($1,200)
+    
+    
+      UT Dallas Partnerships
+      25% ($1,000)
+    
+    
+      Instagram & TikTok
+      20% ($800)
+    
+    
+      Community Events
+      15% ($600)
+    
+    
+      Referral Incentives
+      10% ($400)
+    
+  
+
+  
+    <strong>CHANNEL REALLOCATION FROM INITIAL PLAN
+    Initial marketing allocation favored Instagram/TikTok at 60%. Research and judge feedback indicate Google Business Profile and UT Dallas partnerships deliver higher-intent, lower-cost acquisition for a local brick-and-mortar business. The revised allocation prioritizes channels where customers are actively searching, not passively scrolling.
+  
+
+  <h2>Revenue Projections
+
+  <table>
+    <tr>
+      <th>Metric
+      <th>Month 1–6
+      <th>Month 7–12
+    
+    <tr>
+      <td>Projected Monthly Revenue (Month 6)
+      <td style="text-align:right">$14,000
+      <td style="text-align:right">—
+    
+    <tr>
+      <td>Projected Monthly Revenue (Month 12)
+      <td>—
+      <td style="text-align:right">$30,000
+    
+    <tr>
+      <td>Projected Annual Revenue
+      <td colspan="2" style="text-align:center">$216,000
+    
+    <tr>
+      <td>Estimated Monthly Operating Expenses (steady state)
+      <td colspan="2" style="text-align:center">$20,000–$22,000
+    
+  
+
+  <p><strong>Revenue breakdown by stream (steady state, Month 12+):
+
+  <table>
+    <tr>
+      <th>Revenue Stream
+      <th>Share
+      <th style="text-align:right">Monthly (Month 12)
+    
+    <tr>
+      <td>Food & Beverage
+      <td>65%
+      <td style="text-align:right">$19,500
+    
+    <tr>
+      <td>Cover Charges
+      <td>22%
+      <td style="text-align:right">$6,600
+    
+    <tr>
+      <td>Pre-Owned Retail
+      <td>8%
+      <td style="text-align:right">$2,400
+    
+    <tr>
+      <td>New Game Retail
+      <td>3%
+      <td style="text-align:right">$900
+    
+    <tr>
+      <td>Private Events
+      <td>2%
+      <td style="text-align:right">$600
+    
+    <tr>
+      <td><strong>Total
+      <td><strong>100%
+      <td style="text-align:right"><strong>$30,000
+    
+  
+
+  <p><em>Revenue projections are based on industry benchmarks for board game cafes and experiential retail. Actual results will vary based on location, execution, and market conditions. All projections will be refined following primary research completion before the final round.
+
+  
+    <strong>Important: Primary research (customer surveys, competitor observations, and stakeholder interviews) is planned for completion before the final DECA round. Revenue projections, operating expense estimates, and budget allocations will be validated and refined with primary data. The figures presented are directional estimates, not guarantees.
+</div>
+
+<div class="page">
+Section VII — Page 19 of 20
+  <h1>VII. Bibliography
+
+  <p>The following sources were consulted for this research study. Additional sources will be added following primary research completion before the final round.
+
+  
+    <span>1. ICv2. "Board Game Industry Report 2025: Market Size and Growth Forecast." <em>ICv2 Industry Analysis, 2025. https://icv2.com
+  
+  
+    <span>2. ICv2. "The State of the Hobby: Q1 2026 Update." <em>ICv2 Quarterly Report, January 2026.
+  
+  
+    <span>3. Market Intel O. "Board Game Market Report 2025–2034: CAGR of 9.2%." <em>Market Intelligence Reports, 2025.
+  
+  
+    <span>4. Loyalty Pass. "Loyalty Industry Benchmark Report 2025: What Keeps Customers Coming Back." <em>Loyalty Pass Research, 2025. https://loyaltypass.com
+  
+  
+    <span>5. Reward Loyalty. "Board Game Cafe Loyalty Statistics 2025." <em>Reward Loyalty Insights, 2025. https://rewardloyalty.com
+  
+  
+    <span>6. VoxBooster. "Board Game Cafe Business Statistics and Revenue Data 2026." <em>VoxBooster, 2026. https://voxbooster.com
+  
+  
+    <span>7. Business Plan Templates. "Board Game Cafe Business Plan: Revenue Projections and Costs." <em>BusinessPlanTemplates.com, 2025. https://businessplantemplates.com
+  
+  
+    <span>8. Seattle Times. "Screen Fatigue Is Real: Consumers Are Actively Seeking Less Screen Time." March 2025. https://seattletimes.com
+  
+  
+    <span>9. U.S. Bureau of Labor Statistics. "Hobby, Toy, and Game Store Sector (NAICS 451120): Output and Employment Data." <em>FRED Economic Data. https://fred.stlouisfed.org
+  
+  
+    <span>10. U.S. Census Bureau. "Frisco, Texas: Population and Demographic Profile." 2024 American Community Survey. https://census.gov
+  
+  
+    <span>11. University of Texas at Dallas. "UT Dallas Facts: Enrollment and Student Demographics." Office of Institutional Affairs, 2025. https://utdallas.edu
+  
+  
+    <span>12. Statista. "Board Game Industry — Statistics & Facts." 2025. https://statista.com
+  
+  
+    <span>13. Market Research Future. "Board Game Market Size, Share & Trends Report 2025–2034." 2025. https://marketresearchfuture.com
+  
+  
+    <span>14. Grand View Research. "Tabletop Gaming Industry Analysis: Growth Forecasts 2025–2030." 2025. https://grandviewresearch.com
+  
+  
+    <span>15. National Gaming Congress. "Experiential Retail Trends 2025: The Rise of Third Places." 2025. https://nationalgamingcongress.com
+  
+  
+    <span>16. Porter, Michael E. <em>Competitive Strategy: Techniques for Analyzing Industries. Free Press, 2008.
+  
+  
+    <span>17. Kotler, Philip, and Kevin Lane Keller. <em>Marketing Management, 16th Edition. Pearson, 2022.
+  
+  
+    <span>18. Pine, B. Joseph, and James H. Gilmore. <em>The Experience Economy: Profited from Experience, the Fourth Wave of Economic Thought. Harvard Business Review Press, 2011.
+  
+  
+    <span>19. Sherry, J. "The Business of Experience: Why Customers Pay for Moments, Not Things." <em>Journal of Consumer Marketing, vol. 38, no. 2, 2021, pp. 145–156.
+  
+  
+    <span>20. Rainie, Lee, and Bruce Hardy. "Americans and Screen Time." <em>Pew Research Center, 2024. https://pewresearch.org
+  
+  
+    <span>21. Frisco Chamber of Commerce. "Frisco, Texas: Business Climate and Commercial Real Estate Report." 2025. https://friscochamber.com
+  
+  
+    <span>22. Frisco ISD. "Frisco Independent School District: Strategic Plan and Demographics." 2024–2025. https://friscoisdschool.org
+  
+  
+    <span>23. BoardGameGeek. "Board Game Market Trends and Consumer Behavior Survey." 2025. https://boardgamegeek.com
+  
+  
+    <span>24. Nerdvana. "About Us — Operating Hours and Location." Accessed 2025. https://nerdvana.com
+  
+  
+    <span>25. Texas Tabletop Society. "Member Information and Schedule." Accessed 2025. https://texastabletop.com
+  
+  
+    <span>26. Farm+Feed. "Locations and Menu." Accessed 2025. https://farmandfeed.com
+  
+
+  
+    <strong>Note: This bibliography includes secondary research sources. Primary research data (survey results, interview transcripts, competitor observation notes) will be added as supplementary citations following primary research completion before the final round.
+</div>
+
+<div class="page">
+Section VIII — Page 20 of 20
+  <h1>VIII. Appendix
+
+  <h2>A. Planned Survey Instrument
+
+  <p>The following 20-question survey will be distributed to 100+ respondents aged 13–35 in the Frisco, Texas area. The survey is designed across four domains: screen time habits, interest in board game cafes, spending patterns, and loyalty motivations.
+
+  <h3>Domain 1: Screen Time Habits
+
+  
+    <span>Q1. How many hours per day do you spend on screens (phone, computer, TV, gaming console)?
+    <span>Multiple choice: Less than 2 hrs / 2–4 hrs / 4–6 hrs / 6–8 hrs / 8+ hours
+  
+  
+    <span>Q2. Do you feel like you spend too much time on screens?
+    <span>Multiple choice: No, just right / Yes, I wish I spent less / Yes, I'm actively trying to reduce screen time
+  
+  
+    <span>Q3. How often do you participate in non-screen-based social activities (sports, board games, hobbies, events)?
+    <span>Multiple choice: Daily / Weekly / Monthly / Rarely / Never
+  
+
+  <h3>Domain 2: Interest in Board Game Cafes
+
+  
+    <span>Q4. Have you ever visited a board game cafe?
+    <span>Multiple choice: Yes, regularly / Yes, once or twice / No, but I would / No, not interested
+  
+  
+    <span>Q5. What would motivate you to visit a board game cafe in Frisco?
+    <span>Multiple choice: Hanging out with friends / Date night idea / Escape from screens / Try new games / Special events
+  
+  
+    <span>Q6. How much would you be willing to pay for a cover charge (includes 2 hours of gameplay)?
+    <span>Multiple choice: $5–$10 / $10–$15 / $15–$20 / $20+
+  
+  
+    <span>Q7. What time of day would you most likely visit a board game cafe?
+    <span>Multiple choice: 10 AM – 2 PM / 2 PM – 6 PM / 6 PM – 10 PM / Late night (10 PM+)
+  
+
+  <h3>Domain 3: Spending Patterns
+
+  
+    <span>Q8. On average, how much do you spend per visit at a local cafe or restaurant?
+    <span>Multiple choice: Less than $10 / $10–$15 / $15–$25 / More than $25
+  
+  
+    <span>Q9. Would you purchase food and drinks during a board game cafe visit?
+    <span>Multiple choice: Yes, every time / Yes, sometimes / No, I'd bring my own
+  
+  
+    <span>Q10. Would you be interested in purchasing pre-owned board games to take home?
+    <span>Multiple choice: Yes, definitely / Maybe / No, I prefer new games
+  
+
+  <h3>Domain 4: Loyalty Motivations
+
+  
+    <span>Q11. What would make you come back to a cafe you had never visited before? (Rank top 3)
+    <span>Multiple select: Lower prices / Known by name / Regular events / Friend group goes / Game variety / Online app / Community feel
+  
+  
+    <span>Q12. How important is it to you that a business gives back to the community?
+    <span>Likert scale: Not important / Slightly important / Moderately important / Very important / Extremely important
+  
+  
+    <span>Q13. Would you attend free community nights at a board game cafe?
+    <span>Multiple choice: Yes, every month / Yes, sometimes / Maybe / No
+  
+  
+    <span>Q14. Would you use a mobile app to check game availability and reserve tables?
+    <span>Multiple choice: Yes, frequently / Sometimes / Unlikely / No
+  
+  
+    <span>Q15. What is the most important factor in your loyalty to a business?
+    <span>Multiple choice: Price / Quality / Convenience / Staff relationships / Community connection / Rewards program
+  
+
+  <p><em>Questions 16–20 collect demographic data: age range, gender, occupation/student status, distance from Frisco, and cultural background. This data will be used to validate target market alignment.
+
+  
+    <strong>Note: This survey instrument is planned for deployment. Full survey results, including demographic breakdowns and statistical analysis, will be added to this appendix following primary research completion before the final round.
+</div>
+
+<div class="no-print nav-controls">
+  <div class="page-indicator" id="pageIndicator">Cover Page</div>
+  <button class="nav-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Go to top">↑</button>
+</div>
+
+<script>
+(function() {
+  var pages = document.querySelectorAll('.page, .cover-page, .toc-page');
+  var indicator = document.getElementById('pageIndicator');
+  var labels = [
+    'Cover Page', 'Table of Contents',
+    'Page 1', 'Page 2', 'Page 3', 'Page 4',
+    'Page 5', 'Page 6',
+    'Page 7', 'Pages 8-9', 'Page 10',
+    'Pages 12-13', 'Pages 14-15',
+    'Pages 16-17', 'Page 18', 'Page 19', 'Page 20'
+  ];
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var idx = Array.prototype.indexOf.call(pages, entry.target);
+        if (idx !== -1) indicator.textContent = labels[idx] || ('Page ' + (idx + 1));
+      }
+    });
+  }, { rootMargin: '-40% 0px -40% 0px' });
+  pages.forEach(function(p) { observer.observe(p); });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Home') { window.scrollTo({top: 0, behavior: 'smooth'}); }
+    if (e.key === 'End') { window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'}); }
+  });
+})();
+</script>
+</body>
+</html>

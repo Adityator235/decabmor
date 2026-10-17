@@ -1,0 +1,39 @@
+{
+  "brand": {
+    "accent": "#D4913C",
+    "bg": null,
+    "primary": "#2D5F3E",
+    "text": null
+  },
+  "code_theme": "auto",
+  "company_name": "The Game Table",
+  "default_output_dir": "./markdown-html-out/",
+  "derived_palette": {
+    "--md-accent": "#D4913C",
+    "--md-accent-soft": "rgba(212, 145, 60, 0.14)",
+    "--md-bg": "#2D5F3E",
+    "--md-border": "#408859",
+    "--md-code-bg": "#336C47",
+    "--md-link": "#E6C79C",
+    "--md-link-hover": "#EED9BC",
+    "--md-success": "#10A85C",
+    "--md-surface": "#36734B",
+    "--md-text": "#F7F7F2",
+    "--md-text-muted": "rgba(247, 247, 242, 0.68)",
+    "--md-warn": "#C87C10"
+  },
+  "design_style": "playful",
+  "logo_url": "",
+  "setup_completed_at": "2026-10-14T03:07:31.494438+00:00",
+  "skill": "design-system",
+  "toc": {
+    "behavior": "inline",
+    "max_depth": 3
+  },
+  "typography": {
+    "body_font": "Inter",
+    "heading_font": "Merriweather",
+    "scale_ratio": 1.25
+  },
+  "version": 1
+}

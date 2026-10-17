@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V. Strategic Plan (Page 15) — StarCareRx</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #2D5F3E;
+    --primary-dark: #1E4A2E;
+    --accent: #D4913C;
+    --bg: #FFFFFF;
+    --text: #1A1A1A;
+    --text-muted: #6B6B6B;
+    --border: #E0DCD7;
+    --surface: #F9F7F5;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 2rem;
+    line-height: 1.7;
+  }
+  .page {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--bg);
+    padding: 3.5rem 4rem;
+    position: relative;
+  }
+  .page::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+  }
+  .section-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+  .page-number {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 2rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+  h1 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary);
+    margin: 1.5rem 0 0.75rem;
+    font-size: 1.1rem;
+  }
+  h3 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary-dark);
+    margin: 1.25rem 0 0.5rem;
+    font-size: 1rem;
+  }
+  p { margin-bottom: 1rem; font-size: 0.95rem; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.25rem 0;
+    font-size: 0.85rem;
+  }
+  th, td {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border);
+    text-align: left;
+  }
+  th {
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+  }
+  .page-break {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed var(--border);
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+  .key-insight {
+    border-left: 3px solid var(--primary);
+    padding: 0.75rem 1rem;
+    margin: 1.25rem 0;
+    font-size: 0.9rem;
+  }
+  .key-insight strong {
+    color: var(--primary);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  .initiative-card {
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 1.25rem;
+    margin: 1rem 0;
+    background: var(--surface);
+  }
+  .initiative-card h4 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+  .initiative-card p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  .initiative-card .impact {
+    font-size: 0.8rem;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .timeline-visual {
+    margin: 1.5rem 0;
+    position: relative;
+  }
+  .timeline-bar {
+    height: 32px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    position: relative;
+    margin: 0.5rem 0;
+  }
+  .timeline-bar .segment {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: white;
+  }
+  .timeline-bar .segment.p1 { background: var(--primary); }
+  .timeline-bar .segment.p2 { background: var(--accent); }
+  .timeline-bar .segment.p3 { background: #5A8F6E; }
+  .timeline-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+  }
+  .risk-table td:nth-child(2),
+  .risk-table td:nth-child(3) {
+    text-align: center;
+    width: 20%;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="section-label">Section V — Page 15 of 20</div>
+  <h1>V. Strategic Plan: Implementation &amp; Measurement</h1>
+
+  <h2>Implementation Roadmap</h2>
+
+  <p>Project Swastik is implemented over 12 months in three overlapping phases. Each phase has specific deliverables, owners, and success metrics:</p>
+
+  <div class="timeline-visual">
+    <div style="font-size: 0.75rem; font-weight: 600; color: var(--primary); margin-bottom: 0.25rem;">PHASE 1: DRISHTI (Months 1–3)</div>
+    <div class="timeline-bar">
+      <div class="segment p1" style="left: 0; width: 25%;">M1</div>
+      <div class="segment p1" style="left: 25%; width: 25%;">M2</div>
+      <div class="segment p1" style="left: 50%; width: 25%;">M3</div>
+      <div class="segment p2" style="left: 75%; width: 25%;">Seva launches</div>
+    </div>
+    <div style="font-size: 0.75rem; font-weight: 600; color: var(--accent); margin-bottom: 0.25rem; margin-top: 0.75rem;">PHASE 2: SEVA (Months 4–8)</div>
+    <div class="timeline-bar">
+      <div class="segment p1" style="left: 0; width: 12.5%;"></div>
+      <div class="segment p2" style="left: 12.5%; width: 12.5%;">M4</div>
+      <div class="segment p2" style="left: 25%; width: 12.5%;">M5</div>
+      <div class="segment p2" style="left: 37.5%; width: 12.5%;">M6</div>
+      <div class="segment p2" style="left: 50%; width: 12.5%;">M7</div>
+      <div class="segment p2" style="left: 62.5%; width: 12.5%;">M8</div>
+      <div class="segment p3" style="left: 75%; width: 25%;">Milap launches</div>
+    </div>
+    <div style="font-size: 0.75rem; font-weight: 600; color: #5A8F6E; margin-bottom: 0.25rem; margin-top: 0.75rem;">PHASE 3: MILAP (Months 9–12)</div>
+    <div class="timeline-bar">
+      <div class="segment p1" style="left: 0; width: 66%;"></div>
+      <div class="segment p2" style="left: 66%; width: 9%;"></div>
+      <div class="segment p3" style="left: 75%; width: 12.5%;">M9</div>
+      <div class="segment p3" style="left: 87.5%; width: 12.5%;">M10–12</div>
+    </div>
+    <div class="timeline-labels">
+      <span>Month 1</span>
+      <span>Month 3</span>
+      <span>Month 6</span>
+      <span>Month 9</span>
+      <span>Month 12</span>
+    </div>
+  </div>
+
+  <h3>Phase 1: Foundation (Months 1–3)</h3>
+
+  <table>
+    <tr>
+      <th>Deliverable</th>
+      <th>Owner</th>
+      <th>Success Metric</th>
+    </tr>
+    <tr>
+      <td>Pre-fill copay confirmation workflow implemented</td>
+      <td>Head pharmacist</td>
+      <td>100% of prescriptions receive copay confirmation before fill</td>
+    </tr>
+    <tr>
+      <td>PA checklist integrated into prescription processing</td>
+      <td>Pharmacy technician</td>
+      <td>PA alerts sent within 24 hours of identification</td>
+    </tr>
+    <tr>
+      <td>Wellness Rewards program design finalized</td>
+      <td>Project lead</td>
+      <td>Tier structure, point system, and redemption catalog approved</td>
+    </tr>
+    <tr>
+      <td>Baseline metrics established</td>
+      <td>Project lead</td>
+      <td>Current return rate, average prescriptions/household, and Google/Yelp ratings documented</td>
+    </tr>
+    <tr>
+      <td>Wellness Rewards pilot launched (existing patients)</td>
+      <td>Project lead + staff</td>
+      <td>50 households enrolled in pilot program</td>
+    </tr>
+  </table>
+
+  <h3>Phase 2: Engagement (Months 4–8)</h3>
+
+  <table>
+    <tr>
+      <th>Deliverable</th>
+      <th>Owner</th>
+      <th>Success Metric</th>
+    </tr>
+    <tr>
+      <td>Full Wellness Rewards launch (public)</td>
+      <td>Project lead</td>
+      <td>200+ households enrolled in first 60 days</td>
+    </tr>
+    <tr>
+      <td>Personalization engine operational</td>
+      <td>Pharmacist + project lead</td>
+      <td>90% of households receive segment-appropriate touchpoints</td>
+    </tr>
+    <tr>
+      <td>First two wellness workshops completed</td>
+      <td>Project lead</td>
+      <td>20+ attendees per workshop; 80% satisfaction rate</td>
+    </tr>
+    <tr>
+      <td>Mid-program review and adjustments</td>
+      <td>Project lead</td>
+      <td>Return rate increased to 55%+; patient feedback incorporated</td>
+    </tr>
+  </table>
+
+  <h3>Phase 3: Community (Months 9–12)</h3>
+
+  <table>
+    <tr>
+      <th>Deliverable</th>
+      <th>Owner</th>
+      <th>Success Metric</th>
+    </tr>
+    <tr>
+      <td>Community health program launched (Q1 event)</td>
+      <td>Project lead</td>
+      <td>80+ attendees; 15+ new households acquired</td>
+    </tr>
+    <tr>
+      <td>School sponsorships secured (2+ ISD partnerships)</td>
+      <td>Project lead</td>
+      <td>StarCare branded materials at 2+ school events</td>
+    </tr>
+    <tr>
+      <td>All four wellness workshops completed</td>
+      <td>Project lead</td>
+      <td>70+ total workshop attendees across 4 sessions</td>
+    </tr>
+    <tr>
+      <td>Year-end program review and Year 2 plan</td>
+      <td>Project lead</td>
+      <td>Return rate reaches 78%; referral-driven growth of 35%</td>
+    </tr>
+  </table>
+
+  <h2>Risk Mitigation</h2>
+
+  <table class="risk-table">
+    <tr>
+      <th>Risk</th>
+      <th>Likelihood</th>
+      <th>Mitigation</th>
+    </tr>
+    <tr>
+      <td>Staff resistance to new workflow</td>
+      <td>Medium</td>
+      <td>Frame as opportunity, not burden; tie to wellness rewards tier achievements; recognize top performers</td>
+    </tr>
+    <tr>
+      <td>Low patient enrollment in Wellness Rewards</td>
+      <td>Low</td>
+      <td>Launch with pilot program (50 households); use in-store signage and pharmacist recommendation to drive sign-ups</td>
+    </tr>
+    <tr>
+      <td>Competitor retaliation (CVS/Walmart match program)</td>
+      <td>Medium</td>
+      <td>Chains cannot replicate personalization; double down on community roots and pharmacist relationships</td>
+    </tr>
+    <tr>
+      <td>Budget overrun on community events</td>
+      <td>Low</td>
+      <td>Phase community spending to Phase 3; secure school sponsorship deals before Q1 event; use in-store space to minimize venue costs</td>
+    </tr>
+  </table>
+
+  <div class="key-insight">
+    <strong>MEASUREMENT PHILOSOPHY</strong>
+    Every initiative in Project Swastik has a specific, measurable outcome. We track: patient return rate (primary KPI), prescriptions per household (secondary KPI), patient referrals (tertiary KPI), Google rating (trust proxy), and Wellness Rewards enrollment (program health). These metrics are reviewed monthly and reported to StarCare ownership.
+  </div>
+
+  <div class="page-break">— End of Page 15 —</div>
+</div>
+</body>
+</html>

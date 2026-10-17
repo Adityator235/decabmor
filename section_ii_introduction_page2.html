@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>II. Introduction (Pages 3–4) — StarCareRx</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #2D5F3E;
+    --primary-dark: #1E4A2E;
+    --accent: #D4913C;
+    --bg: #FFFFFF;
+    --text: #1A1A1A;
+    --text-muted: #6B6B6B;
+    --border: #E0DCD7;
+    --surface: #F9F7F5;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 2rem;
+    line-height: 1.7;
+  }
+  .page {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--bg);
+    padding: 3.5rem 4rem;
+    position: relative;
+  }
+  .page::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+  }
+  .section-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+  .page-number {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 2rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+  h1 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary);
+    margin: 1.5rem 0 0.75rem;
+    font-size: 1.1rem;
+  }
+  h3 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary-dark);
+    margin: 1.25rem 0 0.5rem;
+    font-size: 1rem;
+  }
+  p { margin-bottom: 1rem; font-size: 0.95rem; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.25rem 0;
+    font-size: 0.85rem;
+  }
+  th, td {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border);
+    text-align: left;
+  }
+  th {
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+  }
+  .page-break {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed var(--border);
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+  .demographic-bar {
+    margin: 0.75rem 0;
+  }
+  .demographic-bar .bar-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+  }
+  .demographic-bar .bar-track {
+    height: 24px;
+    background: #F0EDE8;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .demographic-bar .bar-fill {
+    height: 100%;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: white;
+  }
+  .demographic-bar .bar-fill.green { background: var(--primary); }
+  .demographic-bar .bar-fill.gold { background: var(--accent); }
+  .demographic-bar .bar-fill.muted { background: #9A9590; }
+  .psychographic-box {
+    background: var(--surface);
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    margin: 1rem 0;
+  }
+  .psychographic-box h4 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  .chart-container {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+  }
+  .swot-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .swot-cell {
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+  }
+  .swot-cell.s { border-top: 3px solid var(--primary); }
+  .swot-cell.w { border-top: 3px solid #C44; }
+  .swot-cell.o { border-top: 3px var(--accent) solid; }
+  .swot-cell.t { border-top: 3px solid #666; }
+  .swot-cell h4 {
+    font-family: 'Merriweather', serif;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+  .swot-cell.s h4 { color: var(--primary); }
+  .swot-cell.w h4 { color: #C44; }
+  .swot-cell.o h4 { color: var(--accent); }
+  .swot-cell.t h4 { color: #666; }
+  .swot-cell ul {
+    font-size: 0.85rem;
+    padding-left: 1.2rem;
+    margin: 0;
+  }
+  .swot-cell ul li { margin-bottom: 0.3rem; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="section-label">Section II — Page 3 of 20</div>
+  <h1>II. Introduction (continued)</h1>
+
+  <h2>B. Target Market (continued)</h2>
+
+  <h3>Market Segmentation</h3>
+
+  <p>StarCare's customer base segments into four groups based on prescription behavior, household composition, and service utilization:</p>
+
+  <table>
+    <tr>
+      <th>Segment</th>
+      <th>Est. Share</th>
+      <th>Annual Rx Value</th>
+      <th>Key Characteristic</th>
+    </tr>
+    <tr>
+      <td>Family Managers</td>
+      <td>45%</td>
+      <td>$1,800–$3,600</td>
+      <td>Parents managing Rx for children, themselves, and sometimes aging parents; fill 8–12 Rx/year</td>
+    </tr>
+    <tr>
+      <td>Chronic Care Patients</td>
+      <td>25%</td>
+      <td>$2,400–$4,800</td>
+      <td>On maintenance medications (diabetes, hypertension, thyroid); fill 12 Rx/year; highest lifetime value</td>
+    </tr>
+    <tr>
+      <td>Occasional Shoppers</td>
+      <td>20%</td>
+      <td>$200–$600</td>
+      <td>Fill 1–3 Rx/year (antibiotics, acute conditions); price-sensitive; switch easily</td>
+    </tr>
+    <tr>
+      <td>Veterinary Clients</td>
+      <td>10%</td>
+      <td>$300–$1,200</td>
+      <td>Own pets; fill veterinary medications; often discovered StarCare through vet differentiator</td>
+    </tr>
+  </table>
+
+  <h3>Projected Patient Mix</h3>
+  <div class="chart-container">
+    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; text-align: center;">Projected Patient Mix by Segment</p>
+    <div class="demographic-bar">
+      <div class="bar-label"><span>Family Managers</span><span>45%</span></div>
+      <div class="bar-track"><div class="bar-fill green" style="width: 45%;">45%</div></div>
+    </div>
+    <div class="demographic-bar">
+      <div class="bar-label"><span>Chronic Care Patients</span><span>25%</span></div>
+      <div class="bar-track"><div class="bar-fill gold" style="width: 25%;">25%</div></div>
+    </div>
+    <div class="demographic-bar">
+      <div class="bar-label"><span>Occasional Shoppers</span><span>20%</span></div>
+      <div class="bar-track"><div class="bar-fill muted" style="width: 20%;">20%</div></div>
+    </div>
+    <div class="demographic-bar">
+      <div class="bar-label"><span>Veterinary Clients</span><span>10%</span></div>
+      <div class="bar-track"><div class="bar-fill green" style="width: 10%;">10%</div></div>
+    </div>
+  </div>
+
+  <h3>Psychographic Profile</h3>
+
+  <p>Psychographic research indicates that the target market for StarCare is motivated by several key factors:</p>
+
+  <div class="psychographic-box">
+    <h4>Trust in the Pharmacist</h4>
+    <p>Patients who know their pharmacist by name and feel comfortable asking questions are 3.2× more likely to remain loyal to a pharmacy than patients who do not (Pharmacy Loyalty Report, 2024). StarCare's Google reviews consistently praise staff by name — Priya, Loveena, Pavani, Jiya — indicating that personal relationships are already StarCare's strongest asset.</p>
+  </div>
+  <div class="psychographic-box">
+    <h4>Convenience and Transparency</h4>
+    <p>58% of patients will switch pharmacies for better convenience (Pharmacy Market Research, 2024). But "convenience" in Prosper means more than location — it means transparent pricing, clear insurance communication, and no surprises at the register. Prosper residents are affluent but highly price-aware; they will pay for quality but resent being overcharged.</p>
+  </div>
+  <div class="psychographic-box">
+    <h4>Community Connection</h4>
+    <p>Prosper residents are deeply community-oriented — 87.9% own their homes, Prosper ISD is one of the top school districts in Texas, and the town's population grew 47.9% in five years. Patients who feel connected to a pharmacy's community presence are 2.1× more likely to recommend it to others (Community Pharmacy Engagement Study, 2024).</p>
+  </div>
+
+  <div class="page-break">— End of Page 3 —</div>
+</div>
+</body>
+</html>

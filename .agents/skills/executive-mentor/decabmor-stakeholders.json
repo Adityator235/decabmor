@@ -1,0 +1,61 @@
+{
+    "initiative": "DECA BMOR: The Game Table — Stakeholder Analysis",
+    "stakeholders": [
+        {
+            "name": "DECA Judges",
+            "role": "Competition evaluators",
+            "influence": 10,
+            "alignment": 5,
+            "interest": 10,
+            "notes": "They want to see rigorous research, logical strategy, and professional presentation. They'll penalize weak data, unrealistic numbers, or superficial analysis. High influence, medium alignment — they're not on our side until we prove ourselves."
+        },
+        {
+            "name": "Team Members (3 people)",
+            "role": "Business owners",
+            "influence": 8,
+            "alignment": 9,
+            "interest": 9,
+            "notes": "All aligned and motivated. But they're high school students — judges will scrutinize depth of analysis accordingly."
+        },
+        {
+            "name": "Frisco ISD Administration",
+            "role": "School approval for competition participation",
+            "influence": 7,
+            "alignment": 7,
+            "interest": 4,
+            "notes": "Likely supportive but won't fight for this. Need them to sign off on competition entry."
+        },
+        {
+            "name": "Board Game Cafe Owners (competitors)",
+            "role": "Industry professionals who could be interviewed",
+            "influence": 4,
+            "alignment": 5,
+            "interest": 3,
+            "notes": "Unlikely to respond to a high school student's interview request. This is a research gap."
+        },
+        {
+            "name": "Frisco Community / Parents",
+            "role": "Target market / potential customers",
+            "influence": 5,
+            "alignment": 6,
+            "interest": 4,
+            "notes": "Frisco is a family-oriented community. Parents control household spending. If they don't see value, the business fails."
+        },
+        {
+            "name": "UT Dallas Students",
+            "role": "Target demographic (18-24)",
+            "influence": 5,
+            "alignment": 7,
+            "interest": 8,
+            "notes": "Strong potential fit — board games, affordable entertainment, proximity. But they're busy and have many options."
+        },
+        {
+            "name": "Nerdvana (Competitor)",
+            "role": "Established Frisco board game cafe",
+            "influence": 6,
+            "alignment": 3,
+            "interest": 7,
+            "notes": "They are our biggest competitive threat. If they extend hours to daytime, our main differentiator disappears. They're an engaged skeptic — paying attention, not convinced we pose a real threat."
+        }
+    ]
+}

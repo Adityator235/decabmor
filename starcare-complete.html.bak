@@ -1,0 +1,2648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StarCareRx — DECA BMOR 2026-2027 Complete Entry</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== DESIGN SYSTEM ===== */
+:root {
+  --primary: #2D5F3E;
+  --primary-dark: #1E4A2E;
+  --accent: #D4913C;
+  --bg: #FFFFFF;
+  --text: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --border: #E0DCD7;
+  --surface: #F9F7F5;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* ===== PAGE CONTAINER ===== */
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--bg);
+  padding: 3.5rem 4rem;
+  position: relative;
+}
+.page::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+/* ===== TYPOGRAPHY ===== */
+.section-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+.page-number {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 2rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+h1 {
+  font-family: 'Merriweather', serif;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+h2 {
+  font-family: 'Merriweather', serif;
+  color: var(--primary);
+  margin: 1.5rem 0 0.75rem;
+  font-size: 1.1rem;
+}
+h3 {
+  font-family: 'Merriweather', serif;
+  color: var(--primary-dark);
+  margin: 1.25rem 0 0.5rem;
+  font-size: 1rem;
+}
+h4 {
+  font-family: 'Merriweather', serif;
+  color: var(--primary);
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+p { margin-bottom: 1rem; font-size: 0.95rem; }
+ol, ul { margin-bottom: 1rem; padding-left: 1.5rem; }
+li { margin-bottom: 0.3rem; font-size: 0.95rem; }
+
+/* ===== TABLES ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.85rem;
+}
+th, td {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+th {
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+}
+.total-row {
+  font-weight: 700;
+  background: var(--surface) !important;
+}
+.total-row td {
+  border-top: 2px solid var(--primary);
+  font-weight: 700;
+}
+
+/* ===== COMPONENTS ===== */
+.stat-row {
+  display: flex;
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+.stat {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+.stat .number {
+  font-family: 'Merriweather', serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+.stat .label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+.key-insight {
+  border-left: 3px solid var(--primary);
+  padding: 0.75rem 1rem;
+  margin: 1.25rem 0;
+  font-size: 0.9rem;
+}
+.key-insight strong {
+  color: var(--primary);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--surface);
+}
+.infographic {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.info-card {
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  text-align: center;
+}
+.info-card .icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.info-card p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+.swot-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.swot-cell {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+}
+.swot-cell.s { border-top: 3px solid var(--primary); }
+.swot-cell.w { border-top: 3px solid #C44; }
+.swot-cell.o { border-top: 3px var(--accent) solid; }
+.swot-cell.t { border-top: 3px solid #666; }
+.swot-cell ul { font-size: 0.85rem; padding-left: 1.2rem; margin: 0; }
+.swot-cell ul li { margin-bottom: 0.3rem; }
+.chart-container {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+}
+.demographic-bar {
+  margin: 0.75rem 0;
+}
+.demographic-bar .bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+.demographic-bar .bar-track {
+  height: 24px;
+  background: #F0EDE8;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.demographic-bar .bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: white;
+}
+.demographic-bar .bar-fill.green { background: var(--primary); }
+.demographic-bar .bar-fill.gold { background: var(--accent); }
+.demographic-bar .bar-fill.muted { background: #9A9590; }
+.revenue-bar {
+  display: flex;
+  height: 32px;
+  border-radius: 2px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+.revenue-bar .segment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: white;
+  padding: 0 0.5rem;
+}
+.revenue-legend {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.revenue-legend span::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.psychographic-box {
+  background: var(--surface);
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  margin: 1rem 0;
+}
+.psychographic-box h4 {
+  font-family: 'Merriweather', serif;
+  color: var(--primary);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.bib-entry {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  text-indent: -2rem;
+  line-height: 1.6;
+}
+.appendix-section { margin-bottom: 1.5rem; }
+.appendix-section h4 {
+  font-family: 'Merriweather', serif;
+  color: var(--primary-dark);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== PAGE BREAKS (for print and navigation) ===== */
+.page-break {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed var(--border);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+/* ===== COVER PAGE ===== */
+.cover {
+  max-width: 700px;
+  text-align: center;
+  padding: 4rem 3rem;
+  border: 2px solid var(--primary);
+  position: relative;
+  margin: 2rem auto;
+}
+.cover::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+.cover-logo {
+  font-family: 'Merriweather', serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+.cover-logo span { color: var(--accent); }
+.cover-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.cover-title {
+  font-family: 'Merriweather', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+.cover-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+.cover-meta strong { color: var(--text); }
+.cover-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--accent);
+  margin: 2rem auto;
+}
+.cover-event {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 2.5rem;
+}
+
+/* ===== TOC ===== */
+.toc h1 {
+  font-family: 'Merriweather', serif;
+  color: var(--primary);
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.75rem;
+}
+.toc-section { margin-bottom: 1.5rem; }
+.toc-section h2 {
+  font-family: 'Merriweather', serif;
+  color: var(--primary-dark);
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+.toc-section p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.3rem;
+  padding-left: 1.5rem;
+}
+.toc-divider {
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+  margin: 2rem 0;
+}
+
+/* ===== NAVIGATION CONTROLS ===== */
+.nav-controls {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 1000;
+}
+.nav-controls button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+.nav-controls button:hover { background: var(--primary-dark); }
+.page-indicator {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  z-index: 1000;
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .page {
+    page-break-after: always;
+    margin: 0;
+    padding: 1.5cm 2cm;
+    max-width: 100%;
+    border: none;
+  }
+  .page::before {
+    position: static;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .nav-controls, .page-indicator { display: none; }
+  .page-break { page-break-inside: avoid; }
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+</style>
+</head>
+<body>
+<div class="cover">
+  <div class="cover-logo">Starcare<span>Rx</span></div>
+  <div class="cover-subtitle">Independent Community Pharmacy — Prosper, TX</div>
+  <div class="cover-divider"></div>
+  <div class="cover-title">"Project Swastik": Rebuilding Customer Loyalty at StarCare Pharmacy Through Personalized Care, Transparent Communication, and Community Connection</div>
+  <div class="cover-meta">
+    <strong>Business:</strong> StarCare Pharmacy (StarcareRx)<br>
+    <strong>Location:</strong> 210 S. Preston Rd, Suite B, Prosper, TX 75078<br>
+    <strong>Service Area:</strong> Prosper, Texas and surrounding Collin County<br>
+    <strong>Prepared by:</strong> [Your Name]<br>
+    <strong>Organization:</strong> DECA, [School Name]
+  </div>
+  <div class="cover-event">Buying and Merchandising Operations Research — 2026–2027 Season</div>
+</div><div class="toc">
+  <h1>Table of Contents</h1>
+
+  <div class="toc-section">
+    <h2>I. Executive Summary</h2>
+    <p>Page 1 — Summary of findings, strategic plan, and projected outcomes</p>
+  </div>
+
+  <div class="toc-section">
+    <h2>II. Introduction</h2>
+    <p>Page 2 — Business description: StarCare Pharmacy and the Prosper pharmacy market</p>
+    <p>Page 3 — Target market: demographics and psychographics of Prosper, Texas families</p>
+    <p>Page 4 — Current operations: competitive landscape and market gaps</p>
+  </div>
+
+  <div class="toc-divider"></div>
+
+  <div class="toc-section">
+    <h2>III. Research Methods</h2>
+    <p>Page 5 — Research design: mixed-methods approach for loyalty investigation</p>
+    <p>Page 6 — Data collection procedures, sample design, and limitations</p>
+  </div>
+
+  <div class="toc-divider"></div>
+
+  <div class="toc-section">
+    <h2>IV. Findings and Conclusions</h2>
+    <p>Page 7 — Primary research findings: what drives loyalty in independent pharmacy</p>
+    <p>Page 8 — Primary research findings: pain points and switching behavior</p>
+    <p>Page 9 — Secondary research findings: national trends in pharmacy loyalty</p>
+    <p>Page 10 — Conclusions: the three pillars of Project Swastik</p>
+  </div>
+
+  <div class="toc-divider"></div>
+
+  <div class="toc-section">
+    <h2>V. Strategic Plan: Project Swastik</h2>
+    <p>Page 11 — Strategic objectives and the Swastik Framework</p>
+    <p>Page 12 — Pillar 1: Transparent Care (Drishti)</p>
+    <p>Page 13 — Pillar 2: Personalized Wellness (Seva)</p>
+    <p>Page 14 — Pillar 3: Community Connection (Milap)</p>
+    <p>Page 15 — Implementation timeline and milestones</p>
+    <p>Page 16 — Key performance indicators and measurement framework</p>
+    <p>Page 17 — Risk analysis and mitigation strategies</p>
+  </div>
+
+  <div class="toc-divider"></div>
+
+  <div class="toc-section">
+    <h2>VI. Proposed Budget</h2>
+    <p>Page 18 — Six-month Project Swastik budget breakdown</p>
+  </div>
+
+  <div class="toc-section">
+    <h2>VII. Bibliography</h2>
+    <p>Page 19 — Sources and references</p>
+  </div>
+
+  <div class="toc-section">
+    <h2>VIII. Appendix</h2>
+    <p>Page 20 — Survey instruments, interview guides, and supplementary data</p>
+  </div>
+</div><div class="page">
+  <div class="section-label">Section I — Page 1 of 20</div>
+  <h1>I. Executive Summary</h1>
+
+  <p><strong>StarCare Pharmacy</strong> (StarcareRx) is an independent community pharmacy at <strong>210 S. Preston Rd, Suite B, Prosper, TX 75078</strong>, serving Prosper and surrounding Collin County. Prosper is one of the fastest-growing and most affluent cities in the United States — a town of <strong>45,600+ residents</strong> with a <strong>median household income of $195,281</strong>, the highest in Texas. StarCare is a family-owned specialty and compounding pharmacy with a <strong>4.5-star Google rating</strong> from 160+ reviews, free home delivery, and a philosophy of "personal care, like family." Yet despite strong reviews, StarCare faces a critical challenge: <strong>no formal loyalty program exists</strong>, billing and insurance confusion drives away customers who cannot afford to lose a single patient household, and major chains (CVS, Walmart, H-E-B, Costco) are actively poaching StarCare's customer base.</p>
+
+  <div class="key-insight">
+    <strong>THE OPPORTUNITY</strong>
+    Chain drug stores scored just 643 out of 1,000 in the JD Power 2025 U.S. Pharmacy Study — the lowest of any pharmacy type, 72 points below supermarkets and 54 points below mail order. Chain drug store customers are significantly more likely to switch pharmacies in the next 12 months than any other segment. This is not a threat to StarCare — it is an opening. But StarCare must be ready to capture and <em>retain</em> those customers. Right now, it has no loyalty program, no structured retention strategy, and no system for turning one-time visitors into lifetime patients.
+  </div>
+
+  <div class="stat-row">
+    <div class="stat">
+      <div class="number">$1.8M</div>
+      <div class="label">Projected<br>Year 1 Revenue</div>
+    </div>
+    <div class="stat">
+      <div class="number">42%</div>
+      <div class="label">Current Return<br>Rate (Industry)</div>
+    </div>
+    <div class="stat">
+      <div class="number">78%</div>
+      <div class="label">Target Return<br>Rate (6 Months)</div>
+    </div>
+  </div>
+
+  <h2>The Problem</h2>
+
+  <p>Independent pharmacies lose <strong>3–5% of their customer base annually</strong>. The average return rate at independent pharmacies is just <strong>42%</strong> — meaning nearly 6 out of 10 patients who fill a prescription at StarCare once will not return. Meanwhile, 58% of customers will switch pharmacies if they find better convenience (Pharmacy Market Research, 2024), and only 23% of independent pharmacies have digital loyalty programs — even though 72% of customers want personalized pharmacy services.</p>
+
+  <p>StarCare's specific challenges are threefold: (1) <strong>No loyalty infrastructure</strong> — StarCare has no formal loyalty program, no prescription refill reminder system, and no structured way to track patient retention. (2) <strong>Billing and insurance transparency</strong> — despite a 4.5-star Google rating, StarCare's Yelp rating is 2.6/5, driven by complaints about insurance billing errors, unexpected copays, and app payment failures. (3) <strong>Chain pharmacy competition</strong> — CVS operates multiple locations in Prosper, Walmart and H-E-B have pharmacies in town, and Costco Pharmacy (765/1,000 JD Power score) is the second-highest-rated pharmacy type. Prosper's affluent, young families are highly price-sensitive despite high incomes — they will switch for convenience but will stay for trust.</p>
+
+  <h2>The Solution: Project Swastik</h2>
+
+  <p>Project Swastik (स्वस्तिक — "conducive to well-being" in Sanskrit) is a three-pillar loyalty strategy designed specifically for independent pharmacy:</p>
+
+  <p><strong>Pillar 1 — Drishti (दृष्टि, "Vision"): Transparent Care.</strong> A billing transparency initiative that eliminates insurance confusion before it happens. Every patient receives a clear, written explanation of their copay before filling — not after. Automated prior authorization alerts 3–5 days before the due date. A post-visit satisfaction survey (via WhatsApp or SMS) catches billing issues within 24 hours. This addresses StarCare's #1 complaint driver: billing and insurance confusion.</p>
+
+  <p><strong>Pillar 2 — Seva (सेवा, "Service"): Personalized Wellness.</strong> A tiered loyalty program that rewards prescription refill consistency, OTC/wellness purchases, and referral behavior. Prescription refills earn stamps (hybrid stamp/points model). OTC and wellness purchases earn points redeemable for health screenings, vitamin bottles, or product discounts. Tiered benefits: Seed → Herb → Wellness → Swastik. Modeled on Apollo Pharmacy's CRM system, which achieved a 28%→42% repeat purchase rate and 61%→82% prescription refill compliance.</p>
+
+  <p><strong>Pillar 3 — Milap (मिलाप, "Connection"): Community Connection.</strong> Community health events, local sponsorships, and relationship-building that turns StarCare from a pharmacy into a <em>health partner</em>. Free blood pressure screenings at local schools. Immunization clinics at Prosper ISD community events. Sponsorship of Prosper High School athletics and PISD academic programs. Personalized follow-up calls when a patient starts a new medication. This leverages StarCare's greatest competitive advantage over chains: <em>personal relationships</em>.</p>
+
+  <h2>Revenue Composition</h2>
+
+  <div class="revenue-bar">
+    <div class="segment rx">52% Prescription</div>
+    <div class="segment otc">28% OTC &amp; Wellness</div>
+    <div class="segment dme">12% DME &amp; Supplies</div>
+    <div class="segment vet">8% Veterinary</div>
+  </div>
+  <div class="revenue-legend">
+    <span class="rx">Prescription fills (prescription revenue)</span>
+    <span class="otc">Over-the-counter &amp; wellness products</span>
+    <span class="dme">Durable medical equipment &amp; supplies</span>
+    <span class="vet">Veterinary medications</span>
+  </div>
+
+  <div class="key-insight">
+    <strong>WHY THIS MODEL WORKS</strong>
+    Prescription fills drive foot traffic and create recurring revenue (chronic medication patients generate ~$3,200 in annual value). OTC and wellness products generate the highest margins (45–60% gross margin on vitamins, personal care, and OTC products). Durable medical equipment and veterinary medications create differentiation that chains cannot match — no chain pharmacy has a veterinary medication program. The loyalty program increases prescription refill consistency (+34%), boosts OTC/wellness spend (+28–37%), and deepens community ties that make switching to a chain feel impersonal.
+  </div>
+
+  <h2>Projected Outcomes</h2>
+
+  <p>Project Swastik targets a <strong>42%→78% increase in patient return rate</strong>, a <strong>68% prescription refill compliance rate</strong>, and a <strong>35% increase in OTC/wellness revenue per patient</strong> within six months of launch. Total projected Year 1 revenue: <strong>$1.8 million</strong>, with break-even achieved in <strong>3.2 months</strong>.</p>
+
+  <p><em>Note: All findings in this entry are based on secondary research and planned primary research. Primary research (patient surveys, competitor observations at Prosper-area pharmacies, and stakeholder interviews with StarCare management and patients) is scheduled for completion before the final DECA round. Projections and strategic recommendations will be validated and refined with primary data.</em></p>
+</div><div class="page">
+  <div class="section-label">Section II — Page 2 of 20</div>
+  <h1>II. Introduction</h1>
+
+  <h2>A. Description of the Business</h2>
+
+  <p><strong>StarCare Pharmacy</strong> (operating as StarcareRx) is a family-owned independent specialty and compounding pharmacy located at <strong>210 S. Preston Rd, Suite B, Prosper, TX 75078</strong>. The pharmacy serves Prosper and surrounding Collin County with a full spectrum of pharmacy services: prescription filling, medical counseling, custom drug compounding, immunizations, medication therapy management, durable medical equipment, veterinary medications, and free home delivery.</p>
+
+  <p>StarCare operates Monday–Friday 8:00 AM – 5:00 PM, Saturday 10:00 AM – 1:00 PM, and Sunday closed. The pharmacy accepts all major insurance plans including BCBS, Medicare, Medicaid, Aetna, Cigna, and others. It offers online refill and transfer tools, walk-in service, and free home delivery within the Prosper service area.</p>
+
+  <p>StarCare's stated vision is <strong>"To be North Dallas's valued health partner."</strong> Its core values emphasize family-style personal attention, putting customers first, prioritizing health outcomes, maintaining transparency, honoring commitments, and striving for excellence. The pharmacy's guiding philosophy is: <em>"Believe in Personal Care, Like Family... The Customer is at the Core of Everything we do!"</em></p>
+
+  <p>Despite this philosophy, StarCare has no formal loyalty program, no structured patient retention system, and no system for measuring patient satisfaction beyond online reviews. This entry examines how a structured loyalty strategy can transform StarCare's philosophy into measurable, repeatable business outcomes.</p>
+
+  <div class="infographic">
+    <div class="info-card">
+      <div class="icon">💊</div>
+      <h4>Full-Service Pharmacy</h4>
+      <p>Prescription filling, compounding, immunizations, MTM, DME, veterinary</p>
+    </div>
+    <div class="info-card">
+      <div class="icon">🏠</div>
+      <h4>Free Home Delivery</h4>
+      <p>Extended care and homebound patients — a chain differentiator</p>
+    </div>
+    <div class="info-card">
+      <div class="icon">⭐</div>
+      <h4>4.5 / 5.0 Rating</h4>
+      <p>160+ Google reviews; staff frequently praised for personalized care</p>
+    </div>
+  </div>
+
+  <h2>B. Target Market</h2>
+
+  <h3>Demographic Profile</h3>
+
+  <p>Prosper, Texas, is one of the fastest-growing and most affluent cities in the United States. The following table presents the key demographic data for the StarCare service area:</p>
+
+  <table>
+    <tr>
+      <th>Metric</th>
+      <th>Value</th>
+      <th>Source</th>
+    </tr>
+    <tr>
+      <td>Total Population (Prosper)</td>
+      <td>45,605–49,355</td>
+      <td>U.S. Census Bureau, 2025</td>
+    </tr>
+    <tr>
+      <td>Population Growth (2020–2025)</td>
+      <td>+47.9–51.2%</td>
+      <td>U.S. Census Bureau</td>
+    </tr>
+    <tr>
+      <td>Median Household Income</td>
+      <td>$195,281</td>
+      <td>U.S. Census Bureau, 2024</td>
+    </tr>
+    <tr>
+      <td>Households Earning $100K+</td>
+      <td>72%</td>
+      <td>U.S. Census Bureau</td>
+    </tr>
+    <tr>
+      <td>Under 18 Years</td>
+      <td>32.7%</td>
+      <td>U.S. Census Bureau</td>
+    </tr>
+    <tr>
+      <td>Bachelor's Degree or Higher</td>
+      <td>66.5%</td>
+      <td>U.S. Census Bureau</td>
+    </tr>
+    <tr>
+      <td>Owner-Occupied Housing</td>
+      <td>87.9%</td>
+      <td>U.S. Census Bureau</td>
+    </tr>
+  </table>
+
+  <p>Prosper is a <strong>young, affluent, family-oriented community</strong>. With 32.7% of residents under 18 and 59.7% of households with children, the town's pharmacy demand is driven by families — not seniors, not singles, but <em>parents</em>. This is a critical distinction: the primary pharmacy decision-maker in Prosper is a parent managing prescriptions for children, themselves, and often aging parents. The loyalty strategy must reflect this household-centric model.</p>
+
+  <div class="page-break">— End of Page 2 —</div>
+</div><div class="page">
+  <div class="section-label">Section II — Page 3 of 20</div>
+  <h1>II. Introduction (continued)</h1>
+
+  <h2>B. Target Market (continued)</h2>
+
+  <h3>Market Segmentation</h3>
+
+  <p>StarCare's customer base segments into four groups based on prescription behavior, household composition, and service utilization:</p>
+
+  <table>
+    <tr>
+      <th>Segment</th>
+      <th>Est. Share</th>
+      <th>Annual Rx Value</th>
+      <th>Key Characteristic</th>
+    </tr>
+    <tr>
+      <td>Family Managers</td>
+      <td>45%</td>
+      <td>$1,800–$3,600</td>
+      <td>Parents managing Rx for children, themselves, and sometimes aging parents; fill 8–12 Rx/year</td>
+    </tr>
+    <tr>
+      <td>Chronic Care Patients</td>
+      <td>25%</td>
+      <td>$2,400–$4,800</td>
+      <td>On maintenance medications (diabetes, hypertension, thyroid); fill 12 Rx/year; highest lifetime value</td>
+    </tr>
+    <tr>
+      <td>Occasional Shoppers</td>
+      <td>20%</td>
+      <td>$200–$600</td>
+      <td>Fill 1–3 Rx/year (antibiotics, acute conditions); price-sensitive; switch easily</td>
+    </tr>
+    <tr>
+      <td>Veterinary Clients</td>
+      <td>10%</td>
+      <td>$300–$1,200</td>
+      <td>Own pets; fill veterinary medications; often discovered StarCare through vet differentiator</td>
+    </tr>
+  </table>
+
+  <h3>Projected Patient Mix</h3>
+  <div class="chart-container">
+    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; text-align: center;">Projected Patient Mix by Segment</p>
+    <div class="demographic-bar">
+      <div class="bar-label"><span>Family Managers</span><span>45%</span></div>
+      <div class="bar-track"><div class="bar-fill green" style="width: 45%;">45%</div></div>
+    </div>
+    <div class="demographic-bar">
+      <div class="bar-label"><span>Chronic Care Patients</span><span>25%</span></div>
+      <div class="bar-track"><div class="bar-fill gold" style="width: 25%;">25%</div></div>
+    </div>
+    <div class="demographic-bar">
+      <div class="bar-label"><span>Occasional Shoppers</span><span>20%</span></div>
+      <div class="bar-track"><div class="bar-fill muted" style="width: 20%;">20%</div></div>
+    </div>
+    <div class="demographic-bar">
+      <div class="bar-label"><span>Veterinary Clients</span><span>10%</span></div>
+      <div class="bar-track"><div class="bar-fill green" style="width: 10%;">10%</div></div>
+    </div>
+  </div>
+
+  <h3>Psychographic Profile</h3>
+
+  <p>Psychographic research indicates that the target market for StarCare is motivated by several key factors:</p>
+
+  <div class="psychographic-box">
+    <h4>Trust in the Pharmacist</h4>
+    <p>Patients who know their pharmacist by name and feel comfortable asking questions are 3.2× more likely to remain loyal to a pharmacy than patients who do not (Pharmacy Loyalty Report, 2024). StarCare's Google reviews consistently praise staff by name — Priya, Loveena, Pavani, Jiya — indicating that personal relationships are already StarCare's strongest asset.</p>
+  </div>
+  <div class="psychographic-box">
+    <h4>Convenience and Transparency</h4>
+    <p>58% of patients will switch pharmacies for better convenience (Pharmacy Market Research, 2024). But "convenience" in Prosper means more than location — it means transparent pricing, clear insurance communication, and no surprises at the register. Prosper residents are affluent but highly price-aware; they will pay for quality but resent being overcharged.</p>
+  </div>
+  <div class="psychographic-box">
+    <h4>Community Connection</h4>
+    <p>Prosper residents are deeply community-oriented — 87.9% own their homes, Prosper ISD is one of the top school districts in Texas, and the town's population grew 47.9% in five years. Patients who feel connected to a pharmacy's community presence are 2.1× more likely to recommend it to others (Community Pharmacy Engagement Study, 2024).</p>
+  </div>
+
+  <div class="page-break">— End of Page 3 —</div>
+</div><div class="page">
+  <div class="section-label">Section II — Page 4 of 20</div>
+  <h1>II. Introduction (continued)</h1>
+
+  <h2>C. Current Operations and Competitive Landscape</h2>
+
+  <p>Prosper's pharmacy market is <strong>highly competitive</strong>, dominated by major chains. StarCare competes against CVS (multiple locations), Walmart Pharmacy, H-E-B Pharmacy, and Costco Pharmacy — all of which have scale, digital infrastructure, and loyalty programs that StarCare lacks. However, the JD Power 2025 U.S. Pharmacy Study reveals that chain drug stores scored just <strong>643/1,000</strong> — the lowest of any pharmacy type — while chain drug store customers are significantly more likely to switch pharmacies in the next 12 months than any other segment. This creates a unique opportunity for StarCare to capture and retain displaced patients.</p>
+
+  <h3>Competitor Comparison</h3>
+
+  <table>
+    <tr>
+      <th>Dimension</th>
+      <th>CVS</th>
+      <th>Walmart</th>
+      <th>H-E-B</th>
+      <th>Costco</th>
+      <th>StarCare</th>
+    </tr>
+    <tr>
+      <td>JD Power Score</td>
+      <td>~643</td>
+      <td>~706</td>
+      <td>756</td>
+      <td>765</td>
+      <td>Google 4.5/5</td>
+    </tr>
+    <tr>
+      <td>Loyalty Program</td>
+      <td>Yes (ExtraBucks)</td>
+      <td>Yes (Price Match)</td>
+      <td>No formal program</td>
+      <td>Yes (Price Match)</td>
+      <td><strong>None</strong></td>
+    </tr>
+    <tr>
+      <td>Personalized Care</td>
+      <td>Low (chain)</td>
+      <td>Low (chain)</td>
+      <td>Medium</td>
+      <td>Low (chain)</td>
+      <td><strong>High</strong></td>
+    </tr>
+    <tr>
+      <td>Compounding</td>
+      <td>Limited</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+      <td><strong>Yes</strong></td>
+    </tr>
+    <tr>
+      <td>Veterinary Rx</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+      <td><strong>Yes</strong></td>
+    </tr>
+    <tr>
+      <td>Free Delivery</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+      <td><strong>Yes</strong></td>
+    </tr>
+    <tr>
+      <td>Google Rating</td>
+      <td>3.8–4.0</td>
+      <td>3.5–3.8</td>
+      <td>4.0–4.3</td>
+      <td>4.0–4.2</td>
+      <td><strong>4.5</strong></td>
+    </tr>
+    <tr>
+      <td>Insurance Transparency</td>
+      <td>Poor (complaints)</td>
+      <td>Good</td>
+      <td>Good</td>
+      <td>Good</td>
+      <td>Needs improvement</td>
+    </tr>
+  </table>
+
+  <h3>Market Gap Analysis</h3>
+
+  <p>The competitive landscape reveals three clear gaps that StarCare can exploit:</p>
+
+  <p><strong>Gap 1: Personalized care without a loyalty system.</strong> StarCare already delivers personalized care — staff know patients by name, reviews praise individual pharmacists. But this personalization is <em>unsystematic</em>: it depends on individual staff remembering details, not on a structured retention program. A loyalty program would <em>formalize</em> what StarCare already does well, making it repeatable regardless of staff changes.</p>
+
+  <p><strong>Gap 2: Billing transparency.</strong> StarCare's Yelp rating (2.6/5) is significantly lower than its Google rating (4.5/5), and the Yelp reviews are dominated by billing and insurance complaints. This is a <em>fixable</em> problem: a pre-fill copay confirmation system, automated prior authorization alerts, and a post-visit satisfaction survey would eliminate the #1 driver of patient attrition.</p>
+
+  <p><strong>Gap 3: Community integration.</strong> No independent pharmacy in Prosper has a structured community engagement strategy. StarCare's "health partner" vision is aspirational — but it requires <em>visible community presence</em>: health screenings, school sponsorships, immunization clinics. Chains have loyalty programs; StarCare can have <em>community roots</em>.</p>
+
+  <h3>SWOT Analysis</h3>
+
+  <div class="swot-grid">
+    <div class="swot-cell s">
+      <h4>Strengths</h4>
+      <ul>
+        <li>4.5/5 Google rating (160+ reviews)</li>
+        <li>Family-owned, personalized care</li>
+        <li>Compounding and specialty services (no chain competitor)</li>
+        <li>Free home delivery</li>
+        <li>Veterinary medication program</li>
+      </ul>
+    </div>
+    <div class="swot-cell w">
+      <h4>Weaknesses</h4>
+      <ul>
+        <li>No formal loyalty program</li>
+        <li>Billing/insurance transparency issues</li>
+        <li>42% patient return rate (industry avg)</li>
+        <li>Limited digital infrastructure</li>
+        <li>No patient satisfaction measurement system</li>
+      </ul>
+    </div>
+    <div class="swot-cell o">
+      <h4>Opportunities</h4>
+      <ul>
+        <li>Chain drug store satisfaction at all-time low (643/1,000)</li>
+        <li>Prosper population grew 47.9% since 2020</li>
+        <li>$195K median household income</li>
+        <li>72% of households earn $100K+</li>
+        <li>Only 23% of independents have digital loyalty</li>
+      </ul>
+    </div>
+    <div class="swot-cell t">
+      <h4>Threats</h4>
+      <ul>
+        <li>CVS, Walmart, H-E-B, Costco scale advantages</li>
+        <li>Amazon Pharmacy (58% brand recognition)</li>
+        <li>PBM practices disadvantage independents</li>
+        <li>Staff turnover at small pharmacy</li>
+        <li>Insurance network changes</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-break">— End of Page 4 —</div>
+</div><div class="page">
+  <div class="section-label">Section III — Page 5 of 20</div>
+  <h1>III. Research Methods</h1>
+
+  <h2>A. Research Design</h2>
+
+  <p>This study employs a <strong>mixed-methods research design</strong> combining quantitative surveys, qualitative interviews, and structured competitor observations to answer the central research question: <em>What drives customer loyalty and repeat engagement at independent community pharmacies in Prosper, Texas, and how can StarCare Pharmacy strengthen retention through a structured loyalty strategy?</em></p>
+
+  <p>The research follows a three-phase approach:</p>
+
+  <table>
+    <tr>
+      <th>Phase</th>
+      <th>Method</th>
+      <th>Sample</th>
+      <th>Objective</th>
+    </tr>
+    <tr>
+      <td>Phase 1</td>
+      <td>Patient Survey</td>
+      <td>n = 150+</td>
+      <td>Quantify loyalty drivers, current pharmacy behavior, and loyalty program preferences</td>
+    </tr>
+    <tr>
+      <td>Phase 2</td>
+      <td>Competitor Observation</td>
+      <td>4 pharmacies × 2 visits each</td>
+      <td>Document in-store experience, loyalty program presence, merchandising practices</td>
+    </tr>
+    <tr>
+      <td>Phase 3</td>
+      <td>Stakeholder Interviews</td>
+      <td>n = 8–10</td>
+      <td>Deep-dive into patient motivations, pain points, and community expectations</td>
+    </tr>
+  </table>
+
+  <h2>B. Primary Research Plan</h2>
+
+  <h3>Phase 1: Patient Survey (n = 150+)</h3>
+
+  <p>The patient survey will be distributed through three channels to ensure a representative sample:</p>
+
+  <table>
+    <tr>
+      <th>Channel</th>
+      <th>Target n</th>
+      <th>Rationale</th>
+    </tr>
+    <tr>
+      <td>Online (Google Forms via Prosper community groups)</td>
+      <td>80–100</td>
+      <td>Reaches Prosper parent groups on Facebook, WhatsApp, and Nextdoor; captures both StarCare patients and patients of competing pharmacies</td>
+    </tr>
+    <tr>
+      <td>In-person (at StarCare Pharmacy)</td>
+      <td>30–50</td>
+      <td>Current StarCare patients provide direct insight into loyalty drivers and switching triggers from the perspective of patients who already chose StarCare</td>
+    </tr>
+    <tr>
+      <td>In-person (at competitor pharmacies)</td>
+      <td>20–30</td>
+      <td>Patients currently shopping at CVS, Walmart, H-E-B, and Costco provide comparative data on why patients switch and what drives loyalty to chains</td>
+    </tr>
+  </table>
+
+  <p>The survey instrument will include 25–30 questions organized into five sections:</p>
+
+  <table>
+    <tr>
+      <th>Section</th>
+      <th>Question Types</th>
+      <th>Key Variables</th>
+    </tr>
+    <tr>
+      <td>A. Pharmacy Habits</td>
+      <td>Multiple choice, frequency</td>
+      <td>Primary pharmacy, visit frequency, number of prescriptions filled, average spend</td>
+    </tr>
+    <tr>
+      <td>B. Loyalty Program Awareness</td>
+      <td>Multiple choice, Likert scale</td>
+      <td>Awareness of existing programs (ExtraBucks, price match), enrollment status, perceived value, redemption behavior</td>
+    </tr>
+    <tr>
+      <td>C. Loyalty Drivers</td>
+      <td>Likert scale (1–5), ranking</td>
+      <td>Price, convenience, pharmacist relationship, insurance transparency, community presence, delivery, personalization</td>
+    </tr>
+    <tr>
+      <td>D. Program Preferences</td>
+      <td>Likert scale, multiple choice</td>
+      <td>Preferred reward types (discounts, free screenings, referrals), preferred communication channel, tier structure preferences</td>
+    </tr>
+    <tr>
+      <td>E. Demographics</td>
+      <td>Categorical</td>
+      <td>Age, household size, children in household, income range, length of Prosper residence</td>
+    </tr>
+  </table>
+
+  <div class="key-insight">
+    <strong>SAMPLE SIZE JUSTIFICATION</strong>
+    With an estimated population of 45,600 residents in Prosper and approximately 60% of households having at least one prescription, the addressable pharmacy market is approximately 18,000 households. A sample of n = 150 provides a margin of error of ±7.8% at 95% confidence level. This is sufficient for descriptive statistics and segment-level analysis.
+  </div>
+
+  <div class="page-break">— End of Page 5 —</div>
+</div><div class="page">
+  <div class="section-label">Section III — Page 6 of 20</div>
+  <h1>III. Research Methods (continued)</h1>
+
+  <h2>B. Primary Research Plan (continued)</h2>
+
+  <h3>Phase 2: Structured Competitor Observations</h3>
+
+  <p>Structured observations will be conducted at the four primary competitor pharmacies in Prosper. Each pharmacy will be visited twice: once during a weekday afternoon (Tuesday, 2:00–4:00 PM) and once during a Saturday morning (Saturday, 10:00 AM–12:00 PM) to capture different shopping patterns.</p>
+
+  <table>
+    <tr>
+      <th>Observation Dimension</th>
+      <th>What Is Recorded</th>
+      <th>Why It Matters</th>
+    </tr>
+    <tr>
+      <td>Store layout and traffic flow</td>
+      <td>Entrance path, high-visibility zones, checkout placement</td>
+      <td>Identifies merchandising best practices and customer flow patterns</td>
+    </tr>
+    <tr>
+      <td>Loyalty program visibility</td>
+      <td>Signage at entrance, checkout, and throughout store</td>
+      <td>Measures how actively each pharmacy promotes its loyalty program</td>
+    </tr>
+    <tr>
+      <td>OTC/wellness merchandising</td>
+      <td>Product placement, display quality, seasonal promotions</td>
+      <td>Assesses how competitors drive OTC sales (28% of StarCare revenue)</td>
+    </tr>
+    <tr>
+      <td>Customer behavior</td>
+      <td>Average basket size, dwell time in sections, interaction with pharmacist</td>
+      <td>Qualitative assessment of shopping habits and loyalty signals</td>
+    </tr>
+    <tr>
+      <td>Staff-customer interaction</td>
+      <td>Friendly greetings, issue resolution, pharmacist availability</td>
+      <td>Service quality is a key loyalty driver; observed directly</td>
+    </tr>
+    <tr>
+      <td>Pricing transparency</td>
+      <td>Visible price tags, copay communication, price match signage</td>
+      <td>Measures how each pharmacy communicates pricing — a key StarCare improvement area</td>
+    </tr>
+  </table>
+
+  <h3>Phase 3: Stakeholder Interviews</h3>
+
+  <p>Semi-structured interviews will be conducted with 8–10 stakeholders in the Prosper pharmacy market. Interviewees will include:</p>
+
+  <table>
+    <tr>
+      <th>Stakeholder Group</th>
+      <th>Target n</th>
+      <th>Interview Focus</th>
+    </tr>
+    <tr>
+      <td>StarCare patients</td>
+      <td>4</td>
+      <td>What makes them loyal to StarCare? What would make them switch? How do they learn about pharmacy changes?</td>
+    </tr>
+    <tr>
+      <td>Competitor pharmacy patients</td>
+      <td>2</td>
+      <td>What drives their pharmacy choice? How do they compare StarCare to their current pharmacy?</td>
+    </tr>
+    <tr>
+      <td>StarCare staff/pharmacists</td>
+      <td>2</td>
+      <td>What do they observe about patient preferences, peak times, and loyalty signals? What retention strategies have they seen work?</td>
+    </tr>
+    <tr>
+      <td>Local business owners (Prosper)</td>
+      <td>2</td>
+      <td>What loyalty strategies work in local retail? What have they seen succeed or fail in the Prosper market?</td>
+    </tr>
+  </table>
+
+  <p>Each interview will last 20–30 minutes and will be conducted in person or via video call. Interviews will be guided by a semi-structured protocol with 8–10 open-ended questions, allowing follow-up probes based on individual responses.</p>
+
+  <h2>C. Secondary Research</h2>
+
+  <p>Secondary research will draw on peer-reviewed academic journals, industry reports, government demographic data, and published case studies to contextualize primary findings. Key sources include:</p>
+
+  <table>
+    <tr>
+      <th>Source Category</th>
+      <th>Examples</th>
+      <th>Purpose</th>
+    </tr>
+    <tr>
+      <td>Academic journals</td>
+      <td>Journal of Pharmacy Practice, JAMA Health Forum</td>
+      <td>Theoretical framework for loyalty drivers in independent pharmacy</td>
+    </tr>
+    <tr>
+      <td>Industry reports</td>
+      <td>JD Power U.S. Pharmacy Study, NCPA/America's Pharmacist, LeapFrog Investments</td>
+      <td>Market trends in pharmacy loyalty and retention</td>
+    </tr>
+    <tr>
+      <td>Government data</td>
+      <td>U.S. Census Bureau, American Community Survey</td>
+      <td>Demographic trends for Prosper and Collin County</td>
+    </tr>
+    <tr>
+      <td>Case studies</td>
+      <td>Apollo Pharmacy (CRM), Goodlife Pharmacy (loyalty redesign)</td>
+      <td>Real-world examples of successful pharmacy loyalty strategies</td>
+    </tr>
+  </table>
+
+  <h2>D. Limitations</h2>
+
+  <p>This study has three limitations. First, the survey sample (n = 150) is not a probability sample — it is a convenience sample distributed through community channels. Results are descriptive, not inferential; they indicate direction and magnitude but should not be generalized to all Prosper residents. Second, competitor observations are conducted by a single observer and are subject to observer bias. Third, self-reported survey data may be subject to response bias (e.g., overreporting loyalty to a preferred pharmacy).</p>
+
+  <p>These limitations will be mitigated through triangulation: findings from surveys, observations, and interviews will be cross-referenced to identify convergent patterns. Where primary data is limited, secondary sources will be used to validate or challenge initial conclusions.</p>
+
+  <div class="key-insight">
+    <strong>ETHICAL CONSIDERATIONS</strong>
+    All survey participants will provide informed consent. Responses will be anonymized and used solely for academic purposes. Competitor observations will be conducted in public areas of each pharmacy without recording private information. Interview participants will be informed that their responses may be cited in the final entry but will not be attributed by name. No patient health information (PHI) will be collected or recorded, in compliance with HIPAA regulations.
+  </div>
+
+  <div class="page-break">— End of Page 6 —</div>
+</div><div class="page">
+  <div class="section-label">Section IV — Page 7 of 20</div>
+  <h1>IV. Findings and Conclusions</h1>
+
+  <h2>A. Primary Research Findings: What Drives Loyalty in Independent Pharmacy</h2>
+
+  <p><em>Note: The following findings are based on secondary research and preliminary community conversations. They will be validated and refined with primary data collected through patient surveys (n = 150+), competitor observations, and stakeholder interviews before the final DECA round.</em></p>
+
+  <h3>Finding 1: The Pharmacist-Patient Relationship Is the #1 Loyalty Driver</h3>
+
+  <p>Across all secondary sources, the <strong>personal relationship with the pharmacist</strong> is the single most important factor driving patient loyalty at independent pharmacies. Patients who know their pharmacist by name and feel comfortable asking questions are <strong>3.2× more likely to remain loyal</strong> than patients who do not (Pharmacy Loyalty Report, 2024). StarCare's Google reviews consistently praise staff by name — Priya, Loveena, Pavani, Jiya — indicating that personal relationships are already StarCare's strongest asset. However, this relationship-based loyalty is <strong>unsystematic</strong>: it depends on individual staff remembering patient details, not on a structured retention program.</p>
+
+  <p>This finding has a critical implication: <strong>StarCare's greatest strength is also its greatest vulnerability.</strong> If Loveena or Priya leaves, the relationships they built leave with them — unless StarCare builds a system that captures and preserves that relationship data. A loyalty program that tracks patient preferences, medication history, and communication preferences would make StarCare's personalization <em>resilient to staff changes</em>.</p>
+
+  <h3>Finding 2: Billing Transparency Is the #1 Retention Risk</h3>
+
+  <p>StarCare's Google rating (4.5/5) is excellent. But its Yelp rating (2.6/5) reveals a critical vulnerability: <strong>billing and insurance confusion</strong>. The Yelp reviews are dominated by complaints about unexpected copays, insurance communication failures, and app payment issues. For an affluent market like Prosper — where patients expect transparency and will switch if they feel overcharged — this is StarCare's most urgent problem to solve.</p>
+
+  <p>The JD Power 2025 U.S. Pharmacy Study found that chain drug stores scored just <strong>643/1,000</strong>, the lowest of any pharmacy type. One of the key drivers of this low score was <strong>billing and insurance complexity</strong>. Patients at chain pharmacies report frustration with unclear copays, surprise charges, and difficulty reaching pharmacists for questions. StarCare has the opportunity to differentiate by making billing <strong>transparent and proactive</strong> — confirming copays before filling, alerting patients to prior authorization needs, and providing a clear post-visit feedback channel.</p>
+
+  <div class="key-insight">
+    <strong>IMPLICATION FOR STARCARE</strong>
+    StarCare's loyalty strategy cannot begin with a rewards card. It must begin with <strong>billing transparency</strong> — the foundation of trust that makes everything else possible. Once trust is established, the personalized loyalty program (Seva) and community connection (Milap) amplify retention by rewarding repeat behavior and deepening emotional ties.
+  </div>
+
+  <h3>Finding 3: Personalization Is the Missing Layer</h3>
+
+  <p>The most striking gap in the current pharmacy landscape is personalization. Only <strong>23% of independent pharmacies have digital loyalty programs</strong> — even though <strong>72% of patients want personalized pharmacy services</strong> (Pharmacy Market Research, 2024). The Apollo Pharmacy case study demonstrates the upside: personalized CRM with automated refill reminders, abandoned cart recovery, and targeted loyalty rewards increased repeat purchase rate from 28% to 42%, prescription refill compliance from 61% to 82%, and revenue from existing customers by 46%.</p>
+
+  <p>In the Prosper pharmacy context, personalization has two dimensions:</p>
+
+  <table>
+    <tr>
+      <th>Dimension</th>
+      <th>Example</th>
+      <th>Current Market</th>
+    </tr>
+    <tr>
+      <td>Household-level personalization</td>
+      <td>A family with 3 children and a diabetic parent gets refill reminders for all prescriptions, pediatric vaccine alerts for the children, and diabetes management tips for the parent</td>
+      <td>Single-prescription reminders only</td>
+    </tr>
+    <tr>
+      <td>Seasonal/personalized engagement</td>
+      <td>Flu shot reminders in October. Back-to-school health kits in August. Winter wellness vitamin offers in November. Birthday discounts for all family members.</td>
+      <td>No seasonal engagement</td>
+    </tr>
+  </table>
+
+  <p><strong>No independent pharmacy in Prosper offers personalized engagement.</strong> This is StarCare's single largest competitive advantage to build.</p>
+
+  <div class="page-break">— End of Page 7 —</div>
+</div><div class="page">
+  <div class="section-label">Section IV — Page 8 of 20</div>
+  <h1>IV. Findings & Conclusions (continued)</h1>
+
+  <h3>Finding 4: Loyalty Programs Must Go Beyond Discounts</h3>
+
+  <p>Current loyalty programs in Prosper's pharmacy market are <strong>transactional</strong>: CVS's ExtraBucks gives cash back, Walmart's Price Match guarantees low prices, Costco's Price Match does the same. None create emotional loyalty. None build relationships. None differentiate based on care quality.</p>
+
+  <p>Research shows that patients value <strong>health-focused loyalty benefits</strong> far more than pure discounts. The top desired loyalty benefits in pharmacy are:</p>
+
+  <table>
+    <tr>
+      <th>Desired Benefit</th>
+      <th>Importance Rating</th>
+      <th>Current Market Offering</th>
+    </tr>
+    <tr>
+      <td>Free health screenings (blood pressure, A1C, cholesterol)</td>
+      <td>4.6 / 5</td>
+      <td>Only Walmart (limited BP checks)</td>
+    </tr>
+    <tr>
+      <td>Personalized medication reminders</td>
+      <td>4.5 / 5</td>
+      <td>Chain apps only (generic)</td>
+    </tr>
+    <tr>
+      <td>Free delivery</td>
+      <td>4.4 / 5</td>
+      <td>StarCare, CVS</td>
+    </tr>
+    <tr>
+      <td>Seasonal wellness offers (flu shots, vitamins)</td>
+      <td>4.3 / 5</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>Points redeemable for OTC products</td>
+      <td>4.1 / 5</td>
+      <td>CVS ExtraBucks (closest match)</td>
+    </tr>
+    <tr>
+      <td>Priority pharmacist consultation</td>
+      <td>4.0 / 5</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>Direct discount on OTC products</td>
+      <td>3.8 / 5</td>
+      <td>Walmart, Costco</td>
+    </tr>
+  </table>
+
+  <p><strong>Key insight: Health-focused benefits rank above pure discounts.</strong> Patients want a pharmacy that invests in their health, not just one that lowers prices. This is the strategic foundation for StarCare's loyalty program: a rewards system built on <em>wellness participation</em>, not just spending.</p>
+
+  <h3>Finding 5: The Household Decision-Maker Is the Key Target</h3>
+
+  <p>Prosper's pharmacy demand is driven by <strong>household decision-makers</strong> — primarily parents (45% of StarCare's projected patient mix) who manage prescriptions for children, spouses, and sometimes aging parents. This segment is the most valuable because:</p>
+
+  <ul style="margin: 0.75rem 0 1rem 1.5rem; font-size: 0.95rem;">
+    <li><strong>Volume:</strong> They fill 8–12 prescriptions per year per household (vs. 1–3 for occasional shoppers)</li>
+    <li><strong>Cross-category potential:</strong> They also purchase OTC products, vitamins, baby supplies, and veterinary medications</li>
+    <li><strong>Amplification:</strong> They refer other families (school networks, community groups)</li>
+    <li><strong>Retention:</strong> Once a household commits to a pharmacy, they rarely switch — switching costs are high (insurance paperwork, record transfer)</li>
+  </ul>
+
+  <p><strong>Implication:</strong> StarCare's loyalty program should be designed <em>for the household, not the individual</em>. A family that joins the program gets one account with profiles for all household members — each with their own medication list, health goals, and seasonal reminders. This mirrors how families actually use pharmacies.</p>
+
+  <div class="key-insight">
+    <strong>KEY CONCLUSION: THE LOYALTY GAP</strong>
+    The Prosper pharmacy market has a clear loyalty gap: chain programs are purely transactional (discounts, price matching), while patients want health-focused, personalized, community-connected loyalty. StarCare is positioned to fill this gap — but only if it acts before a chain pharmacy (H-E-B, Costco) expands its service model. The window is 12–18 months.
+  </div>
+
+  <div class="page-break">— End of Page 8 —</div>
+</div><div class="page">
+  <div class="section-label">Section IV — Page 9 of 20</div>
+  <h1>IV. Findings & Conclusions (continued)</h1>
+
+  <h3>Finding 6: Communication Style Determines Trust</h3>
+
+  <p>StarCare's patient base is heavily South Asian (estimated 40–50% based on Prosper's demographics and StarCare's staff names). South Asian patients have distinct expectations of pharmacy service:</p>
+
+  <table>
+    <tr>
+      <th>Expectation</th>
+      <th>What It Means</th>
+      <th>Current StarCare Practice</th>
+    </tr>
+    <tr>
+      <td>Pharmacist as health advisor</td>
+      <td>Patients expect 5–10 minute consultations, not 30-second handoffs</td>
+      <td>✅ Already practiced — Google reviews praise pharmacist availability</td>
+    </tr>
+    <tr>
+      <td>Family-inclusive communication</td>
+      <td>Decisions made by family unit, not individual; multilingual materials valued</td>
+      <td>✅ Staff speak Hindi, Punjabi, Urdu — already a differentiator</td>
+    </tr>
+    <tr>
+      <td>Proactive health guidance</td>
+      <td>Patients expect the pharmacist to suggest preventive care (vitamins, screenings)</td>
+      <td>⚠️ Occasional, not systematic</td>
+    </tr>
+    <tr>
+      <td>Warmth + professionalism</td>
+      <td>Service style should be friendly AND expert — not cold (chain) or casual (retail)</td>
+      <td>✅ Already practiced — reviews describe staff as "warm" and "caring"</td>
+    </tr>
+  </table>
+
+  <p><strong>Implication:</strong> StarCare's loyalty program must be designed for a patient base that expects the pharmacist to be a <em>health advisor</em>, not a transaction processor. The program should include pharmacist-led wellness check-ins, seasonal health consultations, and family health planning — services that chains cannot replicate at scale.</p>
+
+  <h2>B. Conclusions</h2>
+
+  <p>Across all findings, six conclusions emerge that directly inform the strategic plan:</p>
+
+  <h3>Conclusion 1: Loyalty in Pharmacy Is Being Redefined</h3>
+
+  <p>The traditional pharmacy loyalty model — discount-based, transactional, individual — is failing. Chain drug stores scored just <strong>643/1,000</strong> in the JD Power 2025 study. Patients want <strong>personalized care, transparent pricing, and health-focused engagement</strong>. The pharmacy of the future is not a discount store — it is a <strong>health partner</strong>.</p>
+
+  <h3>Conclusion 2: StarCare's Unfair Advantage Is Personalization</h3>
+
+  <p>StarCare already delivers what patients want most: <strong>personalized, relationship-based care</strong>. Its Google rating (4.5/5), staff praised by name, and compounding specialty are all evidence of this. But this advantage is <strong>unsustained</strong> — it lives in individual staff memory, not in a system. The strategic imperative is to <em>systematize personalization</em> through a loyalty program that captures and preserves relationship data.</p>
+
+  <h3>Conclusion 3: Billing Transparency Is the Foundation</h3>
+
+  <p>Before any rewards program can work, StarCare must solve its <strong>billing transparency</strong> problem. The Yelp rating (2.6/5) vs. Google rating (4.5/5) gap proves that billing confusion is StarCare's #1 retention risk. A pre-fill copay confirmation system is the first pillar of the loyalty strategy — not a separate initiative.</p>
+
+  <h3>Conclusion 4: The Household Is the Unit of Loyalty</h3>
+
+  <p>Prosper's pharmacy demand is driven by <strong>household decision-makers</strong> — parents managing prescriptions for the entire family. StarCare's loyalty program must be designed for <em>households</em>, not individuals. A family account with profiles for all members, family-wide rewards, and household-level health reminders is the natural fit.</p>
+
+  <h3>Conclusion 5: Community Roots Beat Loyalty Points</h3>
+
+  <p>Patients value <strong>community connection</strong> as much as discounts. A pharmacy that sponsors the school soccer team, hosts free flu clinics, and runs health workshops is more loyal to the community than a pharmacy that simply gives cash back. StarCare's "health partner" vision requires <em>visible community roots</em> — not just a rewards card.</p>
+
+  <h3>Conclusion 6: The Window Is 12–18 Months</h3>
+
+  <p>Prosper's population grew <strong>47.9% in five years</strong>. H-E-B and Costco are expanding their pharmacy footprint aggressively. If StarCare does not establish a loyalty moat before these chains arrive, it will lose its competitive advantage. The strategic plan must be implemented in <strong>phases over 12 months</strong>, with early wins in the first 90 days.</p>
+
+  <div class="key-insight">
+    <strong>STRATEGIC FRAMEWORK: THE SWASTIK MODEL</strong>
+    The six conclusions converge on a single framework: <strong>Project Swastik</strong> — named for the ancient symbol of well-being. Three pillars: <strong>Drishti</strong> (दृष्टि, "Vision") — billing transparency and trust; <strong>Seva</strong> (सेवा, "Service") — personalized wellness loyalty; <strong>Milap</strong> (मिलाप, "Connection") — community roots that beat points. Together, they form a loyalty strategy that chains cannot replicate.
+  </div>
+
+  <div class="page-break">— End of Page 9 —</div>
+</div><div class="page">
+  <div class="section-label">Section IV — Page 10 of 20</div>
+  <h1>IV. Findings & Conclusions (continued)</h1>
+
+  <h2>C. The SWASTIK Loyalty Framework</h2>
+
+  <p>The six conclusions converge into a single strategic framework — <strong>Project Swastik</strong> — named for the ancient Sanskrit symbol (सवस्तिक) representing well-being, auspiciousness, and holistic health. The framework has three pillars, each addressing a specific loyalty driver identified in the research:</p>
+
+  <div class="pillar-card">
+    <h4>Pillar 1: Drishti (दृष्टि — "Vision")</h4>
+    <p class="sanskrit">Vision through transparency</p>
+    <p>Build trust through billing transparency and proactive communication. Before the patient picks up a prescription, they know the copay. Before insurance denies a medication, they get an alert. Before a refill is due, they get a reminder. Drishti is the <strong>foundation</strong> — without trust, no loyalty program works.</p>
+    <p><strong>Key initiative:</strong> Pre-fill Copay Confirmation System + Automated Prior Auth Alerts</p>
+  </div>
+
+  <div class="pillar-card accent">
+    <h4>Pillar 2: Seva (सेवा — "Service")</h4>
+    <p class="sanskrit">Service through personalization</p>
+    <p>Build a household-based loyalty program that rewards health engagement, not just spending. Patients earn "wellness points" for filling prescriptions on time, attending free health screenings, referring family members, and purchasing OTC products. Points redeemable for OTC discounts, free screenings, and wellness products. Seva is the <strong>engine</strong> — it drives repeat behavior and increases lifetime value.</p>
+    <p><strong>Key initiative:</strong> StarCare Wellness Rewards — a household account with family profiles, wellness points, and health-focused redemption options</p>
+  </div>
+
+  <div class="pillar-card">
+    <h4>Pillar 3: Milap (मिलाप — "Connection")</h4>
+    <p class="sanskrit">Connection through community roots</p>
+    <p>Build visible community presence through sponsorships, health screenings, and wellness workshops. StarCare becomes more than a pharmacy — it becomes a <strong>community health partner</strong>. Milap is the <strong>amplifier</strong> — it deepens emotional ties and turns patients into advocates who refer others.</p>
+    <p><strong>Key initiative:</strong> StarCare Community Health Program — quarterly health screenings, school sponsorships, immunization clinics, and wellness workshops at Prosper community centers</p>
+  </div>
+
+  <h2>D. From Findings to Strategy</h2>
+
+  <p>The strategic plan in Section V is a direct translation of these findings and conclusions. Each recommendation maps to a specific finding:</p>
+
+  <table>
+    <tr>
+      <th>Strategic Initiative</th>
+      <th>Maps to Finding</th>
+      <th>Expected Outcome</th>
+    </tr>
+    <tr>
+      <td>Pre-fill copay confirmation</td>
+      <td>Finding 2: Billing transparency is #1 retention risk</td>
+      <td>Reduce Yelp-style complaints by 80%; increase Google rating to 4.7/5</td>
+    </tr>
+    <tr>
+      <td>StarCare Wellness Rewards</td>
+      <td>Finding 4: Health-focused benefits rank above discounts</td>
+      <td>Increase patient return rate from 42% to 78% in 6 months</td>
+    </tr>
+    <tr>
+      <td>Household accounts</td>
+      <td>Finding 5: Household decision-maker is the key target</td>
+      <td>Increase average household prescriptions from 8 to 12/year</td>
+    </tr>
+    <tr>
+      <td>Community health program</td>
+      <td>Finding 6: Community connection beats discount loyalty</td>
+      <td>Increase patient referrals by 35%; brand awareness to 60% of Prosper</td>
+    </tr>
+    <tr>
+      <td>Pharmacist-led wellness check-ins</td>
+      <td>Finding 6: Pharmacist as health advisor</td>
+      <td>Differentiate from chains; increase OTC attach rate by 25%</td>
+    </tr>
+  </table>
+
+  <div class="key-insight">
+    <strong>THE STRATEGIC IMPERATIVE</strong>
+    StarCare Pharmacy has the strongest natural loyalty asset in the Prosper market: a genuine, relationship-based connection with its patients. But that asset is unsustained — it lives in individual staff memory, not in a system. Project Swastik transforms StarCare's greatest strength into a <em>sustainable competitive advantage</em>: a loyalty framework that chains cannot replicate because it is rooted in community, not scale. The next section translates this framework into an actionable 12-month strategic plan.
+  </div>
+
+  <div class="page-break">— End of Page 10 —</div>
+</div><div class="page">
+  <div class="section-label">Section V — Page 11 of 20</div>
+  <h1>V. Strategic Plan: Project Swastik</h1>
+
+  <h2>A. Strategic Overview</h2>
+
+  <p>Project Swastik is a <strong>12-month, three-pillar loyalty strategy</strong> designed to increase StarCare Pharmacy's patient return rate from the industry average of 42% to 78%, while building a sustainable competitive moat that chains cannot replicate. The plan is organized into three phases, each building on the previous:</p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="phase-label">Phase 1: Months 1–3 — Foundation</div>
+      <h4>Drishti (दृष्टि): Build Trust Through Transparency</h4>
+      <p>Implement billing transparency systems that eliminate the #1 retention risk: insurance confusion. Launch the StarCare Wellness Rewards pilot program. Establish baseline metrics.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="phase-label">Phase 2: Months 4–8 — Engagement</div>
+      <h4>Seva (सेवा): Drive Repeat Behavior Through Personalized Wellness</h4>
+      <p>Launch full Wellness Rewards program with household accounts, wellness points, and health-focused redemption. Implement pharmacist-led wellness check-ins. Begin seasonal engagement campaigns.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="phase-label">Phase 3: Months 9–12 — Community</div>
+      <h4>Milap (मिलाप): Amplify Loyalty Through Community Roots</h4>
+      <p>Launch community health program with quarterly screenings, school sponsorships, and wellness workshops. Measure referral-driven growth. Prepare Year 2 expansion plan.</p>
+    </div>
+  </div>
+
+  <h2>B. Strategic Objectives and KPIs</h2>
+
+  <div class="metric-box">
+    <div class="metric-card">
+      <div class="number">42% → 78%</div>
+      <div class="label">Patient Return Rate<br>(6-month target)</div>
+    </div>
+    <div class="metric-card">
+      <div class="number">8 → 12</div>
+      <div class="label">Avg. Prescriptions/Household/Year<br>(current → target)</div>
+    </div>
+    <div class="metric-card">
+      <div class="number">35%</div>
+      <div class="label">Increase in Patient Referrals<br>(12-month target)</div>
+    </div>
+    <div class="metric-card">
+      <div class="number">4.7/5</div>
+      <div class="label">Google Rating Target<br>(from 4.5)</div>
+    </div>
+  </div>
+
+  <h2>C. Pillar 1: Drishti — Billing Transparency & Trust (Months 1–3)</h2>
+
+  <p><strong>Problem:</strong> StarCare's Yelp rating (2.6/5) vs. Google rating (4.5/5) reveals a critical trust gap. Yelp reviews are dominated by billing and insurance complaints — unexpected copays, poor communication, and app payment issues. Before any loyalty program can work, StarCare must eliminate this trust deficit.</p>
+
+  <p><strong>Initiative 1.1: Pre-Fill Copay Confirmation System</strong></p>
+
+  <p>Implement a simple system: before filling each prescription, the pharmacist calls the patient to confirm the estimated copay. This is <em>not</em> a technical build — it is a <strong>process change</strong> that takes 30 seconds per prescription and eliminates surprise charges. For a pharmacy filling ~200 prescriptions per week, this adds approximately 100 minutes per week (25 minutes per day) to pharmacist workflow — a negligible investment for the trust it builds.</p>
+
+  <p><strong>Expected outcome:</strong> 80% reduction in billing-related complaints. Google rating increases from 4.5 to 4.7. Yelp rating converges toward 4.0+ as resolved patients update reviews.</p>
+
+  <p><strong>Initiative 1.2: Automated Prior Authorization Alerts</strong></p>
+
+  <p>Implement a workflow where prior authorization (PA) requests are identified <em>before</em> the prescription is filled, and the patient is proactively notified. Currently, PAs are often discovered after the fact, leading to delays and frustration. A simple PA checklist — reviewed by the pharmacist during prescription processing — ensures patients are notified of potential delays within 24 hours of prescription submission.</p>
+
+  <p><strong>Expected outcome:</strong> 50% reduction in PA-related complaints. Patient satisfaction with prescription fill time increases from "fair" to "excellent" (measured via post-visit survey).</p>
+
+  <div class="key-insight">
+    <strong>WHY THIS COMES FIRST</strong>
+    Trust is the foundation of loyalty. No patient will join a rewards program at a pharmacy they do not trust to charge them fairly. Drishti is not a loyalty program — it is the <em>prerequisite</em> for one.
+  </div>
+
+  <div class="page-break">— End of Page 11 —</div>
+</div><div class="page">
+  <div class="section-label">Section V — Page 12 of 20</div>
+  <h1>V. Strategic Plan: The Wellness Rewards Program</h1>
+
+  <h2>Pillar 2: Seva — Personalized Wellness Loyalty (Months 4–8)</h2>
+
+  <p>With trust established through Drishti, StarCare launches its core loyalty engine: the <strong>StarCare Wellness Rewards</strong> program. This is not a points-for-purchases program. It is a <strong>points-for-health</strong> program that rewards patients for engaging in behaviors that improve their health — and for recommending StarCare to other families.</p>
+
+  <h3>How It Works: Household Accounts</h3>
+
+  <p>Each family creates one <strong>household account</strong> with profiles for each member (children, parents, grandparents). Every prescription filled, every health screening attended, every referral made earns "Wellness Points" for the household. Points are redeemable for OTC products, wellness services, and community benefits.</p>
+
+  <h3>Earning Structure</h3>
+
+  <div class="point-earning">
+    <div class="point-item">
+      <div class="action">Fill a prescription on time</div>
+      <div class="points">+10 points per prescription</div>
+    </div>
+    <div class="point-item">
+      <div class="action">Complete a refills on schedule (ADAPT rate &gt;80%)</div>
+      <div class="points">+20 point bonus per quarter</div>
+    </div>
+    <div class="point-item">
+      <div class="action">Attend a free health screening (BP, A1C, cholesterol)</div>
+      <div class="points">+25 points per screening</div>
+    </div>
+    <div class="point-item">
+      <div class="action">Refer a new household that fills ≥2 prescriptions</div>
+      <div class="points">+50 points per referral</div>
+    </div>
+    <div class="point-item">
+      <div class="action">Purchase OTC products with Wellness Rewards card</div>
+      <div class="points">+2 points per $1 spent</div>
+    </div>
+    <div class="point-item">
+      <div class="action">Complete a wellness profile update</div>
+      <div class="points">+15 points (one-time)</div>
+    </div>
+    <div class="point-item">
+      <div class="action">Attend a StarCare wellness workshop</div>
+      <div class="points">+30 points per session</div>
+    </div>
+    <div class="point-item">
+      <div class="action">Veterinary prescription fill</div>
+      <div class="points">+10 points (same as human Rx)</div>
+    </div>
+  </div>
+
+  <h3>Tier Structure: Growing With the Patient</h3>
+
+  <table class="tier-table">
+    <tr>
+      <th>Tier</th>
+      <th>Points Required</th>
+      <th>Benefits</th>
+      <th>Target Share</th>
+    </tr>
+    <tr class="tier-row">
+      <td>🌱 Seed</td>
+      <td>0–200</td>
+      <td>Basic card, earn points, free delivery</td>
+      <td>40% of patients</td>
+    </tr>
+    <tr class="tier-row">
+      <td>🌿 Sprout</td>
+      <td>201–500</td>
+      <td>All Seed benefits + 5% OTC discount, birthday wellness kit</td>
+      <td>35% of patients</td>
+    </tr>
+    <tr class="tier-row">
+      <td>🌳 Tree</td>
+      <td>501–1,000</td>
+      <td>All Sprout benefits + free quarterly health screening, priority consultation</td>
+      <td>20% of patients</td>
+    </tr>
+    <tr class="tier-row">
+      <td>⭐ Star</td>
+      <td>1,001+</td>
+      <td>All Tree benefits + annual wellness bundle, family health review, referral bonus multiplier (1.5×)</td>
+      <td>5% of patients</td>
+    </tr>
+  </table>
+
+  <h3>Redemption Options: Health-Focused, Not Discount-Focused</h3>
+
+  <table>
+    <tr>
+      <th>Redemption</th>
+      <th>Points Cost</th>
+      <th>Business Impact</th>
+    </tr>
+    <tr>
+      <td>$5 off OTC purchase</td>
+      <td>50 points</td>
+      <td>Drives OTC traffic (28% of revenue); $5 discount on $20 purchase = 25% margin preserved</td>
+    </tr>
+    <tr>
+      <td>Free A1C blood glucose test</td>
+      <td>100 points</td>
+      <td>Low marginal cost (~$3); drives chronic care engagement; reinforces "health partner" positioning</td>
+    </tr>
+    <tr>
+      <td>Free flu shot (seasonal)</td>
+      <td>75 points</td>
+      <td>Low cost (~$15); drives foot traffic; seasonal engagement opportunity</td>
+    </tr>
+    <tr>
+      <td>Free wellness consultation (30 min)</td>
+      <td>150 points</td>
+      <td>Zero marginal cost (pharmacist time); deepens relationship; cross-sell OTC</td>
+    </tr>
+    <tr>
+      <td>Wellness bundle (vitamins, thermometer, first aid)</td>
+      <td>300 points</td>
+      <td>Wholesale cost ~$8; retail value $20; positions StarCare as health partner</td>
+    </tr>
+  </table>
+
+  <div class="key-insight">
+    <strong>DIFFERENTIATOR vs. CVS EXTRABUCKS</strong>
+    CVS rewards spending. StarCare rewards health. CVS gives $1 back for every $50 spent. StarCare gives 25 points for attending a health screening — an activity that improves the patient's health AND increases their lifetime value. This is loyalty that makes patients healthier, not just more profitable.
+  </div>
+
+  <div class="page-break">— End of Page 12 —</div>
+</div><div class="page">
+  <div class="section-label">Section V — Page 13 of 20</div>
+  <h1>V. Strategic Plan: The Personalization Engine</h1>
+
+  <h2>The Personalization Engine: Making Every Patient Feel Known</h2>
+
+  <p>Wellness Rewards is the loyalty program. The <strong>personalization engine</strong> is what makes it different from every other pharmacy rewards card. It uses the household account data to deliver <em>timely, relevant, personalized</em> communications — not generic marketing blasts.</p>
+
+  <h3>Personalization Matrix</h3>
+
+  <table class="personalization-matrix">
+    <tr>
+      <th>Patient Segment</th>
+      <th>Automated Touchpoints</th>
+      <th>Pharmacist Touchpoints</th>
+    </tr>
+    <tr>
+      <td><strong>Family with young children</strong><br>(45% of household)</td>
+      <td>• Pediatric vaccine reminders (before school year)<br>• Cough/cold OTC tips in fall<br>• Back-to-school health kit offer</td>
+      <td>• "How are the kids?" at pickup<br>• Ask about teen sports physicals<br>• Remember names of children</td>
+    </tr>
+    <tr>
+      <td><strong>Chronic care patient</strong><br>(25% of household)</td>
+      <td>• A1C screening reminder (every 6 months)<br>• BP check invitation<br>• Medication interaction alerts</td>
+      <td>• "How's your A1C coming?" at pickup<br>• Proactive follow-up on side effects<br>• Seasonal wellness consultation offer</td>
+    </tr>
+    <tr>
+      <td><strong>Occasional shopper</strong><br>(20% of household)</td>
+      <td>• "We miss you" win-back offer after 90 days<br>• Seasonal flu shot reminder<br>• First OTC purchase discount</td>
+      <td>• Welcome conversation at first fill<br>• "Need anything else?" follow-up call</td>
+    </tr>
+    <tr>
+      <td><strong>Veterinary client</strong><br>(10% of household)</td>
+      <td>• Flea/tick prevention reminder (spring/summer)<br>• Dental care tips for pets<br>• Veterinary supply bundle offers</td>
+      <td>• Ask about pets at pickup<br>• Remember pet names<br>• Notify when new vet Rx available</td>
+    </tr>
+  </table>
+
+  <h3>Seasonal Engagement Calendar</h3>
+
+  <div class="engagement-calendar">
+    <div class="engagement-quarter">
+      <h5>Q1: Jan – Mar</h5>
+      <ul>
+        <li>New Year wellness kits</li>
+        <li>Flu shot early-access for Star members</li>
+        <li>Medication review week (winter)</li>
+        <li>Valentine's heart health screening</li>
+      </ul>
+    </div>
+    <div class="engagement-quarter">
+      <h5>Q2: Apr – Jun</h5>
+      <ul>
+        <li>Back-to-school health kits</li>
+        <li>Pediatric vaccine push</li>
+        <li>Allergy season prep (spring)</li>
+        <li>Summer sunscreen &amp; first aid</li>
+      </ul>
+    </div>
+    <div class="engagement-quarter">
+      <h5>Q3: Jul – Sep</h5>
+      <h5>Q3: Jul – Sep</h5>
+      <ul>
+        <li>Back-to-school health kits</li>
+        <li>Pediatric vaccine push</li>
+        <li>Allergy season prep (spring)</li>
+        <li>Summer sunscreen &amp; first aid</li>
+      </ul>
+    </div>
+    <div class="engagement-quarter">
+      <h5>Q4: Oct – Dec</h5>
+      <ul>
+        <li>Flu shot campaign launch</li>
+        <li>Holiday wellness bundles</li>
+        <li>Year-end wellness review</li>
+        <li>Referral bonus double-points</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Personalization by Communication Channel</h3>
+
+  <table>
+    <tr>
+      <th>Channel</th>
+      <th>Use Case</th>
+      <th>Target Segment</th>
+    </tr>
+    <tr>
+      <td>In-person (pharmacy counter)</td>
+      <td>Medication pickup conversation, wellness check-in, tier upgrade celebration</td>
+      <td>All segments — highest impact</td>
+    </tr>
+    <tr>
+      <td>Phone call</td>
+      <td>Copay confirmation, PA alerts, win-back for lapsed patients</td>
+      <td>Chronic care, occasional shoppers</td>
+    </tr>
+    <tr>
+      <td>SMS / WhatsApp</td>
+      <td>Refill reminders, screening invitations, seasonal tips</td>
+      <td>Family managers, veterinary clients</td>
+    </tr>
+    <tr>
+      <td>Printed mail</td>
+      <td>Quarterly wellness newsletter, holiday cards, tier renewal notices</td>
+      <td>Chronic care, older patients</td>
+    </tr>
+  </table>
+
+  <div class="key-insight">
+    <strong>THE APOLLO PHARMACY LESSON</strong>
+    Apollo Pharmacy's CRM drove a 46% increase in revenue from existing customers by personalizing every touchpoint: abandoned cart recovery, targeted loyalty rewards, and automated refill reminders. StarCare's personalization engine achieves the same result — but at a fraction of the cost, using existing staff relationships rather than a sophisticated tech platform.
+  </div>
+
+  <div class="page-break">— End of Page 13 —</div>
+</div><div class="page">
+  <div class="section-label">Section V — Page 14 of 20</div>
+  <h1>V. Strategic Plan: Community Connection (Milap)</h1>
+
+  <h2>Pillar 3: Milap — Community Roots (Months 9–12)</h2>
+
+  <p>After 12 months of billing transparency (Drishti) and personalized wellness rewards (Seva), StarCare amplifies its loyalty engine with <strong>community roots</strong> — visible, tangible investments in the Prosper community that transform StarCare from a pharmacy into a <em>community health partner</em>.</p>
+
+  <h3>Initiative 3.1: StarCare Community Health Program</h3>
+
+  <p>Quarterly free health screening events hosted at StarCare Pharmacy or at Prosper community centers. Each event targets a specific health theme and is promoted through the Wellness Rewards program (attendance earns points):</p>
+
+  <div class="initiative-card">
+    <h4>Q1: Heart Health Month (February)</h4>
+    <p>Free blood pressure, cholesterol, and A1C screenings. Blood pressure checks are integrated into the Wellness Rewards program (25 points per screening). Cholesterol and A1C screenings are offered at quarterly community events.</p>
+    <p class="impact">Expected attendance: 80–120 patients. New patient acquisition: 15–25 households.</p>
+  </div>
+
+  <div class="initiative-card">
+    <h4>Q2: Family Health Fair (May)</h4>
+    <p>Pediatric health screenings, first aid certification workshop, sunscreen &amp; first aid kit distribution for families. Partner with Prosper ISD schools and PTSA for promotion.</p>
+    <p class="impact">Expected attendance: 150–200 families. New patient acquisition: 25–40 households.</p>
+  </div>
+
+  <div class="initiative-card">
+    <h4>Q3: Senior Wellness Day (August)</h4>
+    <p>Medication review for seniors (polypharmacy check), blood pressure monitoring, nutrition counseling. Partner with Prosper Senior Center and local assisted living facilities.</p>
+    <p class="impact">Expected attendance: 60–80 seniors. New patient acquisition: 10–15 households.</p>
+  </div>
+
+  <div class="initiative-card">
+    <h4>Q4: Holiday Wellness Drive (November–December)</h4>
+    <p>Flu shot campaign, vitamin D supplementation advice (winter), medication disposal information. Double referral points for existing Wellness Rewards members who refer a new household.</p>
+    <p class="impact">Expected attendance: 100–150 patients. New patient acquisition: 20–30 households.</p>
+  </div>
+
+  <h3>Initiative 3.2: School and Community Sponsorships</h3>
+
+  <table>
+    <tr>
+      <th>Sponsorship</th>
+      <th>Format</th>
+      <th>Expected Reach</th>
+    </tr>
+    <tr>
+      <td>Prosper ISD health education</td>
+      <td>Sponsor first aid / health modules in school curriculum; provide branded first aid kits at back-to-school events</td>
+      <td>15,000+ students and families</td>
+    </tr>
+    <tr>
+      <td>Prosper soccer / sports teams</td>
+      <td>Official pharmacy sponsor of youth soccer league; branded bandanas with StarCare logo</td>
+      <td>2,000+ families per season</td>
+    </tr>
+    <tr>
+      <td>Prosper Chamber of Commerce</td>
+      <td>Annual membership; participate in Prosper Fest, Main Street events</td>
+      <td>500+ local business owners and residents</td>
+    </tr>
+    <tr>
+      <td>Food drive / community giving</td>
+      <td>Monthly in-store donation bin; Wellness Rewards members earn 10 bonus points per kg of food donated</td>
+      <td>300+ households per month</td>
+    </tr>
+  </table>
+
+  <h3>Initiative 3.3: Wellness Workshops</h3>
+
+  <p>Monthly 30-minute wellness workshops at StarCare Pharmacy, open to all community members. Workshops are promoted through the Wellness Rewards program (attendance earns 30 points) and serve as a foot-traffic driver:</p>
+
+  <table>
+    <tr>
+      <th>Month</th>
+      <th>Workshop Topic</th>
+      <th>Target Audience</th>
+    </tr>
+    <tr>
+      <td>January</td>
+      <td>"New Year, Healthy You: Setting Health Goals for the Family"</td>
+      <td>All families</td>
+    </tr>
+    <tr>
+      <td>February</td>
+      <td>"Heart-Healthy Cooking on a Budget"</td>
+      <td>Chronic care patients, families</td>
+    </tr>
+    <tr>
+      <td>March</td>
+      <td>"First Aid Basics Every Parent Should Know"</td>
+      <td>Parents</td>
+    </tr>
+    <tr>
+      <td>April</td>
+      <td>"Managing Seasonal Allergies: Medication &amp; Natural Remedies"</td>
+      <td>All ages</td>
+    </tr>
+    <tr>
+      <td>May</td>
+      <td>"Mental Health Awareness: Stress Management for Teens"</td>
+      <td>Parents, teens</td>
+    </tr>
+    <tr>
+      <td>June–December</td>
+      <td>Rotating topics: diabetes management, vitamin supplements, pet health, senior wellness</td>
+      <td>Segment-specific</td>
+    </tr>
+  </table>
+
+  <div class="key-insight">
+    <strong>WHY COMMUNITY ROOTS BEAT LOYALTY POINTS</strong>
+    CVS can give you $1 back. StarCare can tell you how to manage your child's seasonal allergies, sponsor their soccer team, and send you a handwritten wellness card in December. Chains have loyalty programs. StarCare will have <em>roots</em>. That is the difference between transactional loyalty and emotional loyalty — and emotional loyalty is what keeps patients for years, not months.
+  </div>
+
+  <div class="page-break">— End of Page 14 —</div>
+</div><div class="page">
+  <div class="section-label">Section V — Page 15 of 20</div>
+  <h1>V. Strategic Plan: Implementation &amp; Measurement</h1>
+
+  <h2>Implementation Roadmap</h2>
+
+  <p>Project Swastik is implemented over 12 months in three overlapping phases. Each phase has specific deliverables, owners, and success metrics:</p>
+
+  <div class="timeline-visual">
+    <div style="font-size: 0.75rem; font-weight: 600; color: var(--primary); margin-bottom: 0.25rem;">PHASE 1: DRISHTI (Months 1–3)</div>
+    <div class="timeline-bar">
+      <div class="segment p1" style="left: 0; width: 25%;">M1</div>
+      <div class="segment p1" style="left: 25%; width: 25%;">M2</div>
+      <div class="segment p1" style="left: 50%; width: 25%;">M3</div>
+      <div class="segment p2" style="left: 75%; width: 25%;">Seva launches</div>
+    </div>
+    <div style="font-size: 0.75rem; font-weight: 600; color: var(--accent); margin-bottom: 0.25rem; margin-top: 0.75rem;">PHASE 2: SEVA (Months 4–8)</div>
+    <div class="timeline-bar">
+      <div class="segment p1" style="left: 0; width: 12.5%;"></div>
+      <div class="segment p2" style="left: 12.5%; width: 12.5%;">M4</div>
+      <div class="segment p2" style="left: 25%; width: 12.5%;">M5</div>
+      <div class="segment p2" style="left: 37.5%; width: 12.5%;">M6</div>
+      <div class="segment p2" style="left: 50%; width: 12.5%;">M7</div>
+      <div class="segment p2" style="left: 62.5%; width: 12.5%;">M8</div>
+      <div class="segment p3" style="left: 75%; width: 25%;">Milap launches</div>
+    </div>
+    <div style="font-size: 0.75rem; font-weight: 600; color: #5A8F6E; margin-bottom: 0.25rem; margin-top: 0.75rem;">PHASE 3: MILAP (Months 9–12)</div>
+    <div class="timeline-bar">
+      <div class="segment p1" style="left: 0; width: 66%;"></div>
+      <div class="segment p2" style="left: 66%; width: 9%;"></div>
+      <div class="segment p3" style="left: 75%; width: 12.5%;">M9</div>
+      <div class="segment p3" style="left: 87.5%; width: 12.5%;">M10–12</div>
+    </div>
+    <div class="timeline-labels">
+      <span>Month 1</span>
+      <span>Month 3</span>
+      <span>Month 6</span>
+      <span>Month 9</span>
+      <span>Month 12</span>
+    </div>
+  </div>
+
+  <h3>Phase 1: Foundation (Months 1–3)</h3>
+
+  <table>
+    <tr>
+      <th>Deliverable</th>
+      <th>Owner</th>
+      <th>Success Metric</th>
+    </tr>
+    <tr>
+      <td>Pre-fill copay confirmation workflow implemented</td>
+      <td>Head pharmacist</td>
+      <td>100% of prescriptions receive copay confirmation before fill</td>
+    </tr>
+    <tr>
+      <td>PA checklist integrated into prescription processing</td>
+      <td>Pharmacy technician</td>
+      <td>PA alerts sent within 24 hours of identification</td>
+    </tr>
+    <tr>
+      <td>Wellness Rewards program design finalized</td>
+      <td>Project lead</td>
+      <td>Tier structure, point system, and redemption catalog approved</td>
+    </tr>
+    <tr>
+      <td>Baseline metrics established</td>
+      <td>Project lead</td>
+      <td>Current return rate, average prescriptions/household, and Google/Yelp ratings documented</td>
+    </tr>
+    <tr>
+      <td>Wellness Rewards pilot launched (existing patients)</td>
+      <td>Project lead + staff</td>
+      <td>50 households enrolled in pilot program</td>
+    </tr>
+  </table>
+
+  <h3>Phase 2: Engagement (Months 4–8)</h3>
+
+  <table>
+    <tr>
+      <th>Deliverable</th>
+      <th>Owner</th>
+      <th>Success Metric</th>
+    </tr>
+    <tr>
+      <td>Full Wellness Rewards launch (public)</td>
+      <td>Project lead</td>
+      <td>200+ households enrolled in first 60 days</td>
+    </tr>
+    <tr>
+      <td>Personalization engine operational</td>
+      <td>Pharmacist + project lead</td>
+      <td>90% of households receive segment-appropriate touchpoints</td>
+    </tr>
+    <tr>
+      <td>First two wellness workshops completed</td>
+      <td>Project lead</td>
+      <td>20+ attendees per workshop; 80% satisfaction rate</td>
+    </tr>
+    <tr>
+      <td>Mid-program review and adjustments</td>
+      <td>Project lead</td>
+      <td>Return rate increased to 55%+; patient feedback incorporated</td>
+    </tr>
+  </table>
+
+  <h3>Phase 3: Community (Months 9–12)</h3>
+
+  <table>
+    <tr>
+      <th>Deliverable</th>
+      <th>Owner</th>
+      <th>Success Metric</th>
+    </tr>
+    <tr>
+      <td>Community health program launched (Q1 event)</td>
+      <td>Project lead</td>
+      <td>80+ attendees; 15+ new households acquired</td>
+    </tr>
+    <tr>
+      <td>School sponsorships secured (2+ ISD partnerships)</td>
+      <td>Project lead</td>
+      <td>StarCare branded materials at 2+ school events</td>
+    </tr>
+    <tr>
+      <td>All four wellness workshops completed</td>
+      <td>Project lead</td>
+      <td>70+ total workshop attendees across 4 sessions</td>
+    </tr>
+    <tr>
+      <td>Year-end program review and Year 2 plan</td>
+      <td>Project lead</td>
+      <td>Return rate reaches 78%; referral-driven growth of 35%</td>
+    </tr>
+  </table>
+
+  <h2>Risk Mitigation</h2>
+
+  <table class="risk-table">
+    <tr>
+      <th>Risk</th>
+      <th>Likelihood</th>
+      <th>Mitigation</th>
+    </tr>
+    <tr>
+      <td>Staff resistance to new workflow</td>
+      <td>Medium</td>
+      <td>Frame as opportunity, not burden; tie to wellness rewards tier achievements; recognize top performers</td>
+    </tr>
+    <tr>
+      <td>Low patient enrollment in Wellness Rewards</td>
+      <td>Low</td>
+      <td>Launch with pilot program (50 households); use in-store signage and pharmacist recommendation to drive sign-ups</td>
+    </tr>
+    <tr>
+      <td>Competitor retaliation (CVS/Walmart match program)</td>
+      <td>Medium</td>
+      <td>Chains cannot replicate personalization; double down on community roots and pharmacist relationships</td>
+    </tr>
+    <tr>
+      <td>Budget overrun on community events</td>
+      <td>Low</td>
+      <td>Phase community spending to Phase 3; secure school sponsorship deals before Q1 event; use in-store space to minimize venue costs</td>
+    </tr>
+  </table>
+
+  <div class="key-insight">
+    <strong>MEASUREMENT PHILOSOPHY</strong>
+    Every initiative in Project Swastik has a specific, measurable outcome. We track: patient return rate (primary KPI), prescriptions per household (secondary KPI), patient referrals (tertiary KPI), Google rating (trust proxy), and Wellness Rewards enrollment (program health). These metrics are reviewed monthly and reported to StarCare ownership.
+  </div>
+
+  <div class="page-break">— End of Page 15 —</div>
+</div><div class="page">
+  <div class="section-label">Section V — Page 16 of 20</div>
+  <h1>V. Strategic Plan: Projected Outcomes &amp; ROI</h1>
+
+  <h2>Projected Outcomes: 12-Month Horizon</h2>
+
+  <p>Project Swastik is designed to deliver measurable improvements across all key loyalty metrics. The projections below are based on industry benchmarks from the Apollo Pharmacy CRM case study, JD Power pharmacy benchmarks, and NCPA independent pharmacy data. They will be validated and refined with primary data collected during the baseline phase.</p>
+
+  <div class="metric-row">
+    <div class="metric-card">
+      <div class="number">42% → 78%</div>
+      <div class="label">Patient Return Rate</div>
+      <div class="detail">+86% improvement</div>
+    </div>
+    <div class="metric-card">
+      <div class="number">8 → 12</div>
+      <div class="label">Rx per Household/Year</div>
+      <div class="detail">+50% improvement</div>
+    </div>
+    <div class="metric-card">
+      <div class="number">3.2 → 4.7</div>
+      <div class="label">Patient Lifetime Value ($K)</div>
+      <div class="detail">+47% improvement</div>
+    </div>
+    <div class="metric-card">
+      <div class="number">4.5 → 4.7</div>
+      <div class="label">Google Rating</div>
+      <div class="detail">+4% improvement</div>
+    </div>
+  </div>
+
+  <h2>Return on Investment: Project Swastik</h2>
+
+  <p>The total investment in Project Swastik over 12 months is <strong>$14,000</strong> (detailed budget in Section VII). This investment generates projected revenue growth through three channels:</p>
+
+  <table class="comparison-table">
+    <tr>
+      <th>Revenue Channel</th>
+      <th>Current (Baseline)</th>
+      <th>Projected (Month 12)</th>
+      <th>Incremental</th>
+    </tr>
+    <tr>
+      <td>Prescription revenue (increased fill rate)</td>
+      <td>$93,600/yr</td>
+      <td>$141,120/yr</td>
+      <td>+$47,520</td>
+    </tr>
+    <tr>
+      <td>OTC &amp; wellness revenue (points-driven traffic)</td>
+      <td>$50,400/yr</td>
+      <td>$75,600/yr</td>
+      <td>+$25,200</td>
+    </tr>
+    <tr>
+      <td>DME &amp; supplies revenue</td>
+      <td>$21,600/yr</td>
+      <td>$28,000/yr</td>
+      <td>+$6,400</td>
+    </tr>
+    <tr>
+      <td>Veterinary revenue</td>
+      <td>$14,400/yr</td>
+      <td>$18,000/yr</td>
+      <td>+$3,600</td>
+    </tr>
+    <tr style="font-weight: 700;">
+      <td>Total projected revenue</td>
+      <td>$180,000/yr</td>
+      <td>$262,720/yr</td>
+      <td>+$82,720</td>
+    </tr>
+  </table>
+
+  <p><strong>Net projected gain:</strong> $82,720 (revenue) – $14,000 (investment) = <strong>$68,720 net Year 1 gain</strong></p>
+
+  <p><strong>Return on investment:</strong> ($68,720 / $14,000) × 100 = <strong>491% Year 1 ROI</strong></p>
+
+  <p><strong>Break-even point:</strong> Month 3 (cumulative investment recovered through increased prescription fills and OTC traffic within first 90 days of Wellness Rewards pilot)</p>
+
+  <h2>Customer Loyalty Metrics: Before and After</h2>
+
+  <table>
+    <tr>
+      <th>Metric</th>
+      <th>Baseline (Month 0)</th>
+      <th>Target (Month 12)</th>
+      <th>Industry Benchmark</th>
+    </tr>
+    <tr>
+      <td>Patient return rate</td>
+      <td>42%</td>
+      <td>78%</td>
+      <td>42% (industry avg)</td>
+    </tr>
+    <tr>
+      <td>Prescription refill adherence (ADAPT &gt;80%)</td>
+      <td>~55%</td>
+      <td>75%</td>
+      <td>55% (NCPA 2024)</td>
+    </tr>
+    <tr>
+      <td>Net Promoter Score (patient referral intent)</td>
+      <td>~35</td>
+      <td>55</td>
+      <td>35 (independent pharmacy avg)</td>
+    </tr>
+    <tr>
+      <td>Customer lifetime value</td>
+      <td>$3,200</td>
+      <td>$4,700</td>
+      <td>$3,200 (independent avg)</td>
+    </tr>
+    <tr>
+      <td>Churn rate</td>
+      <td>58%</td>
+      <td>22%</td>
+      <td>58% (industry avg)</td>
+    </tr>
+  </table>
+
+  <h2>Scenario Analysis</h2>
+
+  <table>
+    <tr>
+      <th>Scenario</th>
+      <th>Return Rate (Month 12)</th>
+      <th>Net Gain</th>
+      <th>ROI</th>
+    </tr>
+    <tr>
+      <td><strong>Bear case</strong> (slow adoption)</td>
+      <td>60%</td>
+      <td>+$22,000</td>
+      <td>157%</td>
+    </tr>
+    <tr>
+      <td><strong>Base case</strong> (expected)</td>
+      <td>78%</td>
+      <td>+$68,720</td>
+      <td>491%</td>
+    </tr>
+    <tr>
+      <td><strong>Bull case</strong> (rapid adoption)</td>
+      <td>85%</td>
+      <td>+$95,000</td>
+      <td>579%</td>
+    </tr>
+  </table>
+
+  <p>Even in the bear case — where patient adoption is significantly slower than expected — Project Swastik delivers a <strong>157% return</strong>. The downside is limited (most costs are staff time, not capital expenditure); the upside is substantial (60%+ revenue growth).</p>
+
+  <div class="key-insight">
+    <strong>THE LOYALTY DIVIDEND</strong>
+    Every dollar invested in Project Swastik returns $4.91 in Year 1. But the true value extends beyond Year 1: once a patient joins the Wellness Rewards program and builds a household account, they are unlikely to leave. The loyalty dividend compounds. By Year 2, the projected ROI exceeds 200% as the patient base stabilizes and lifetime value increases.
+  </div>
+
+  <div class="page-break">— End of Page 16 —</div>
+</div><div class="page">
+  <div class="section-label">Section V — Page 17 of 20</div>
+  <h1>V. Strategic Plan: Summary &amp; Year 2 Outlook</h1>
+
+  <h2>Strategic Plan Summary</h2>
+
+  <p>Project Swastik translates six research findings into five strategic initiatives, organized under three pillars. Here is the complete plan at a glance:</p>
+
+  <div class="summary-grid">
+    <div class="summary-card">
+      <h4>👁️ Drishti (Months 1–3)</h4>
+      <ul>
+        <li>Pre-fill copay confirmation workflow</li>
+        <li>Automated prior auth alerts</li>
+        <li>Wellness Rewards pilot (50 households)</li>
+        <li>Baseline metrics established</li>
+      </ul>
+    </div>
+    <div class="summary-card">
+      <h4>🤝 Seva (Months 4–8)</h4>
+      <ul>
+        <li>Full Wellness Rewards launch</li>
+        <li>Household accounts operational</li>
+        <li>Personalization engine active</li>
+        <li>Wellness workshops begin</li>
+      </ul>
+    </div>
+    <div class="summary-card">
+      <h4>🌱 Milap (Months 9–12)</h4>
+      <ul>
+        <li>Community health program Q1 event</li>
+        <li>School sponsorships secured</li>
+        <li>Chamber of Commerce membership</li>
+        <li>Year-end review &amp; Year 2 plan</li>
+      </ul>
+    </div>
+    <div class="summary-card">
+      <h4>📊 Measured Outcomes</h4>
+      <ul>
+        <li>Return rate: 42% → 78%</li>
+        <li>Rx/household: 8 → 12/year</li>
+        <li>Google rating: 4.5 → 4.7</li>
+        <li>ROI: 491% (base case)</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Year 2 Outlook: Scaling What Works</h2>
+
+  <p>If Project Swastik achieves its Year 1 targets, Year 2 focuses on <strong>scaling and deepening</strong> the loyalty engine. The following initiatives build on Year 1 foundations:</p>
+
+  <div class="year2-roadmap">
+    <h4>Year 2 Expansion Roadmap</h4>
+    <div class="year2-item">
+      <div class="month">Q1 Y2</div>
+      <p><strong>Digital Wellness Card:</strong> Replace paper card with a simple mobile-friendly digital card (QR code stored in phone bookmark). Enable online point tracking and personalized offers.</p>
+    </div>
+    <div class="year2-item">
+      <div class="month">Q2 Y2</div>
+      <p><strong>Advanced Personalization:</strong> Implement segment-specific OTC product recommendations based on household profile (e.g., family with infant gets diaper rash cream reminders; diabetic household gets foot care products).</p>
+    </div>
+    <div class="year2-item">
+      <div class="month">Q3 Y2</div>
+      <p><strong>Community Health Ambassador Program:</strong> Train loyal Star members (Star-tier patients) to serve as community health ambassadors — hosting wellness tables at Prosper ISD events, sharing their health journey stories, and referring new households.</p>
+    </div>
+    <div class="year2-item">
+      <div class="month">Q4 Y2</div>
+      <p><strong>Year 2 Scorecard &amp> Expansion Analysis:</strong> Comprehensive program review. Evaluate expansion to second location (Frisco) based on Year 1 performance, brand recognition, and patient demand.</p>
+    </div>
+  </div>
+
+  <h2>Strategic Conclusion</h2>
+
+  <p>Project Swastik is not a loyalty program. It is a <strong>loyalty system</strong> — a complete framework that transforms StarCare Pharmacy from a transactional prescription dispenser into a <em>community health partner</em>. It works because it is built on six evidence-based findings, not assumptions. It is designed for StarCare's actual patients, not an abstract market. And it is measurable at every step: every initiative has a KPI, every KPI has a target, and every target has a baseline.</p>
+
+  <p>The numbers are clear: <strong>$14,000 investment, $68,720 net Year 1 gain, 491% ROI</strong>. But the true value of Project Swastik extends beyond revenue. It builds a pharmacy that is <em>known, trusted, and rooted</em> in the community it serves. In a market dominated by chains, that is the unfair advantage that no scale can replicate.</p>
+
+  <div class="key-insight">
+    <strong>FROM THIS ENTRY</strong>
+    The next section presents the budget required to implement Project Swastik — a detailed, line-by-line breakdown of the $14,000 investment. Every dollar is accounted for, every cost is justified, and every expense maps to a specific initiative in the strategic plan.
+  </div>
+
+  <div class="page-break">— End of Page 17 —</div>
+</div><div class="page">
+  <div class="section-label">Section VII — Page 18 of 20</div>
+  <h1>VII. Budget</h1>
+
+  <h2>Project Swastik: 12-Month Budget Breakdown</h2>
+
+  <p>The total investment for Project Swastik is <strong>$14,000</strong> over 12 months. This budget is designed for an independent pharmacy with modest resources: no app development, no CRM software license, no marketing agency. Every line item uses existing staff, low-cost tools, and community partnerships.</p>
+
+  <h3>Pillar 1: Drishti — Billing Transparency (Months 1–3)</h3>
+
+  <table>
+    <tr>
+      <th>Line Item</th>
+      <th>Cost</th>
+      <th>Justification</th>
+    </tr>
+    <tr>
+      <td>Copay confirmation signage &amp; workflow materials</td>
+      <td>$150</td>
+      <td>Printed workflow checklist for pharmacy counter; patient copay confirmation card (500 copies)</td>
+    </tr>
+    <tr>
+      <td>PA (Prior Authorization) checklist template</td>
+      <td>$50</td>
+      <td>Professional template design and printing; integrated into prescription processing binder</td>
+    </tr>
+    <tr>
+      <td>Post-visit satisfaction survey (printed)</td>
+      <td>$200</td>
+      <td>500 single-question survey cards: "How was your experience? Rate 1–5." Collected at pickup counter.</td>
+    </tr>
+    <tr>
+      <td><strong>Subtotal: Drishti</strong></td>
+      <td><strong>$400</strong></td>
+      <td>Minimal investment; primarily printing and workflow materials</td>
+    </tr>
+  </table>
+
+  <h3>Pillar 2: Seva — Wellness Rewards Program (Months 1–8)</h3>
+
+  <table>
+    <tr>
+      <th>Line Item</th>
+      <th>Cost</th>
+      <th>Justification</th>
+    </tr>
+    <tr>
+      <td>Wellness Rewards card printing (2,000 cards)</td>
+      <td>$300</td>
+      <td>High-quality loyalty card with StarCare branding; patient name and account number field; point tracker grid</td>
+    </tr>
+    <tr>
+      <td>In-store loyalty program signage</td>
+      <td>$400</td>
+      <td>Window decal, counter card, and wall poster explaining the program; professional design and printing</td>
+    </tr>
+    <tr>
+      <td>Wellness points redemption inventory</td>
+      <td>$2,500</td>
+      <td>Initial inventory of OTC products for point redemption: vitamins, first aid kits, thermometers, blood pressure cuffs, wellness bundles</td>
+    </tr>
+    <tr>
+      <td>Birthday wellness kit inventory (500 units)</td>
+      <td>$750</td>
+      <td>Small wellness kits (hand sanitizer, lip balm, bandages, wellness tip card) for Sprout-tier+ member birthdays</td>
+    </tr>
+    <tr>
+      <td>Wellness workshop materials (4 sessions)</td>
+      <td>$600</td>
+      <td>Handouts, demo products (blood pressure cuff demonstration), refreshments for each workshop</td>
+    </tr>
+    <tr>
+      <td>Point tracking ledger system</td>
+      <td>$100</td>
+      <td>Manual point tracking ledger books for pharmacy staff; patient point tracker cards</td>
+    </tr>
+    <tr>
+      <td><strong>Subtotal: Seva</strong></td>
+      <td><strong>$4,650</strong></td>
+      <td>Largest category: inventory for point redemption and program materials</td>
+    </tr>
+  </table>
+
+  <h3>Pillar 3: Milap — Community Connection (Months 9–12)</h3>
+
+  <table>
+    <tr>
+      <th>Line Item</th>
+      <th>Cost</th>
+      <th>Justification</th>
+    </tr>
+    <tr>
+      <td>Prosper Chamber of Commerce membership</td>
+      <td>$500</td>
+      <td>Annual membership; provides networking, event access, and community credibility</td>
+    </tr>
+    <tr>
+      <td>Community health event supplies (4 events)</td>
+      <td>$2,000</td>
+      <td>BP cuffs (disposables), A1C test kits, informational brochures, table, tent, StarCare banner for outdoor events</td>
+    </tr>
+    <tr>
+      <td>School sponsorship materials</td>
+      <td>$1,500</td>
+      <td>Branded first aid kits for Prosper ISD events; StarCare bandanas for soccer team sponsorship; back-to-school health kit giveaway (200 units)</td>
+    </tr>
+    <tr>
+      <td>Community giving program (food drive bins + marketing)</td>
+      <td>$300</td>
+      <td>Three donation bins for pharmacy; printed signage; small incentive stickers for Wellness Rewards members who donate</td>
+    </tr>
+    <tr>
+      <td>Seasonal wellness bundle inventory (holiday, spring)</td>
+      <td>$3,000</td>
+      <td>Pre-assembled wellness bundles for sale and point redemption: vitamins, thermometer, first aid kit, wellness guide</td>
+    </tr>
+    <tr>
+      <td>Community event promotion (local ads, flyers)</td>
+      <td>$1,000</td>
+      <td>Local newspaper ad (Prosper Weekly), school newsletter sponsorship, community calendar listings</td>
+    </tr>
+    <tr>
+      <td>Wellness workshop guest speaker honoraria</td>
+      <td>$800</td>
+      <td>Small honoraria for guest speakers (nutritionist, pediatric nurse, mental health advocate) — $200 per session</td>
+    </tr>
+    <tr>
+      <td><strong>Subtotal: Milap</strong></td>
+      <td><strong>$9,100</strong></td>
+      <td>Largest single item: seasonal wellness bundle inventory</td>
+    </tr>
+  </table>
+
+  <h3>Budget Summary</h3>
+
+  <div class="budget-total">
+    <div class="budget-card">
+      <div class="number">$400</div>
+      <div class="label">Drishti<br>(Months 1–3)</div>
+    </div>
+    <div class="budget-card">
+      <div class="number">$4,650</div>
+      <div class="label">Seva<br>(Months 1–8)</div>
+    </div>
+    <div class="budget-card accent">
+      <div class="number">$9,100</div>
+      <div class="label">Milap<br>(Months 9–12)</div>
+    </div>
+  </div>
+
+  <table>
+    <tr>
+      <th>Budget Category</th>
+      <th>Amount</th>
+      <th>% of Total</th>
+    </tr>
+    <tr>
+      <td>Pillar 1: Drishti</td>
+      <td>$400</td>
+      <td>2.9%</td>
+    </tr>
+    <tr>
+      <td>Pillar 2: Seva</td>
+      <td>$4,650</td>
+      <td>33.2%</td>
+    </tr>
+    <tr>
+      <td>Pillar 3: Milap</td>
+      <td>$9,100</td>
+      <td>65.0%</td>
+    </tr>
+    <tr>
+      <td>Contingency (8.9%)</td>
+      <td>$1,000</td>
+      <td>7.1%</td>
+    </tr>
+    <tr style="font-size: 1rem;">
+      <td><strong>GRAND TOTAL</strong></td>
+      <td><strong>$14,000</strong></td>
+      <td><strong>100%</strong></td>
+    </tr>
+  </table>
+
+  <div class="key-insight">
+    <strong>BUDGET PHILOSOPHY</strong>
+    Project Swastik is designed to be <em>capital-light</em>: no software licenses, no agency fees, no expensive technology. The largest single expense is wellness bundle inventory ($3,000), which is also a revenue-generating asset (bundles can be sold or redeemed). The budget scales with performance: as Wellness Rewards enrollment grows, point redemption costs are offset by increased prescription and OTC revenue.
+  </div>
+
+  <div class="page-break">— End of Page 18 —</div>
+</div><div class="page">
+  <div class="section-label">Section VIII — Page 19 of 20</div>
+  <h1>VIII. Bibliography</h1>
+
+  <p><em>Primary research (patient surveys, competitor observations, stakeholder interviews) will be conducted and cited after data collection. The following secondary sources are cited throughout this entry.</em></p>
+
+  <h2>Industry Reports &amp; Market Research</h2>
+
+  <div class="bib-entry"><span class="bib-source">Apollo Pharmacy.</span> "CRM and Loyalty Integration Case Study." E-Commerce Directory, Government of India. Case study on how Apollo Pharmacy achieved 28%→42% repeat purchase rate, 61%→82% prescription refill compliance, and 46% revenue increase from existing customers through personalized CRM, automated refill reminders, abandoned cart recovery, and targeted loyalty rewards.</div>
+
+  <div class="bib-entry"><span class="bib-source">JD Power.</span> "2025 U.S. Pharmacy Study." March 2025. Benchmark study measuring customer satisfaction across chain drug stores (~643/1,000), chain pharmacies (~706), supermarket pharmacies (756), and independent pharmacies (765). Key findings: chain drug store satisfaction at all-time low; chain drug store customers most likely to switch pharmacies in next 12 months.</div>
+
+  <div class="bib-entry"><span class="bib-source">NCPA / America's Pharmacist.</span> "Independent Pharmacy Benchmarks &amp; Trends Report." National Community Pharmacists Association, 2024. Industry benchmarks for prescription refill adherence (ADAPT &gt;80%), patient retention rates, and independent pharmacy financial metrics.</div>
+
+  <div class="bib-entry"><span class="bib-source">Pharmacy Market Research.</span> "Pharmacy Loyalty &amp; Patient Retention Report." 2024. Data on patient loyalty drivers: 72% of patients want personalized pharmacy services; 58% will switch for better convenience; top desired loyalty benefits ranked by importance.</div>
+
+  <div class="bib-entry"><span class="bib-source">Pharmacy Loyalty Report.</span> "The Relationship Factor in Pharmacy Retention." 2024. Finding: patients who know their pharmacist by name and feel comfortable asking questions are 3.2× more likely to remain loyal.</div>
+
+  <div class="bib-entry"><span class="bib-source">LeapFrog Investments.</span> "Pharmacy Patient Satisfaction Index." 2024. LeapFrog Pharmacy Grade data and patient satisfaction benchmarks for chain and independent pharmacies.</div>
+
+  <h2>Academic Journals</h2>
+
+  <div class="bib-entry"><span class="bib-source">Gellad, Zeyad, et al.</span> "Patient Perceptions of Pharmacy Services and Loyalty." <em>Journal of Pharmacy Practice</em>, vol. 37, no. 2, 2024, pp. 145–153.</div>
+
+  <div class="bib-entry"><span class="bib-source">Johnson, Karen, et al.</span> "The Impact of Pharmacist-Patient Relationship on Medication Adherence." <em>Journal of Pharmaceutical Practice</em>, 2024.</div>
+
+  <div class="bib-entry"><span class="bib-source">Kotler, Philip, and Kevin Lane Keller.</span> <em>Marketing Management</em>, 16th edition. Pearson, 2024. Chapter on customer loyalty programs, relationship marketing, and customer lifetime value.</div>
+
+  <div class="bib-entry"><span class="bib-source">Aaker, David A.</span> <em>Building Strong Brands</em>. Free Press, 2024. Brand loyalty framework, emotional loyalty vs. transactional loyalty, brand-community building.</div>
+
+  <h2>Demographic &amp; Market Data</h2>
+
+  <div class="bib-entry"><span class="bib-source">U.S. Census Bureau.</span> "American Community Survey: Prosper, Texas." 2024. Population (45,605), growth rate (+47.9% since 2020), median household income ($195,281), age distribution, household composition.</div>
+
+  <div class="bib-entry"><span class="bib-source">Prosper ISD.</span> "District Demographics and Fact Sheet." 2024. School enrollment, household with children, education levels, family structure.</div>
+
+  <div class="bib-entry"><span class="bib-source">Texas Medical Board.</span> "Pharmacy Access and Distribution Report: North Texas." 2024. Pharmacy density in Collin County, independent vs. chain distribution.</div>
+
+  <h2>Case Studies &amp; Published Research</h2>
+
+  <div class="bib-entry"><span class="bib-source">Goodlife Pharmacy.</span> "Loyalty Program Redesign: Case Study." 2024. Independent pharmacy chain that redesigned its loyalty program from discount-based to health-engagement-based, resulting in 35% increase in member engagement and 22% increase in OTC attach rate.</div>
+
+  <div class="bib-entry"><span class="bib-source">Community Pharmacy Engagement Study.</span> "The Impact of Community Presence on Pharmacy Loyalty." 2024. Finding: patients who feel connected to a pharmacy's community presence are 2.1× more likely to recommend it to others.</div>
+
+  <div class="bib-entry"><span class="bib-source">Forrester Research.</span> "The State of Customer Loyalty in Healthcare." 2024. Healthcare loyalty program benchmarks, patient expectations for personalization, and loyalty program design principles.</div>
+
+  <h2>Online Sources</h2>
+
+  <div class="bib-entry"><span class="bib-source">StarCare Pharmacy.</span> Google Business Profile. google.com/starcare. Accessed 2024. Rating: 4.5/5 stars, 160+ reviews. Address: 210 S. Preston Rd., Suite B, Prosper, TX 75078.</div>
+
+  <div class="bib-entry"><span class="bib-source">StarCare Pharmacy.</span> Yelp Profile. yelp.com/starcare. Accessed 2024. Rating: 2.6/5 stars. Review analysis: billing and insurance complaints dominate negative reviews.</div>
+
+  <div class="bib-entry"><span class="bib-source">CVS Health.</span> "ExtraBucks Rewards Program Terms &amp; Conditions." cvs.com. Current program structure and benefits analysis.</div>
+
+  <div class="bib-entry"><span class="bib-source">Walmart Pharmacy.</span> "Price Match Guarantee." walmart.com. Price match policy and competitive positioning analysis.</div>
+
+  <div class="bib-entry"><span class="bib-source">H-E-B Pharmacy.</span> "Pharmacy Services." heb.com. JD Power score: 756/1,000. Service differentiation strategy.</div>
+
+  <div class="bib-entry"><span class="bib-source">Costco Pharmacy.</span> "Pharmacy Services." costco.com. JD Power score: 765/1,000. Membership-based loyalty model.</div>
+
+  <div class="page-break">— End of Page 19 —</div>
+</div><div class="page">
+  <div class="section-label">Section IX — Page 20 of 20</div>
+  <h1>IX. Appendix</h1>
+
+  <h2>A. Patient Survey Instrument (Draft)</h2>
+
+  <p>The following draft survey instrument will be used for primary data collection. Questions will be finalized after pilot testing with 10–15 patients.</p>
+
+  <div class="appendix-box">
+    <h4>Section A: Pharmacy Habits</h4>
+    <div class="survey-q"><span class="q-number">A1.</span> Which pharmacy(ies) do you currently use for prescriptions? (Select all that apply)</div>
+    <div class="survey-q"><span class="q-number">A2.</span> How many prescriptions does your household fill per year? (0–3 / 4–7 / 8–12 / 13+)</div>
+    <div class="survey-q"><span class="q-number">A3.</span> What is the primary reason you chose your current pharmacy? (Price / Location / Pharmacist relationship / Insurance / Other)</div>
+    <div class="survey-q"><span class="q-number">A4.</span> How often do you purchase OTC products when you pick up a prescription? (Always / Usually / Sometimes / Rarely)</div>
+    <div class="survey-q"><span class="q-number">A5.</span> Approximately how much do you spend at your pharmacy per month? (Under $25 / $25–$50 / $51–$100 / Over $100)</div>
+  </div>
+
+  <div class="appendix-box">
+    <h4>Section B: Loyalty Program Awareness</h4>
+    <div class="survey-q"><span class="q-number">B1.</span> Are you currently enrolled in any pharmacy loyalty programs? (CVS ExtraBucks / Walmart Price Match / Costco Price Match / None)</div>
+    <div class="survey-q"><span class="q-number">B2.</span> How often do you use your loyalty rewards? (Every time / Sometimes / Never)</div>
+    <div class="survey-q"><span class="q-number">B3.</span> Has a loyalty program ever convinced you to switch pharmacies? (Yes / No / Not sure)</div>
+    <div class="survey-q"><span class="q-number">B4.</span> On a scale of 1–5, how important are loyalty rewards when choosing a pharmacy? (1 = not important, 5 = very important)</div>
+  </div>
+
+  <div class="appendix-box">
+    <h4>Section C: Loyalty Drivers (Rank by Importance)</h4>
+    <div class="survey-q"><span class="q-number">C1.</span> Please rank the following factors by importance when choosing a pharmacy: (1 = most important)</div>
+    <div class="survey-q" style="padding-left: 1rem;">___ Low copay price &nbsp; ___ Pharmacist relationship &nbsp;___ Convenience/location</div>
+    <div class="survey-q" style="padding-left: 1rem;">___ Transparent billing &nbsp;___ Free delivery &nbsp;___ Personalized health advice</div>
+    <div class="survey-q" style="padding-left: 1rem;">___ Loyalty rewards &nbsp;___ Community presence &nbsp;___ Online/app tools</div>
+  </div>
+
+  <div class="appendix-box">
+    <h4>Section D: Program Preferences</h4>
+    <div class="survey-q"><span class="q-number">D1.</span> Which of the following Wellness Rewards benefits would you value most? (Select top 3)</div>
+    <div class="survey-q" style="padding-left: 1rem;">___ Free health screenings &nbsp;___ Points for OTC discounts &nbsp;___ Refill reminders</div>
+    <div class="survey-q" style="padding-left: 1rem;">___ Family-wide account &nbsp;___ Referral bonuses &nbsp;___ Wellness workshop access</div>
+    <div class="survey-q"><span class="q-number">D2.</span> Would you enroll in a pharmacy loyalty program that rewards health engagement (not just spending)? (Definitely / Probably / Maybe / Probably not)</div>
+    <div class="survey-q"><span class="q-number">D3.</span> How would you prefer to receive pharmacy updates? (In-person / Phone / SMS / Printed mail)</div>
+  </div>
+
+  <div class="appendix-box">
+    <h4>Section E: Demographics</h4>
+    <div class="survey-q"><span class="q-number">E1.</span> Age range: (18–24 / 25–34 / 35–44 / 45–54 / 55–64 / 65+)</div>
+    <div class="survey-q"><span class="q-number">E2.</span> Household size: (1 / 2 / 3 / 4 / 5+)</div>
+    <div class="survey-q"><span class="q-number">E3.</span> Number of children in household: (0 / 1 / 2 / 3 / 4+)</div>
+    <div class="survey-q"><span class="q-number">E4.</span> Annual household income: (Under $75K / $75K–$150K / Over $150K)</div>
+    <div class="survey-q"><span class="q-number">E5.</span> How long have you lived in Prosper? (Under 1 year / 1–3 years / 3–5 years / 5+ years)</div>
+  </div>
+
+  <h2>B. Competitor Observation Checklist</h2>
+
+  <div class="appendix-box">
+    <h4>StarCare Pharmacy — Observation Protocol</h4>
+    <ul>
+      <li><strong>Arrival:</strong> Signage visibility, entrance accessibility, waiting area comfort</li>
+      <li><strong>Counter interaction:</strong> Greeting warmth, wait time, staff knowledge, pharmacist availability</li>
+      <li><strong>Store layout:</strong> OTC section organization, seasonal display, promotional signage, checkout flow</li>
+      <li><strong>Loyalty visibility:</strong> Is a loyalty program promoted? Where? How prominently?</li>
+      <li><strong>Pricing transparency:</strong> Are prices visible? Is copay communicated proactively?</li>
+      <li><strong>Departure:</strong> Follow-up information provided? Delivery options mentioned?</li>
+    </ul>
+  </div>
+
+  <h2>C. Stakeholder Interview Guide</h2>
+
+  <div class="appendix-box">
+    <h4>Sample Interview Questions (Patient Version)</h4>
+    <ul>
+      <li>What made you choose StarCare Pharmacy over the chains nearby?</li>
+      <li>What would make you consider switching pharmacies?</li>
+      <li>How do you find out about new products or services at StarCare?</li>
+      <li>If StarCare had a rewards program, what would make it worth your time?</li>
+      <li>What does "personalized care" mean to you at a pharmacy?</li>
+      <li>How important is it to you that a pharmacy is involved in the Prosper community?</li>
+      <li>Would you refer StarCare to a friend? What would make you more likely to refer?</li>
+    </ul>
+  </div>
+
+  <div class="page-break">— End of Page 20 —</div>
+  <div style="text-align: center; margin-top: 2rem; padding-top: 1rem;">
+    <p style="font-family: 'Merriweather', serif; font-size: 1.1rem; color: var(--primary); font-weight: 700;">Project Swastik</p>
+    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">Rebuilding Customer Loyalty at StarCare Pharmacy</p>
+    <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem;">DECA Buying and Merchandising Operations Research | 2026–2027</p>
+  </div>
+</div>
+
+<script>
+(function() {
+  // Page navigation
+  const pages = document.querySelectorAll('.page, .cover, .toc');
+  let currentPage = 0;
+
+  // Page indicator
+  const indicator = document.createElement('div');
+  indicator.className = 'page-indicator';
+  document.body.appendChild(indicator);
+  indicator.textContent = '1 / ' + pages.length;
+
+  // Nav controls
+  const nav = document.createElement('div');
+  nav.className = 'nav-controls';
+  document.body.appendChild(nav);
+
+  const prevBtn = document.createElement('button');
+  prevBtn.textContent = '← Prev';
+  prevBtn.onclick = function() {
+    if (currentPage > 0) { currentPage--; scrollToPage(currentPage); }
+  };
+  const nextBtn = document.createElement('button');
+  nextBtn.textContent = 'Next →';
+  nextBtn.onclick = function() {
+    if (currentPage < pages.length - 1) { currentPage++; scrollToPage(currentPage); }
+  };
+  nav.appendChild(prevBtn);
+  nav.appendChild(nextBtn);
+
+  function scrollToPage(idx) {
+    pages[idx].scrollIntoView({ behavior: 'smooth' });
+    indicator.textContent = (idx + 1) + ' / ' + pages.length;
+    currentPage = idx;
+  }
+
+  // Intersection Observer for scroll tracking
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        const idx = Array.prototype.indexOf.call(pages, entry.target);
+        if (idx !== -1) {
+          currentPage = idx;
+          indicator.textContent = (idx + 1) + ' / ' + pages.length;
+          prevBtn.disabled = idx === 0;
+          nextBtn.disabled = idx === pages.length - 1;
+        }
+      }
+    });
+  }, { rootMargin: '-40% 0px -40% 0px' });
+
+  pages.forEach(function(page) { observer.observe(page); });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+      e.preventDefault();
+      if (currentPage < pages.length - 1) { currentPage++; scrollToPage(currentPage); }
+    } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+      e.preventDefault();
+      if (currentPage > 0) { currentPage--; scrollToPage(currentPage); }
+    } else if (e.key === 'Home') {
+      e.preventDefault();
+      currentPage = 0; scrollToPage(0);
+    } else if (e.key === 'End') {
+      e.preventDefault();
+      currentPage = pages.length - 1; scrollToPage(currentPage);
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Game Table — DECA BMOR Presentation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@400;600;700&display=swap">
+
+<style>
+:root {
+    --md-accent: #D4913C;
+    --md-accent-soft: rgba(212, 145, 60, 0.14);
+    --md-bg: #2D5F3E;
+    --md-border: #408859;
+    --md-code-bg: #336C47;
+    --md-link: #E6C79C;
+    --md-link-hover: #EED9BC;
+    --md-success: #10A85C;
+    --md-surface: #36734B;
+    --md-text: #F7F7F2;
+    --md-text-muted: rgba(247, 247, 242, 0.68);
+    --md-warn: #C87C10;
+    --md-font-heading: 'Merriweather', Georgia, serif;
+    --md-font-body: 'Inter', system-ui, -apple-system, sans-serif;
+    --md-font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+body {
+    background: var(--md-bg);
+    color: var(--md-text);
+    font-family: var(--md-font-body);
+    font-size: 22px;
+    line-height: 1.45;
+}
+
+/* Slide layout — each slide is a viewport-sized panel */
+.deck { width: 100vw; height: 100vh; position: relative; }
+.slide {
+    position: absolute;
+    inset: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4vh 8vw;
+    overflow: auto;
+}
+.slide.active { display: flex; }
+.slide h1, .slide h2, .slide h3 {
+    font-family: var(--md-font-heading);
+    margin: 0 0 0.6em;
+    line-height: 1.15;
+    font-weight: 700;
+}
+.slide h1 { font-size: 3rem; }
+.slide h2 { font-size: 2.5rem; }
+.slide h3 { font-size: 1.875rem; }
+.slide p { margin: 0.5em 0 1em; font-size: 1.25rem; }
+.slide ul, .slide ol { padding-left: 1.5em; font-size: 1.25rem; }
+.slide li { margin: 0.4em 0; }
+.slide a { color: var(--md-link); }
+.slide code {
+    background: var(--md-code-bg);
+    padding: 0.1em 0.3em;
+    border-radius: 4px;
+    font-family: var(--md-font-mono);
+    font-size: 0.9em;
+}
+.slide pre {
+    background: var(--md-code-bg);
+    border: 1px solid var(--md-border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    font-family: var(--md-font-mono);
+    font-size: 1rem;
+    overflow: auto;
+    margin: 0.75em 0;
+}
+.slide pre code { background: transparent; padding: 0; }
+.slide table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+    font-size: 1.125rem;
+}
+.slide th, .slide td { border: 1px solid var(--md-border); padding: 0.5em 0.75em; text-align: left; }
+.slide th { background: var(--md-surface); font-weight: 600; }
+.slide td.align-center, .slide th.align-center { text-align: center; }
+.slide td.align-right, .slide th.align-right { text-align: right; }
+.slide blockquote {
+    border-left: 4px solid var(--md-accent);
+    margin: 1em 0;
+    padding: 0.4em 1em;
+    color: var(--md-text-muted);
+    font-style: italic;
+    font-size: 1.25rem;
+}
+.slide hr { border: 0; border-top: 1px solid var(--md-border); margin: 1.5em 0; }
+
+.slide .callout {
+    border-left: 4px solid var(--md-accent);
+    background: var(--md-accent-soft);
+    padding: 0.75em 1em;
+    margin: 1em 0;
+    border-radius: 0 8px 8px 0;
+}
+.slide .callout-label {
+    font-family: var(--md-font-heading);
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--md-accent);
+    margin-bottom: 0.25em;
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+}
+.slide .callout-note { border-left-color: var(--md-link); }
+.slide .callout-tip { border-left-color: var(--md-success); }
+.slide .callout-warning { border-left-color: var(--md-warn); }
+.slide .callout-caution { border-left-color: var(--md-warn); }
+
+/* Chrome (slide counter + hint) */
+.chrome {
+    position: fixed;
+    bottom: 1rem;
+    right: 1.25rem;
+    font-family: var(--md-font-mono);
+    font-size: 0.875rem;
+    color: var(--md-text-muted);
+    user-select: none;
+}
+.chrome a { color: var(--md-text-muted); margin-right: 0.5rem; }
+.chrome a:hover { color: var(--md-accent); }
+
+/* Progress bar */
+.progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    background: var(--md-accent);
+    transition: width 0.2s ease;
+    z-index: 100;
+}
+
+/* Presenter mode (P key toggles body class) */
+body.presenter .deck { width: 60vw; }
+body.presenter .presenter-panel { display: flex; }
+.presenter-panel {
+    display: none;
+    position: fixed;
+    top: 0; right: 0;
+    width: 40vw;
+    height: 100vh;
+    background: var(--md-surface);
+    border-left: 1px solid var(--md-border);
+    flex-direction: column;
+    padding: 1.5rem 1.5rem;
+    font-size: 1rem;
+    overflow: auto;
+}
+.presenter-panel h3 {
+    font-family: var(--md-font-heading);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--md-text-muted);
+    margin: 0 0 0.5rem;
+    border-bottom: 1px solid var(--md-border);
+    padding-bottom: 0.4rem;
+}
+.presenter-panel .clock { font-family: var(--md-font-mono); font-size: 1.5rem; margin-bottom: 1rem; }
+.presenter-panel .notes { flex: 1; line-height: 1.5; color: var(--md-text); margin-bottom: 1rem; white-space: pre-wrap; }
+.presenter-panel .next-preview {
+    background: var(--md-bg);
+    border: 1px solid var(--md-border);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    max-height: 25vh;
+    overflow: hidden;
+    opacity: 0.7;
+}
+.presenter-panel .next-preview h4 {
+    font-family: var(--md-font-heading);
+    margin: 0 0 0.3em;
+    font-size: 1rem;
+    color: var(--md-accent);
+}
+
+/* Print: all slides visible, one per page */
+@media print {
+    html, body { height: auto; overflow: visible; }
+    .chrome, .progress, .presenter-panel { display: none !important; }
+    .deck, body.presenter .deck { width: 100%; height: auto; }
+    .slide {
+        display: flex !important;
+        position: relative;
+        height: 100vh;
+        page-break-after: always;
+        break-after: page;
+    }
+    .slide:last-child { page-break-after: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+}
+</style>
+</head>
+<body class="style-playful">
+<div id="progress" class="progress"></div>
+<div class="deck">
+<section class="slide" id="slide-1" data-notes=""><h1>The Game Table</h1><h2>Rebuilding Customer Loyalty Through Community</h2></section>
+<section class="slide" id="slide-2" data-notes=""><h1>The Problem</h1><p>More people are spending too much time on their phones.</p>
+<ul><li>53% of consumers are trying to reduce screen time</li><li>Traditional retail stores are losing customers</li><li>Gen Z and Millennials want real social experiences</li><li>Frisco has no board game cafe for daytime customers</li></ul></section>
+<section class="slide" id="slide-3" data-notes=""><h1>Our Solution: The Game Table</h1><p>A board game cafe and retail store in Frisco, Texas.</p>
+<ul><li>300-800 board games to play while you eat and drink</li><li>Food and drinks with 75-85% profit margin on coffee</li><li>"Third place" — not home, not school</li><li>Near UT Dallas (38,000+ students)</li></ul></section>
+<section class="slide" id="slide-4" data-notes=""><h1>What We Found</h1><p><strong>Our research surveyed 100+ people in Frisco:</strong></p>
+<ul><li>68% want to spend less time on phones</li><li>72% would visit a board game cafe nearby</li><li>70% of students prefer used games over new</li><li>Competitors only open evenings, miss daytime customers</li></ul></section>
+<section class="slide" id="slide-5" data-notes=""><h1>Competitive Gap</h1><table><thead><tr><th class="align-left">Competitor</th><th class="align-left">Problem</th></tr></thead><tbody><tr><td class="align-left">Nerdvana</td><td class="align-left">Opens at 4 PM, no reservations</td></tr><tr><td class="align-left">Texas Tabletop</td><td class="align-left">Evening only, members-only Sundays</td></tr><tr><td class="align-left">Farm+Feed</td><td class="align-left">Gaming restaurant, not community</td></tr></tbody></table>
+<p><strong>No competitor serves families and students during the day.</strong></p></section>
+<section class="slide" id="slide-6" data-notes=""><h1>Turn the P.A.G.E. Campaign</h1><p>Our strategic plan to rebuild customer loyalty:</p>
+<p><strong>P</strong> — Pre-Owned Game Marketplace <strong>A</strong> — App-Based Transparency <strong>G</strong> — Giving and Awareness <strong>E</strong> — Employee Engagement</p></section>
+<section class="slide" id="slide-7" data-notes=""><h1>P: Pre-Owned Game Marketplace</h1><p>Customers sell their old games back to us.</p>
+<ul><li>Buy games at fair prices using ISBN</li><li>Resell at 40-55% markup</li><li>70% of students prefer used games</li><li>Second-hand market growing 5.5% per year</li></ul></section>
+<section class="slide" id="slide-8" data-notes=""><h1>A: App-Based Transparency</h1><p>Mobile app for notifications and community.</p>
+<ul><li>Push notifications about new games and events</li><li>90% open rate vs 20% for email</li><li>Customers vote on new game purchases</li><li>Loyalty points tracking</li></ul></section>
+<section class="slide" id="slide-9" data-notes=""><h1>G: Giving and Awareness</h1><p>Support local causes throughout the year.</p>
+<ul><li>Monthly cause: food bank, mental health, school clubs</li><li>"Awareness month" displays with themed games</li><li>Round-up donations at checkout</li><li>40% participation rate projected</li></ul></section>
+<section class="slide" id="slide-10" data-notes=""><h1>E: Employee Engagement</h1><p>Happy employees = happy customers.</p>
+<ul><li>$50 weekly bonus for great service</li><li>Flexible scheduling and volunteer time off</li><li>Task rotation to prevent boredom</li><li>90% employee retention target</li></ul></section>
+<section class="slide" id="slide-11" data-notes=""><h1>Financial Projections</h1><table><thead><tr><th class="align-left">Metric</th><th class="align-left">Target</th></tr></thead><tbody><tr><td class="align-left">Startup Cost</td><td class="align-left">$201,000-$460,000</td></tr><tr><td class="align-left">Break-Even</td><td class="align-left">12-24 months</td></tr><tr><td class="align-left">Campaign ROI</td><td class="align-left">420%</td></tr><tr><td class="align-left">Net Profit Margin</td><td class="align-left">10-17%</td></tr><tr><td class="align-left">Avg. Spend/Visit</td><td class="align-left">$32-45</td></tr></tbody></table></section>
+<section class="slide" id="slide-12" data-notes=""><h1>Our KPIs</h1><table><thead><tr><th class="align-left">KPI</th><th class="align-left">Target</th></tr></thead><tbody><tr><td class="align-left">Customer Return Rate</td><td class="align-left">60% return within 90 days</td></tr><tr><td class="align-left">App Adoption</td><td class="align-left">60% of customers download app</td></tr><tr><td class="align-left">Pre-Owned Transactions</td><td class="align-left">50+ games per month</td></tr><tr><td class="align-left">Customer Satisfaction</td><td class="align-left">4.5 out of 5.0</td></tr><tr><td class="align-left">Employee Retention</td><td class="align-left">90% past 6 months</td></tr></tbody></table></section>
+<section class="slide" id="slide-13" data-notes=""><h1>Timeline</h1><table><thead><tr><th class="align-left">Quarter</th><th class="align-left">Focus</th></tr></thead><tbody><tr><td class="align-left">Q1</td><td class="align-left">Set up pre-owned program, plan app</td></tr><tr><td class="align-left">Q2</td><td class="align-left">Launch pre-owned marketplace, awareness displays</td></tr><tr><td class="align-left">Q3</td><td class="align-left">Launch app, UT Dallas events</td></tr><tr><td class="align-left">Q4</td><td class="align-left">Full app rollout, holiday giving</td></tr></tbody></table></section>
+<section class="slide" id="slide-14" data-notes=""><h1>Why We Will Win</h1><ul><li>Zero competitors serve daytime customers in Frisco</li><li>Board game industry growing 9.2% per year</li><li>53% of people want to use phones less</li><li>Real numbers, real plan, real community</li></ul>
+<p><strong>The Game Table — Where the community plays together.</strong></p></section>
+</div>
+
+<aside class="presenter-panel" aria-label="Presenter view (toggle with P)">
+    <h3>Clock</h3>
+    <div class="clock">--:--:--</div>
+    <h3>Speaker notes</h3>
+    <div class="notes"></div>
+    <div class="next-preview"></div>
+</aside>
+
+<div class="chrome">
+    <a href="#" onclick="event.preventDefault(); document.dispatchEvent(new KeyboardEvent('keydown', {key:'P'}))">P · presenter</a>
+    <span id="counter">1 / 14</span>
+</div>
+
+<script>
+(function () {
+    "use strict";
+    var slides = document.querySelectorAll(".slide");
+    var total = slides.length;
+    var current = 0;
+    var presenter = false;
+
+    function show(idx) {
+        idx = Math.max(0, Math.min(total - 1, idx));
+        slides.forEach(function (s, i) {
+            s.classList.toggle("active", i === idx);
+        });
+        current = idx;
+        document.getElementById("counter").textContent = (current + 1) + " / " + total;
+        var prog = document.getElementById("progress");
+        if (prog) prog.style.width = (100 * (current + 1) / total) + "%";
+        if (location.hash !== "#" + (current + 1)) {
+            history.replaceState(null, "", "#" + (current + 1));
+        }
+        updatePresenterPanel();
+    }
+
+    function next() { show(current + 1); }
+    function prev() { show(current - 1); }
+    function first() { show(0); }
+    function last() { show(total - 1); }
+
+    function togglePresenter() {
+        presenter = !presenter;
+        document.body.classList.toggle("presenter", presenter);
+        updatePresenterPanel();
+    }
+
+    function updatePresenterPanel() {
+        var panel = document.querySelector(".presenter-panel");
+        if (!panel) return;
+        var notes = slides[current].getAttribute("data-notes") || "(no notes for this slide)";
+        panel.querySelector(".notes").textContent = notes;
+        var preview = panel.querySelector(".next-preview");
+        if (current + 1 < total) {
+            var nextSlide = slides[current + 1];
+            var title = nextSlide.querySelector("h1, h2") ;
+            preview.innerHTML = "<h4>Up next (#" + (current + 2) + ")</h4>" +
+                (title ? title.outerHTML : "<em>(no title)</em>");
+            preview.style.display = "block";
+        } else {
+            preview.innerHTML = "<h4>End of deck</h4>";
+        }
+    }
+
+    function tickClock() {
+        var now = new Date();
+        var hh = String(now.getHours()).padStart(2, "0");
+        var mm = String(now.getMinutes()).padStart(2, "0");
+        var ss = String(now.getSeconds()).padStart(2, "0");
+        var el = document.querySelector(".presenter-panel .clock");
+        if (el) el.textContent = hh + ":" + mm + ":" + ss;
+    }
+
+    document.addEventListener("keydown", function (e) {
+        if (e.metaKey || e.ctrlKey || e.altKey) return;
+        switch (e.key) {
+            case "ArrowRight":
+            case "PageDown":
+            case " ":
+                e.preventDefault(); next(); break;
+            case "ArrowLeft":
+            case "PageUp":
+                e.preventDefault(); prev(); break;
+            case "Home": e.preventDefault(); first(); break;
+            case "End":  e.preventDefault(); last();  break;
+            case "p":
+            case "P":
+                e.preventDefault(); togglePresenter(); break;
+            case "Escape":
+                if (presenter) { e.preventDefault(); togglePresenter(); }
+                break;
+        }
+    });
+
+    // Mount the initial slide (respect URL hash, otherwise slide 1)
+    var initial = 0;
+    if (location.hash) {
+        var n = parseInt(location.hash.slice(1), 10);
+        if (!isNaN(n) && n >= 1 && n <= total) initial = n - 1;
+    }
+    show(initial);
+    setInterval(tickClock, 1000);
+    tickClock();
+})();
+</script>
+</body>
+</html>

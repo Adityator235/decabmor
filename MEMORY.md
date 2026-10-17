@@ -1,0 +1,11 @@
+- [DECA BMOR Competition Overview](01-Competition-Overview/README.md) — Format, scoring, requirements, and 2026-2027 topic
+- [DECA BMOR Exam Blueprint](02-Exam-Blueprint/README.md) — Instructional areas, question distribution, and study priorities
+- [Retail Math & Formulas](03-Retail-Math-Formulas/README.md) — All essential formulas with examples and DECA tips
+- [Merchandise Planning & Buying](04-Merchandise-Planning/README.md) — Assortment, inventory, OTB, and replenishment
+- [Pricing Strategies](05-Pricing-Strategies/README.md) — Markup, markdown, psychological pricing, and pricing models
+- [Customer Loyalty & Retention](06-Customer-Loyalty/README.md) — 2026-2027 competition topic deep dive with strategies and research
+- [Vendor Management & Category Management](07-Vendor-Management/README.md) — Buyer-supplier relationships and category strategies
+- [Case Study & Presentation Tips](08-Case-Study-Tips/README.md) — Winning strategies, structure, and judging criteria
+- [Key Terms Glossary](09-Key-Terms/README.md) — Essential retail and merchandising terminology
+- [Resources & Downloads](10-Resources/README.md) — Official DECA links, sample entries, and study materials
+- [Board Game Cafe Deep Research](11-Board-Game-Cafe-Research/README.md) — Industry data, competitive analysis, financial benchmarks, loyalty strategies, and merchandise buying for the selected business concept

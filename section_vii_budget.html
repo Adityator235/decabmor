@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VII. Budget (Page 18) — StarCareRx</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #2D5F3E;
+    --primary-dark: #1E4A2E;
+    --accent: #D4913C;
+    --bg: #FFFFFF;
+    --text: #1A1A1A;
+    --text-muted: #6B6B6B;
+    --border: #E0DCD7;
+    --surface: #F9F7F5;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 2rem;
+    line-height: 1.7;
+  }
+  .page {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--bg);
+    padding: 3.5rem 4rem;
+    position: relative;
+  }
+  .page::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+  }
+  .section-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+  .page-number {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 2rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+  h1 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary);
+    margin: 1.5rem 0 0.75rem;
+    font-size: 1.1rem;
+  }
+  h3 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary-dark);
+    margin: 1.25rem 0 0.5rem;
+    font-size: 1rem;
+  }
+  p { margin-bottom: 1rem; font-size: 0.95rem; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.25rem 0;
+    font-size: 0.85rem;
+  }
+  th, td {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border);
+    text-align: left;
+  }
+  th {
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+  }
+  tfoot td {
+    font-weight: 700;
+    border-top: 2px solid var(--primary);
+  }
+  .page-break {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed var(--border);
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+  .key-insight {
+    border-left: 3px solid var(--primary);
+    padding: 0.75rem 1rem;
+    margin: 1.25rem 0;
+    font-size: 0.9rem;
+  }
+  .key-insight strong {
+    color: var(--primary);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  .budget-total {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .budget-card {
+    flex: 1;
+    background: var(--surface);
+    border: 2px solid var(--primary);
+    border-radius: 2px;
+    padding: 1.25rem;
+    text-align: center;
+  }
+  .budget-card .number {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--primary);
+  }
+  .budget-card .label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+  }
+  .budget-card.accent {
+    border-color: var(--accent);
+  }
+  .budget-card.accent .number {
+    color: var(--accent);
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="section-label">Section VII — Page 18 of 20</div>
+  <h1>VII. Budget</h1>
+
+  <h2>Project Swastik: 12-Month Budget Breakdown</h2>
+
+  <p>The total investment for Project Swastik is <strong>$14,000</strong> over 12 months. This budget is designed for an independent pharmacy with modest resources: no app development, no CRM software license, no marketing agency. Every line item uses existing staff, low-cost tools, and community partnerships.</p>
+
+  <h3>Pillar 1: Drishti — Billing Transparency (Months 1–3)</h3>
+
+  <table>
+    <tr>
+      <th>Line Item</th>
+      <th>Cost</th>
+      <th>Justification</th>
+    </tr>
+    <tr>
+      <td>Copay confirmation signage &amp; workflow materials</td>
+      <td>$150</td>
+      <td>Printed workflow checklist for pharmacy counter; patient copay confirmation card (500 copies)</td>
+    </tr>
+    <tr>
+      <td>PA (Prior Authorization) checklist template</td>
+      <td>$50</td>
+      <td>Professional template design and printing; integrated into prescription processing binder</td>
+    </tr>
+    <tr>
+      <td>Post-visit satisfaction survey (printed)</td>
+      <td>$200</td>
+      <td>500 single-question survey cards: "How was your experience? Rate 1–5." Collected at pickup counter.</td>
+    </tr>
+    <tr>
+      <td><strong>Subtotal: Drishti</strong></td>
+      <td><strong>$400</strong></td>
+      <td>Minimal investment; primarily printing and workflow materials</td>
+    </tr>
+  </table>
+
+  <h3>Pillar 2: Seva — Wellness Rewards Program (Months 1–8)</h3>
+
+  <table>
+    <tr>
+      <th>Line Item</th>
+      <th>Cost</th>
+      <th>Justification</th>
+    </tr>
+    <tr>
+      <td>Wellness Rewards card printing (2,000 cards)</td>
+      <td>$300</td>
+      <td>High-quality loyalty card with StarCare branding; patient name and account number field; point tracker grid</td>
+    </tr>
+    <tr>
+      <td>In-store loyalty program signage</td>
+      <td>$400</td>
+      <td>Window decal, counter card, and wall poster explaining the program; professional design and printing</td>
+    </tr>
+    <tr>
+      <td>Wellness points redemption inventory</td>
+      <td>$2,500</td>
+      <td>Initial inventory of OTC products for point redemption: vitamins, first aid kits, thermometers, blood pressure cuffs, wellness bundles</td>
+    </tr>
+    <tr>
+      <td>Birthday wellness kit inventory (500 units)</td>
+      <td>$750</td>
+      <td>Small wellness kits (hand sanitizer, lip balm, bandages, wellness tip card) for Sprout-tier+ member birthdays</td>
+    </tr>
+    <tr>
+      <td>Wellness workshop materials (4 sessions)</td>
+      <td>$600</td>
+      <td>Handouts, demo products (blood pressure cuff demonstration), refreshments for each workshop</td>
+    </tr>
+    <tr>
+      <td>Point tracking ledger system</td>
+      <td>$100</td>
+      <td>Manual point tracking ledger books for pharmacy staff; patient point tracker cards</td>
+    </tr>
+    <tr>
+      <td><strong>Subtotal: Seva</strong></td>
+      <td><strong>$4,650</strong></td>
+      <td>Largest category: inventory for point redemption and program materials</td>
+    </tr>
+  </table>
+
+  <h3>Pillar 3: Milap — Community Connection (Months 9–12)</h3>
+
+  <table>
+    <tr>
+      <th>Line Item</th>
+      <th>Cost</th>
+      <th>Justification</th>
+    </tr>
+    <tr>
+      <td>Prosper Chamber of Commerce membership</td>
+      <td>$500</td>
+      <td>Annual membership; provides networking, event access, and community credibility</td>
+    </tr>
+    <tr>
+      <td>Community health event supplies (4 events)</td>
+      <td>$2,000</td>
+      <td>BP cuffs (disposables), A1C test kits, informational brochures, table, tent, StarCare banner for outdoor events</td>
+    </tr>
+    <tr>
+      <td>School sponsorship materials</td>
+      <td>$1,500</td>
+      <td>Branded first aid kits for Prosper ISD events; StarCare bandanas for soccer team sponsorship; back-to-school health kit giveaway (200 units)</td>
+    </tr>
+    <tr>
+      <td>Community giving program (food drive bins + marketing)</td>
+      <td>$300</td>
+      <td>Three donation bins for pharmacy; printed signage; small incentive stickers for Wellness Rewards members who donate</td>
+    </tr>
+    <tr>
+      <td>Seasonal wellness bundle inventory (holiday, spring)</td>
+      <td>$3,000</td>
+      <td>Pre-assembled wellness bundles for sale and point redemption: vitamins, thermometer, first aid kit, wellness guide</td>
+    </tr>
+    <tr>
+      <td>Community event promotion (local ads, flyers)</td>
+      <td>$1,000</td>
+      <td>Local newspaper ad (Prosper Weekly), school newsletter sponsorship, community calendar listings</td>
+    </tr>
+    <tr>
+      <td>Wellness workshop guest speaker honoraria</td>
+      <td>$800</td>
+      <td>Small honoraria for guest speakers (nutritionist, pediatric nurse, mental health advocate) — $200 per session</td>
+    </tr>
+    <tr>
+      <td><strong>Subtotal: Milap</strong></td>
+      <td><strong>$9,100</strong></td>
+      <td>Largest single item: seasonal wellness bundle inventory</td>
+    </tr>
+  </table>
+
+  <h3>Budget Summary</h3>
+
+  <div class="budget-total">
+    <div class="budget-card">
+      <div class="number">$400</div>
+      <div class="label">Drishti<br>(Months 1–3)</div>
+    </div>
+    <div class="budget-card">
+      <div class="number">$4,650</div>
+      <div class="label">Seva<br>(Months 1–8)</div>
+    </div>
+    <div class="budget-card accent">
+      <div class="number">$9,100</div>
+      <div class="label">Milap<br>(Months 9–12)</div>
+    </div>
+  </div>
+
+  <table>
+    <tr>
+      <th>Budget Category</th>
+      <th>Amount</th>
+      <th>% of Total</th>
+    </tr>
+    <tr>
+      <td>Pillar 1: Drishti</td>
+      <td>$400</td>
+      <td>2.9%</td>
+    </tr>
+    <tr>
+      <td>Pillar 2: Seva</td>
+      <td>$4,650</td>
+      <td>33.2%</td>
+    </tr>
+    <tr>
+      <td>Pillar 3: Milap</td>
+      <td>$9,100</td>
+      <td>65.0%</td>
+    </tr>
+    <tr>
+      <td>Contingency (8.9%)</td>
+      <td>$1,000</td>
+      <td>7.1%</td>
+    </tr>
+    <tr style="font-size: 1rem;">
+      <td><strong>GRAND TOTAL</strong></td>
+      <td><strong>$14,000</strong></td>
+      <td><strong>100%</strong></td>
+    </tr>
+  </table>
+
+  <div class="key-insight">
+    <strong>BUDGET PHILOSOPHY</strong>
+    Project Swastik is designed to be <em>capital-light</em>: no software licenses, no agency fees, no expensive technology. The largest single expense is wellness bundle inventory ($3,000), which is also a revenue-generating asset (bundles can be sold or redeemed). The budget scales with performance: as Wellness Rewards enrollment grows, point redemption costs are offset by increased prescription and OTC revenue.
+  </div>
+
+  <div class="page-break">— End of Page 18 —</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Game Table — DECA BMOR Presentation</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #2D5F3E;
+    --primary-light: #3A7A50;
+    --primary-dark: #1E4A2E;
+    --accent: #D4913C;
+    --accent-light: #E8A95C;
+    --bg: #0A0F0C;
+    --bg-light: #121914;
+    --surface: #1A2420;
+    --text: #F0EDE8;
+    --text-muted: #9A9590;
+    --border: #2A3530;
+    --success: #4CAF50;
+    --card-bg: rgba(255,255,255,0.03);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  /* ── Slide Container ── */
+  .slides-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 6rem;
+    opacity: 0;
+    transform: translateY(30px) scale(0.97);
+    transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+    overflow-y: auto;
+  }
+
+  .slide.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+    z-index: 10;
+  }
+
+  .slide.exit-up {
+    opacity: 0;
+    transform: translateY(-40px) scale(0.97);
+  }
+
+  /* ── Typography ── */
+  h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 3.2rem;
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-light);
+    margin-bottom: 1.25rem;
+  }
+
+  h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  p, li {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    max-width: 700px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 0.6rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* ── Slide-specific layouts ── */
+  .slide-title {
+    text-align: center;
+    background: radial-gradient(ellipse at 50% 40%, var(--bg-light) 0%, var(--bg) 70%);
+  }
+
+  .slide-title h1 {
+    font-size: 3.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .slide-title .tagline {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.05em;
+  }
+
+  .slide-title .meta {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    opacity: 0.7;
+  }
+
+  .slide-title .accent-line {
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    margin: 1.5rem auto;
+    border-radius: 2px;
+  }
+
+  .slide-content {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .slide-content .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  .slide-content .content-full {
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+
+  /* ── Cards ── */
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 8px 32px rgba(212, 145, 60, 0.1);
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* ── Stats ── */
+  .stat-row {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    text-align: center;
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .stat .number {
+    font-family: 'Merriweather', serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+
+  .stat .label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  /* ── Pillars ── */
+  .pillar-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  .pillar {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+
+  .pillar:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(212, 145, 60, 0.1);
+  }
+
+  .pillar .letter {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .pillar .word {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.3rem;
+  }
+
+  .pillar .desc {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  /* ── Table ── */
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+
+  th {
+    background: var(--surface);
+    font-weight: 600;
+    color: var(--accent);
+    padding: 0.8rem 1rem;
+    text-align: left;
+    font-size: 0.85rem;
+  }
+
+  td {
+    padding: 0.7rem 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  tr:hover td {
+    background: rgba(255,255,255,0.02);
+  }
+
+  /* ── Badge ── */
+  .badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: rgba(212, 145, 60, 0.15);
+    color: var(--accent);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  /* ── Navigation ── */
+  .nav-controls {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    gap: 0.75rem;
+    z-index: 100;
+  }
+
+  .nav-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+
+  .nav-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: scale(1.05);
+  }
+
+  .nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .slide-counter {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    opacity: 0.6;
+    z-index: 100;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-light));
+    transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: 100;
+    border-radius: 0 2px 2px 0;
+  }
+
+  /* ── Animations ── */
+  .slide.active .fade-in {
+    animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .slide.active .fade-in-delay-1 { animation-delay: 0.1s; }
+  .slide.active .fade-in-delay-2 { animation-delay: 0.2s; }
+  .slide.active .fade-in-delay-3 { animation-delay: 0.3s; }
+  .slide.active .fade-in-delay-4 { animation-delay: 0.4s; }
+  .slide.active .fade-in-delay-5 { animation-delay: 0.5s; }
+  .slide.active .fade-in-delay-6 { animation-delay: 0.6s; }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .slide.active .scale-in {
+    animation: scaleIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .scale-in {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  @keyframes scaleIn {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* ── Highlight text ── */
+  .highlight {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .highlight-green {
+    color: var(--success);
+    font-weight: 600;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 1024px) {
+    .slide { padding: 3rem 4rem; }
+    h1 { font-size: 2.5rem; }
+    .pillar-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat-row { gap: 1.5rem; }
+    .stat .number { font-size: 2.2rem; }
+  }
+
+  @media (max-width: 768px) {
+    .slide { padding: 2rem; }
+    h1 { font-size: 2rem; }
+    .slide-title h1 { font-size: 2.5rem; }
+    .content-grid { grid-template-columns: 1fr !important; }
+    .pillar-grid { grid-template-columns: 1fr 1fr; }
+    .stat-row { flex-direction: column; gap: 1rem; }
+  }
+
+  /* ── Keyboard hint ── */
+  .keyboard-hint {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    opacity: 0.4;
+    z-index: 100;
+  }
+
+  kbd {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+  }
+</style>
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+<div class="keyboard-hint"><kbd>←</kbd> <kbd>→</kbd> or <kbd>Space</kbd> to navigate</div>
+
+<div class="slides-wrapper" id="slidesWrapper">
+
+  <!-- Slide 1: Title -->
+  <div class="slide slide-title active" data-slide="1">
+    <div class="badge fade-in">DECA BMOR 2026–2027</div>
+    <h1 class="fade-in fade-in-delay-1">The Game Table</h1>
+    <div class="accent-line fade-in fade-in-delay-2"></div>
+    <p class="tagline fade-in fade-in-delay-3">Board Game Cafe &amp; Retail — Frisco, Texas</p>
+    <p class="meta fade-in fade-in-delay-4">Rebuilding Customer Loyalty and Spending</p>
+    <p class="meta fade-in fade-in-delay-5" style="margin-top: 2rem; opacity: 0.5;">Presented by [Your Team Name]<br>[High School Name]</p>
+  </div>
+
+  <!-- Slide 2: The Problem -->
+  <div class="slide" data-slide="2">
+    <div class="slide-content">
+      <div class="badge fade-in">The Problem</div>
+      <h2 class="fade-in fade-in-delay-1">People Are Tired of Screens</h2>
+      <div class="stat-row">
+        <div class="stat scale-in scale-in-delay-1">
+          <div class="number">53%</div>
+          <div class="label">of consumers want<br>less screen time</div>
+        </div>
+        <div class="stat scale-in scale-in-delay-2">
+          <div class="number">+20</div>
+          <div class="label">point increase<br>in 2 years</div>
+        </div>
+        <div class="stat scale-in scale-in-delay-3">
+          <div class="number">↓</div>
+          <div class="label">Traditional retail<br>losing customers</div>
+        </div>
+      </div>
+      <p class="fade-in fade-in-delay-4" style="margin-top: 2rem; text-align: center;">
+        Teenagers and young adults are spending too much time on their phones.<br>
+        <span class="highlight">Traditional stores are losing customers</span> because they don't give people a reason to leave their houses.
+      </p>
+    </div>
+  </div>
+
+  <!-- Slide 3: Our Solution -->
+  <div class="slide" data-slide="3">
+    <div class="slide-content">
+      <div class="badge fade-in">Our Solution</div>
+      <h2 class="fade-in fade-in-delay-1">The Game Table</h2>
+      <p class="fade-in fade-in-delay-2">A board game cafe where customers play games, eat, drink, and actually talk to each other.</p>
+      <div class="content-grid">
+        <div class="card fade-in fade-in-delay-3">
+          <h3>🎲 300–800 Games</h3>
+          <p>Play any game from our library. From quick card games to epic strategy games that take all afternoon.</p>
+        </div>
+        <div class="card fade-in fade-in-delay-4">
+          <h3>☕ High-Margin Food &amp; Drinks</h3>
+          <p>Coffee at 85% profit margin. Simple menu — flatbreads, pretzels, bowls. No sticky fingers on the cards.</p>
+        </div>
+        <div class="card fade-in fade-in-delay-5">
+          <h3>📍 Near UT Dallas</h3>
+          <p>15 minutes from 38,000+ students. The biggest built-in customer base in North Texas.</p>
+        </div>
+        <div class="card fade-in fade-in-delay-6">
+          <h3>🏠 A "Third Place"</h3>
+          <p>Not home. Not school. A real place to hang out, meet friends, and do something that feels actual.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 4: Market Opportunity -->
+  <div class="slide" data-slide="4">
+    <div class="slide-content">
+      <div class="badge fade-in">Market Opportunity</div>
+      <h2 class="fade-in fade-in-delay-1">The Board Game Industry Is Booming</h2>
+      <div class="stat-row">
+        <div class="stat scale-in scale-in-delay-1">
+          <div class="number">$1.74B</div>
+          <div class="label">Industry value in<br>2025</div>
+        </div>
+        <div class="stat scale-in scale-in-delay-2">
+          <div class="number">$3.84B</div>
+          <div class="label">Expected by<br>2034</div>
+        </div>
+        <div class="stat scale-in scale-in-delay-3">
+          <div class="number">9.2%</div>
+          <div class="label">Growth rate<br>per year</div>
+        </div>
+      </div>
+      <p class="fade-in fade-in-delay-4" style="margin-top: 2rem; text-align: center;">
+        This is not a trend. This is a <span class="highlight">real, growing industry</span> backed by government data and market research.
+      </p>
+      <div class="content-full fade-in fade-in-delay-5">
+        <table>
+          <tr>
+            <th>Customer Group</th>
+            <th>Age</th>
+            <th>Visits/Year</th>
+            <th>Avg. Spend</th>
+          </tr>
+          <tr>
+            <td>Gen Z (students)</td>
+            <td>13–19</td>
+            <td>12–24</td>
+            <td>$18–$28</td>
+          </tr>
+          <tr>
+            <td>Millennials</td>
+            <td>20–35</td>
+            <td>8–12</td>
+            <td>$35–$48</td>
+          </tr>
+          <tr>
+            <td>Gen X / Families</td>
+            <td>36–50</td>
+            <td>4–6</td>
+            <td>$40–$55</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 5: Competitive Gap -->
+  <div class="slide" data-slide="5">
+    <div class="slide-content">
+      <div class="badge fade-in">Competitive Gap</div>
+      <h2 class="fade-in fade-in-delay-1">No One Serves Daytime Customers in Frisco</h2>
+      <table>
+        <tr>
+          <th>Competitor</th>
+          <th>Hours</th>
+          <th>Problem</th>
+        </tr>
+        <tr>
+          <td><strong>Nerdvana</strong></td>
+          <td>Opens 4 PM</td>
+          <td>No reservations, no daytime hours</td>
+        </tr>
+        <tr>
+          <td><strong>Texas Tabletop</strong></td>
+          <td>6–10 PM only</td>
+          <td>Members-only Sundays, limited staff</td>
+        </tr>
+        <tr>
+          <td><strong>Farm+Feed</strong></td>
+          <td>Restaurant model</td>
+          <td>Gaming restaurant, not a community space</td>
+        </tr>
+      </table>
+      <p class="fade-in fade-in-delay-3" style="margin-top: 1.5rem; text-align: center;">
+        <span class="highlight">The gap:</span> No competitor serves families and students during the day.
+        <br>We open at <span class="highlight-green">10 AM</span> and own the daytime market.
+      </p>
+    </div>
+  </div>
+
+  <!-- Slide 6: Key Findings -->
+  <div class="slide" data-slide="6">
+    <div class="slide-content">
+      <div class="badge fade-in">Research Findings</div>
+      <h2 class="fade-in fade-in-delay-1">What We Found</h2>
+      <div class="content-grid">
+        <div class="card fade-in fade-in-delay-2">
+          <h3>1. Screen Fatigue Is Real</h3>
+          <p>53% of consumers want less screen time. Up 20 points in two years. People want to hang out in person.</p>
+        </div>
+        <div class="card fade-in fade-in-delay-3">
+          <h3>2. Food &amp; Drinks Make the Money</h3>
+          <p>60–70% of revenue comes from F&B. Coffee has 85% profit margin. Games bring people in, food keeps the lights on.</p>
+        </div>
+        <div class="card fade-in fade-in-delay-4">
+          <h3>3. Loyalty = Community</h3>
+          <p>Customers don't care about points. They care about feeling like it's their place. Staff who know their names.</p>
+        </div>
+        <div class="card fade-in fade-in-delay-5">
+          <h3>4. Pre-Owned Games Are Growing</h3>
+          <p>70% of students prefer used games. Second-hand market growing 5.5% per year. $45B opportunity.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 7: Turn the P.A.G.E. -->
+  <div class="slide" data-slide="7">
+    <div class="slide-content">
+      <div class="badge fade-in">Strategic Plan</div>
+      <h2 class="fade-in fade-in-delay-1">Turn the P.A.G.E.</h2>
+      <p class="fade-in fade-in-delay-2" style="text-align: center;">Our campaign to rebuild customer loyalty and spending</p>
+      <div class="pillar-grid">
+        <div class="pillar scale-in scale-in-delay-2">
+          <div class="letter">P</div>
+          <div class="word">Pre-Owned</div>
+          <div class="desc">Game marketplace — customers sell old games back to us</div>
+        </div>
+        <div class="pillar scale-in scale-in-delay-3">
+          <div class="letter">A</div>
+          <div class="word">App-Based</div>
+          <div class="desc">Push notifications, voting, loyalty points in one app</div>
+        </div>
+        <div class="pillar scale-in scale-in-delay-4">
+          <div class="letter">G</div>
+          <div class="word">Giving</div>
+          <div class="desc">Monthly causes — food banks, mental health, school clubs</div>
+        </div>
+        <div class="pillar scale-in scale-in-delay-5">
+          <div class="letter">E</div>
+          <div class="word">Employee</div>
+          <div class="desc">Better pay, flexible schedule, weekly service bonuses</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 8: P — Pre-Owned -->
+  <div class="slide" data-slide="8">
+    <div class="slide-content">
+      <div class="badge fade-in">P — Pre-Owned Marketplace</div>
+      <h2 class="fade-in fade-in-delay-1">Customers Sell Games Back to Us</h2>
+      <div class="content-grid">
+        <div class="card fade-in fade-in-delay-2">
+          <h3>How It Works</h3>
+          <p>Customers bring their old games to The Game Table. We buy them at fair prices using ISBN numbers, then resell them in our store at a 40–55% markup.</p>
+        </div>
+        <div class="card fade-in fade-in-delay-3">
+          <h3>Why It Works</h3>
+          <p>70% of students prefer used games. The second-hand market is growing 5.5% per year. Customers get money back, we get inventory, everyone wins.</p>
+        </div>
+      </div>
+      <div class="stat-row" style="margin-top: 1.5rem;">
+        <div class="stat scale-in scale-in-delay-4">
+          <div class="number">70%</div>
+          <div class="label">Students prefer<br>used games</div>
+        </div>
+        <div class="stat scale-in scale-in-delay-5">
+          <div class="number">5.5%</div>
+          <div class="label">Annual growth<br>in pre-owned</div>
+        </div>
+        <div class="stat scale-in scale-in-delay-6">
+          <div class="number">40–55%</div>
+          <div class="label">Markup we<br>make on resale</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 9: A — App-Based -->
+  <div class="slide" data-slide="9">
+    <div class="slide-content">
+      <div class="badge fade-in">A — App-Based Transparency</div>
+      <h2 class="fade-in fade-in-delay-1">Your Pocket Community Hub</h2>
+      <div class="content-grid">
+        <div class="card fade-in fade-in-delay-2">
+          <h3>Push Notifications</h3>
+          <p>New games, upcoming events, special deals. 90% open rate compared to 20% for email. Nobody misses an event at The Game Table.</p>
+        </div>
+        <div class="card fade-in fade-in-delay-3">
+          <h3>Customer Voting</h3>
+          <p>Customers vote on which games we buy next. When they feel part of the business, they come back more. Simple as that.</p>
+        </div>
+      </div>
+      <div class="stat-row" style="margin-top: 1.5rem;">
+        <div class="stat scale-in scale-in-delay-4">
+          <div class="number">90%</div>
+          <div class="label">Push notification<br>open rate</div>
+        </div>
+        <div class="stat scale-in scale-in-delay-5">
+          <div class="number">20%</div>
+          <div class="label">Email open<br>rate (for comparison)</div>
+        </div>
+        <div class="stat scale-in scale-in-delay-6">
+          <div class="number">60%</div>
+          <div class="label">Target app<br>adoption rate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 10: G — Giving -->
+  <div class="slide" data-slide="10">
+    <div class="slide-content">
+      <div class="badge fade-in">G — Giving &amp; Awareness</div>
+      <h2 class="fade-in fade-in-delay-1">Supporting What Matters</h2>
+      <p class="fade-in fade-in-delay-2" style="text-align: center;">Each month, The Game Table supports a different cause</p>
+      <div class="content-grid">
+        <div class="card fade-in fade-in-delay-3">
+          <h3>Monthly Causes</h3>
+          <p>Food banks, mental health organizations, school clubs. We pick causes that matter to our community — especially Frisco's large South Asian population.</p>
+        </div>
+        <div class="card fade-in fade-in-delay-4">
+          <h3>Awareness Displays</h3>
+          <p>Themed game selections, round-up donations at checkout, and special events. Customers feel proud to shop here.</p>
+        </div>
+      </div>
+      <div class="stat-row" style="margin-top: 1.5rem;">
+        <div class="stat scale-in scale-in-delay-5">
+          <div class="number">40%</div>
+          <div class="label">Target participation<br>in round-up donations</div>
+        </div>
+        <div class="stat scale-in scale-in-delay-6">
+          <div class="number">12</div>
+          <div class="label">Causes supported<br>per year</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 11: E — Employee -->
+  <div class="slide" data-slide="11">
+    <div class="slide-content">
+      <div class="badge fade-in">E — Employee Engagement</div>
+      <h2 class="fade-in fade-in-delay-1">Happy Staff = Happy Customers</h2>
+      <p class="fade-in fade-in-delay-2" style="text-align: center;">Our research showed that Texas Tabletop has limited staff interaction. We're going to do better.</p>
+      <div class="content-grid">
+        <div class="card fade-in fade-in-delay-3">
+          <h3>Weekly Service Bonus</h3>
+          <p>One employee gets a $50 gift card bonus each week for great customer service. Small cost, big motivation.</p>
+        </div>
+        <div class="card fade-in fade-in-delay-4">
+          <h3>Flexible &amp; Meaningful</h3>
+          <p>Flexible scheduling, volunteer time off, task rotation so nobody gets bored. Employees who feel valued give better service.</p>
+        </div>
+      </div>
+      <div class="stat-row" style="margin-top: 1.5rem;">
+        <div class="stat scale-in scale-in-delay-5">
+          <div class="number">$50</div>
+          <div class="label">Weekly bonus<br>gift card</div>
+        </div>
+        <div class="stat scale-in scale-in-delay-6">
+          <div class="number">90%</div>
+          <div class="label">Target employee<br>retention rate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 12: Timeline -->
+  <div class="slide" data-slide="12">
+    <div class="slide-content">
+      <div class="badge fade-in">Timeline</div>
+      <h2 class="fade-in fade-in-delay-1">12-Month Rollout</h2>
+      <table>
+        <tr>
+          <th>Quarter</th>
+          <th>Focus</th>
+          <th>Key Milestones</th>
+        </tr>
+        <tr>
+          <td><strong>Q1</strong></td>
+          <td>Setup</td>
+          <td>Pre-owned program, app planning, first 3 causes, loyalty points</td>
+        </tr>
+        <tr>
+          <td><strong>Q2</strong></td>
+          <td>Launch</td>
+          <td>Pre-owned marketplace, app beta, awareness displays, first game night</td>
+        </tr>
+        <tr>
+          <td><strong>Q3</strong></td>
+          <td>Growth</td>
+          <td>App launch, UT Dallas events, employee satisfaction review</td>
+        </tr>
+        <tr>
+          <td><strong>Q4</strong></td>
+          <td>Scale</td>
+          <td>Full app rollout, holiday giving, year-end report, Year 2 planning</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Slide 13: Financials -->
+  <div class="slide" data-slide="13">
+    <div class="slide-content">
+      <div class="badge fade-in">Financial Projections</div>
+      <h2 class="fade-in fade-in-delay-1">Real Numbers, Real Returns</h2>
+      <div class="stat-row">
+        <div class="stat scale-in scale-in-delay-1">
+          <div class="number">$201K</div>
+          <div class="label">Total startup cost<br>(low end)</div>
+        </div>
+        <div class="stat scale-in scale-in-delay-2">
+          <div class="number">$14K</div>
+          <div class="label">Turn the P.A.G.E.<br>campaign budget</div>
+        </div>
+        <div class="stat scale-in scale-in-delay-3">
+          <div class="number">420%</div>
+          <div class="label">Return on<br>investment</div>
+        </div>
+        <div class="stat scale-in scale-in-delay-4">
+          <div class="number">Q2 '27</div>
+          <div class="label">Break-even<br>point</div>
+        </div>
+      </div>
+      <div class="fade-in fade-in-delay-5" style="margin-top: 1.5rem; text-align: center;">
+        <p style="text-align: center;">For every <span class="highlight">$1</span> we spend on the campaign, we make <span class="highlight-green">$4.20</span> back.</p>
+        <p style="text-align: center; font-size: 0.9rem; margin-top: 0.5rem;">Profit sources: Pre-owned sales ($12K) + App-driven F&B ($35.8K) + Loyalty retention ($25K) = $72.8K</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 14: KPIs -->
+  <div class="slide" data-slide="14">
+    <div class="slide-content">
+      <div class="badge fade-in">Key Performance Indicators</div>
+      <h2 class="fade-in fade-in-delay-1">How We Measure Success</h2>
+      <table>
+        <tr>
+          <th>KPI</th>
+          <th>Target</th>
+        </tr>
+        <tr>
+          <td>Customer Return Rate</td>
+          <td>60% return within 90 days</td>
+        </tr>
+        <tr>
+          <td>App Adoption</td>
+          <td>60% of customers download the app</td>
+        </tr>
+        <tr>
+          <td>Pre-Owned Transactions</td>
+          <td>50+ games bought/sold per month</td>
+        </tr>
+        <tr>
+          <td>Customer Satisfaction</td>
+          <td>4.5 out of 5.0</td>
+        </tr>
+        <tr>
+          <td>Employee Retention</td>
+          <td>90% past 6 months</td>
+        </tr>
+        <tr>
+          <td>Net Promoter Score</td>
+          <td>Above 50</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Slide 15: Why We Win -->
+  <div class="slide" data-slide="15">
+    <div class="slide-content">
+      <div class="badge fade-in">Why We Will Win</div>
+      <h2 class="fade-in fade-in-delay-1">The Big Picture</h2>
+      <div class="content-grid">
+        <div class="card fade-in fade-in-delay-2">
+          <h3>Zero Competition</h3>
+          <p>No competitor serves daytime customers in Frisco. We own the 10 AM to 4 PM window that nobody else touches.</p>
+        </div>
+        <div class="card fade-in fade-in-delay-3">
+          <h3>Growing Industry</h3>
+          <p>Board game industry growing 9.2% per year. $1.74B today, $3.84B by 2034. This is a real market.</p>
+        </div>
+        <div class="card fade-in fade-in-delay-4">
+          <h3>Screen Fatigue</h3>
+          <p>53% of people want to use their phones less. Up 20 points in two years. The trend is accelerating.</p>
+        </div>
+        <div class="card fade-in fade-in-delay-5">
+          <h3>Real Community</h3>
+          <p>Frisco has the largest South Asian population in the US. Near UT Dallas with 38,000+ students. Built-in audience.</p>
+        </div>
+      </div>
+      <p class="fade-in fade-in-delay-6" style="text-align: center; margin-top: 2rem; font-size: 1.2rem; color: var(--accent); font-weight: 600;">
+        The Game Table — Where the community plays together.
+      </p>
+    </div>
+  </div>
+
+  <!-- Slide 16: Closing -->
+  <div class="slide slide-title" data-slide="16">
+    <h1 class="fade-in">Thank You</h1>
+    <div class="accent-line fade-in fade-in-delay-1"></div>
+    <p class="tagline fade-in fade-in-delay-2">The Game Table</p>
+    <p class="fade-in fade-in-delay-3" style="text-align: center; margin-top: 1rem;">
+      <span style="font-size: 1.1rem; color: var(--text-muted);">
+        Where the community plays together.
+      </span>
+    </p>
+    <p class="meta fade-in fade-in-delay-4" style="margin-top: 2rem; opacity: 0.5;">
+      DECA BMOR 2026–2027 · Rebuilding Customer Loyalty and Spending
+    </p>
+  </div>
+
+</div>
+
+<!-- Navigation -->
+<div class="nav-controls">
+  <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)" aria-label="Previous slide">←</button>
+  <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)" aria-label="Next slide">→</button>
+</div>
+
+<div class="slide-counter" id="slideCounter">1 / 16</div>
+<div class="progress-bar" id="progressBarFill" style="width: 6.25%"></div>
+
+<script>
+  let currentSlide = 1;
+  const totalSlides = 16;
+
+  function updateSlide() {
+    // Update slide visibility
+    document.querySelectorAll('.slide').forEach((slide, index) => {
+      const slideNum = parseInt(slide.dataset.slide);
+      slide.classList.remove('active', 'exit-up');
+      if (slideNum === currentSlide) {
+        slide.classList.add('active');
+      } else if (slideNum < currentSlide) {
+        slide.classList.add('exit-up');
+      }
+    });
+
+    // Update counter
+    document.getElementById('slideCounter').textContent = `${currentSlide} / ${totalSlides}`;
+
+    // Update progress bar
+    const progress = (currentSlide / totalSlides) * 100;
+    document.getElementById('progressBarFill').style.width = `${progress}%`;
+
+    // Update buttons
+    document.getElementById('prevBtn').disabled = currentSlide === 1;
+    document.getElementById('nextBtn').disabled = currentSlide === totalSlides;
+  }
+
+  function changeSlide(direction) {
+    const newSlide = currentSlide + direction;
+    if (newSlide >= 1 && newSlide <= totalSlides) {
+      currentSlide = newSlide;
+      updateSlide();
+    }
+  }
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ') {
+      e.preventDefault();
+      changeSlide(1);
+    } else if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      changeSlide(-1);
+    }
+  });
+
+  // Touch support for mobile
+  let touchStartX = 0;
+  document.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+  });
+
+  document.addEventListener('touchend', (e) => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      changeSlide(diff > 0 ? 1 : -1);
+    }
+  });
+
+  // Initialize
+  updateSlide();
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StarcareRx — DECA BMOR 2026-2027</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #2D5F3E;
+    --primary-dark: #1E4A2E;
+    --accent: #D4913C;
+    --bg: #FFFFFF;
+    --text: #1A1A1A;
+    --text-muted: #6B6B6B;
+    --border: #E0DCD7;
+    --surface: #F9F7F5;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+  .cover {
+    max-width: 700px;
+    text-align: center;
+    padding: 4rem 3rem;
+    border: 2px solid var(--primary);
+    position: relative;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+  }
+  .cover-logo {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+  .cover-logo span { color: var(--accent); }
+  .cover-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .cover-title {
+    font-family: 'Merriweather', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+  }
+  .cover-meta {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+  .cover-meta strong { color: var(--text); }
+  .cover-divider {
+    width: 60px;
+    height: 2px;
+    background: var(--accent);
+    margin: 2rem auto;
+  }
+  .cover-event {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 2.5rem;
+  }
+</style>
+</head>
+<body>
+<div class="cover">
+  <div class="cover-logo">Starcare<span>Rx</span></div>
+  <div class="cover-subtitle">Independent Community Pharmacy — Prosper, TX</div>
+  <div class="cover-divider"></div>
+  <div class="cover-title">"Project Swastik": Rebuilding Customer Loyalty at StarCare Pharmacy Through Personalized Care, Transparent Communication, and Community Connection</div>
+  <div class="cover-meta">
+    <strong>Business:</strong> StarCare Pharmacy (StarcareRx)<br>
+    <strong>Location:</strong> 210 S. Preston Rd, Suite B, Prosper, TX 75078<br>
+    <strong>Service Area:</strong> Prosper, Texas and surrounding Collin County<br>
+    <strong>Prepared by:</strong> [Your Name]<br>
+    <strong>Organization:</strong> DECA, [School Name]
+  </div>
+  <div class="cover-event">Buying and Merchandising Operations Research — 2026–2027 Season</div>
+</div>
+</body>
+</html>
