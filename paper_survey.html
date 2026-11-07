@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>StarCare Pharmacy - Patient Survey</title>
+<style>
+  @page { size: letter; margin: 0.5in; }
+  body {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.4;
+    color: #1a1a1a;
+    max-width: 6.5in;
+    margin: 0 auto;
+    padding: 0.3in;
+  }
+  h1 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 16pt;
+    color: #2D5F3E;
+    margin: 0 0 2px 0;
+    text-align: center;
+  }
+  .subtitle {
+    text-align: center;
+    font-size: 9pt;
+    color: #555;
+    margin: 0 0 12px 0;
+  }
+  .header-box {
+    background: #f0f7f4;
+    border: 1.5px solid #5BB5A2;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 14px;
+    font-size: 9pt;
+    text-align: center;
+    line-height: 1.5;
+  }
+  h2 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 12pt;
+    color: #2D5F3E;
+    border-bottom: 2px solid #5BB5A2;
+    padding-bottom: 3px;
+    margin: 16px 0 8px 0;
+  }
+  .question {
+    margin-bottom: 7px;
+    page-break-inside: avoid;
+  }
+  .question label {
+    font-weight: 600;
+    font-size: 10pt;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 16px;
+    margin-left: 4px;
+  }
+  .option {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 9.5pt;
+    white-space: nowrap;
+  }
+  .checkbox-square {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1.5px solid #333;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .radio-circle {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1.5px solid #333;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .scale-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 4px;
+    font-size: 9.5pt;
+  }
+  .scale-label {
+    flex: 1;
+  }
+  .scale-numbers {
+    display: flex;
+    gap: 8px;
+  }
+  .scale-num {
+    width: 18px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 10pt;
+    color: #5BB5A2;
+  }
+  .scale-circle {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1.5px solid #333;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .scale-ends {
+    display: flex;
+    justify-content: space-between;
+    font-size: 8pt;
+    color: #666;
+    margin-left: 26px;
+    margin-bottom: 6px;
+  }
+  .text-line {
+    display: block;
+    border-bottom: 1px solid #999;
+    height: 18px;
+    margin-left: 4px;
+    margin-top: 2px;
+  }
+  .text-line.long { height: 36px; }
+  .footer-note {
+    margin-top: 16px;
+    padding-top: 8px;
+    border-top: 2px solid #5BB5A2;
+    font-size: 8.5pt;
+    color: #555;
+    text-align: center;
+    line-height: 1.5;
+  }
+  .page-break {
+    page-break-after: always;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+</style>
+</head>
+<body>
+
+<h1>StarCare Pharmacy Patient Survey</h1>
+<p class="subtitle">Help us serve you better — take 3 minutes</p>
+
+<div class="header-box">
+  This survey helps StarCare Pharmacy understand what matters most to our patients.
+  Your responses are anonymous. Completed surveys may qualify for a 5% discount on your next visit.
+  Thank you for your time!
+</div>
+
+<!-- SECTION A -->
+<h2>Section A: About You</h2>
+
+<div class="question">
+  <label>A1. What is your age group?</label>
+  <div class="options">
+    <span class="option"><span class="radio-circle"></span> Under 18</span>
+    <span class="option"><span class="radio-circle"></span> 18-24</span>
+    <span class="option"><span class="radio-circle"></span> 25-34</span>
+    <span class="option"><span class="radio-circle"></span> 35-44</span>
+    <span class="option"><span class="radio-circle"></span> 45-54</span>
+    <span class="option"><span class="radio-circle"></span> 55-64</span>
+    <span class="option"><span class="radio-circle"></span> 65+</span>
+  </div>
+</div>
+
+<div class="question">
+  <label>A2. How many people are in your household? <span style="font-weight:400">(enter a number)</span></label>
+  <span class="text-line" style="width: 60px; border-bottom: 1px solid #333; height: 18px;"></span>
+</div>
+
+<div class="question">
+  <label>A3. How many prescriptions does your household fill per month? <span style="font-weight:400">(enter a number)</span></label>
+  <span class="text-line" style="width: 60px; border-bottom: 1px solid #333; height: 18px;"></span>
+</div>
+
+<!-- SECTION B -->
+<h2>Section B: Your Pharmacy Habits</h2>
+
+<div class="question">
+  <label>B1. How long have you been a StarCare patient?</label>
+  <div class="options">
+    <span class="option"><span class="radio-circle"></span> Less than 1 month</span>
+    <span class="option"><span class="radio-circle"></span> 1-6 months</span>
+    <span class="option"><span class="radio-circle"></span> 6-12 months</span>
+    <span class="option"><span class="radio-circle"></span> 1-2 years</span>
+    <span class="option"><span class="radio-circle"></span> 2+ years</span>
+  </div>
+</div>
+
+<div class="question">
+  <label>B2. How often do you fill prescriptions at StarCare?</label>
+  <div class="options">
+    <span class="option"><span class="radio-circle"></span> Every time</span>
+    <span class="option"><span class="radio-circle"></span> Most of the time</span>
+    <span class="option"><span class="radio-circle"></span> Sometimes</span>
+    <span class="option"><span class="radio-circle"></span> Rarely</span>
+    <span class="option"><span class="radio-circle"></span> Never (first-time)</span>
+  </div>
+</div>
+
+<div class="question">
+  <label>B3. Have you used StarCare home delivery?</label>
+  <div class="options">
+    <span class="option"><span class="radio-circle"></span> Yes, regularly</span>
+    <span class="option"><span class="radio-circle"></span> Yes, once or twice</span>
+    <span class="option"><span class="radio-circle"></span> No, but interested</span>
+    <span class="option"><span class="radio-circle"></span> No, not interested</span>
+  </div>
+</div>
+
+<div class="question">
+  <label>B4. How often do you purchase OTC or wellness products (vitamins, personal care) at StarCare?</label>
+  <div class="options">
+    <span class="option"><span class="radio-circle"></span> Every fill</span>
+    <span class="option"><span class="radio-circle"></span> Sometimes</span>
+    <span class="option"><span class="radio-circle"></span> Rarely</span>
+    <span class="option"><span class="radio-circle"></span> Never</span>
+  </div>
+</div>
+
+<div class="question">
+  <label>B5. Which StarCare services have you used? (Check all that apply)</label>
+  <div class="options">
+    <span class="option"><span class="checkbox-square"></span> Prescription filling</span>
+    <span class="option"><span class="checkbox-square"></span> Custom compounding</span>
+    <span class="option"><span class="checkbox-square"></span> Immunizations (flu shots)</span>
+    <span class="option"><span class="checkbox-square"></span> Medication Therapy Mgmt</span>
+    <span class="option"><span class="checkbox-square"></span> Durable Medical Equipment</span>
+    <span class="option"><span class="checkbox-square"></span> Veterinary medications</span>
+    <span class="option"><span class="checkbox-square"></span> Home delivery</span>
+    <span class="option"><span class="checkbox-square"></span> Greeting cards / gifts</span>
+    <span class="option"><span class="checkbox-square"></span> None - prescriptions only</span>
+  </div>
+</div>
+
+<div class="question">
+  <label>B6. What was your main reason for choosing StarCare? (Check all that apply)</label>
+  <div class="options">
+    <span class="option"><span class="checkbox-square"></span> Friend/family recommendation</span>
+    <span class="option"><span class="checkbox-square"></span> Close to my home</span>
+    <span class="option"><span class="checkbox-square"></span> Close to work/school</span>
+    <span class="option"><span class="checkbox-square"></span> My insurance requires it</span>
+    <span class="option"><span class="checkbox-square"></span> Previous pharmacy closed</span>
+    <span class="option"><span class="checkbox-square"></span> Staff recommendation</span>
+    <span class="option"><span class="checkbox-square"></span> Wanted an independent pharmacy</span>
+    <span class="option"><span class="checkbox-square"></span> Other</span>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- SECTION C -->
+<h2>Section C: How We Are Doing</h2>
+<p style="font-size: 9pt; color: #555; margin: 0 0 8px 0;">Rate your satisfaction with each aspect of StarCare</p>
+
+<div class="scale-ends">
+  <span>Very Dissatisfied</span>
+  <span>Very Satisfied</span>
+</div>
+
+<div class="question">
+  <div class="scale-row">
+    <span class="scale-label">C1. Staff knowledge about medications</span>
+    <div class="scale-numbers">
+      <span class="scale-num">1</span>
+      <span class="scale-num">2</span>
+      <span class="scale-num">3</span>
+      <span class="scale-num">4</span>
+      <span class="scale-num">5</span>
+    </div>
+  </div>
+  <div style="margin-left: 26px; display: flex; gap: 8px;">
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+  </div>
+</div>
+
+<div class="question">
+  <div class="scale-row">
+    <span class="scale-label">C2. Wait time at pickup</span>
+    <div class="scale-numbers">
+      <span class="scale-num">1</span>
+      <span class="scale-num">2</span>
+      <span class="scale-num">3</span>
+      <span class="scale-num">4</span>
+      <span class="scale-num">5</span>
+    </div>
+  </div>
+  <div style="margin-left: 26px; display: flex; gap: 8px;">
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+  </div>
+</div>
+
+<div class="question">
+  <div class="scale-row">
+    <span class="scale-label">C3. Clarity of copay explanation</span>
+    <div class="scale-numbers">
+      <span class="scale-num">1</span>
+      <span class="scale-num">2</span>
+      <span class="scale-num">3</span>
+      <span class="scale-num">4</span>
+      <span class="scale-num">5</span>
+    </div>
+  </div>
+  <div style="margin-left: 26px; display: flex; gap: 8px;">
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+  </div>
+</div>
+
+<div class="question">
+  <div class="scale-row">
+    <span class="scale-label">C4. Store atmosphere and cleanliness</span>
+    <div class="scale-numbers">
+      <span class="scale-num">1</span>
+      <span class="scale-num">2</span>
+      <span class="scale-num">3</span>
+      <span class="scale-num">4</span>
+      <span class="scale-num">5</span>
+    </div>
+  </div>
+  <div style="margin-left: 26px; display: flex; gap: 8px;">
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+  </div>
+</div>
+
+<div class="question">
+  <div class="scale-row">
+    <span class="scale-label">C5. Ease of online refill process</span>
+    <div class="scale-numbers">
+      <span class="scale-num">1</span>
+      <span class="scale-num">2</span>
+      <span class="scale-num">3</span>
+      <span class="scale-num">4</span>
+      <span class="scale-num">5</span>
+    </div>
+  </div>
+  <div style="margin-left: 26px; display: flex; gap: 8px;">
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+  </div>
+</div>
+
+<div class="question">
+  <div class="scale-row">
+    <span class="scale-label">C6. Quality of compounding services</span>
+    <div class="scale-numbers">
+      <span class="scale-num">1</span>
+      <span class="scale-num">2</span>
+      <span class="scale-num">3</span>
+      <span class="scale-num">4</span>
+      <span class="scale-num">5</span>
+    </div>
+  </div>
+  <div style="margin-left: 26px; display: flex; gap: 8px;">
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+  </div>
+</div>
+
+<div class="question">
+  <div class="scale-row">
+    <span class="scale-label">C7. Frequency of staff greeting you by name</span>
+    <div class="scale-numbers">
+      <span class="scale-num">1</span>
+      <span class="scale-num">2</span>
+      <span class="scale-num">3</span>
+      <span class="scale-num">4</span>
+      <span class="scale-num">5</span>
+    </div>
+  </div>
+  <div style="margin-left: 26px; display: flex; gap: 8px;">
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+  </div>
+</div>
+
+<div class="question">
+  <div class="scale-row">
+    <span class="scale-label">C8. Overall satisfaction with StarCare</span>
+    <div class="scale-numbers">
+      <span class="scale-num">1</span>
+      <span class="scale-num">2</span>
+      <span class="scale-num">3</span>
+      <span class="scale-num">4</span>
+      <span class="scale-num">5</span>
+    </div>
+  </div>
+  <div style="margin-left: 26px; display: flex; gap: 8px;">
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+    <span class="scale-circle"></span>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- SECTION D -->
+<h2>Section D: Loyalty Program Interest</h2>
+<p style="font-size: 9pt; color: #555; margin: 0 0 8px 0;">StarCare is exploring a loyalty rewards program. Your input shapes what it looks like.</p>
+
+<div class="question">
+  <label>D1. Would you participate in a loyalty rewards program at StarCare?</label>
+  <div class="options">
+    <span class="option"><span class="radio-circle"></span> Definitely</span>
+    <span class="option"><span class="radio-circle"></span> Probably</span>
+    <span class="option"><span class="radio-circle"></span> Maybe</span>
+    <span class="option"><span class="radio-circle"></span> Probably not</span>
+    <span class="option"><span class="radio-circle"></span> Definitely not</span>
+  </div>
+</div>
+
+<div class="question">
+  <label>D2. Which rewards would you value most? (Check up to 3)</label>
+  <div class="options">
+    <span class="option"><span class="checkbox-square"></span> Discount on OTC products</span>
+    <span class="option"><span class="checkbox-square"></span> Free health screening</span>
+    <span class="option"><span class="checkbox-square"></span> Priority service</span>
+    <span class="option"><span class="checkbox-square"></span> Free home delivery</span>
+    <span class="option"><span class="checkbox-square"></span> Birthday gift or card</span>
+    <span class="option"><span class="checkbox-square"></span> Referral bonus</span>
+    <span class="option"><span class="checkbox-square"></span> Copay assistance</span>
+    <span class="option"><span class="checkbox-square"></span> Other</span>
+  </div>
+</div>
+
+<div class="question">
+  <label>D3. How likely are you to refer a friend or family member to StarCare?</label>
+  <div class="options">
+    <span class="option"><span class="radio-circle"></span> Very likely</span>
+    <span class="option"><span class="radio-circle"></span> Somewhat likely</span>
+    <span class="option"><span class="radio-circle"></span> Neutral</span>
+    <span class="option"><span class="radio-circle"></span> Somewhat unlikely</span>
+    <span class="option"><span class="radio-circle"></span> Very unlikely</span>
+  </div>
+</div>
+
+<div class="question">
+  <label>D4. Would you prefer a stamp card or a points-based system?</label>
+  <div class="options">
+    <span class="option"><span class="radio-circle"></span> Stamp card</span>
+    <span class="option"><span class="radio-circle"></span> Points-based</span>
+    <span class="option"><span class="radio-circle"></span> No preference</span>
+  </div>
+</div>
+
+<div class="question">
+  <label>D5. How often would you check your loyalty program status?</label>
+  <div class="options">
+    <span class="option"><span class="radio-circle"></span> Every visit</span>
+    <span class="option"><span class="radio-circle"></span> Weekly</span>
+    <span class="option"><span class="radio-circle"></span> Monthly</span>
+    <span class="option"><span class="radio-circle"></span> Rarely</span>
+  </div>
+</div>
+
+<div class="question">
+  <label>D6. Would you like to receive health tips via SMS or text message?</label>
+  <div class="options">
+    <span class="option"><span class="radio-circle"></span> Yes</span>
+    <span class="option"><span class="radio-circle"></span> No</span>
+  </div>
+</div>
+
+<div class="question">
+  <label>D7. What additional rewards would encourage you to return more often?</label>
+  <span class="text-line long"></span>
+  <span class="text-line long"></span>
+</div>
+
+<!-- SECTION E -->
+<h2>Section E: Your Thoughts</h2>
+
+<div class="question">
+  <label>E1. What is ONE thing StarCare could do to improve your experience?</label>
+  <span class="text-line long"></span>
+  <span class="text-line long"></span>
+</div>
+
+<div class="question">
+  <label>E2. What do you appreciate MOST about StarCare?</label>
+  <span class="text-line long"></span>
+  <span class="text-line long"></span>
+</div>
+
+<div class="question">
+  <label>E3. Any other comments or suggestions?</label>
+  <span class="text-line long"></span>
+</div>
+
+<div class="footer-note">
+  Thank you for your time! Please return your completed survey at the counter.<br>
+  Completed surveys may qualify for a 5% discount on your next visit.<br>
+  <em>This survey is part of a Prosper High School business research project.</em>
+</div>
+
+</body>
+</html>
