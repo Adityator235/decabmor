@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Competitor Observer</title>
+<style>
+  :root {
+    --teal: #5BB5A2;
+    --green: #2D5F3E;
+    --accent: #D4913C;
+    --bg: #F0F2F1;
+    --card: #FFFFFF;
+    --text: #1A1A1A;
+    --muted: #666;
+    --border: #E0E0E0;
+    --red: #E74C3C;
+    --green-light: #E8F5F1;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    padding-bottom: 40px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .header {
+    background: linear-gradient(135deg, var(--green), var(--teal));
+    color: white;
+    padding: 14px 16px 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+  .header h1 { font-size: 17px; font-weight: 700; }
+  .header p { font-size: 11px; opacity: 0.85; }
+
+  .tabs {
+    display: flex;
+    background: var(--card);
+    border-bottom: 2px solid var(--border);
+    position: sticky;
+    top: 52px;
+    z-index: 19;
+  }
+  .tab {
+    flex: 1;
+    padding: 10px 4px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    border: none;
+    background: none;
+    color: var(--muted);
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+  }
+  .tab.active { color: var(--green); border-bottom-color: var(--teal); }
+
+  .content { padding: 10px; max-width: 600px; margin: 0 auto; }
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  .card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .card h3 {
+    font-size: 14px;
+    color: var(--green);
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--teal);
+  }
+  .field { margin-bottom: 10px; }
+  .field label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--muted);
+    margin-bottom: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .field select, .field input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    background: #FAFAFA;
+    -webkit-appearance: none;
+  }
+  .field select:focus, .field input:focus {
+    outline: none;
+    border-color: var(--teal);
+    background: white;
+  }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+
+  .user-chips { display: flex; gap: 6px; }
+  .user-chip {
+    flex: 1;
+    padding: 10px 8px;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    background: #FAFAFA;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .user-chip:active { transform: scale(0.97); }
+  .user-chip.selected {
+    border-color: var(--teal);
+    background: var(--teal);
+    color: white;
+  }
+
+  .queue-section {
+    background: var(--green-light);
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+  .queue-section h4 { font-size: 13px; color: var(--green); margin-bottom: 6px; }
+  .queue-hint { font-size: 10px; color: var(--muted); margin-bottom: 8px; line-height: 1.4; }
+  .queue-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(45,95,62,0.12);
+    font-size: 12px;
+  }
+  .queue-row:last-child { border-bottom: none; }
+  .queue-num {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--teal);
+    color: white;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 700;
+    flex-shrink: 0;
+  }
+  .queue-name { flex: 1; font-weight: 600; }
+  .queue-timer { font-size: 11px; color: var(--muted); min-width: 45px; text-align: right; }
+  .queue-status { font-size: 9px; padding: 2px 6px; border-radius: 8px; font-weight: 700; }
+  .status-waiting { background: #FFF3CD; color: #856404; }
+  .status-served { background: #D4EDDA; color: #155724; }
+  .queue-btn {
+    padding: 4px 8px; border: none; border-radius: 6px;
+    font-size: 10px; font-weight: 700; cursor: pointer; margin-left: 2px;
+  }
+  .btn-serve { background: var(--green); color: white; }
+  .btn-remove { background: #FFE0E0; color: var(--red); }
+
+  .add-row { display: flex; gap: 6px; margin-top: 8px; }
+  .add-row input {
+    flex: 1; padding: 8px 10px;
+    border: 1.5px solid var(--border); border-radius: 8px;
+    font-size: 13px; background: white;
+  }
+  .add-row button {
+    padding: 8px 14px; background: var(--teal);
+    color: white; border: none; border-radius: 8px;
+    font-size: 13px; font-weight: 700; cursor: pointer;
+  }
+
+  .end-btn {
+    margin-top: 8px; padding: 10px; width: 100%;
+    background: var(--green); color: white; border: none;
+    border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer;
+  }
+
+  .rating-select {
+    width: 100%; padding: 10px 12px;
+    border: 1.5px solid var(--border); border-radius: 8px;
+    font-size: 15px; font-family: inherit; background: #FAFAFA;
+    -webkit-appearance: none;
+  }
+
+  .btn {
+    display: block; width: 100%; padding: 14px;
+    border: none; border-radius: 10px;
+    font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--green), var(--teal));
+    color: white;
+  }
+  .btn-secondary { background: white; color: var(--green); border: 2px solid var(--green); }
+  .btn-small { width: auto; display: inline-block; padding: 7px 14px; font-size: 12px; }
+  .btn:disabled { opacity: 0.5; }
+
+  .entry {
+    background: var(--card); border-radius: 12px;
+    padding: 12px; margin-bottom: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--teal);
+  }
+  .entry-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
+  .entry-title { font-size: 14px; font-weight: 700; color: var(--green); }
+  .entry-meta { font-size: 11px; color: var(--muted); margin-bottom: 6px; }
+  .entry-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+  .entry-item .label { font-size: 9px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.3px; }
+  .entry-item .value { font-size: 13px; font-weight: 600; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10px; font-weight: 700; }
+  .badge-teal { background: var(--green-light); color: var(--teal); }
+  .badge-green { background: #E8F0E5; color: var(--green); }
+  .badge-accent { background: #FFF3E0; color: var(--accent); }
+
+  .empty-state { text-align: center; padding: 40px 20px; color: var(--muted); }
+  .empty-state .icon { font-size: 36px; margin-bottom: 6px; }
+  .empty-state p { font-size: 13px; }
+
+  .export-area {
+    width: 100%; min-height: 150px;
+    font-family: 'Courier New', monospace; font-size: 10px;
+    padding: 8px; border: 1px solid var(--border);
+    border-radius: 8px; background: #FAFAFA;
+    resize: vertical; white-space: pre; overflow-x: auto; line-height: 1.4;
+  }
+
+  .pharmacy-block {
+    background: var(--card); border-radius: 12px;
+    padding: 12px; margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .pharmacy-block h3 { font-size: 15px; color: var(--green); margin-bottom: 4px; }
+  .pharmacy-avg { font-size: 24px; font-weight: 800; color: var(--teal); margin: 6px 0; }
+  .visit-row {
+    padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 12px;
+  }
+  .visit-row:last-child { border-bottom: none; }
+  .visit-row .visit-header { font-weight: 700; }
+  .visit-row .visit-details { color: var(--muted); font-size: 11px; }
+  .visit-row .visit-busy { color: var(--accent); font-size: 11px; font-weight: 600; }
+
+  .section-label {
+    font-size: 11px; font-weight: 700; color: var(--muted);
+    text-transform: uppercase; margin: 12px 0 6px; letter-spacing: 0.5px;
+  }
+
+  .guide-toggle {
+    background: var(--card);
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .guide-toggle .icon { font-size: 18px; }
+  .guide-toggle .text { font-size: 12px; font-weight: 600; color: var(--accent); }
+  .guide-content {
+    display: none;
+    background: var(--card);
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .guide-content.open { display: block; }
+  .guide-content h4 { font-size: 13px; color: var(--green); margin: 8px 0 4px; }
+  .guide-content p, .guide-content li { font-size: 11px; color: var(--muted); line-height: 1.5; }
+  .guide-content ul { padding-left: 16px; margin: 4px 0; }
+  .time-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    margin: 2px 2px 2px 0;
+  }
+  .time-busy { background: #FFE0E0; color: #C62828; }
+  .time-medium { background: #FFF3E0; color: #E65100; }
+  .time-slow { background: var(--green-light); color: var(--green); }
+
+  .loading {
+    text-align: center;
+    padding: 20px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--green);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+  .toast.show { opacity: 1; }
+  .toast.error { background: var(--red); }
+
+  .sync-bar {
+    background: #E8F5F1;
+    border: 1px solid var(--teal);
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    font-size: 11px;
+    color: var(--green);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .sync-bar .sync-btn {
+    margin-left: auto;
+    padding: 4px 10px;
+    background: var(--teal);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Competitor Observer</h1>
+  <p>StarCare Pharmacy — DECA BMOR 2026-27</p>
+</div>
+
+<div class="tabs">
+  <button class="tab active" onclick="showPanel('observe')">Observe</button>
+  <button class="tab" onclick="showPanel('entries')">Entries</button>
+  <button class="tab" onclick="showPanel('summary')">Summary</button>
+  <button class="tab" onclick="showPanel('export')">Export</button>
+</div>
+
+<div class="content">
+
+<!-- OBSERVE PANEL -->
+<div class="panel active" id="panel-observe">
+
+  <div class="guide-toggle" onclick="toggleGuide()">
+    <span class="icon">📖</span>
+    <span class="text">Visit Guide & Busy Time Research</span>
+  </div>
+  <div class="guide-content" id="guideContent">
+    <h4>How to Measure Wait Time</h4>
+    <p>Add each customer when they join the line. Tap "Served" when they get their meds. The app averages all wait times.</p>
+
+    <h4>CVS — Typical Traffic</h4>
+    <ul>
+      <li><span class="time-badge time-busy">Busy: 12-1 PM, 4-6 PM Sat</span></li>
+      <li><span class="time-badge time-medium">Medium: 10-11 AM, 2-3 PM</span></li>
+      <li><span class="time-badge time-slow">Slow: 8-9 AM weekdays, 1-2 PM weekdays</span></li>
+    </ul>
+    <p>CVS has drive-thru at most locations. Expect longer waits during lunch rush and Saturday morning.</p>
+
+    <h4>H-E-B Pharmacy — Typical Traffic</h4>
+    <ul>
+      <li><span class="time-badge time-busy">Busy: 5-7 PM weekdays, 9-11 AM Sat</span></li>
+      <li><span class="time-badge time-medium">Medium: 3-4 PM, 12-1 PM</span></li>
+      <li><span class="time-badge time-slow">Slow: 8-9 AM weekdays, 2-4 PM weekdays</span></li>
+    </ul>
+    <p>H-E-B pharmacy is inside the grocery store. Traffic spikes with grocery rush.</p>
+
+    <h4>Prosper Pharmacy — Typical Traffic</h4>
+    <ul>
+      <li><span class="time-badge time-busy">Busy: 3-5 PM weekdays, 10-12 PM Sat</span></li>
+      <li><span class="time-badge time-medium">Medium: 11 AM-12 PM, 2-3 PM</span></li>
+      <li><span class="time-badge time-slow">Slow: 8-9 AM, 1-2 PM</span></li>
+    </ul>
+    <p>Smaller independent — generally slower than chains. Saturday mornings busy with local regulars.</p>
+
+    <h4>Data Points to Collect at Every Visit</h4>
+    <ul>
+      <li>Wait time (queue tracking)</li>
+      <li>Customers in store, staff on duty</li>
+      <li>Customer-to-staff ratio</li>
+      <li>Drive-thru available? Cars in line?</li>
+      <li>Staff interaction, name recognition, medication counseling</li>
+      <li>OTC display, loyalty program, digital engagement</li>
+      <li>Health screenings available?</li>
+      <li>Atmosphere, cleanliness, overall impression</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Observer</h3>
+    <div class="user-chips" id="userChips">
+      <div class="user-chip" onclick="selectUser(this, 'Person 1')">P1</div>
+      <div class="user-chip" onclick="selectUser(this, 'Person 2')">P2</div>
+      <div class="user-chip" onclick="selectUser(this, 'Person 3')">P3</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Location & Time</h3>
+    <div class="field">
+      <label>Pharmacy</label>
+      <select id="pharmacy" onchange="updateQueueHeader()">
+        <option value="">Select...</option>
+        <option value="CVS">CVS</option>
+        <option value="H-E-B Pharmacy">H-E-B Pharmacy</option>
+        <option value="Prosper Pharmacy">Prosper Pharmacy</option>
+      </select>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Date</label>
+        <input type="date" id="date">
+      </div>
+      <div class="field">
+        <label>Visit Time</label>
+        <select id="visitType">
+          <option value="Weekday AM (8-11)">Weekday AM (8-11)</option>
+          <option value="Weekday PM (4-7)" selected>Weekday PM (4-7)</option>
+          <option value="Saturday AM (10-12)">Saturday AM (10-12)</option>
+          <option value="Saturday PM (2-5)">Saturday PM (2-5)</option>
+        </select>
+      </div>
+    </div>
+    <div class="field">
+      <label>Perceived Traffic Level</label>
+      <select id="trafficLevel">
+        <option value="Slow">Slow — barely anyone here</option>
+        <option value="Moderate" selected>Moderate — steady flow</option>
+        <option value="Busy">Busy — lines forming</option>
+        <option value="Peak">Peak — packed</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="section-label">QUEUE TRACKING</div>
+  <div class="queue-section">
+    <h4>Queue: <span id="queueLabel">—</span></h4>
+    <p class="queue-hint">Add each customer when they join the line. Tap "Served" when they get their meds.</p>
+    <div id="queueList"></div>
+    <div class="add-row">
+      <input type="text" id="customerName" placeholder="Customer # (e.g. 42)">
+      <button onclick="addToQueue()">+ Add</button>
+    </div>
+    <button class="end-btn" onclick="endQueue()">End Queue → Save Observation</button>
+  </div>
+
+  <div class="card">
+    <h3>Store Metrics</h3>
+    <div class="field-row">
+      <div class="field">
+        <label>Customers in Store</label>
+        <input type="number" id="customersInStore" placeholder="0">
+      </div>
+      <div class="field">
+        <label>Staff at Counter</label>
+        <input type="number" id="staffAtCounter" placeholder="0">
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Drive-Thru Available?</label>
+        <select id="driveThru">
+          <option value="No">No</option>
+          <option value="Yes">Yes</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Cars in Drive-Thru Line</label>
+        <input type="number" id="driveThruCars" placeholder="0" value="0">
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Drop-off & Pickup Separate?</label>
+        <select id="dropoffPickup">
+          <option value="No">No — single counter</option>
+          <option value="Yes">Yes — separate counters</option>
+          <option value="Online Only">Online only — no walk-in drop-off</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Specialty Pharmacy On-Site?</label>
+        <select id="specialtyPharmacy">
+          <option value="No">No</option>
+          <option value="Yes">Yes</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Ratings</h3>
+    <div class="field">
+      <label>Staff Interaction Quality</label>
+      <select class="rating-select" id="interactionRating">
+        <option value="">Select...</option>
+        <option value="1">1 — Very Poor</option>
+        <option value="2">2 — Poor</option>
+        <option value="3">3 — Average</option>
+        <option value="4">4 — Good</option>
+        <option value="5">5 — Excellent</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Staff Uses Customer Names?</label>
+      <select class="rating-select" id="nameRecognition">
+        <option value="">Select...</option>
+        <option value="Always">Always — by name every time</option>
+        <option value="Often">Often — most of the time</option>
+        <option value="Sometimes">Sometimes</option>
+        <option value="Rarely">Rarely</option>
+        <option value="Never">Never</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Staff Counsels on Medications?</label>
+      <select class="rating-select" id="medCounseling">
+        <option value="">Select...</option>
+        <option value="Always">Always — full counseling</option>
+        <option value="Often">Often — brief tips</option>
+        <option value="Sometimes">Sometimes</option>
+        <option value="Rarely">Rarely</option>
+        <option value="Never">Never — just hands over bag</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>OTC / Wellness Display Near Counter</label>
+      <select class="rating-select" id="otcRating">
+        <option value="">Select...</option>
+        <option value="Low">Low — minimal near counter</option>
+        <option value="Medium">Medium — some displays</option>
+        <option value="High">High — extensive near counter</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Loyalty Program Visible?</label>
+      <select class="rating-select" id="loyaltyRating">
+        <option value="">Select...</option>
+        <option value="No">No — not visible</option>
+        <option value="Yes">Yes — clearly visible</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Health Screenings Available?</label>
+      <select class="rating-select" id="healthScreenings">
+        <option value="">Select...</option>
+        <option value="No">No</option>
+        <option value="Yes">Yes — flu shots, BP, glucose, etc.</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Digital Engagement</label>
+      <select class="rating-select" id="digitalEngagement">
+        <option value="">Select...</option>
+        <option value="Minimal">Minimal — no app, no screens</option>
+        <option value="Moderate">Moderate — app available, some screens</option>
+        <option value="High">High — app, WiFi, digital screens, self-service</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Store Atmosphere & Cleanliness</label>
+      <select class="rating-select" id="atmosphereRating">
+        <option value="">Select...</option>
+        <option value="1">1 — Poor</option>
+        <option value="2">2 — Below Average</option>
+        <option value="3">3 — Average</option>
+        <option value="4">4 — Good</option>
+        <option value="5">5 — Excellent</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Overall Impression</label>
+      <select class="rating-select" id="overallRating">
+        <option value="">Select...</option>
+        <option value="1">1 — Very Poor</option>
+        <option value="2">2 — Poor</option>
+        <option value="3">3 — Average</option>
+        <option value="4">4 — Good</option>
+        <option value="5">5 — Excellent</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Notes</h3>
+    <div class="field">
+      <label>Loyalty Program Details</label>
+      <input type="text" id="loyaltyNotes" placeholder="What did they say? How is it marketed?">
+    </div>
+    <div class="field">
+      <label>Key Observations</label>
+      <input type="text" id="otherNotes" placeholder="Atmosphere, cleanliness, anything notable">
+    </div>
+  </div>
+
+  <div class="sync-bar" id="syncBar" style="display:none">
+    <span>Cloud sync active — data saved to Google Sheets</span>
+    <button class="sync-btn" onclick="syncToCloud()">Sync Now</button>
+  </div>
+
+  <button class="btn btn-primary" onclick="saveEntry()">Save Observation</button>
+</div>
+
+<!-- ENTRIES PANEL -->
+<div class="panel" id="panel-entries">
+  <div id="entriesList"></div>
+</div>
+
+<!-- SUMMARY PANEL -->
+<div class="panel" id="panel-summary">
+  <div id="summaryContent"></div>
+</div>
+
+<!-- EXPORT PANEL -->
+<div class="panel" id="panel-export">
+  <div class="card">
+    <h3>Export Data</h3>
+    <button class="btn btn-secondary btn-small" onclick="copyData()" style="margin-bottom:8px;">Copy to Clipboard</button>
+    <textarea class="export-area" id="exportArea" readonly></textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// State
+var entries = JSON.parse(localStorage.getItem('observer_entries') || '[]');
+var currentQueue = [];
+var selectedUser = null;
+
+// Init
+document.getElementById('date').valueAsDate = new Date();
+
+function showToast(msg, isError) {
+  var t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast show' + (isError ? ' error' : '');
+  setTimeout(function() { t.className = 'toast'; }, 2500);
+}
+
+function showPanel(name) {
+  document.querySelectorAll('.panel').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
+  document.getElementById('panel-' + name).classList.add('active');
+  event.target.classList.add('active');
+  if (name === 'entries') renderEntries();
+  if (name === 'summary') renderSummary();
+  if (name === 'export') renderExport();
+}
+
+function toggleGuide() {
+  document.getElementById('guideContent').classList.toggle('open');
+}
+
+function selectUser(el, user) {
+  document.querySelectorAll('.user-chip').forEach(function(c) { c.classList.remove('selected'); });
+  el.classList.add('selected');
+  selectedUser = user;
+}
+
+function updateQueueHeader() {
+  var pharmacy = document.getElementById('pharmacy').value;
+  document.getElementById('queueLabel').textContent = pharmacy || '—';
+}
+
+function addToQueue() {
+  var input = document.getElementById('customerName');
+  var name = input.value.trim() || 'Customer ' + (currentQueue.length + 1);
+  currentQueue.push({
+    name: name,
+    joined: Date.now(),
+    served: null
+  });
+  input.value = '';
+  renderQueue();
+}
+
+function serveCustomer(index) {
+  currentQueue[index].served = Date.now();
+  renderQueue();
+}
+
+function removeCustomer(index) {
+  currentQueue.splice(index, 1);
+  renderQueue();
+}
+
+function formatWait(ms) {
+  if (!ms) return '—';
+  var s = Math.round(ms / 1000);
+  if (s < 60) return s + 's';
+  return Math.floor(s / 60) + 'm ' + (s % 60) + 's';
+}
+
+function renderQueue() {
+  var container = document.getElementById('queueList');
+  if (currentQueue.length === 0) {
+    container.innerHTML = '<p style="font-size:11px;color:#666;text-align:center;padding:6px;">No customers in line</p>';
+    return;
+  }
+  var html = '';
+  for (var i = 0; i < currentQueue.length; i++) {
+    var c = currentQueue[i];
+    var isServed = c.served !== null;
+    var wait = isServed ? (c.served - c.joined) : (Date.now() - c.joined);
+    html += '<div class="queue-row">';
+    html += '<div class="queue-num">' + (i + 1) + '</div>';
+    html += '<div class="queue-name">' + c.name + '</div>';
+    html += '<div class="queue-timer">' + formatWait(wait) + '</div>';
+    html += isServed
+      ? '<span class="queue-status status-served">Served</span>'
+      : '<span class="queue-status status-waiting">Waiting</span>';
+    html += '<button class="queue-btn btn-serve" onclick="serveCustomer(' + i + ')" ' + (isServed ? 'disabled' : '') + '>Served</button>';
+    html += '<button class="queue-btn btn-remove" onclick="removeCustomer(' + i + ')">×</button>';
+    html += '</div>';
+  }
+  container.innerHTML = html;
+
+  if (currentQueue.some(function(c) { return !c.served; })) {
+    setTimeout(function() { renderQueue(); }, 1000);
+  }
+}
+
+function endQueue() {
+  if (currentQueue.length === 0) {
+    showToast('Add at least one customer to the queue.', true);
+    return;
+  }
+  var pharmacy = document.getElementById('pharmacy').value;
+  if (!pharmacy) { showToast('Select a pharmacy.', true); return; }
+  if (!selectedUser) { showToast('Select an observer.', true); return; }
+
+  var served = currentQueue.filter(function(c) { return c.served !== null; });
+  var waitTimes = served.map(function(c) { return (c.served - c.joined) / 1000; });
+  var avgWait = waitTimes.length > 0 ? waitTimes.reduce(function(a, b) { return a + b; }, 0) / waitTimes.length : 0;
+
+  window._pendingQueue = {
+    totalObserved: currentQueue.length,
+    served: served.length,
+    individualWaitTimes: currentQueue.map(function(c) {
+      return {
+        name: c.name,
+        waitSeconds: c.served !== null ? Math.round((c.served - c.joined) / 1000) : null
+      };
+    }),
+    averageWaitSeconds: avgWait,
+    averageWaitDisplay: avgWait < 60 ? Math.round(avgWait) + 's' : Math.round(avgWait / 60) + 'm ' + Math.round(avgWait % 60) + 's'
+  };
+
+  showToast('Queue saved! Fill ratings below, then tap Save.');
+}
+
+function saveEntry() {
+  var pharmacy = document.getElementById('pharmacy').value;
+  if (!pharmacy) { showToast('Select a pharmacy.', true); return; }
+  if (!window._pendingQueue) { showToast('End a queue session first.', true); return; }
+  if (!selectedUser) { showToast('Select an observer.', true); return; }
+  if (!document.getElementById('interactionRating').value) { showToast('Rate staff interaction quality.', true); return; }
+  if (!document.getElementById('overallRating').value) { showToast('Rate overall impression.', true); return; }
+
+  var customersInStore = parseInt(document.getElementById('customersInStore').value) || 0;
+  var staffAtCounter = parseInt(document.getElementById('staffAtCounter').value) || 0;
+
+  var entry = {
+    id: Date.now(),
+    user: selectedUser,
+    pharmacy: pharmacy,
+    date: document.getElementById('date').value,
+    visitType: document.getElementById('visitType').value,
+    trafficLevel: document.getElementById('trafficLevel').value,
+    queueData: window._pendingQueue,
+    customersInStore: customersInStore,
+    staffAtCounter: staffAtCounter,
+    customerStaffRatio: staffAtCounter > 0 ? (customersInStore / staffAtCounter).toFixed(1) : '—',
+    driveThru: document.getElementById('driveThru').value,
+    driveThruCars: parseInt(document.getElementById('driveThruCars').value) || 0,
+    dropoffPickup: document.getElementById('dropoffPickup').value,
+    specialtyPharmacy: document.getElementById('specialtyPharmacy').value,
+    interaction: document.getElementById('interactionRating').value,
+    nameRecognition: document.getElementById('nameRecognition').value,
+    medCounseling: document.getElementById('medCounseling').value,
+    otc: document.getElementById('otcRating').value,
+    loyalty: document.getElementById('loyaltyRating').value,
+    healthScreenings: document.getElementById('healthScreenings').value,
+    digital: document.getElementById('digitalEngagement').value,
+    atmosphere: document.getElementById('atmosphereRating').value,
+    overall: document.getElementById('overallRating').value,
+    loyaltyNotes: document.getElementById('loyaltyNotes').value,
+    otherNotes: document.getElementById('otherNotes').value,
+  };
+
+  entries.push(entry);
+  localStorage.setItem('observer_entries', JSON.stringify(entries));
+
+  // Sync to cloud
+  try {
+    google.script.run
+      .withSuccessHandler(function(result) {
+        if (result.success) {
+          showToast('Saved! Entry ' + result.totalEntries + ' synced to Google Sheets.');
+        } else {
+          showToast('Saved locally. Cloud sync failed.', true);
+        }
+      })
+      .withFailureHandler(function(err) {
+        showToast('Saved locally. Cloud sync failed.', true);
+      })
+      .saveData(entry);
+  } catch(e) {
+    showToast('Saved locally (' + entries.length + ' entries).');
+  }
+
+  // Reset
+  currentQueue = [];
+  window._pendingQueue = null;
+  document.getElementById('pharmacy').value = '';
+  document.getElementById('customersInStore').value = '';
+  document.getElementById('staffAtCounter').value = '';
+  document.getElementById('driveThruCars').value = '0';
+  document.getElementById('dropoffPickup').value = 'No';
+  document.getElementById('specialtyPharmacy').value = 'No';
+  document.getElementById('interactionRating').value = '';
+  document.getElementById('nameRecognition').value = '';
+  document.getElementById('medCounseling').value = '';
+  document.getElementById('otcRating').value = '';
+  document.getElementById('loyaltyRating').value = '';
+  document.getElementById('healthScreenings').value = '';
+  document.getElementById('digitalEngagement').value = '';
+  document.getElementById('atmosphereRating').value = '';
+  document.getElementById('overallRating').value = '';
+  document.getElementById('loyaltyNotes').value = '';
+  document.getElementById('otherNotes').value = '';
+  document.getElementById('queueLabel').textContent = '—';
+  renderQueue();
+}
+
+function renderEntries() {
+  var container = document.getElementById('entriesList');
+  if (entries.length === 0) {
+    container.innerHTML = '<div class="empty-state"><div class="icon">📋</div><p>No observations saved yet.</p></div>';
+    return;
+  }
+  var html = '';
+  for (var i = 0; i < entries.length; i++) {
+    var e = entries[i];
+    var trafficBadge = e.trafficLevel === 'Busy' || e.trafficLevel === 'Peak'
+      ? '<span class="badge badge-accent">' + e.trafficLevel + '</span>'
+      : e.trafficLevel === 'Slow'
+        ? '<span class="badge badge-green">' + e.trafficLevel + '</span>'
+        : '<span class="badge badge-teal">' + e.trafficLevel + '</span>';
+    html += '<div class="entry">';
+    html += '<div class="entry-header">';
+    html += '<span class="entry-title">' + e.pharmacy + '</span>';
+    html += '<div>';
+    html += '<span class="badge badge-teal">' + e.user + '</span>';
+    html += trafficBadge;
+    html += '<button onclick="deleteEntry(' + e.id + ')" style="background:none;border:none;font-size:16px;cursor:pointer;margin-left:4px;">🗑</button>';
+    html += '</div></div>';
+    html += '<div class="entry-meta">' + e.date + ' | ' + e.visitType + ' | ' + e.queueData.served + ' served / ' + e.queueData.totalObserved + ' observed</div>';
+    html += '<div class="entry-grid">';
+    html += '<div class="entry-item"><div class="label">Avg Wait</div><div class="value">' + e.queueData.averageWaitDisplay + '</div></div>';
+    html += '<div class="entry-item"><div class="label">Interaction</div><div class="value">' + e.interaction + '/5</div></div>';
+    html += '<div class="entry-item"><div class="label">OTC Display</div><div class="value">' + e.otc + '</div></div>';
+    html += '<div class="entry-item"><div class="label">Loyalty Visible</div><div class="value">' + e.loyalty + '</div></div>';
+    html += '<div class="entry-item"><div class="label">Atmosphere</div><div class="value">' + (e.atmosphere || '—') + '/5</div></div>';
+    html += '<div class="entry-item"><div class="label">Customers</div><div class="value">' + e.customersInStore + ' | Staff: ' + e.staffAtCounter + '</div></div>';
+    html += '</div>';
+    if (e.otherNotes) html += '<div style="font-size:11px;color:#666;margin-top:6px;">💬 ' + e.otherNotes + '</div>';
+    html += '</div>';
+  }
+  container.innerHTML = html;
+}
+
+function deleteEntry(id) {
+  if (!confirm('Delete this observation?')) return;
+  entries = entries.filter(function(e) { return e.id !== id; });
+  localStorage.setItem('observer_entries', JSON.stringify(entries));
+  renderEntries();
+}
+
+function renderSummary() {
+  var container = document.getElementById('summaryContent');
+  if (entries.length === 0) {
+    container.innerHTML = '<div class="empty-state"><div class="icon">📊</div><p>No data to summarize yet.</p></div>';
+    return;
+  }
+
+  var byPharmacy = {};
+  for (var i = 0; i < entries.length; i++) {
+    var e = entries[i];
+    if (!byPharmacy[e.pharmacy]) byPharmacy[e.pharmacy] = [];
+    byPharmacy[e.pharmacy].push(e);
+  }
+
+  var html = '';
+  var pharmacies = Object.keys(byPharmacy);
+  for (var p = 0; p < pharmacies.length; p++) {
+    var pharmacy = pharmacies[p];
+    var obs = byPharmacy[pharmacy];
+
+    var allWaitSeconds = [];
+    for (var i = 0; i < obs.length; i++) {
+      var o = obs[i];
+      for (var j = 0; j < o.queueData.individualWaitTimes.length; j++) {
+        var c = o.queueData.individualWaitTimes[j];
+        if (c.waitSeconds !== null) allWaitSeconds.push(c.waitSeconds);
+      }
+    }
+
+    var overallAvg = allWaitSeconds.length > 0
+      ? allWaitSeconds.reduce(function(a, b) { return a + b; }, 0) / allWaitSeconds.length
+      : 0;
+    var avgStr = overallAvg < 60 ? Math.round(overallAvg) + 's' : Math.round(overallAvg / 60) + 'm ' + Math.round(overallAvg % 60) + 's';
+
+    var byTraffic = {};
+    for (var i = 0; i < obs.length; i++) {
+      var o = obs[i];
+      var trafficKey = o.trafficLevel || 'Unknown';
+      if (!byTraffic[trafficKey]) byTraffic[trafficKey] = [];
+      for (var j = 0; j < o.queueData.individualWaitTimes.length; j++) {
+        var c = o.queueData.individualWaitTimes[j];
+        if (c.waitSeconds !== null) byTraffic[trafficKey].push(c.waitSeconds);
+      }
+    }
+
+    html += '<div class="pharmacy-block">';
+    html += '<h3>' + pharmacy + '</h3>';
+    html += '<div style="font-size:11px;color:#666;">' + obs.length + ' visit(s) | ' + allWaitSeconds.length + ' customers tracked</div>';
+    html += '<div class="pharmacy-avg">' + avgStr + '</div>';
+    html += '<div style="font-size:11px;color:#666;">Overall average wait time</div>';
+
+    var trafficKeys = Object.keys(byTraffic);
+    for (var t = 0; t < trafficKeys.length; t++) {
+      var traffic = trafficKeys[t];
+      var waits = byTraffic[traffic];
+      var tAvg = waits.reduce(function(a, b) { return a + b; }, 0) / waits.length;
+      var tAvgStr = tAvg < 60 ? Math.round(tAvg) + 's' : Math.round(tAvg / 60) + 'm ' + Math.round(tAvg % 60) + 's';
+      var trafficColor = traffic === 'Busy' || traffic === 'Peak' ? '#E74C3C' : traffic === 'Slow' ? '#2D5F3E' : '#D4913C';
+      var trafficBg = traffic === 'Slow' ? '#E8F5F1' : traffic === 'Busy' ? '#FFE0E0' : '#FFF3E0';
+      html += '<div style="margin:6px 0;padding:6px 8px;background:' + trafficBg + ';border-radius:6px;font-size:11px;">';
+      html += '<strong style="color:' + trafficColor + '">' + traffic + ':</strong> ' + tAvgStr + ' avg (' + waits.length + ' customers, ' + byTraffic[traffic].length + ' visits)';
+      html += '</div>';
+    }
+
+    html += '<div style="margin-top:8px;font-size:11px;font-weight:700;color:#666;text-transform:uppercase;">Visit Details</div>';
+    for (var i = 0; i < obs.length; i++) {
+      var o = obs[i];
+      var avgDisp = o.queueData.averageWaitDisplay;
+      html += '<div class="visit-row">';
+      html += '<div class="visit-header">Visit ' + (i + 1) + ': ' + o.visitType + ' — ' + o.date + '</div>';
+      html += '<div class="visit-details">';
+      html += o.queueData.served + ' served | ';
+      html += 'Avg: ' + avgDisp + ' | ';
+      html += 'Customers: ' + o.customersInStore + ' | Staff: ' + o.staffAtCounter;
+      if (o.customerStaffRatio !== '—') html += ' | Ratio: ' + o.customerStaffRatio + ':1';
+      html += '</div>';
+      html += '<div class="visit-busy">Interaction: ' + o.interaction + '/5 | Names: ' + (o.nameRecognition || '—') + ' | Counseling: ' + (o.medCounseling || '—') + ' | Overall: ' + o.overall + '/5</div>';
+      if (o.otherNotes) html += '<div class="visit-details">💬 ' + o.otherNotes + '</div>';
+      html += '</div>';
+    }
+
+    html += '</div>';
+  }
+
+  container.innerHTML = html;
+}
+
+function renderExport() {
+  var container = document.getElementById('exportArea');
+  if (entries.length === 0) {
+    container.value = 'No entries to export.';
+    return;
+  }
+
+  var byPharmacy = {};
+  for (var i = 0; i < entries.length; i++) {
+    var e = entries[i];
+    if (!byPharmacy[e.pharmacy]) byPharmacy[e.pharmacy] = [];
+    byPharmacy[e.pharmacy].push(e);
+  }
+
+  var text = 'COMPETITOR OBSERVATION DATA\n';
+  text += 'StarCare Pharmacy — DECA BMOR 2026-27\n';
+  text += '='.repeat(70) + '\n\n';
+
+  var pharmacyKeys = Object.keys(byPharmacy);
+  for (var p = 0; p < pharmacyKeys.length; p++) {
+    var pharmacy = pharmacyKeys[p];
+    var obs = byPharmacy[pharmacy];
+
+    text += '═══════════════════════════════════════════════════════════════════\n';
+    text += '  ' + pharmacy.toUpperCase() + '\n';
+    text += '═══════════════════════════════════════════════════════════════════\n';
+
+    var allWaitSeconds = [];
+    var byTraffic = {};
+
+    for (var i = 0; i < obs.length; i++) {
+      var o = obs[i];
+      text += '\nVisit ' + (i + 1) + ': ' + o.visitType + ' | ' + o.date + '\n';
+      text += 'Observer: ' + o.user + ' | Traffic: ' + o.trafficLevel + '\n';
+
+      var served = o.queueData.individualWaitTimes.filter(function(c) { return c.waitSeconds !== null; });
+      allWaitSeconds = allWaitSeconds.concat(served.map(function(c) { return c.waitSeconds; }));
+
+      if (!byTraffic[o.trafficLevel]) byTraffic[o.trafficLevel] = [];
+      byTraffic[o.trafficLevel] = byTraffic[o.trafficLevel].concat(served.map(function(c) { return c.waitSeconds; }));
+
+      text += 'Customers Observed: ' + o.queueData.totalObserved + ' | Served: ' + o.queueData.served + '\n';
+      text += 'Customers in Store: ' + o.customersInStore + ' | Staff at Counter: ' + o.staffAtCounter;
+      if (o.customerStaffRatio !== '—') text += ' | Ratio: ' + o.customerStaffRatio + ':1';
+      text += '\n';
+
+      text += 'Individual Wait Times:\n';
+      for (var j = 0; j < o.queueData.individualWaitTimes.length; j++) {
+        var c = o.queueData.individualWaitTimes[j];
+        text += '  ' + c.name + ': ' + (c.waitSeconds !== null ? c.waitSeconds + 's' : 'still waiting') + '\n';
+      }
+      text += 'Visit Average: ' + o.queueData.averageWaitDisplay + '\n';
+
+      text += '\nStore Metrics:\n';
+      text += '  Drive-Thru: ' + o.driveThru + (o.driveThru === 'Yes' ? ' (' + o.driveThruCars + ' cars in line)' : '');
+      text += '\n  Drop-off/Pickup: ' + o.dropoffPickup + '\n';
+      text += '  Specialty Pharmacy: ' + o.specialtyPharmacy + '\n';
+      text += '  Health Screenings: ' + (o.healthScreenings || 'Not checked') + '\n';
+
+      text += '\nRatings:\n';
+      text += '  Interaction Quality: ' + o.interaction + '/5\n';
+      text += '  Name Recognition: ' + (o.nameRecognition || 'N/A') + '\n';
+      text += '  Medication Counseling: ' + (o.medCounseling || 'N/A') + '\n';
+      text += '  OTC/Wellness Display: ' + o.otc + '\n';
+      text += '  Loyalty Program Visible: ' + o.loyalty + '\n';
+      text += '  Digital Engagement: ' + (o.digital || 'N/A') + '\n';
+      text += '  Atmosphere & Cleanliness: ' + (o.atmosphere || 'N/A') + '/5\n';
+      text += '  Overall Impression: ' + o.overall + '/5\n';
+      if (o.loyaltyNotes) text += '  Loyalty Details: ' + o.loyaltyNotes + '\n';
+      if (o.otherNotes) text += '  Other: ' + o.otherNotes + '\n';
+      text += '\n' + '-'.repeat(60) + '\n';
+    }
+
+    if (allWaitSeconds.length > 0) {
+      var overall = allWaitSeconds.reduce(function(a, b) { return a + b; }, 0) / allWaitSeconds.length;
+      var overallDisp = overall < 60 ? Math.round(overall) + 's' : Math.round(overall / 60) + 'm ' + Math.round(overall % 60) + 's';
+      text += '\nOVERALL AVERAGE WAIT: ' + overallDisp + '\n';
+      text += '  (' + allWaitSeconds.length + ' customers across ' + obs.length + ' visits)\n';
+    }
+
+    if (Object.keys(byTraffic).length > 1) {
+      text += '\nWAIT TIME BY TRAFFIC LEVEL:\n';
+      var trafficKeys = Object.keys(byTraffic);
+      for (var t = 0; t < trafficKeys.length; t++) {
+        var traffic = trafficKeys[t];
+        var waits = byTraffic[traffic];
+        var avg = waits.reduce(function(a, b) { return a + b; }, 0) / waits.length;
+        var avgDisp = avg < 60 ? Math.round(avg) + 's' : Math.round(avg / 60) + 'm ' + Math.round(avg % 60) + 's';
+        text += '  ' + traffic + ': ' + avgDisp + ' (' + waits.length + ' customers)\n';
+      }
+    }
+
+    text += '\n' + '='.repeat(70) + '\n\n';
+  }
+
+  text += 'SUMMARY\n';
+  text += '='.repeat(70) + '\n';
+  text += 'Total observations: ' + entries.length + '\n';
+  text += 'Pharmacies observed: ' + Object.keys(byPharmacy).length + '\n';
+  text += 'Date range: ' + (entries.length > 0 ? entries[0].date + ' to ' + entries[entries.length - 1].date : 'N/A') + '\n';
+
+  container.value = text;
+}
+
+function copyData() {
+  var text = document.getElementById('exportArea').value;
+  if (text === 'No entries to export.') return;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(function() {
+      showToast('Copied to clipboard!');
+    }).catch(function() {
+      showToast('Copy failed — select and copy manually.', true);
+    });
+  } else {
+    document.getElementById('exportArea').select();
+    document.execCommand('copy');
+    showToast('Copied!');
+  }
+}
+
+function syncToCloud() {
+  if (entries.length === 0) {
+    showToast('No entries to sync.', true);
+    return;
+  }
+  showToast('Syncing...');
+  try {
+    google.script.run
+      .withSuccessHandler(function(result) {
+        if (result.success) {
+          showToast('Synced! ' + result.totalEntries + ' entries in Google Sheets.');
+        } else {
+          showToast('Sync failed.', true);
+        }
+      })
+      .withFailureHandler(function(err) {
+        showToast('Sync failed.', true);
+      })
+      .saveData({ batch: entries });
+  } catch(e) {
+    showToast('Sync failed.', true);
+  }
+}
+
+renderQueue();
+</script>
+
+</body>
+</html>
