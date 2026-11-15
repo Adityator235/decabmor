@@ -6,123 +6,614 @@
 <title>StarCareRx - IV. Findings and Conclusions of the Study</title>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-"
-/* ===== STARCARERX DECA BMOR ~ TEAL + GREEN THEME ===== */
+"/* ===== STARCARERX DECA BMOR — PROFESSIONAL THEME ===== */
+
+/* Color system: teal + forest green + gold accent */
 :root {
   --teal:        #5BB5A2;
   --teal-dark:   #3D8B7A;
+  --teal-light:  #E8F3F0;
   --primary:     #2D5F3E;
-  --primary-dark:#1E4A2E;
-  --accent:      #D4913C;
-  --bg:          #FAFAF7;
+  --primary-dark:#1A3D28;
+  --accent:      #B8842F;
+  --accent-light:#F5EDE0;
+  --bg:          #FFFFFF;
   --text:        #1A1A1A;
-  --text-muted:  #6B6B6B;
-  --border:      #D8D4CF;
-  --surface:     #F7F4EF;
-  --stone:       #E8E4DF;
+  --text-body:   #2C2C2C;
+  --text-muted:  #6E6E6E;
+  --border:      #D5D0CA;
+  --border-light:#EAE6E0;
+  --surface:     #F9F8F5;
 }
+
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
+
 body {
-  font-family:'Inter',sans-serif;
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
   background:var(--bg);
-  color:var(--text);
-  line-height:1.7;
+  color:var(--text-body);
+  line-height:1.72;
   font-size:15px;
-}
-
-/* ===== TOP BAR (teal ~ matches store walls) ===== */
-.top-bar {
-  position:fixed; top:0; left:0; right:0; height:4px; z-index:1001;
-  background:linear-gradient(90deg, var(--teal), var(--primary), var(--accent));
-}
-
-/* ===== NAV BAR ===== */
-.nav {
-  position:fixed; top:4px; left:0; right:0; height:48px; z-index:1000;
-  background:rgba(255,255,255,0.97);
-  border-bottom:1px solid var(--border);
-  display:flex; align-items:center; justify-content:center; gap:1.5rem;
-  padding:0 2rem;
-  backdrop-filter:blur(8px);
-  -webkit-backdrop-filter:blur(8px);
-}
-.nav-logo {
-  height:28px; opacity:0.9;
-}
-.nav-divider {
-  width:1px; height:20px; background:var(--border);
-}
-.nav-deca {
-  height:18px; opacity:0.85;
-}
-.nav-title {
-  font-size:0.75rem; color:var(--text-muted); font-weight:500;
-  letter-spacing:0.02em;
 }
 
 /* ===== PAGE CONTAINER ===== */
 .page {
-  max-width:800px;
-  margin:72px auto 0;
-  background:#fff;
-  padding:3rem 3.5rem 2.5rem;
+  max-width:780px;
+  margin:48px auto 0;
+  padding:3rem 3.2rem 2.5rem;
   position:relative;
-  border-top:3px solid var(--teal);
-  box-shadow:0 1px 4px rgba(0,0,0,0.04);
 }
-.page::after {
-  content:''; position:absolute; bottom:0; left:0; right:0; height:3px;
-  background:linear-gradient(90deg, var(--primary), var(--accent));
+.page::before {
+  content:'';
+  position:absolute;
+  top:0; left:3.2rem; right:3.2rem;
+  height:3px;
+  background:var(--primary);
+}
+.page-number {
+  position:absolute;
+  bottom:1.25rem; right:1.5rem;
+  font-size:0.7rem;
+  color:var(--text-muted);
+  font-weight:400;
+  letter-spacing:0.02em;
 }
 
 /* ===== TYPOGRAPHY ===== */
 .section-label {
-  font-size:0.65rem; font-weight:600; letter-spacing:0.2em;
-  text-transform:uppercase; color:var(--teal-dark); margin-bottom:0.4rem;
+  font-size:0.6rem;
+  font-weight:700;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--teal-dark);
+  margin-bottom:0.5rem;
 }
-.page-number {
-  position:absolute; bottom:1rem; right:1.5rem;
-  font-size:0.75rem; color:var(--text-muted);
-}
+
 h1 {
-  font-family:'Merriweather',serif;
-  color:var(--primary);
-  font-size:1.45rem; font-weight:900;
-  margin-bottom:1.25rem;
-  border-bottom:2px solid var(--teal);
-  padding-bottom:0.4rem;
-}
-h2 {
-  font-family:'Merriweather',serif;
-  color:var(--primary);
-  font-size:1.05rem; font-weight:700;
-  margin:1.4rem 0 0.6rem;
-}
-h3 {
-  font-family:'Merriweather',serif;
+  font-family:'Merriweather',Georgia,serif;
   color:var(--primary-dark);
-  font-size:0.95rem; font-weight:700;
-  margin:1.2rem 0 0.5rem;
+  font-size:1.55rem;
+  font-weight:900;
+  margin-bottom:1.3rem;
+  padding-bottom:0.5rem;
+  border-bottom:1.5px solid var(--border);
+  line-height:1.3;
 }
-h4 {
-  font-family:'Merriweather',serif;
+
+h2 {
+  font-family:'Merriweather',Georgia,serif;
   color:var(--primary);
-  font-size:0.85rem; font-weight:700;
-  margin-bottom:0.3rem;
+  font-size:1.1rem;
+  font-weight:700;
+  margin:1.5rem 0 0.65rem;
+  line-height:1.35;
 }
+
+h3 {
+  font-family:'Merriweather',Georgia,serif;
+  color:var(--teal-dark);
+  font-size:0.95rem;
+  font-weight:700;
+  margin:1.3rem 0 0.5rem;
+  line-height:1.35;
+}
+
+h4 {
+  font-family:'Merriweather',Georgia,serif;
+  color:var(--text-body);
+  font-size:0.88rem;
+  font-weight:700;
+  margin-bottom:0.3rem;
+  line-height:1.35;
+}
+
 p { margin-bottom:0.85rem; font-size:0.92rem; }
 p:last-child { margin-bottom:0; }
 ol, ul { margin-bottom:0.85rem; padding-left:1.5rem; }
-li { margin-bottom:0.25rem; font-size:0.92rem; }
+li { margin-bottom:0.3rem; font-size:0.92rem; }
+
+/* ===== STAT BOXES ===== */
+.stat-row {
+  display:flex;
+  gap:0.75rem;
+  margin:1.5rem 0;
+}
+.stat {
+  flex:1;
+  text-align:center;
+  padding:1rem 0.5rem 0.85rem;
+  background:var(--surface);
+  border:1px solid var(--border-light);
+}
+.stat .number {
+  font-family:'Merriweather',serif;
+  font-size:1.7rem;
+  font-weight:900;
+  color:var(--primary-dark);
+  line-height:1;
+  margin-bottom:0.35rem;
+}
+.stat .label {
+  font-size:0.65rem;
+  color:var(--text-muted);
+  line-height:1.35;
+  letter-spacing:0.01em;
+}
+
+/* ===== KEY INSIGHT CALLOUT ===== */
+.key-insight {
+  margin:1.5rem 0;
+  padding:1rem 1.25rem;
+  background:var(--teal-light);
+  border-left:3px solid var(--teal-dark);
+}
+.key-insight strong {
+  display:block;
+  font-size:0.6rem;
+  font-weight:700;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--teal-dark);
+  margin-bottom:0.3rem;
+}
+.key-insight p {
+  font-size:0.9rem;
+  margin:0;
+  line-height:1.65;
+}
+
+/* ===== NOTE CALLOUT ===== */
+.note {
+  font-size:0.8rem;
+  color:var(--text-muted);
+  font-style:italic;
+  margin-top:1.75rem;
+  padding:0.85rem 1rem;
+  background:var(--surface);
+  border-left:2px solid var(--accent);
+  line-height:1.6;
+}
+
+/* ===== INFO CARDS ===== */
+.infographic {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0.75rem;
+  margin:1.5rem 0;
+}
+.info-card {
+  padding:1.1rem 0.9rem;
+  background:var(--surface);
+  border:1px solid var(--border-light);
+  border-top:2px solid var(--teal);
+}
+.info-card .card-icon {
+  font-size:0.65rem;
+  font-weight:700;
+  color:var(--teal-dark);
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  margin-bottom:0.35rem;
+}
+.info-card h4 {
+  font-family:'Merriweather',serif;
+  color:var(--primary);
+  font-size:0.8rem;
+  margin-bottom:0.25rem;
+}
+.info-card p { font-size:0.72rem; color:var(--text-muted); margin:0; line-height:1.45; }
+
+/* ===== TABLES ===== */
+table {
+  width:100%;
+  border-collapse:collapse;
+  margin:1.25rem 0;
+  font-size:0.8rem;
+}
+thead th {
+  background:var(--primary);
+  color:#FFFFFF;
+  font-weight:600;
+  font-size:0.75rem;
+  padding:0.7rem 0.75rem;
+  border:1px solid var(--primary);
+  text-align:left;
+  letter-spacing:0.02em;
+}
+thead th:first-child { }
+thead th:last-child { }
+tbody td {
+  padding:0.55rem 0.7rem;
+  border:1px solid var(--border-light);
+  text-align:left;
+  font-size:0.8rem;
+}
+tbody tr:nth-child(even) {
+  background:var(--surface);
+}
+tbody tr:hover {
+  background:var(--teal-light);
+}
+.total-row { font-weight:700; }
+.total-row td {
+  border-top:2px solid var(--primary);
+  border-bottom:2px solid var(--primary);
+  background:var(--surface);
+}
+
+/* ===== REVENUE BAR ===== */
+.revenue-bar {
+  display:flex;
+  height:34px;
+  margin:1rem 0;
+  overflow:hidden;
+  border:1px solid var(--border-light);
+}
+.revenue-bar .segment {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:0.65rem;
+  font-weight:600;
+  color:#FFFFFF;
+  letter-spacing:0.03em;
+}
+.revenue-legend {
+  display:flex;
+  gap:1.5rem;
+  font-size:0.72rem;
+  color:var(--text-muted);
+  margin-top:0.5rem;
+  flex-wrap:wrap;
+}
+.revenue-legend span::before {
+  content:'';
+  display:inline-block;
+  width:10px;
+  height:10px;
+  margin-right:4px;
+  vertical-align:middle;
+}
+.revenue-legend .rx::before { background:var(--primary); }
+.revenue-legend .otc::before { background:var(--accent); }
+.revenue-legend .dme::before { background:var(--teal); }
+.revenue-legend .vet::before { background:#9A9590; }
+
+/* ===== DEMOGRAPHIC BAR ===== */
+.demographic-bar { margin:0.75rem 0; }
+.demographic-bar .bar-label {
+  display:flex;
+  justify-content:space-between;
+  font-size:0.78rem;
+  margin-bottom:0.25rem;
+}
+.demographic-bar .bar-track {
+  height:20px;
+  background:var(--surface);
+  border:1px solid var(--border-light);
+  overflow:hidden;
+}
+.demographic-bar .bar-fill {
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  padding-right:0.4rem;
+  font-size:0.62rem;
+  font-weight:600;
+  color:#FFFFFF;
+}
+.bar-fill.teal { background:var(--teal); }
+.bar-fill.green { background:var(--primary); }
+.bar-fill.gold { background:var(--accent); }
+.bar-fill.muted { background:#9A9590; }
+
+/* ===== SWOT GRID ===== */
+.swot-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  background:var(--border-light);
+  border:1px solid var(--border-light);
+  margin:1.25rem 0;
+}
+.swot-cell { padding:0.9rem; background:#FFFFFF; }
+.swot-cell h3 {
+  font-size:0.75rem;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  margin:0 0 0.5rem;
+  padding-bottom:0.3rem;
+  border-bottom:2px solid;
+}
+.swot-cell.strengths h3 { color:var(--primary); border-color:var(--primary); }
+.swot-cell.weaknesses h3 { color:var(--accent); border-color:var(--accent); }
+.swot-cell.opportunities h3 { color:var(--teal-dark); border-color:var(--teal); }
+.swot-cell.threats h3 { color:#C0392B; border-color:#C0392B; }
+.swot-cell ul { margin:0; padding-left:1.1rem; font-size:0.78rem; }
+.swot-cell li { margin-bottom:0.3rem; line-height:1.45; }
+
+/* ===== PILLAR CARD ===== */
+.pillar-card {
+  margin:1.25rem 0;
+  padding:1.1rem 1.25rem;
+  background:var(--surface);
+  border-left:3px solid var(--teal-dark);
+}
+.pillar-card h3 {
+  font-family:'Merriweather',serif;
+  color:var(--primary);
+  margin:0 0 0.4rem;
+  font-size:0.95rem;
+}
+.pillar-card .pillar-letter {
+  display:inline-block;
+  background:var(--teal-dark);
+  color:#FFFFFF;
+  font-family:'Merriweather',serif;
+  font-weight:900;
+  width:26px;
+  height:26px;
+  line-height:26px;
+  text-align:center;
+  margin-right:0.5rem;
+  font-size:0.82rem;
+}
+.pillar-card p { font-size:0.88rem; margin:0; line-height:1.65; }
+
+/* ===== TIMELINE ===== */
+.timeline {
+  position:relative;
+  padding-left:1.75rem;
+  margin:1.25rem 0;
+}
+.timeline::before {
+  content:'';
+  position:absolute;
+  left:0.4rem;
+  top:0.3rem;
+  bottom:0.3rem;
+  width:2px;
+  background:var(--teal);
+}
+.timeline-item {
+  position:relative;
+  margin-bottom:1.15rem;
+}
+.timeline-item::before {
+  content:'';
+  position:absolute;
+  left:-1.6rem;
+  top:0.4rem;
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:var(--teal);
+  border:2px solid #FFFFFF;
+  box-shadow:0 0 0 1px var(--teal);
+}
+.timeline-item .week {
+  font-size:0.65rem;
+  font-weight:700;
+  color:var(--accent);
+  text-transform:uppercase;
+  letter-spacing:0.12em;
+}
+.timeline-item p { font-size:0.85rem; margin:0; line-height:1.6; }
+
+/* ===== GAP CALLOUT ===== */
+.gap-callout {
+  margin:1.25rem 0;
+  padding:1rem 1.25rem;
+  background:var(--accent-light);
+  border-left:3px solid var(--accent);
+}
+.gap-callout h4 {
+  font-family:'Merriweather',serif;
+  color:var(--primary);
+  font-size:0.9rem;
+  margin:0 0 0.3rem;
+}
+.gap-callout p { font-size:0.88rem; margin:0; line-height:1.6; }
+
+/* ===== METHOD CARD ===== */
+.method-card {
+  margin-bottom:0.75rem;
+  padding:1rem 1.15rem;
+  background:var(--surface);
+  border:1px solid var(--border-light);
+}
+.method-card .status {
+  display:inline-block;
+  padding:0.1rem 0.55rem;
+  font-size:0.6rem;
+  font-weight:600;
+  letter-spacing:0.05em;
+  margin-bottom:0.35rem;
+}
+.method-card .status.completed { background:var(--teal-light); color:var(--teal-dark); }
+.method-card .status.planned { background:var(--accent-light); color:var(--accent); }
+.method-card .status.secondary { background:var(--teal-light); color:var(--teal-dark); }
+.method-card p { font-size:0.85rem; margin:0; line-height:1.6; }
+
+/* ===== COVER PAGE ===== */
+.cover-page {
+  max-width:800px;
+  margin:48px auto 0;
+  background:#FFFFFF;
+  overflow:hidden;
+  border:1px solid var(--border-light);
+}
+.cover-hero {
+  position:relative;
+  width:100%;
+  height:260px;
+  overflow:hidden;
+}
+.cover-hero img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+}
+.cover-hero-overlay {
+  position:absolute;
+  bottom:0; left:0; right:0;
+  padding:1.5rem;
+  background:linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%);
+  color:#FFFFFF;
+}
+.cover-hero-overlay h2 {
+  font-family:'Merriweather',serif;
+  font-size:1.65rem;
+  font-weight:900;
+  color:#FFFFFF;
+  text-shadow:0 2px 6px rgba(0,0,0,0.5);
+  margin:0;
+  border:none;
+  padding-bottom:0;
+  line-height:1.2;
+}
+.cover-hero-overlay .tagline {
+  font-size:0.92rem;
+  font-style:italic;
+  color:rgba(255,255,255,0.92);
+  margin-top:0.3rem;
+}
+.cover-body {
+  padding:2rem 2.5rem 2rem;
+  text-align:center;
+}
+.cover-deca {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:1rem;
+  margin-bottom:1.5rem;
+}
+.cover-deca img { height:22px; }
+.cover-deca .deca-line {
+  width:60px;
+  height:1px;
+  background:var(--border);
+}
+.cover-title {
+  font-family:'Merriweather',serif;
+  font-size:1.2rem;
+  font-weight:700;
+  color:var(--primary-dark);
+  line-height:1.45;
+  margin-bottom:1.25rem;
+}
+.cover-divider {
+  width:60px;
+  height:2px;
+  background:var(--accent);
+  margin:1.25rem auto;
+}
+.cover-meta {
+  font-size:0.85rem;
+  color:var(--text-muted);
+  line-height:2;
+  margin-bottom:1.5rem;
+}
+.cover-meta strong { color:var(--text-body); }
+.cover-event {
+  font-size:0.65rem;
+  color:var(--text-muted);
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  margin-top:1rem;
+  padding-top:1rem;
+  border-top:1px solid var(--border-light);
+}
+
+/* ===== TABLE OF CONTENTS ===== */
+.toc-page {
+  max-width:800px;
+  margin:48px auto 0;
+  padding:2.5rem 3rem;
+  border:1px solid var(--border-light);
+}
+.toc-page h1 {
+  font-family:'Merriweather',serif;
+  color:var(--primary-dark);
+  font-size:1.5rem;
+  font-weight:900;
+  margin-bottom:0.3rem;
+  border:none;
+  padding-bottom:0;
+}
+.toc-page .toc-subtitle {
+  font-size:0.7rem;
+  color:var(--text-muted);
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  margin-bottom:2rem;
+}
+.toc-section { margin-bottom:1.25rem; }
+.toc-section h2 {
+  font-family:'Merriweather',serif;
+  color:var(--primary);
+  font-size:1rem;
+  font-weight:700;
+  margin:0 0 0.35rem;
+  border:none;
+  padding:0;
+}
+.toc-section p {
+  font-size:0.8rem;
+  color:var(--text-muted);
+  margin:0.1rem 0;
+  padding-left:1.25rem;
+}
+.toc-divider {
+  width:100%;
+  height:1px;
+  background:var(--border-light);
+  margin:1.5rem 0;
+}
+
+/* ===== BIBLIOGRAPHY ===== */
+.bib-entry {
+  margin-bottom:0.6rem;
+  padding-left:1.5rem;
+  text-indent:-1.5rem;
+  font-size:0.85rem;
+  line-height:1.6;
+}
+.bib-entry .citation-number {
+  font-weight:600;
+  color:var(--primary);
+}
+.appendix-section {
+  margin-bottom:1.25rem;
+}
+.appendix-section h4 {
+  font-size:0.88rem;
+  color:var(--primary);
+  margin-bottom:0.4rem;
+}
+.survey-question {
+  margin-bottom:0.35rem;
+  font-size:0.85rem;
+  line-height:1.55;
+}
+.survey-question .q-number {
+  font-weight:700;
+  color:var(--primary-dark);
+}
+.survey-question .q-type {
+  color:var(--text-muted);
+  font-size:0.82rem;
+}
 
 /* ===== PHOTO FRAMES ===== */
 .photo-frame {
   margin:1.5rem 0;
-  border:2px solid var(--teal);
-  border-radius:6px;
+  border:1px solid var(--border-light);
   overflow:hidden;
-  box-shadow:0 2px 8px rgba(0,0,0,0.06);
   page-break-inside:avoid;
 }
 .photo-frame .photo-inner {
@@ -134,31 +625,26 @@ li { margin-bottom:0.25rem; font-size:0.92rem; }
   height:auto;
   display:block;
 }
-/* Gold accent strip below photo */
-.photo-frame .photo-accent {
-  height:3px;
-  background:linear-gradient(90deg, var(--teal), var(--accent), var(--primary));
-}
 .photo-frame .photo-caption {
   padding:0.6rem 1rem;
   background:var(--surface);
-  font-size:0.78rem;
+  font-size:0.76rem;
   color:var(--text-muted);
   font-style:italic;
-  border-top:1px solid var(--border);
+  border-top:1px solid var(--border-light);
   line-height:1.5;
 }
 .photo-frame .photo-caption strong {
   color:var(--primary);
   font-style:normal;
 }
-.photo-frame.landscape { max-height:320px; }
 .photo-frame.landscape .photo-inner {
-  display:flex; align-items:center;
+  display:flex;
+  align-items:center;
   background:#000;
 }
 .photo-frame.landscape .photo-inner img {
-  max-height:320px;
+  max-height:300px;
   object-fit:contain;
 }
 
@@ -171,374 +657,49 @@ li { margin-bottom:0.25rem; font-size:0.92rem; }
 }
 .photo-grid .photo-frame { margin:0; }
 
-/* ===== COMPONENTS ===== */
-.stat-row {
-  display:flex; gap:0.75rem; margin:1.25rem 0;
-}
-.stat {
-  flex:1; text-align:center; padding:0.9rem 0.6rem;
-  background:var(--surface); border:1px solid var(--border);
-  border-radius:4px;
-}
-.stat .number {
-  font-family:'Merriweather',serif;
-  font-size:1.6rem; font-weight:900;
-  color:var(--primary); line-height:1; margin-bottom:0.2rem;
-}
-.stat .label {
-  font-size:0.65rem; color:var(--text-muted); line-height:1.3;
-}
-.key-insight {
-  border-left:3px solid var(--teal);
-  padding:0.7rem 1rem; margin:1.25rem 0;
-  font-size:0.88rem; background:var(--surface);
-  border-radius:0 4px 4px 0;
-}
-.key-insight strong {
-  color:var(--teal-dark);
-  font-size:0.7rem; letter-spacing:0.1em;
-  text-transform:uppercase; display:block; margin-bottom:0.2rem;
-}
-.note {
-  font-size:0.82rem; color:var(--text-muted); font-style:italic;
-  margin-top:1.5rem; padding:0.9rem;
-  background:var(--surface); border-radius:4px;
-  border-left:3px solid var(--accent);
-}
-.infographic {
-  display:grid; grid-template-columns:repeat(3,1fr); gap:0.75rem; margin:1.25rem 0;
-}
-.info-card {
-  padding:1rem; background:var(--surface);
-  border:1px solid var(--border); border-radius:4px;
-  text-align:center;
-}
-.info-card .icon { font-size:1.4rem; margin-bottom:0.3rem; }
-.info-card h4 {
-  font-family:'Merriweather',serif; color:var(--primary);
-  font-size:0.82rem; margin-bottom:0.25rem;
-}
-.info-card p { font-size:0.72rem; color:var(--text-muted); margin:0; line-height:1.4; }
-
-/* ===== TABLES ===== */
-table {
-  width:100%; border-collapse:collapse; margin:1.25rem 0; font-size:0.82rem;
-}
-th, td {
-  padding:0.55rem 0.7rem; border:1px solid var(--border); text-align:left;
-}
-th {
-  background:var(--primary); color:#fff; font-weight:600;
-}
-thead th {
-  background:var(--teal-dark); color:#fff; font-weight:700;
-}
-.total-row { font-weight:700; background:var(--surface) !important; }
-.total-row td { border-top:2px solid var(--primary); font-weight:700; }
-
-/* ===== BARS & CHARTS ===== */
-.revenue-bar {
-  display:flex; height:28px; border-radius:4px; overflow:hidden;
-  margin:0.75rem 0;
-}
-.revenue-bar .segment {
-  display:flex; align-items:center; justify-content:center;
-  font-size:0.65rem; font-weight:600; color:#fff; padding:0 0.4rem;
-}
-.revenue-legend {
-  display:flex; gap:1.25rem; font-size:0.75rem; color:var(--text-muted);
-  margin-top:0.4rem; flex-wrap:wrap;
-}
-.revenue-legend span::before {
-  content:''; display:inline-block; width:9px; height:9px;
-  margin-right:3px; vertical-align:middle; border-radius:1px;
-}
-.revenue-legend .rx::before { background:var(--primary); }
-.revenue-legend .otc::before { background:var(--accent); }
-.revenue-legend .dme::before { background:var(--teal); }
-.revenue-legend .vet::before { background:#9A9590; }
-
-.demographic-bar { margin:0.6rem 0; }
-.demographic-bar .bar-label {
-  display:flex; justify-content:space-between;
-  font-size:0.8rem; margin-bottom:0.2rem;
-}
-.demographic-bar .bar-track {
-  height:22px; background:#F0EDE8; border-radius:3px; overflow:hidden;
-}
-.demographic-bar .bar-fill {
-  height:100%; border-radius:3px;
-  display:flex; align-items:center; justify-content:flex-end;
-  padding-right:0.4rem;
-  font-size:0.65rem; font-weight:600; color:#fff;
-}
-.bar-fill.teal { background:var(--teal); }
-.bar-fill.green { background:var(--primary); }
-.bar-fill.gold { background:var(--accent); }
-.bar-fill.muted { background:#9A9590; }
-
-/* ===== SWOT ===== */
-.swot-grid {
-  display:grid; grid-template-columns:1fr 1fr; gap:1px;
-  background:var(--border); border:1px solid var(--border);
-  border-radius:4px; margin:1.25rem 0;
-}
-.swot-cell { padding:0.9rem; background:#fff; }
-.swot-cell h3 {
-  font-size:0.78rem; text-transform:uppercase; letter-spacing:0.1em;
-  margin:0 0 0.5rem; padding-bottom:0.35rem;
-  border-bottom:2px solid;
-}
-.swot-cell.strengths h3 { color:var(--primary); border-color:var(--primary); }
-.swot-cell.weaknesses h3 { color:var(--accent); border-color:var(--accent); }
-.swot-cell.opportunities h3 { color:var(--teal-dark); border-color:var(--teal); }
-.swot-cell.threats h3 { color:#C0392B; border-color:#C0392B; }
-.swot-cell ul { margin:0; padding-left:1.1rem; font-size:0.8rem; }
-.swot-cell li { margin-bottom:0.35rem; line-height:1.45; }
-
-/* ===== PILLAR CARD ===== */
-.pillar-card {
-  background:var(--surface); padding:1rem;
-  border-left:3px solid var(--teal);
-  border-radius:0 4px 4px 0;
-  margin:1rem 0;
-}
-.pillar-card h3 {
-  font-family:'Merriweather',serif; color:var(--primary);
-  margin:0 0 0.4rem; font-size:0.95rem;
-}
-.pillar-card .pillar-letter {
-  display:inline-block; background:var(--teal); color:#fff;
-  font-family:'Merriweather',serif; font-weight:900;
-  width:26px; height:26px; line-height:26px; text-align:center;
-  border-radius:50%; margin-right:0.4rem; font-size:0.85rem;
-}
-
-/* ===== TIMELINE ===== */
-.timeline {
-  position:relative; padding-left:1.75rem; margin:1.25rem 0;
-}
-.timeline::before {
-  content:''; position:absolute; left:0.5rem; top:0; bottom:0;
-  width:2px; background:var(--teal);
-}
-.timeline-item {
-  position:relative; margin-bottom:1rem;
-}
-.timeline-item::before {
-  content:''; position:absolute; left:-1.5rem; top:0.35rem;
-  width:9px; height:9px; border-radius:50%;
-  background:var(--teal); border:2px solid #fff;
-  box-shadow:0 0 0 1px var(--teal);
-}
-.timeline-item .week {
-  font-size:0.7rem; font-weight:600; color:var(--accent);
-  text-transform:uppercase; letter-spacing:0.1em;
-}
-.timeline-item p { font-size:0.82rem; margin:0; }
-
-/* ===== GAP CALLOUT ===== */
-.gap-callout {
-  background:var(--surface); padding:1rem;
-  border-left:4px solid var(--accent);
-  border-radius:0 4px 4px 0;
-  margin:1.25rem 0;
-}
-.gap-callout h4 {
-  font-family:'Merriweather',serif; color:var(--primary);
-  font-size:0.9rem; margin:0 0 0.4rem;
-}
-
-/* ===== METHOD CARD ===== */
-.method-card {
-  background:var(--surface); padding:1rem;
-  border:1px solid var(--border); border-radius:4px;
-  margin-bottom:0.75rem;
-}
-.method-card .status {
-  display:inline-block; padding:0.1rem 0.5rem; border-radius:10px;
-  font-size:0.65rem; font-weight:600; margin-bottom:0.4rem;
-}
-.method-card .status.completed { background:#E8F5E9; color:#2E7D32; }
-.method-card .status.planned { background:#FFF3E0; color:#E65100; }
-.method-card .status.secondary { background:#E0F2F1; color:#00695C; }
-
-/* ===== COVER PAGE ===== */
-.cover-page {
-  max-width:800px;
-  margin:60px auto 0;
-  background:#fff;
-  border-radius:8px;
-  overflow:hidden;
-  box-shadow:0 2px 16px rgba(0,0,0,0.08);
-  page-break-after:always;
-}
-.cover-hero {
-  position:relative;
-  width:100%;
-  height:280px;
-  overflow:hidden;
-}
-.cover-hero img {
-  width:100%; height:100%;
-  object-fit:cover;
-  object-position:center top;
-  filter:brightness(0.7);
-}
-.cover-hero-overlay {
-  position:absolute; bottom:0; left:0; right:0;
-  padding:1.5rem;
-  background:linear-gradient(transparent, rgba(0,0,0,0.7));
-  color:#fff;
-}
-.cover-hero-overlay h2 {
-  font-family:'Merriweather',serif;
-  font-size:1.6rem; font-weight:900;
-  color:#fff;
-  text-shadow:0 2px 4px rgba(0,0,0,0.5);
-  margin:0;
-  border:none;
-}
-.cover-hero-overlay .tagline {
-  font-size:0.9rem;
-  font-style:italic;
-  color:rgba(255,255,255,0.9);
-  margin-top:0.2rem;
-}
-.cover-body {
-  padding:2rem 2.5rem 2rem;
-  text-align:center;
-}
-.cover-deca {
-  display:flex; align-items:center; justify-content:center; gap:1rem;
-  margin-bottom:1.5rem;
-}
-.cover-deca img { height:22px; }
-.cover-deca .deca-line {
-  width:40px; height:1px; background:var(--accent);
-}
-.cover-title {
-  font-family:'Merriweather',serif;
-  font-size:1.25rem; font-weight:700;
-  color:var(--primary-dark);
-  line-height:1.4;
-  margin-bottom:1.25rem;
-}
-.cover-divider {
-  width:50px; height:2px;
-  background:linear-gradient(90deg, var(--teal), var(--accent));
-  margin:1.25rem auto;
-}
-.cover-meta {
-  font-size:0.85rem; color:var(--text-muted);
-  line-height:2; margin-bottom:1.5rem;
-}
-.cover-meta strong { color:var(--text); }
-.cover-event {
-  font-size:0.7rem; color:var(--text-muted);
-  letter-spacing:0.15em; text-transform:uppercase;
-  margin-top:1rem;
-  padding-top:1rem;
-  border-top:1px solid var(--border);
-}
-
-/* ===== TOC ===== */
-.toc-page {
-  max-width:800px;
-  margin:60px auto 0;
-  background:#fff;
-  padding:2.5rem 3rem;
-  border-radius:8px;
-  box-shadow:0 1px 4px rgba(0,0,0,0.04);
-  border-top:3px solid var(--teal);
-}
-.toc-page h1 {
-  font-family:'Merriweather',serif;
-  color:var(--primary);
-  font-size:1.5rem; font-weight:900;
-  margin-bottom:0.3rem;
-  border:none;
-  padding-bottom:0;
-}
-.toc-page .toc-subtitle {
-  font-size:0.72rem; color:var(--text-muted);
-  letter-spacing:0.1em; text-transform:uppercase;
-  margin-bottom:2rem;
-}
-.toc-section { margin-bottom:1.25rem; }
-.toc-section h2 {
-  font-family:'Merriweather',serif;
-  color:var(--primary-dark);
-  font-size:1rem; font-weight:700;
-  margin:0 0 0.4rem;
-  border:none;
-  padding:0;
-}
-.toc-section p {
-  font-size:0.82rem; color:var(--text-muted);
-  margin:0.15rem 0; padding-left:1.25rem;
-}
-.toc-divider {
-  width:100%; height:1px;
-  background:linear-gradient(90deg, transparent, var(--border), transparent);
-  margin:1.5rem 0;
-}
-
-/* ===== NAVIGATION CONTROLS ===== */
-.nav-controls {
-  position:fixed; bottom:1.25rem; right:1.25rem;
-  display:flex; gap:0.4rem; z-index:1000;
-}
-.nav-controls button {
-  width:40px; height:40px; border-radius:50%;
-  border:1px solid var(--border);
-  background:rgba(255,255,255,0.95);
-  color:var(--primary);
-  font-size:1.1rem; cursor:pointer;
-  display:flex; align-items:center; justify-content:center;
-  box-shadow:0 2px 8px rgba(0,0,0,0.1);
-  transition:all 0.15s;
-  backdrop-filter:blur(4px);
-}
-.nav-controls button:hover {
-  background:var(--primary); color:#fff;
-  box-shadow:0 4px 12px rgba(0,0,0,0.15);
-}
-.page-indicator {
-  position:fixed; bottom:1.25rem; left:1.25rem;
-  font-size:0.72rem; color:var(--text-muted);
-  background:rgba(255,255,255,0.95);
-  padding:0.35rem 0.7rem; border-radius:12px;
-  border:1px solid var(--border);
-  box-shadow:0 1px 4px rgba(0,0,0,0.06);
-  z-index:1000;
-  backdrop-filter:blur(4px);
-}
-
 /* ===== PRINT ===== */
 @media print {
-  .top-bar, .nav, .nav-controls, .page-indicator { display:none !important; }
   .page, .cover-page, .toc-page {
-    margin:0; padding:1.5cm 2cm;
-    box-shadow:none; border-radius:0;
+    margin:0;
+    padding:1.5cm 2cm;
+    box-shadow:none;
+    border:none;
     page-break-after:always;
   }
-  body { background:#fff; }
+  .page::before {
+    background:var(--primary) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  thead th {
+    background:var(--primary) !important;
+    color:#FFFFFF !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .revenue-bar .segment {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .stat .number {
+    color:var(--primary-dark) !important;
+  }
+  body { background:#FFFFFF; }
   .photo-frame { break-inside:avoid; }
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width:860px) {
-  .page, .toc-page { margin:60px 0 0; border-radius:0; }
-  .cover-page { margin:56px 0 0; border-radius:0; }
+  .page, .toc-page { margin:48px 0 0; }
+  .cover-page { margin:48px 0 0; }
   .page { padding:2rem 1.5rem 1.5rem; }
   .stat-row { flex-direction:column; }
   .infographic { grid-template-columns:1fr; }
   .swot-grid { grid-template-columns:1fr; }
   .photo-grid { grid-template-columns:1fr; }
-  .nav { padding:0 1rem; }
-  .nav-title { display:none; }
+  .toc-page { padding:2rem 1.5rem; }
 }
+
 
 </style>
 </head>
@@ -584,12 +745,30 @@ thead th {
   </table>
   <p><strong>Key finding: Prosper is a young, affluent, highly-educated family community.</strong> With 32.7% of residents under 18 and a median household income of $195,281, the people filling prescriptions at StarCare are mostly parents — managing meds for their kids, themselves, and sometimes aging parents. This demographic is ideal for a pharmacy focused on long-term patient relationships: they value trust and personalization over pure price, and they're likely to stay with a pharmacy that feels like it has their back.</p>
   <h3>Primary Research Findings: Patient Survey Results</h3>
-  <p>Primary research (patient surveys, competitor observations, and stakeholder interviews) was conducted between October 19 and November 6, 2026. A total of <strong>60 survey respondents</strong> were collected: 40 current patients, 10 lapsed patients, and 10 non-patients (Prosper residents who use a different pharmacy). Additionally, 2 competitor observations were conducted at each of 3 locations (CVS, Walmart, H-E-B), and 1 management interview plus 2 patient interviews were completed with StarCare.</p>
-  <p><em>Note: The following findings are based on the primary data collected. Projections and strategic recommendations will be validated and refined with the complete primary data set.</em></p>
-  <div class="key-insight"><strong>FINDING #1: PERSONAL RELATIONSHIPS ARE THE #1 LOYALTY DRIVER</strong>Across all three research methods, personal relationships emerged as the strongest driver of patient loyalty. JD Power data shows independent pharmacies (Health Mart 759, Good Neighbor 732) outscore national chains (643) by wide margins. Patient surveys consistently identify staff knowledge and personal attention as the top reasons patients choose and stay with StarCare. This is StarCare's core competitive advantage — something chains literally cannot replicate at scale.</div>
-  <div class="key-insight"><strong>FINDING #2: BILLING TRANSPARENCY IS THE #1 RETENTION THREAT</strong>The gap between StarCare's 4.5-star Google rating and 2.6-star Yelp rating is entirely driven by billing and insurance complaints — not by staff quality or product range. Patient surveys confirm that billing confusion is the most common reason patients leave or consider switching. This validates the Drishti pillar's focus on pre-fill copay estimates and post-visit satisfaction surveys.</div>
-  <div class="key-insight"><strong>FINDING #3: LOYALTY PROGRAMS WORK — BUT NOT THE CHAIN MODEL</strong>67% of surveyed patients express interest in a loyalty rewards program, but independent pharmacy patients respond better to <em>relationship-based rewards</em> (personalized follow-ups, health screenings, community events) than to pure discount models. This informs the tiered structure of Project Swastik's Seva pillar, which combines prescription refill stamps with OTC purchase points and referral rewards.</div>
-  <div class="key-insight"><strong>FINDING #4: CHAINS ARE WEAK IN CONVENIENCE, NOT IN RELATIONSHIPS</strong>Competitor observations at CVS, Walmart, and H-E-B reveal that while chains score higher on convenience metrics (drive-thru, extended hours, app-based refills), they consistently score lower on staff-customer interaction quality. Patients at chain locations report feeling "processed" rather than "known." StarCare's advantage is connection — the strategy must amplify what chains cannot replicate.</div>
+  <p>Primary research was conducted between November 13-14, 2026, consisting of systematic competitor observations at three Prosper-area pharmacy locations (CVS, H-E-B, and Prosper Pharmacy), with two visits per location — one weekday evening (4:30-7:30 PM) and one Saturday morning (10:00 AM-1:30 PM). A total of <strong>6 structured observations</strong> were completed, recording wait times, customer-to-staff ratios, interaction quality, loyalty program visibility, and OTC product placement. Patient surveys and stakeholder interviews were not completed due to StarCare's unresponsiveness to outreach attempts; this entry relies on competitor observation data and secondary research for all findings and conclusions.</p>
+  <p><em>Note: Patient surveys and stakeholder interviews were not completed due to StarCare's unresponsiveness to outreach attempts. All findings and conclusions in this entry are derived from competitor observation data and secondary research.</em></p>
+  <h4>Observation Data Summary</h4>
+  <table>
+    <thead><tr><th>Metric</th><th>Prosper Pharmacy</th><th>CVS</th><th>H-E-B</th></tr></thead>
+    <tbody>
+      <tr><td>Avg. Wait Time</td><td><strong>102 sec (1:42)</strong></td><td><strong>258 sec (4:18)</strong></td><td><strong>91 sec (1:31)</strong></td></tr>
+      <tr><td>Customers Served</td><td>14 total</td><td>18</td><td>7</td></tr>
+      <tr><td>Staff at Counter</td><td>2</td><td>3</td><td>2</td></tr>
+      <tr><td>Customer:Staff Ratio</td><td><strong>0.5 - 1.5</strong></td><td><strong>5.0 - 8.3</strong></td><td><strong>3.5 - 5.0</strong></td></tr>
+      <tr><td>Interaction Quality (1-5)</td><td><strong>5.0</strong></td><td>4.0</td><td>3.5 - 4.0</td></tr>
+      <tr><td>Name Recognition</td><td>Rarely</td><td>Never</td><td>Never</td></tr>
+      <tr><td>Medication Counseling</td><td><strong>Always + Detailed</strong></td><td>Always</td><td>Always</td></tr>
+      <tr><td>OTC Display</td><td>Medium</td><td>High</td><td><strong>High</strong></td></tr>
+      <tr><td>Loyalty Program</td><td>None</td><td>HSA/FSA Benefits</td><td>None</td></tr>
+      <tr><td>Drive-Thru</td><td>No</td><td>Yes (3 cars)</td><td>Yes</td></tr>
+      <tr><td>Atmosphere (1-5)</td><td><strong>5.0</strong></td><td><strong>5.0</strong></td><td><strong>5.0</strong></td></tr>
+      <tr><td>Overall Rating (1-5)</td><td><strong>5.0</strong></td><td>4.0</td><td>4.0</td></tr>
+    </tbody>
+  </table>
+  <h4>Key Observations by Location</h4>
+  <p><strong>Prosper Pharmacy (Weekday PM + Saturday AM):</strong> StarCare had the shortest average wait time (102 seconds) and the highest overall rating (5.0). Staff were highly attentive — one managed pickups while the other handled prescriptions digitally and answered the phone. The phone caller received "very detailed information and precise points in time where the medication would be ready." When a customer had a problem opening her medication container, staff listened carefully, offered a solution (different container), and said they would look into the issue. Small talk was struck with every customer. The waiting area included a mini fridge with snacks and a coffee machine — amenities no chain offers. One customer requested compounding pricing; the receptionist calculated it and promised to follow up Monday. <em>Key takeaway: StarCare delivers the highest interaction quality and most personalized service, but has no loyalty program and limited OTC display.</em></p>
+  <p><strong>CVS (Weekday PM + Saturday AM):</strong> CVS had the longest average wait time (258 seconds / 4:18) and the highest customer-to-staff ratio (up to 8.3:1). The store was very busy, especially on weekday evenings, with 25 customers observed and 3 cars in the drive-thru. CVS was the only location with a visible loyalty program (HSA/FSA benefits prominently displayed). Staff medication counseling was consistent ("Always"), but interactions felt transactional — name recognition was "never" observed. The atmosphere was rated 5.0 despite "plain walls, minimal decorations" — likely because the wide variety of products created a sense of abundance. <em>Key takeaway: CVS excels at scale and loyalty program visibility but struggles with wait times and personal interaction.</em></p>
+  <p><strong>H-E-B Pharmacy (Weekday PM + Saturday AM):</strong> H-E-B had the most variable wait times — from 70 seconds to 13:27 (one customer had a complex situation). On Saturday morning, H-E-B served 2 customers in just 87-94 seconds despite having 13 people in the store and 9 cars in the drive-thru. H-E-B scored highest on OTC cross-merchandising ("High") and had the most vibrant pharmacy environment — "bright blue and red colors, consultation included, tons of posters about prescriptions and refills and pre-paid pick up." They also offered a public blood pressure checker. However, name recognition was "never" observed, and the loyalty program was not visible. <em>Key takeaway: H-E-B creates the most engaging pharmacy environment but doesn't leverage personal relationships the way StarCare does.</em></p>
   <div class="page-number">Page 10 of 20</div>
 </div>
 <div class="nav-controls">

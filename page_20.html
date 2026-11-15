@@ -6,123 +6,614 @@
 <title>StarCareRx - VII. Bibliography</title>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-"
-/* ===== STARCARERX DECA BMOR ~ TEAL + GREEN THEME ===== */
+"/* ===== STARCARERX DECA BMOR — PROFESSIONAL THEME ===== */
+
+/* Color system: teal + forest green + gold accent */
 :root {
   --teal:        #5BB5A2;
   --teal-dark:   #3D8B7A;
+  --teal-light:  #E8F3F0;
   --primary:     #2D5F3E;
-  --primary-dark:#1E4A2E;
-  --accent:      #D4913C;
-  --bg:          #FAFAF7;
+  --primary-dark:#1A3D28;
+  --accent:      #B8842F;
+  --accent-light:#F5EDE0;
+  --bg:          #FFFFFF;
   --text:        #1A1A1A;
-  --text-muted:  #6B6B6B;
-  --border:      #D8D4CF;
-  --surface:     #F7F4EF;
-  --stone:       #E8E4DF;
+  --text-body:   #2C2C2C;
+  --text-muted:  #6E6E6E;
+  --border:      #D5D0CA;
+  --border-light:#EAE6E0;
+  --surface:     #F9F8F5;
 }
+
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
+
 body {
-  font-family:'Inter',sans-serif;
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
   background:var(--bg);
-  color:var(--text);
-  line-height:1.7;
+  color:var(--text-body);
+  line-height:1.72;
   font-size:15px;
-}
-
-/* ===== TOP BAR (teal ~ matches store walls) ===== */
-.top-bar {
-  position:fixed; top:0; left:0; right:0; height:4px; z-index:1001;
-  background:linear-gradient(90deg, var(--teal), var(--primary), var(--accent));
-}
-
-/* ===== NAV BAR ===== */
-.nav {
-  position:fixed; top:4px; left:0; right:0; height:48px; z-index:1000;
-  background:rgba(255,255,255,0.97);
-  border-bottom:1px solid var(--border);
-  display:flex; align-items:center; justify-content:center; gap:1.5rem;
-  padding:0 2rem;
-  backdrop-filter:blur(8px);
-  -webkit-backdrop-filter:blur(8px);
-}
-.nav-logo {
-  height:28px; opacity:0.9;
-}
-.nav-divider {
-  width:1px; height:20px; background:var(--border);
-}
-.nav-deca {
-  height:18px; opacity:0.85;
-}
-.nav-title {
-  font-size:0.75rem; color:var(--text-muted); font-weight:500;
-  letter-spacing:0.02em;
 }
 
 /* ===== PAGE CONTAINER ===== */
 .page {
-  max-width:800px;
-  margin:72px auto 0;
-  background:#fff;
-  padding:3rem 3.5rem 2.5rem;
+  max-width:780px;
+  margin:48px auto 0;
+  padding:3rem 3.2rem 2.5rem;
   position:relative;
-  border-top:3px solid var(--teal);
-  box-shadow:0 1px 4px rgba(0,0,0,0.04);
 }
-.page::after {
-  content:''; position:absolute; bottom:0; left:0; right:0; height:3px;
-  background:linear-gradient(90deg, var(--primary), var(--accent));
+.page::before {
+  content:'';
+  position:absolute;
+  top:0; left:3.2rem; right:3.2rem;
+  height:3px;
+  background:var(--primary);
+}
+.page-number {
+  position:absolute;
+  bottom:1.25rem; right:1.5rem;
+  font-size:0.7rem;
+  color:var(--text-muted);
+  font-weight:400;
+  letter-spacing:0.02em;
 }
 
 /* ===== TYPOGRAPHY ===== */
 .section-label {
-  font-size:0.65rem; font-weight:600; letter-spacing:0.2em;
-  text-transform:uppercase; color:var(--teal-dark); margin-bottom:0.4rem;
+  font-size:0.6rem;
+  font-weight:700;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--teal-dark);
+  margin-bottom:0.5rem;
 }
-.page-number {
-  position:absolute; bottom:1rem; right:1.5rem;
-  font-size:0.75rem; color:var(--text-muted);
-}
+
 h1 {
-  font-family:'Merriweather',serif;
-  color:var(--primary);
-  font-size:1.45rem; font-weight:900;
-  margin-bottom:1.25rem;
-  border-bottom:2px solid var(--teal);
-  padding-bottom:0.4rem;
-}
-h2 {
-  font-family:'Merriweather',serif;
-  color:var(--primary);
-  font-size:1.05rem; font-weight:700;
-  margin:1.4rem 0 0.6rem;
-}
-h3 {
-  font-family:'Merriweather',serif;
+  font-family:'Merriweather',Georgia,serif;
   color:var(--primary-dark);
-  font-size:0.95rem; font-weight:700;
-  margin:1.2rem 0 0.5rem;
+  font-size:1.55rem;
+  font-weight:900;
+  margin-bottom:1.3rem;
+  padding-bottom:0.5rem;
+  border-bottom:1.5px solid var(--border);
+  line-height:1.3;
 }
-h4 {
-  font-family:'Merriweather',serif;
+
+h2 {
+  font-family:'Merriweather',Georgia,serif;
   color:var(--primary);
-  font-size:0.85rem; font-weight:700;
-  margin-bottom:0.3rem;
+  font-size:1.1rem;
+  font-weight:700;
+  margin:1.5rem 0 0.65rem;
+  line-height:1.35;
 }
+
+h3 {
+  font-family:'Merriweather',Georgia,serif;
+  color:var(--teal-dark);
+  font-size:0.95rem;
+  font-weight:700;
+  margin:1.3rem 0 0.5rem;
+  line-height:1.35;
+}
+
+h4 {
+  font-family:'Merriweather',Georgia,serif;
+  color:var(--text-body);
+  font-size:0.88rem;
+  font-weight:700;
+  margin-bottom:0.3rem;
+  line-height:1.35;
+}
+
 p { margin-bottom:0.85rem; font-size:0.92rem; }
 p:last-child { margin-bottom:0; }
 ol, ul { margin-bottom:0.85rem; padding-left:1.5rem; }
-li { margin-bottom:0.25rem; font-size:0.92rem; }
+li { margin-bottom:0.3rem; font-size:0.92rem; }
+
+/* ===== STAT BOXES ===== */
+.stat-row {
+  display:flex;
+  gap:0.75rem;
+  margin:1.5rem 0;
+}
+.stat {
+  flex:1;
+  text-align:center;
+  padding:1rem 0.5rem 0.85rem;
+  background:var(--surface);
+  border:1px solid var(--border-light);
+}
+.stat .number {
+  font-family:'Merriweather',serif;
+  font-size:1.7rem;
+  font-weight:900;
+  color:var(--primary-dark);
+  line-height:1;
+  margin-bottom:0.35rem;
+}
+.stat .label {
+  font-size:0.65rem;
+  color:var(--text-muted);
+  line-height:1.35;
+  letter-spacing:0.01em;
+}
+
+/* ===== KEY INSIGHT CALLOUT ===== */
+.key-insight {
+  margin:1.5rem 0;
+  padding:1rem 1.25rem;
+  background:var(--teal-light);
+  border-left:3px solid var(--teal-dark);
+}
+.key-insight strong {
+  display:block;
+  font-size:0.6rem;
+  font-weight:700;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--teal-dark);
+  margin-bottom:0.3rem;
+}
+.key-insight p {
+  font-size:0.9rem;
+  margin:0;
+  line-height:1.65;
+}
+
+/* ===== NOTE CALLOUT ===== */
+.note {
+  font-size:0.8rem;
+  color:var(--text-muted);
+  font-style:italic;
+  margin-top:1.75rem;
+  padding:0.85rem 1rem;
+  background:var(--surface);
+  border-left:2px solid var(--accent);
+  line-height:1.6;
+}
+
+/* ===== INFO CARDS ===== */
+.infographic {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0.75rem;
+  margin:1.5rem 0;
+}
+.info-card {
+  padding:1.1rem 0.9rem;
+  background:var(--surface);
+  border:1px solid var(--border-light);
+  border-top:2px solid var(--teal);
+}
+.info-card .card-icon {
+  font-size:0.65rem;
+  font-weight:700;
+  color:var(--teal-dark);
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  margin-bottom:0.35rem;
+}
+.info-card h4 {
+  font-family:'Merriweather',serif;
+  color:var(--primary);
+  font-size:0.8rem;
+  margin-bottom:0.25rem;
+}
+.info-card p { font-size:0.72rem; color:var(--text-muted); margin:0; line-height:1.45; }
+
+/* ===== TABLES ===== */
+table {
+  width:100%;
+  border-collapse:collapse;
+  margin:1.25rem 0;
+  font-size:0.8rem;
+}
+thead th {
+  background:var(--primary);
+  color:#FFFFFF;
+  font-weight:600;
+  font-size:0.75rem;
+  padding:0.7rem 0.75rem;
+  border:1px solid var(--primary);
+  text-align:left;
+  letter-spacing:0.02em;
+}
+thead th:first-child { }
+thead th:last-child { }
+tbody td {
+  padding:0.55rem 0.7rem;
+  border:1px solid var(--border-light);
+  text-align:left;
+  font-size:0.8rem;
+}
+tbody tr:nth-child(even) {
+  background:var(--surface);
+}
+tbody tr:hover {
+  background:var(--teal-light);
+}
+.total-row { font-weight:700; }
+.total-row td {
+  border-top:2px solid var(--primary);
+  border-bottom:2px solid var(--primary);
+  background:var(--surface);
+}
+
+/* ===== REVENUE BAR ===== */
+.revenue-bar {
+  display:flex;
+  height:34px;
+  margin:1rem 0;
+  overflow:hidden;
+  border:1px solid var(--border-light);
+}
+.revenue-bar .segment {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:0.65rem;
+  font-weight:600;
+  color:#FFFFFF;
+  letter-spacing:0.03em;
+}
+.revenue-legend {
+  display:flex;
+  gap:1.5rem;
+  font-size:0.72rem;
+  color:var(--text-muted);
+  margin-top:0.5rem;
+  flex-wrap:wrap;
+}
+.revenue-legend span::before {
+  content:'';
+  display:inline-block;
+  width:10px;
+  height:10px;
+  margin-right:4px;
+  vertical-align:middle;
+}
+.revenue-legend .rx::before { background:var(--primary); }
+.revenue-legend .otc::before { background:var(--accent); }
+.revenue-legend .dme::before { background:var(--teal); }
+.revenue-legend .vet::before { background:#9A9590; }
+
+/* ===== DEMOGRAPHIC BAR ===== */
+.demographic-bar { margin:0.75rem 0; }
+.demographic-bar .bar-label {
+  display:flex;
+  justify-content:space-between;
+  font-size:0.78rem;
+  margin-bottom:0.25rem;
+}
+.demographic-bar .bar-track {
+  height:20px;
+  background:var(--surface);
+  border:1px solid var(--border-light);
+  overflow:hidden;
+}
+.demographic-bar .bar-fill {
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  padding-right:0.4rem;
+  font-size:0.62rem;
+  font-weight:600;
+  color:#FFFFFF;
+}
+.bar-fill.teal { background:var(--teal); }
+.bar-fill.green { background:var(--primary); }
+.bar-fill.gold { background:var(--accent); }
+.bar-fill.muted { background:#9A9590; }
+
+/* ===== SWOT GRID ===== */
+.swot-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  background:var(--border-light);
+  border:1px solid var(--border-light);
+  margin:1.25rem 0;
+}
+.swot-cell { padding:0.9rem; background:#FFFFFF; }
+.swot-cell h3 {
+  font-size:0.75rem;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  margin:0 0 0.5rem;
+  padding-bottom:0.3rem;
+  border-bottom:2px solid;
+}
+.swot-cell.strengths h3 { color:var(--primary); border-color:var(--primary); }
+.swot-cell.weaknesses h3 { color:var(--accent); border-color:var(--accent); }
+.swot-cell.opportunities h3 { color:var(--teal-dark); border-color:var(--teal); }
+.swot-cell.threats h3 { color:#C0392B; border-color:#C0392B; }
+.swot-cell ul { margin:0; padding-left:1.1rem; font-size:0.78rem; }
+.swot-cell li { margin-bottom:0.3rem; line-height:1.45; }
+
+/* ===== PILLAR CARD ===== */
+.pillar-card {
+  margin:1.25rem 0;
+  padding:1.1rem 1.25rem;
+  background:var(--surface);
+  border-left:3px solid var(--teal-dark);
+}
+.pillar-card h3 {
+  font-family:'Merriweather',serif;
+  color:var(--primary);
+  margin:0 0 0.4rem;
+  font-size:0.95rem;
+}
+.pillar-card .pillar-letter {
+  display:inline-block;
+  background:var(--teal-dark);
+  color:#FFFFFF;
+  font-family:'Merriweather',serif;
+  font-weight:900;
+  width:26px;
+  height:26px;
+  line-height:26px;
+  text-align:center;
+  margin-right:0.5rem;
+  font-size:0.82rem;
+}
+.pillar-card p { font-size:0.88rem; margin:0; line-height:1.65; }
+
+/* ===== TIMELINE ===== */
+.timeline {
+  position:relative;
+  padding-left:1.75rem;
+  margin:1.25rem 0;
+}
+.timeline::before {
+  content:'';
+  position:absolute;
+  left:0.4rem;
+  top:0.3rem;
+  bottom:0.3rem;
+  width:2px;
+  background:var(--teal);
+}
+.timeline-item {
+  position:relative;
+  margin-bottom:1.15rem;
+}
+.timeline-item::before {
+  content:'';
+  position:absolute;
+  left:-1.6rem;
+  top:0.4rem;
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:var(--teal);
+  border:2px solid #FFFFFF;
+  box-shadow:0 0 0 1px var(--teal);
+}
+.timeline-item .week {
+  font-size:0.65rem;
+  font-weight:700;
+  color:var(--accent);
+  text-transform:uppercase;
+  letter-spacing:0.12em;
+}
+.timeline-item p { font-size:0.85rem; margin:0; line-height:1.6; }
+
+/* ===== GAP CALLOUT ===== */
+.gap-callout {
+  margin:1.25rem 0;
+  padding:1rem 1.25rem;
+  background:var(--accent-light);
+  border-left:3px solid var(--accent);
+}
+.gap-callout h4 {
+  font-family:'Merriweather',serif;
+  color:var(--primary);
+  font-size:0.9rem;
+  margin:0 0 0.3rem;
+}
+.gap-callout p { font-size:0.88rem; margin:0; line-height:1.6; }
+
+/* ===== METHOD CARD ===== */
+.method-card {
+  margin-bottom:0.75rem;
+  padding:1rem 1.15rem;
+  background:var(--surface);
+  border:1px solid var(--border-light);
+}
+.method-card .status {
+  display:inline-block;
+  padding:0.1rem 0.55rem;
+  font-size:0.6rem;
+  font-weight:600;
+  letter-spacing:0.05em;
+  margin-bottom:0.35rem;
+}
+.method-card .status.completed { background:var(--teal-light); color:var(--teal-dark); }
+.method-card .status.planned { background:var(--accent-light); color:var(--accent); }
+.method-card .status.secondary { background:var(--teal-light); color:var(--teal-dark); }
+.method-card p { font-size:0.85rem; margin:0; line-height:1.6; }
+
+/* ===== COVER PAGE ===== */
+.cover-page {
+  max-width:800px;
+  margin:48px auto 0;
+  background:#FFFFFF;
+  overflow:hidden;
+  border:1px solid var(--border-light);
+}
+.cover-hero {
+  position:relative;
+  width:100%;
+  height:260px;
+  overflow:hidden;
+}
+.cover-hero img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+}
+.cover-hero-overlay {
+  position:absolute;
+  bottom:0; left:0; right:0;
+  padding:1.5rem;
+  background:linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%);
+  color:#FFFFFF;
+}
+.cover-hero-overlay h2 {
+  font-family:'Merriweather',serif;
+  font-size:1.65rem;
+  font-weight:900;
+  color:#FFFFFF;
+  text-shadow:0 2px 6px rgba(0,0,0,0.5);
+  margin:0;
+  border:none;
+  padding-bottom:0;
+  line-height:1.2;
+}
+.cover-hero-overlay .tagline {
+  font-size:0.92rem;
+  font-style:italic;
+  color:rgba(255,255,255,0.92);
+  margin-top:0.3rem;
+}
+.cover-body {
+  padding:2rem 2.5rem 2rem;
+  text-align:center;
+}
+.cover-deca {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:1rem;
+  margin-bottom:1.5rem;
+}
+.cover-deca img { height:22px; }
+.cover-deca .deca-line {
+  width:60px;
+  height:1px;
+  background:var(--border);
+}
+.cover-title {
+  font-family:'Merriweather',serif;
+  font-size:1.2rem;
+  font-weight:700;
+  color:var(--primary-dark);
+  line-height:1.45;
+  margin-bottom:1.25rem;
+}
+.cover-divider {
+  width:60px;
+  height:2px;
+  background:var(--accent);
+  margin:1.25rem auto;
+}
+.cover-meta {
+  font-size:0.85rem;
+  color:var(--text-muted);
+  line-height:2;
+  margin-bottom:1.5rem;
+}
+.cover-meta strong { color:var(--text-body); }
+.cover-event {
+  font-size:0.65rem;
+  color:var(--text-muted);
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  margin-top:1rem;
+  padding-top:1rem;
+  border-top:1px solid var(--border-light);
+}
+
+/* ===== TABLE OF CONTENTS ===== */
+.toc-page {
+  max-width:800px;
+  margin:48px auto 0;
+  padding:2.5rem 3rem;
+  border:1px solid var(--border-light);
+}
+.toc-page h1 {
+  font-family:'Merriweather',serif;
+  color:var(--primary-dark);
+  font-size:1.5rem;
+  font-weight:900;
+  margin-bottom:0.3rem;
+  border:none;
+  padding-bottom:0;
+}
+.toc-page .toc-subtitle {
+  font-size:0.7rem;
+  color:var(--text-muted);
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  margin-bottom:2rem;
+}
+.toc-section { margin-bottom:1.25rem; }
+.toc-section h2 {
+  font-family:'Merriweather',serif;
+  color:var(--primary);
+  font-size:1rem;
+  font-weight:700;
+  margin:0 0 0.35rem;
+  border:none;
+  padding:0;
+}
+.toc-section p {
+  font-size:0.8rem;
+  color:var(--text-muted);
+  margin:0.1rem 0;
+  padding-left:1.25rem;
+}
+.toc-divider {
+  width:100%;
+  height:1px;
+  background:var(--border-light);
+  margin:1.5rem 0;
+}
+
+/* ===== BIBLIOGRAPHY ===== */
+.bib-entry {
+  margin-bottom:0.6rem;
+  padding-left:1.5rem;
+  text-indent:-1.5rem;
+  font-size:0.85rem;
+  line-height:1.6;
+}
+.bib-entry .citation-number {
+  font-weight:600;
+  color:var(--primary);
+}
+.appendix-section {
+  margin-bottom:1.25rem;
+}
+.appendix-section h4 {
+  font-size:0.88rem;
+  color:var(--primary);
+  margin-bottom:0.4rem;
+}
+.survey-question {
+  margin-bottom:0.35rem;
+  font-size:0.85rem;
+  line-height:1.55;
+}
+.survey-question .q-number {
+  font-weight:700;
+  color:var(--primary-dark);
+}
+.survey-question .q-type {
+  color:var(--text-muted);
+  font-size:0.82rem;
+}
 
 /* ===== PHOTO FRAMES ===== */
 .photo-frame {
   margin:1.5rem 0;
-  border:2px solid var(--teal);
-  border-radius:6px;
+  border:1px solid var(--border-light);
   overflow:hidden;
-  box-shadow:0 2px 8px rgba(0,0,0,0.06);
   page-break-inside:avoid;
 }
 .photo-frame .photo-inner {
@@ -134,31 +625,26 @@ li { margin-bottom:0.25rem; font-size:0.92rem; }
   height:auto;
   display:block;
 }
-/* Gold accent strip below photo */
-.photo-frame .photo-accent {
-  height:3px;
-  background:linear-gradient(90deg, var(--teal), var(--accent), var(--primary));
-}
 .photo-frame .photo-caption {
   padding:0.6rem 1rem;
   background:var(--surface);
-  font-size:0.78rem;
+  font-size:0.76rem;
   color:var(--text-muted);
   font-style:italic;
-  border-top:1px solid var(--border);
+  border-top:1px solid var(--border-light);
   line-height:1.5;
 }
 .photo-frame .photo-caption strong {
   color:var(--primary);
   font-style:normal;
 }
-.photo-frame.landscape { max-height:320px; }
 .photo-frame.landscape .photo-inner {
-  display:flex; align-items:center;
+  display:flex;
+  align-items:center;
   background:#000;
 }
 .photo-frame.landscape .photo-inner img {
-  max-height:320px;
+  max-height:300px;
   object-fit:contain;
 }
 
@@ -171,374 +657,49 @@ li { margin-bottom:0.25rem; font-size:0.92rem; }
 }
 .photo-grid .photo-frame { margin:0; }
 
-/* ===== COMPONENTS ===== */
-.stat-row {
-  display:flex; gap:0.75rem; margin:1.25rem 0;
-}
-.stat {
-  flex:1; text-align:center; padding:0.9rem 0.6rem;
-  background:var(--surface); border:1px solid var(--border);
-  border-radius:4px;
-}
-.stat .number {
-  font-family:'Merriweather',serif;
-  font-size:1.6rem; font-weight:900;
-  color:var(--primary); line-height:1; margin-bottom:0.2rem;
-}
-.stat .label {
-  font-size:0.65rem; color:var(--text-muted); line-height:1.3;
-}
-.key-insight {
-  border-left:3px solid var(--teal);
-  padding:0.7rem 1rem; margin:1.25rem 0;
-  font-size:0.88rem; background:var(--surface);
-  border-radius:0 4px 4px 0;
-}
-.key-insight strong {
-  color:var(--teal-dark);
-  font-size:0.7rem; letter-spacing:0.1em;
-  text-transform:uppercase; display:block; margin-bottom:0.2rem;
-}
-.note {
-  font-size:0.82rem; color:var(--text-muted); font-style:italic;
-  margin-top:1.5rem; padding:0.9rem;
-  background:var(--surface); border-radius:4px;
-  border-left:3px solid var(--accent);
-}
-.infographic {
-  display:grid; grid-template-columns:repeat(3,1fr); gap:0.75rem; margin:1.25rem 0;
-}
-.info-card {
-  padding:1rem; background:var(--surface);
-  border:1px solid var(--border); border-radius:4px;
-  text-align:center;
-}
-.info-card .icon { font-size:1.4rem; margin-bottom:0.3rem; }
-.info-card h4 {
-  font-family:'Merriweather',serif; color:var(--primary);
-  font-size:0.82rem; margin-bottom:0.25rem;
-}
-.info-card p { font-size:0.72rem; color:var(--text-muted); margin:0; line-height:1.4; }
-
-/* ===== TABLES ===== */
-table {
-  width:100%; border-collapse:collapse; margin:1.25rem 0; font-size:0.82rem;
-}
-th, td {
-  padding:0.55rem 0.7rem; border:1px solid var(--border); text-align:left;
-}
-th {
-  background:var(--primary); color:#fff; font-weight:600;
-}
-thead th {
-  background:var(--teal-dark); color:#fff; font-weight:700;
-}
-.total-row { font-weight:700; background:var(--surface) !important; }
-.total-row td { border-top:2px solid var(--primary); font-weight:700; }
-
-/* ===== BARS & CHARTS ===== */
-.revenue-bar {
-  display:flex; height:28px; border-radius:4px; overflow:hidden;
-  margin:0.75rem 0;
-}
-.revenue-bar .segment {
-  display:flex; align-items:center; justify-content:center;
-  font-size:0.65rem; font-weight:600; color:#fff; padding:0 0.4rem;
-}
-.revenue-legend {
-  display:flex; gap:1.25rem; font-size:0.75rem; color:var(--text-muted);
-  margin-top:0.4rem; flex-wrap:wrap;
-}
-.revenue-legend span::before {
-  content:''; display:inline-block; width:9px; height:9px;
-  margin-right:3px; vertical-align:middle; border-radius:1px;
-}
-.revenue-legend .rx::before { background:var(--primary); }
-.revenue-legend .otc::before { background:var(--accent); }
-.revenue-legend .dme::before { background:var(--teal); }
-.revenue-legend .vet::before { background:#9A9590; }
-
-.demographic-bar { margin:0.6rem 0; }
-.demographic-bar .bar-label {
-  display:flex; justify-content:space-between;
-  font-size:0.8rem; margin-bottom:0.2rem;
-}
-.demographic-bar .bar-track {
-  height:22px; background:#F0EDE8; border-radius:3px; overflow:hidden;
-}
-.demographic-bar .bar-fill {
-  height:100%; border-radius:3px;
-  display:flex; align-items:center; justify-content:flex-end;
-  padding-right:0.4rem;
-  font-size:0.65rem; font-weight:600; color:#fff;
-}
-.bar-fill.teal { background:var(--teal); }
-.bar-fill.green { background:var(--primary); }
-.bar-fill.gold { background:var(--accent); }
-.bar-fill.muted { background:#9A9590; }
-
-/* ===== SWOT ===== */
-.swot-grid {
-  display:grid; grid-template-columns:1fr 1fr; gap:1px;
-  background:var(--border); border:1px solid var(--border);
-  border-radius:4px; margin:1.25rem 0;
-}
-.swot-cell { padding:0.9rem; background:#fff; }
-.swot-cell h3 {
-  font-size:0.78rem; text-transform:uppercase; letter-spacing:0.1em;
-  margin:0 0 0.5rem; padding-bottom:0.35rem;
-  border-bottom:2px solid;
-}
-.swot-cell.strengths h3 { color:var(--primary); border-color:var(--primary); }
-.swot-cell.weaknesses h3 { color:var(--accent); border-color:var(--accent); }
-.swot-cell.opportunities h3 { color:var(--teal-dark); border-color:var(--teal); }
-.swot-cell.threats h3 { color:#C0392B; border-color:#C0392B; }
-.swot-cell ul { margin:0; padding-left:1.1rem; font-size:0.8rem; }
-.swot-cell li { margin-bottom:0.35rem; line-height:1.45; }
-
-/* ===== PILLAR CARD ===== */
-.pillar-card {
-  background:var(--surface); padding:1rem;
-  border-left:3px solid var(--teal);
-  border-radius:0 4px 4px 0;
-  margin:1rem 0;
-}
-.pillar-card h3 {
-  font-family:'Merriweather',serif; color:var(--primary);
-  margin:0 0 0.4rem; font-size:0.95rem;
-}
-.pillar-card .pillar-letter {
-  display:inline-block; background:var(--teal); color:#fff;
-  font-family:'Merriweather',serif; font-weight:900;
-  width:26px; height:26px; line-height:26px; text-align:center;
-  border-radius:50%; margin-right:0.4rem; font-size:0.85rem;
-}
-
-/* ===== TIMELINE ===== */
-.timeline {
-  position:relative; padding-left:1.75rem; margin:1.25rem 0;
-}
-.timeline::before {
-  content:''; position:absolute; left:0.5rem; top:0; bottom:0;
-  width:2px; background:var(--teal);
-}
-.timeline-item {
-  position:relative; margin-bottom:1rem;
-}
-.timeline-item::before {
-  content:''; position:absolute; left:-1.5rem; top:0.35rem;
-  width:9px; height:9px; border-radius:50%;
-  background:var(--teal); border:2px solid #fff;
-  box-shadow:0 0 0 1px var(--teal);
-}
-.timeline-item .week {
-  font-size:0.7rem; font-weight:600; color:var(--accent);
-  text-transform:uppercase; letter-spacing:0.1em;
-}
-.timeline-item p { font-size:0.82rem; margin:0; }
-
-/* ===== GAP CALLOUT ===== */
-.gap-callout {
-  background:var(--surface); padding:1rem;
-  border-left:4px solid var(--accent);
-  border-radius:0 4px 4px 0;
-  margin:1.25rem 0;
-}
-.gap-callout h4 {
-  font-family:'Merriweather',serif; color:var(--primary);
-  font-size:0.9rem; margin:0 0 0.4rem;
-}
-
-/* ===== METHOD CARD ===== */
-.method-card {
-  background:var(--surface); padding:1rem;
-  border:1px solid var(--border); border-radius:4px;
-  margin-bottom:0.75rem;
-}
-.method-card .status {
-  display:inline-block; padding:0.1rem 0.5rem; border-radius:10px;
-  font-size:0.65rem; font-weight:600; margin-bottom:0.4rem;
-}
-.method-card .status.completed { background:#E8F5E9; color:#2E7D32; }
-.method-card .status.planned { background:#FFF3E0; color:#E65100; }
-.method-card .status.secondary { background:#E0F2F1; color:#00695C; }
-
-/* ===== COVER PAGE ===== */
-.cover-page {
-  max-width:800px;
-  margin:60px auto 0;
-  background:#fff;
-  border-radius:8px;
-  overflow:hidden;
-  box-shadow:0 2px 16px rgba(0,0,0,0.08);
-  page-break-after:always;
-}
-.cover-hero {
-  position:relative;
-  width:100%;
-  height:280px;
-  overflow:hidden;
-}
-.cover-hero img {
-  width:100%; height:100%;
-  object-fit:cover;
-  object-position:center top;
-  filter:brightness(0.7);
-}
-.cover-hero-overlay {
-  position:absolute; bottom:0; left:0; right:0;
-  padding:1.5rem;
-  background:linear-gradient(transparent, rgba(0,0,0,0.7));
-  color:#fff;
-}
-.cover-hero-overlay h2 {
-  font-family:'Merriweather',serif;
-  font-size:1.6rem; font-weight:900;
-  color:#fff;
-  text-shadow:0 2px 4px rgba(0,0,0,0.5);
-  margin:0;
-  border:none;
-}
-.cover-hero-overlay .tagline {
-  font-size:0.9rem;
-  font-style:italic;
-  color:rgba(255,255,255,0.9);
-  margin-top:0.2rem;
-}
-.cover-body {
-  padding:2rem 2.5rem 2rem;
-  text-align:center;
-}
-.cover-deca {
-  display:flex; align-items:center; justify-content:center; gap:1rem;
-  margin-bottom:1.5rem;
-}
-.cover-deca img { height:22px; }
-.cover-deca .deca-line {
-  width:40px; height:1px; background:var(--accent);
-}
-.cover-title {
-  font-family:'Merriweather',serif;
-  font-size:1.25rem; font-weight:700;
-  color:var(--primary-dark);
-  line-height:1.4;
-  margin-bottom:1.25rem;
-}
-.cover-divider {
-  width:50px; height:2px;
-  background:linear-gradient(90deg, var(--teal), var(--accent));
-  margin:1.25rem auto;
-}
-.cover-meta {
-  font-size:0.85rem; color:var(--text-muted);
-  line-height:2; margin-bottom:1.5rem;
-}
-.cover-meta strong { color:var(--text); }
-.cover-event {
-  font-size:0.7rem; color:var(--text-muted);
-  letter-spacing:0.15em; text-transform:uppercase;
-  margin-top:1rem;
-  padding-top:1rem;
-  border-top:1px solid var(--border);
-}
-
-/* ===== TOC ===== */
-.toc-page {
-  max-width:800px;
-  margin:60px auto 0;
-  background:#fff;
-  padding:2.5rem 3rem;
-  border-radius:8px;
-  box-shadow:0 1px 4px rgba(0,0,0,0.04);
-  border-top:3px solid var(--teal);
-}
-.toc-page h1 {
-  font-family:'Merriweather',serif;
-  color:var(--primary);
-  font-size:1.5rem; font-weight:900;
-  margin-bottom:0.3rem;
-  border:none;
-  padding-bottom:0;
-}
-.toc-page .toc-subtitle {
-  font-size:0.72rem; color:var(--text-muted);
-  letter-spacing:0.1em; text-transform:uppercase;
-  margin-bottom:2rem;
-}
-.toc-section { margin-bottom:1.25rem; }
-.toc-section h2 {
-  font-family:'Merriweather',serif;
-  color:var(--primary-dark);
-  font-size:1rem; font-weight:700;
-  margin:0 0 0.4rem;
-  border:none;
-  padding:0;
-}
-.toc-section p {
-  font-size:0.82rem; color:var(--text-muted);
-  margin:0.15rem 0; padding-left:1.25rem;
-}
-.toc-divider {
-  width:100%; height:1px;
-  background:linear-gradient(90deg, transparent, var(--border), transparent);
-  margin:1.5rem 0;
-}
-
-/* ===== NAVIGATION CONTROLS ===== */
-.nav-controls {
-  position:fixed; bottom:1.25rem; right:1.25rem;
-  display:flex; gap:0.4rem; z-index:1000;
-}
-.nav-controls button {
-  width:40px; height:40px; border-radius:50%;
-  border:1px solid var(--border);
-  background:rgba(255,255,255,0.95);
-  color:var(--primary);
-  font-size:1.1rem; cursor:pointer;
-  display:flex; align-items:center; justify-content:center;
-  box-shadow:0 2px 8px rgba(0,0,0,0.1);
-  transition:all 0.15s;
-  backdrop-filter:blur(4px);
-}
-.nav-controls button:hover {
-  background:var(--primary); color:#fff;
-  box-shadow:0 4px 12px rgba(0,0,0,0.15);
-}
-.page-indicator {
-  position:fixed; bottom:1.25rem; left:1.25rem;
-  font-size:0.72rem; color:var(--text-muted);
-  background:rgba(255,255,255,0.95);
-  padding:0.35rem 0.7rem; border-radius:12px;
-  border:1px solid var(--border);
-  box-shadow:0 1px 4px rgba(0,0,0,0.06);
-  z-index:1000;
-  backdrop-filter:blur(4px);
-}
-
 /* ===== PRINT ===== */
 @media print {
-  .top-bar, .nav, .nav-controls, .page-indicator { display:none !important; }
   .page, .cover-page, .toc-page {
-    margin:0; padding:1.5cm 2cm;
-    box-shadow:none; border-radius:0;
+    margin:0;
+    padding:1.5cm 2cm;
+    box-shadow:none;
+    border:none;
     page-break-after:always;
   }
-  body { background:#fff; }
+  .page::before {
+    background:var(--primary) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  thead th {
+    background:var(--primary) !important;
+    color:#FFFFFF !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .revenue-bar .segment {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .stat .number {
+    color:var(--primary-dark) !important;
+  }
+  body { background:#FFFFFF; }
   .photo-frame { break-inside:avoid; }
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width:860px) {
-  .page, .toc-page { margin:60px 0 0; border-radius:0; }
-  .cover-page { margin:56px 0 0; border-radius:0; }
+  .page, .toc-page { margin:48px 0 0; }
+  .cover-page { margin:48px 0 0; }
   .page { padding:2rem 1.5rem 1.5rem; }
   .stat-row { flex-direction:column; }
   .infographic { grid-template-columns:1fr; }
   .swot-grid { grid-template-columns:1fr; }
   .photo-grid { grid-template-columns:1fr; }
-  .nav { padding:0 1rem; }
-  .nav-title { display:none; }
+  .toc-page { padding:2rem 1.5rem; }
 }
+
 
 </style>
 </head>
@@ -565,61 +726,49 @@ thead th {
   <div class="bib-entry"><span class="citation-number">[9]</span> Apollo Pharmacy. (2024). "CRM System Performance Report." Internal document, Apollo Hospitals Enterprise Ltd.</div>
   <div class="bib-entry"><span class="citation-number">[10]</span> National Community Pharmacists Association. (2024). "The State of Independent Pharmacy 2024." NCPA Publications.</div>
   <h1>VIII. Appendix</h1>
-  <h2>Appendix A: Patient Survey Instrument</h2>
-  <div class="appendix-section"><h4>Section A: Demographics</h4>
-    <div class="survey-question"><span class="q-number">A1.</span> What is your age group? <span class="q-type">[Single choice: Under 18 / 18-24 / 25-34 / 35-44 / 45-54 / 55-64 / 65+]</span></div>
-    <div class="survey-question"><span class="q-number">A2.</span> How many people are in your household? <span class="q-type">[Number: ___]</span></div>
-    <div class="survey-question"><span class="q-number">A3.</span> How many prescriptions does your household fill per month? <span class="q-type">[Number: ___]</span></div>
-  </div>
-  <div class="appendix-section"><h4>Section B: Pharmacy Usage</h4>
-    <div class="survey-question"><span class="q-number">B1.</span> How long have you been a StarCare patient? <span class="q-type">[Single choice: Less than 1 month / 1-6 months / 6-12 months / 1-2 years / 2+ years]</span></div>
-    <div class="survey-question"><span class="q-number">B2.</span> How often do you fill prescriptions at StarCare? <span class="q-type">[Single choice: Every time / Most of the time / Sometimes / Rarely / Never (first-time)]</span></div>
-    <div class="survey-question"><span class="q-number">B3.</span> Have you used StarCare's home delivery service? <span class="q-type">[Single choice: Yes, regularly / Yes, once or twice / No, but interested / No, not interested]</span></div>
-    <div class="survey-question"><span class="q-number">B4.</span> How often do you purchase OTC or wellness products at StarCare? <span class="q-type">[Single choice: Every fill / Sometimes / Rarely / Never]</span></div>
-    <div class="survey-question"><span class="q-number">B5.</span> Which StarCare services have you used? <span class="q-type">[Multiple choice: Prescription filling / Compounding / Immunizations / MTM / DME / Veterinary / Delivery / None]</span></div>
-    <div class="survey-question"><span class="q-number">B6.</span> What was your reason for choosing StarCare? <span class="q-type">[Multiple choice: Personal recommendation / Proximity / Insurance requirement / Previous pharmacy closed / Staff recommendation / Other]</span></div>
-  </div>
-  <div class="appendix-section"><h4>Section C: Satisfaction Drivers (5-point Likert scale)</h4>
-    <div class="survey-question"><span class="q-number">C1.</span> Staff knowledge about medications</div>
-    <div class="survey-question"><span class="q-number">C2.</span> Wait time at pickup</div>
-    <div class="survey-question"><span class="q-number">C3.</span> Clarity of copay explanation</div>
-    <div class="survey-question"><span class="q-number">C4.</span> Store atmosphere and cleanliness</div>
-    <div class="survey-question"><span class="q-number">C5.</span> Ease of online refill process</div>
-    <div class="survey-question"><span class="q-number">C6.</span> Quality of compounding services</div>
-    <div class="survey-question"><span class="q-number">C7.</span> Frequency of staff greeting by name</div>
-    <div class="survey-question"><span class="q-number">C8.</span> Overall satisfaction with StarCare</div>
-  </div>
-  <div class="appendix-section"><h4>Section D: Loyalty Interest</h4>
-    <div class="survey-question"><span class="q-number">D1.</span> Would you participate in a loyalty rewards program? <span class="q-type">[Single choice: Definitely / Probably / Maybe / Probably not / Definitely not]</span></div>
-    <div class="survey-question"><span class="q-number">D2.</span> Which rewards would you value most? <span class="q-type">[Multiple choice: OTC discount / Free health screening / Priority service / Free delivery / Birthday gift / Referral bonus]</span></div>
-    <div class="survey-question"><span class="q-number">D3.</span> How likely are you to refer a friend or family member to StarCare? <span class="q-type">[Single choice: Very likely / Somewhat likely / Neutral / Somewhat unlikely / Very unlikely]</span></div>
-    <div class="survey-question"><span class="q-number">D4.</span> Would you prefer a stamp card or a points-based system? <span class="q-type">[Single choice: Stamp card / Points-based / No preference]</span></div>
-    <div class="survey-question"><span class="q-number">D5.</span> How often would you check your loyalty program status? <span class="q-type">[Single choice: Every visit / Weekly / Monthly / Rarely]</span></div>
-    <div class="survey-question"><span class="q-number">D6.</span> Would you like to receive health tips via SMS? <span class="q-type">[Single choice: Yes / No]</span></div>
-    <div class="survey-question"><span class="q-number">D7.</span> What additional rewards would encourage you to return more often? <span class="q-type">[Open-ended]</span></div>
-  </div>
-  <div class="appendix-section"><h4>Section E: Open Feedback</h4>
-    <div class="survey-question"><span class="q-number">E1.</span> What is one thing StarCare could do to improve your experience? <span class="q-type">[Open-ended]</span></div>
-    <div class="survey-question"><span class="q-number">E2.</span> What do you appreciate most about StarCare? <span class="q-type">[Open-ended]</span></div>
-    <div class="survey-question"><span class="q-number">E3.</span> Any other comments or suggestions? <span class="q-type">[Open-ended]</span></div>
-  </div>
-  <h2>Appendix B: Competitor Observation Checklist</h2>
+  <h2>Appendix A: Completed Observation Data</h2>
   <div class="appendix-section">
-    <p>Each competitor location (CVS, Walmart, H-E-B) is visited 2 times: one weekday evening (after 4:30 PM) and one Saturday morning. Observations are recorded using the following checklist:</p>
+    <p><strong>Note:</strong> Patient surveys and stakeholder interviews were not completed due to StarCare's unresponsiveness to outreach attempts. All primary research data consists of competitor observations conducted November 13-14, 2026. Below is the complete observation dataset.</p>
+    <h4>Observation Checklist (12 Metrics Recorded Per Visit)</h4>
     <ol>
-      <li>Wait time (seconds from entry to staff interaction)</li>
-      <li>Number of customers served per 15-minute interval</li>
-      <li>Staff-customer interaction quality (1-5 scale)</li>
-      <li>Loyalty program visibility (signage, receipts, staff mentions)</li>
-      <li>OTC product placement and cross-merchandising</li>
-      <li>Digital engagement (app promotion, WiFi branding, digital screens)</li>
-      <li>Store cleanliness and organization</li>
-      <li>Checkout upselling or recommendation behavior</li>
-      <li>Overall customer experience rating (1-5)</li>
+      <li>Date and time of observation</li>
+      <li>Observer identification</li>
+      <li>Pharmacy location</li>
+      <li>Visit type (Weekday PM 4-7 PM / Saturday AM 10 AM-1:30 PM)</li>
+      <li>Traffic level (Slow / Moderate / Busy)</li>
+      <li>Total customers observed</li>
+      <li>Customers served</li>
+      <li>Average wait time (seconds and display format)</li>
+      <li>Staff at counter</li>
+      <li>Customer-to-staff ratio</li>
+      <li>Staff-customer interaction quality (1-5)</li>
+      <li>Name recognition (Rarely / Never)</li>
+      <li>Medication counseling (Always / Often / Rarely)</li>
+      <li>OTC display quality (High / Medium / Low)</li>
+      <li>Loyalty program visible (Yes / No)</li>
+      <li>Drive-thru available (Yes / No + car count)</li>
+      <li>Atmosphere rating (1-5)</li>
+      <li>Overall rating (1-5)</li>
+      <li>Open notes</li>
     </ol>
-      <li>Overall customer experience rating (1-5)</li>
-    </ol>
+    <h4>Summary of All 6 Observations</h4>
+    <table>
+      <thead><tr><th>Location</th><th>Visit</th><th>Traffic</th><th>Customers</th><th>Avg Wait</th><th>Staff</th><th>Ratio</th><th>Interaction</th><th>Overall</th></tr></thead>
+      <tbody>
+        <tr><td>Prosper Pharmacy</td><td>Weekday PM</td><td>Moderate</td><td>5</td><td>1:34</td><td>2</td><td>1.5</td><td>5</td><td>5</td></tr>
+        <tr><td>Prosper Pharmacy</td><td>Sat AM</td><td>Moderate</td><td>9</td><td>1:50</td><td>2</td><td>0.5</td><td>5</td><td>5</td></tr>
+        <tr><td>CVS</td><td>Weekday PM</td><td>Busy</td><td>18</td><td>6:01</td><td>3</td><td>8.3</td><td>4</td><td>4</td></tr>
+        <tr><td>CVS</td><td>Sat AM</td><td>Slow</td><td>13</td><td>4:18</td><td>3</td><td>5.0</td><td>4</td><td>4</td></tr>
+        <tr><td>H-E-B</td><td>Weekday PM</td><td>Slow</td><td>7</td><td>4:37</td><td>2</td><td>5.0</td><td>3</td><td>4</td></tr>
+        <tr><td>H-E-B</td><td>Sat AM</td><td>Moderate</td><td>2</td><td>1:31</td><td>2</td><td>6.5</td><td>4</td><td>4</td></tr>
+      </tbody>
+    </table>
   </div>
+  <h2>Appendix B: Observation Protocol</h2>
+  <div class="appendix-section">
+    <p>Each competitor location (Prosper Pharmacy, CVS, H-E-B) was visited 2 times: one weekday evening (4:30-7:30 PM) and one Saturday morning (10:00 AM-1:30 PM). Observations were recorded using a standardized checklist covering 12 metrics per visit. All observations were conducted by team members working after school hours and on weekends.</p>
+  </div>
+  <div class="page-number">Page 20 of 20</div>
   <div class="page-number">Page 20 of 20</div>
 </div>
 <div class="nav-controls">
