@@ -343,14 +343,14 @@
       <tr><td>Name Recognition</td><td>Rarely</td><td>Never</td><td>Never</td></tr>
       <tr><td>Medication Counseling</td><td><strong>Always + Detailed</strong></td><td>Always</td><td>Always</td></tr>
       <tr><td>OTC Display</td><td>Medium</td><td>High</td><td><strong>High</strong></td></tr>
-      <tr><td>Loyalty Program</td><td>None</td><td>HSA/FSA Benefits</td><td>None</td></tr>
+      <tr><td>Loyalty Program</td><td>Referral Rewards (100 pts)</td><td>HSA/FSA Benefits</td><td>None</td></tr>
       <tr><td>Drive-Thru</td><td>No</td><td>Yes (3 cars)</td><td>Yes</td></tr>
       <tr><td>Atmosphere (1-5)</td><td><strong>5.0</strong></td><td><strong>5.0</strong></td><td><strong>5.0</strong></td></tr>
       <tr><td>Overall Rating (1-5)</td><td><strong>5.0</strong></td><td>4.0</td><td>4.0</td></tr>
     </tbody>
   </table>
   <h4>Key Observations by Location</h4>
-  <p><strong>Prosper Pharmacy (Weekday PM + Saturday AM):</strong> StarCare had the shortest average wait time (102 seconds) and the highest overall rating (5.0). Staff were highly attentive — one managed pickups while the other handled prescriptions digitally and answered the phone. The phone caller received "very detailed information and precise points in time where the medication would be ready." When a customer had a problem opening her medication container, staff listened carefully, offered a solution (different container), and said they would look into the issue. Small talk was struck with every customer. The waiting area included a mini fridge with snacks and a coffee machine — amenities no chain offers. One customer requested compounding pricing; the receptionist calculated it and promised to follow up Monday. <em>Key takeaway: StarCare delivers the highest interaction quality and most personalized service, but has no loyalty program and limited OTC display.</em></p>
+  <p><strong>Prosper Pharmacy (Weekday PM + Saturday AM):</strong> Prosper Pharmacy had the shortest average wait time (102 seconds) and the highest overall rating (5.0). Staff were highly attentive — one managed pickups while the other handled prescriptions digitally and answered the phone. The phone caller received "very detailed information and precise points in time where the medication would be ready." When a customer had a problem opening her medication container, staff listened carefully, offered a solution (different container), and said they would look into the issue. Small talk was struck with every customer. The waiting area included a mini fridge with snacks and a coffee machine — amenities no chain offers. One customer requested compounding pricing; the receptionist calculated it and promised to follow up Monday. Prosper Pharmacy also operates a referral rewards program — patients earn 100 reward points for each friend or family member they refer on their first prescription purchase — though this was not visibly promoted in-store. <em>Key takeaway: Prosper Pharmacy delivers the highest interaction quality and most personalized service, and has a referral loyalty program (though it is not actively promoted to walk-in patients).</em></p>
   <p><strong>CVS (Weekday PM + Saturday AM):</strong> CVS had the longest average wait time (258 seconds / 4:18) and the highest customer-to-staff ratio (up to 8.3:1). The store was very busy, especially on weekday evenings, with 25 customers observed and 3 cars in the drive-thru. CVS was the only location with a visible loyalty program (HSA/FSA benefits prominently displayed). Staff medication counseling was consistent ("Always"), but interactions felt transactional — name recognition was "never" observed. The atmosphere was rated 5.0 despite "plain walls, minimal decorations" — likely because the wide variety of products created a sense of abundance. <em>Key takeaway: CVS excels at scale and loyalty program visibility but struggles with wait times and personal interaction.</em></p>
   <p><strong>H-E-B Pharmacy (Weekday PM + Saturday AM):</strong> H-E-B had the most variable wait times — from 70 seconds to 13:27 (one customer had a complex situation). On Saturday morning, H-E-B served 2 customers in just 87-94 seconds despite having 13 people in the store and 9 cars in the drive-thru. H-E-B scored highest on OTC cross-merchandising ("High") and had the most vibrant pharmacy environment — "bright blue and red colors, consultation included, tons of posters about prescriptions and refills and pre-paid pick up." They also offered a public blood pressure checker. However, name recognition was "never" observed, and the loyalty program was not visible. <em>Key takeaway: H-E-B creates the most engaging pharmacy environment but doesn't leverage personal relationships the way StarCare does.</em></p>
   <div class="page-number">Page 10 of 20</div>
@@ -751,14 +751,14 @@
     </ol>
     <h4>Summary of All 6 Observations</h4>
     <table>
-      <thead><tr><th>Location</th><th>Visit</th><th>Traffic</th><th>Customers</th><th>Avg Wait</th><th>Staff</th><th>Ratio</th><th>Interaction</th><th>Overall</th></tr></thead>
+      <thead><tr><th>Location</th><th>Visit</th><th>Traffic</th><th>Customers</th><th>Avg Wait</th><th>Staff</th><th>Ratio</th><th>Interaction</th><th>Loyalty</th><th>Overall</th></tr></thead>
       <tbody>
-        <tr><td>Prosper Pharmacy</td><td>Weekday PM</td><td>Moderate</td><td>5</td><td>1:34</td><td>2</td><td>1.5</td><td>5</td><td>5</td></tr>
-        <tr><td>Prosper Pharmacy</td><td>Sat AM</td><td>Moderate</td><td>9</td><td>1:50</td><td>2</td><td>0.5</td><td>5</td><td>5</td></tr>
-        <tr><td>CVS</td><td>Weekday PM</td><td>Busy</td><td>18</td><td>6:01</td><td>3</td><td>8.3</td><td>4</td><td>4</td></tr>
-        <tr><td>CVS</td><td>Sat AM</td><td>Slow</td><td>13</td><td>4:18</td><td>3</td><td>5.0</td><td>4</td><td>4</td></tr>
-        <tr><td>H-E-B</td><td>Weekday PM</td><td>Slow</td><td>7</td><td>4:37</td><td>2</td><td>5.0</td><td>3</td><td>4</td></tr>
-        <tr><td>H-E-B</td><td>Sat AM</td><td>Moderate</td><td>2</td><td>1:31</td><td>2</td><td>6.5</td><td>4</td><td>4</td></tr>
+        <tr><td>Prosper Pharmacy</td><td>Weekday PM</td><td>Moderate</td><td>5</td><td>1:34</td><td>2</td><td>1.5</td><td>5</td><td>Referral (100 pts)</td><td>5</td></tr>
+        <tr><td>Prosper Pharmacy</td><td>Sat AM</td><td>Moderate</td><td>9</td><td>1:50</td><td>2</td><td>0.5</td><td>5</td><td>Referral (100 pts)</td><td>5</td></tr>
+        <tr><td>CVS</td><td>Weekday PM</td><td>Busy</td><td>18</td><td>6:01</td><td>3</td><td>8.3</td><td>4</td><td>HSA/FSA</td><td>4</td></tr>
+        <tr><td>CVS</td><td>Sat AM</td><td>Slow</td><td>13</td><td>4:18</td><td>3</td><td>5.0</td><td>4</td><td>HSA/FSA</td><td>4</td></tr>
+        <tr><td>H-E-B</td><td>Weekday PM</td><td>Slow</td><td>7</td><td>4:37</td><td>2</td><td>5.0</td><td>3</td><td>None</td><td>4</td></tr>
+        <tr><td>H-E-B</td><td>Sat AM</td><td>Moderate</td><td>2</td><td>1:31</td><td>2</td><td>6.5</td><td>4</td><td>None</td><td>4</td></tr>
       </tbody>
     </table>
   </div>
