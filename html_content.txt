@@ -16,11 +16,11 @@
   <h2>The Problem</h2>
   <p>Independent pharmacies lose about 3-5% of their customers every year. The average return rate at independent pharmacies is just 42%, which means nearly 6 out of 10 patients who fill a prescription at StarCare once will never come back. Meanwhile, 58% of customers will switch pharmacies if they find something more convenient, and only 23% of independent pharmacies have any kind of digital loyalty program — even though 72% of customers want more personalized service from their pharmacy.</p>
   <p>StarCare's problems come down to three things. First, there's <strong>no loyalty infrastructure</strong> — no formal program, no refill reminders, no way to know if a patient is still coming back. Second, <strong>billing and insurance confusion</strong> is driving patients away. StarCare has a 4.5-star Google rating but only 2.6 stars on Yelp, and the difference is entirely about billing complaints — unexpected copays, insurance errors, payment app failures. Third, <strong>chain pharmacies are competing hard</strong>. CVS has multiple locations in Prosper, Walmart and H-E-B have pharmacies in town, and Costco Pharmacy (765/1,000 JD Power score) is the second-highest-rated pharmacy type. Prosper families are affluent but price-sensitive — they'll switch for convenience, but they'll stay for trust.</p>
-  <h2>The Solution: Project Swastik</h2>
-  <p>Project Swastik (which means "conducive to well-being" in Sanskrit) is a three-part strategy built specifically for an independent pharmacy like StarCare. Pillar 1 — <strong>Drishti (Vision): Transparent Care</strong> — eliminates billing confusion by giving every patient a clear written estimate of their copay before filling the prescription, sending automated alerts when prior authorizations are about to expire, and following up via SMS within 24 hours of pickup. Pillar 2 — <strong>Seva (Service): Personalized Wellness</strong> — a tiered loyalty program modeled on Apollo Pharmacy's CRM system, which took their repeat purchase rate from 28% to 42% and prescription refill compliance from 61% to 82%. Four tiers: Seed (new patient), Herb (3+ refills), Wellness (6+ refills + 5 OTC purchases), and Swastik (12+ refills + referral). Pillar 3 — <strong>Milap (Connection): Community Connection</strong> — free blood pressure screenings at local schools, immunization clinics at Prosper ISD events, sponsoring Prosper High School athletics, and personalized follow-up calls when a patient starts a new medication. Chains literally cannot do this at scale.</p>
+  <h2>The Solution: Project StarCare</h2>
+  <p>Project StarCare is a three-part strategy built specifically for an independent pharmacy like StarCare. Pillar 1 — <strong>Transparent Care</strong> — eliminates billing confusion by giving every patient a clear written estimate of their copay before filling the prescription, sending automated alerts when prior authorizations are about to expire, and following up via SMS within 24 hours of pickup. Pillar 2 — <strong>Personalized Wellness</strong> — a tiered loyalty program modeled on Apollo Pharmacy's CRM system, which took their repeat purchase rate from 28% to 42% and prescription refill compliance from 61% to 82%. Four tiers: Seed (new patient), Herb (3+ refills), Wellness (6+ refills + 5 OTC purchases), and StarCare (12+ refills + referral). Pillar 3 — <strong>Community Connection</strong> — free blood pressure screenings at local schools, immunization clinics at Prosper ISD events, sponsoring Prosper High School athletics, and personalized follow-up calls when a patient starts a new medication. Chains literally cannot do this at scale.</p>
   <h2>Projected Outcomes</h2>
-  <p>Project Swastik targets moving the patient return rate from 42% to 78%, getting prescription refill compliance up to 68%, and increasing OTC and wellness revenue per patient by 35% within six months. Total projected Year 1 revenue: $2.25 million, with break-even in about 5 days and a 3,510% 12-month ROI on a $6,400 investment.</p>
-  <p class="note"><em>Note: This project runs from October 16 to November 16, 2026. Secondary research (JD Power study, Census data, StarCare digital assets, ConcertAI data quality research) is complete. Primary research consisted of systematic competitor observations at three Prosper-area pharmacy locations (CVS, H-E-B, and Prosper Pharmacy), with two visits per location conducted November 13-14, 2026. Patient surveys and stakeholder interviews were not completed due to StarCare's unresponsiveness to outreach attempts; all findings and conclusions in this entry are derived from competitor observation data and secondary research.</em></p>
+  <p>Project StarCare targets moving the patient return rate from 42% to 78%, getting prescription refill compliance up to 68%, and increasing OTC and wellness revenue per patient by 35% within six months. Total projected Year 1 revenue: $2.25 million, with break-even in about 5 days and a 3,510% 12-month ROI on a $6,400 investment.</p>
+  <p class="note"><em>Note: This project runs from October 16 to November 16, 2026. Secondary research (JD Power study, Census data, StarCare digital assets, ConcertAI data quality research) is complete. Primary research consisted of systematic competitor observations at three Prosper-area pharmacy locations (CVS, H-E-B, and Prosper Pharmacy), with two visits per location conducted November 13-14, 2026. A stakeholder interview with Peter Nguyen, a physics teacher and StarCare patient, was conducted on November 15, 2026. All findings and conclusions in this entry are derived from competitor observation data, the stakeholder interview, and secondary research.</em></p>
   <div class="page-number">Page 1 of 20</div>
 </div>
 
@@ -43,14 +43,14 @@
     <span class="vet">Veterinary</span>
   </div>
   <h2>Key Strategic Recommendations</h2>
-  <p><strong>1. Transparent Billing (Drishti):</strong> Implement pre-fill copay estimates, automated prior authorization alerts, and post-visit SMS satisfaction surveys. This directly addresses the #1 reason patients leave — billing confusion.</p>
-  <p><strong>2. Tiered Loyalty Program (Seva):</strong> Launch a stamp-and-points card with four tiers (Seed, Herb, Wellness, Swastik) that rewards prescription refill consistency, OTC purchases, and referrals. Modeled on Apollo Pharmacy's CRM system, which achieved a 28% to 42% repeat purchase rate.</p>
-  <p><strong>3. Community Connection (Milap):</strong> Position StarCare as a health partner, not just a pharmacy. Free blood pressure screenings at Prosper ISD schools, immunization clinics at school events, sponsoring PHS athletics, and personalized follow-up calls when patients start new medications.</p>
+  <p><strong>1. Transparent Billing:</strong> Implement pre-fill copay estimates, automated prior authorization alerts, and post-visit SMS satisfaction surveys. This directly addresses the #1 reason patients leave — billing confusion.</p>
+  <p><strong>2. Tiered Loyalty Program:</strong> Launch a stamp-and-points card with four tiers (Seed, Herb, Wellness, StarCare) that rewards prescription refill consistency, OTC purchases, and referrals. Modeled on Apollo Pharmacy's CRM system, which achieved a 28% to 42% repeat purchase rate.</p>
+  <p><strong>3. Community Connection:</strong> Position StarCare as a health partner, not just a pharmacy. Free blood pressure screenings at Prosper ISD schools, immunization clinics at school events, sponsoring PHS athletics, and personalized follow-up calls when patients start new medications.</p>
   <h2>Financial Summary</h2>
-  <p>The total six-month Project Swastik budget is $6,400. Projected Year 1 revenue: $2.25 million. Break-even: approximately 5 days of increased prescription fills and OTC sales. 12-month ROI: 3,510%. Even in the conservative scenario (achieving only half of our targets), the 12-month ROI is still 2,820%.</p>
+  <p>The total six-month Project StarCare budget is $6,400. Projected Year 1 revenue: $2.25 million. Break-even: approximately 5 days of increased prescription fills and OTC sales. 12-month ROI: 3,510%. Even in the conservative scenario (achieving only half of our targets), the 12-month ROI is still 2,820%.</p>
   <div class="key-insight">
     <strong>WHY THIS STRATEGY</strong>
-    The 2026-2027 DECA BMOR topic is "research what drives customer loyalty and repeat engagement." Project Swastik directly answers this question for StarCare Pharmacy: personal relationships drive loyalty, but those relationships need to be structured and consistent to be measurable. The three pillars — Transparent Care, Personalized Wellness, Community Connection — each address a different driver of retention identified in the JD Power 2025 study, competitor observations, and ConcertAI data quality research. This project runs October 16 – November 16, 2026, with primary research (competitor observations at three Prosper-area pharmacies) conducted after 4:30 PM and on weekends.
+    The 2026-2027 DECA BMOR topic is "research what drives customer loyalty and repeat engagement." Project StarCare directly answers this question for StarCare Pharmacy: personal relationships drive loyalty, but those relationships need to be structured and consistent to be measurable. The three pillars — Transparent Care, Personalized Wellness, Community Connection — each address a different driver of retention identified in the JD Power 2025 study, competitor observations, and ConcertAI data quality research. This project runs October 16 – November 16, 2026, with primary research (competitor observations at three Prosper-area pharmacies and a stakeholder interview with Peter Nguyen, a physics teacher and StarCare patient) conducted after 4:30 PM and on weekends.
   </div>
   <div class="page-number">Page 2 of 20</div>
 </div>
@@ -78,7 +78,7 @@
   </table>
   <h2>The 2026-2027 Topic: Customer Loyalty and Repeat Engagement</h2>
   <p>The DECA BMOR topic for 2026-2027 asks participants to "collaborate with a local business or organization to research what drives customer loyalty and repeat engagement." For StarCare Pharmacy, this question is critical. Independent pharmacies lose 3-5% of their customers every year, and the average return rate is just 42%. Meanwhile, chain pharmacies — despite scoring the lowest in customer satisfaction (643/1,000 in JD Power 2025) — still capture the majority of pharmacy market share because of convenience, pricing, and increasingly, loyalty programs.</p>
-  <p>StarCare has no loyalty program. No system for keeping patients coming back. No way to track who's staying and who's leaving. This entry addresses that gap by researching what drives loyalty in independent pharmacy patients and proposing a structured strategic plan — Project Swastik — to strengthen retention through three pillars: transparent care, personalized wellness, and community connection. The research runs from October 16 to November 16, 2026, with primary data collected after school hours and on weekends by this high school team.</p>
+  <p>StarCare has no loyalty program. No system for keeping patients coming back. No way to track who's staying and who's leaving. This entry addresses that gap by researching what drives loyalty in independent pharmacy patients and proposing a structured strategic plan — Project StarCare — to strengthen retention through three pillars: transparent care, personalized wellness, and community connection. The research runs from October 16 to November 16, 2026, with primary data collected after school hours and on weekends by this high school team.</p>
   <div class="page-number">Page 3 of 20</div>
 </div>
 
@@ -261,7 +261,7 @@
   <h2>B. Process Used to Conduct the Selected Research Methods</h2>
   <h3>Primary Research: Competitor Observations (Completed November 13-14, 2026)</h3>
   <p>Systematic observations were conducted at three Prosper-area pharmacy locations — Prosper Pharmacy, CVS, and H-E-B — with two visits per location (one weekday evening and one Saturday morning). A total of <strong>6 structured observations</strong> were completed, recording 12 metrics per visit using a standardized observation checklist.</p>
-  <p><em>Note: Patient surveys and stakeholder interviews were not completed due to StarCare's unresponsiveness to outreach attempts. All primary research data in this entry consists of competitor observations.</em></p>
+  <p><em>Note: A stakeholder interview with Peter Nguyen, a physics teacher and StarCare patient, was conducted on November 15, 2026. All primary research data in this entry consists of competitor observations and this stakeholder interview.</em></p>
   <div class="method-card"><span class="status completed">Nov 13-14</span><h4>Competitor Observations (6 total: 2 per location)</h4><p>Each location was visited twice: once on a weekday evening (4:30-7:30 PM) and once on a Saturday morning (10:00 AM-1:30 PM). Observations recorded using a standardized checklist covering: wait time (seconds from entry to staff interaction), number of customers served, staff at counter, customer-to-staff ratio, staff-customer interaction quality (1-5 scale), name recognition (yes/never), medication counseling (always/often/rarely), loyalty program visibility, OTC display quality, drive-thru status, atmosphere (1-5), and overall rating (1-5). All observations were conducted by team members working after school hours and on weekends.</p></div>
   <h3>Observation Checklist Design</h3>
   <p>The observation checklist was structured around five dimensions, designed to capture both quantitative and qualitative data in under 15 minutes per visit:</p>
@@ -332,8 +332,8 @@
   </table>
   <p><strong>Key finding: Prosper is a young, affluent, highly-educated family community.</strong> With 32.7% of residents under 18 and a median household income of $195,281, the people filling prescriptions at StarCare are mostly parents — managing meds for their kids, themselves, and sometimes aging parents. This demographic is ideal for a pharmacy focused on long-term patient relationships: they value trust and personalization over pure price, and they're likely to stay with a pharmacy that feels like it has their back.</p>
   <h3>Primary Research Findings: Patient Survey Results</h3>
-  <p>Primary research was conducted between November 13-14, 2026, consisting of systematic competitor observations at three Prosper-area pharmacy locations (CVS, H-E-B, and Prosper Pharmacy), with two visits per location — one weekday evening (4:30-7:30 PM) and one Saturday morning (10:00 AM-1:30 PM). A total of <strong>6 structured observations</strong> were completed, recording wait times, customer-to-staff ratios, interaction quality, loyalty program visibility, and OTC product placement. Patient surveys and stakeholder interviews were not completed due to StarCare's unresponsiveness to outreach attempts; this entry relies on competitor observation data and secondary research for all findings and conclusions.</p>
-  <p><em>Note: Patient surveys and stakeholder interviews were not completed due to StarCare's unresponsiveness to outreach attempts. All findings and conclusions in this entry are derived from competitor observation data and secondary research.</em></p>
+  <p>Primary research was conducted between November 13-15, 2026, consisting of systematic competitor observations at three Prosper-area pharmacy locations (CVS, H-E-B, and Prosper Pharmacy), with two visits per location — one weekday evening (4:30-7:30 PM) and one Saturday morning (10:00 AM-1:30 PM), plus a stakeholder interview with Peter Nguyen, a physics teacher and StarCare patient (November 15, 2026). A total of <strong>6 structured observations</strong> and <strong>1 stakeholder interview</strong> were completed, recording wait times, customer-to-staff ratios, interaction quality, loyalty program visibility, OTC product placement, and patient retention drivers.</p>
+  <p><em>Note: A stakeholder interview with Peter Nguyen, a physics teacher and 4-year StarCare patient, was conducted on November 15, 2026. All findings and conclusions in this entry are derived from competitor observation data, the stakeholder interview, and secondary research.</em></p>
   <h4>Observation Data Summary</h4>
   <table>
     <thead><tr><th>Metric</th><th>Prosper Pharmacy</th><th>CVS</th><th>H-E-B</th></tr></thead>
@@ -408,8 +408,8 @@
       <tr><td>What's one thing StarCare could change that would make you recommend it more?</td><td>"After they sent one refill reminder, they were never heard from again." — Suggests StarCare lacks ongoing patient communication after initial engagement.</td></tr>
     </tbody>
   </table>
-  <div class="key-insight"><strong>FINDING #5: THE BILLING GAP IS THE LOYALTY GAP</strong>The stark contrast between StarCare's 4.5-star Google rating and 2.6-star Yelp rating is entirely driven by billing and insurance complaints — not by staff quality or product range. This confirms that <em>the Drishti pillar (Transparent Care)</em> addresses the single largest threat to patient retention.</div>
-  <div class="key-insight"><strong>FINDING #6: THE COMMUNICATION GAP IS THE RETENTION GAP</strong>A long-term StarCare patient reported that after receiving one refill reminder, StarCare "was never heard from again." This is the core problem: StarCare has no system for ongoing patient communication. Patients who start with a referral or recommendation eventually fade into silence. The Drishti pillar's automated prior authorization alerts and post-visit SMS surveys directly address this gap — transforming StarCare from a pharmacy that patients forget into one that proactively maintains the relationship.</div>
+  <div class="key-insight"><strong>FINDING #5: THE BILLING GAP IS THE LOYALTY GAP</strong>The stark contrast between StarCare's 4.5-star Google rating and 2.6-star Yelp rating is entirely driven by billing and insurance complaints — not by staff quality or product range. This confirms that <em>the Transparent Care pillar</em> addresses the single largest threat to patient retention.</div>
+  <div class="key-insight"><strong>FINDING #6: THE COMMUNICATION GAP IS THE RETENTION GAP</strong>A long-term StarCare patient reported that after receiving one refill reminder, StarCare "was never heard from again." This is the core problem: StarCare has no system for ongoing patient communication. Patients who start with a referral or recommendation eventually fade into silence. The Transparent Care pillar's automated prior authorization alerts and post-visit SMS surveys directly address this gap — transforming StarCare from a pharmacy that patients forget into one that proactively maintains the relationship.</div>
   <div class="key-insight"><strong>FINDING #7: LOYALTY PROGRAMS ARE NOT TAKEN SERIOUSLY BY DELIVERY-ONLY PATIENTS</strong>The interviewee was indifferent to traditional pharmacy rewards programs (CVS ExtraCare, etc.) because he never visits the store. This suggests that any loyalty program designed for StarCare must be digital-first and delivery-compatible. A "monthly pickup day for all refills" was the preferred reward — suggesting that convenience and predictability matter more than points or discounts for delivery-only patients.</div>
   <div class="photo-grid">
     <div class="photo-frame">
@@ -436,7 +436,7 @@
     <li><strong>App/payment failures</strong> — digital payment system issues leading to frustrated experiences.</li>
     <li><strong>Wait times</strong> — occasional complaints about prescription fill times during peak hours.</li>
   </ul>
-  <div class="key-insight"><strong>FINDING #5: THE BILLING GAP IS THE LOYALTY GAP</strong>The stark contrast between StarCare's 4.5-star Google rating and 2.6-star Yelp rating is entirely driven by billing and insurance complaints — not by staff quality or product range. This confirms that <em>the Drishti pillar (Transparent Care)</em> addresses the single largest threat to patient retention.</div>
+  <div class="key-insight"><strong>FINDING #5: THE BILLING GAP IS THE LOYALTY GAP</strong>The stark contrast between StarCare's 4.5-star Google rating and 2.6-star Yelp rating is entirely driven by billing and insurance complaints — not by staff quality or product range. This confirms that <em>the Transparent Care pillar</em> addresses the single largest threat to patient retention.</div>
   <div class="page-number">Page 11 of 20</div>
 </div>
 
@@ -446,18 +446,18 @@
   <h1>IV. Findings and Conclusions of the Study (continued)</h1>
   <h2>B. Conclusions Based on the Findings</h2>
   <p>Based on the research findings — combining JD Power industry data, Prosper Census demographics, competitor observations at three Prosper-area pharmacies, StarCare's Google Maps and Yelp review analysis, and a semi-structured interview with a long-term StarCare patient (November 15, 2026) — three strategic conclusions emerge as the foundation for StarCare's loyalty strategy. Each one maps directly to a specific finding from the research:</p>
-  <div class="pillar-card"><h3><span class="pillar-letter">1</span> Drishti - Transparent Care (Vision)</h3><p><strong>Conclusion: Billing confusion is the #1 retention threat, not staff quality or product range.</strong> The 4.5-star Google vs. 2.6-star Yelp gap is entirely billing-related. This pattern is confirmed by JD Power data, which shows that "ease of ordering" and "insurance experience" are key metrics where chains underperform. Critically, the patient interview validated this: a long-term StarCare patient reported that "the most frustrating part of using any pharmacy was mainly them only telling the amount of payment needed after requesting the prescription." <strong>Implication:</strong> Every patient must receive a clear, written explanation of their copay before filling. Automated prior authorization alerts and post-visit satisfaction surveys via SMS will prevent billing surprises and catch issues before they become negative reviews. This pillar transforms StarCare's weakest review theme into a trust-building opportunity.</p></div>
-  <div class="pillar-card"><h3><span class="pillar-letter">2</span> Seva - Personalized Wellness (Service)</h3><p><strong>Conclusion: Personal relationships are the #1 loyalty driver, but they need to be structured to be measurable.</strong> Competitor observations confirm that StarCare already delivers the highest interaction quality of any pharmacy in Prosper (5.0/5.0 vs. 4.0 for CVS and 3.5-4.0 for H-E-B). JD Power data shows independent pharmacies (Health Mart 759, Good Neighbor 732) outscore national chains (643) by wide margins. But StarCare has no system to track whether a patient is still coming back. The patient interview revealed a critical gap: after receiving one refill reminder, the patient "was never heard from again." This confirms that StarCare's communication is sporadic, not systematic. <strong>Implication:</strong> A tiered loyalty program that rewards prescription refill consistency, OTC/wellness purchases, and referral behavior. Modeled on Apollo Pharmacy's CRM system, which achieved a 28% to 42% repeat purchase rate and 61% to 82% prescription refill compliance. Tiers: Seed to Herb to Wellness to Swastik.</p></div>
-  <div class="pillar-card"><h3><span class="pillar-letter">3</span> Milap - Community Connection (Connection)</h3><p><strong>Conclusion: Chains are weak in relationships, not in convenience.</strong> Competitor observations reveal that while chains score higher on convenience metrics (drive-thru, extended hours, app-based refills), they consistently score lower on staff-customer interaction quality. Name recognition was "never" observed at any chain location, while StarCare staff made small talk with every customer and proactively solved problems. The patient interview added a critical insight: when asked what reward he would value most, the interviewee selected "monthly pickup day for all refills" — suggesting that convenience and predictability matter more than points or discounts for delivery-only patients. <strong>Implication:</strong> Turn StarCare from a pharmacy into a <em>health partner</em>. Free blood pressure screenings at local schools. Immunization clinics at Prosper ISD events. Sponsorship of Prosper High School athletics. Personalized follow-up calls when a patient starts a new medication. This leverages StarCare's greatest competitive advantage: personal relationships.</p></div>
-  <div class="key-insight"><strong>WHY THESE THREE CONCLUSIONS</strong>Each conclusion maps directly to a research finding: Drishti addresses the billing gap (Finding #5 from Yelp review analysis + Finding #6 from patient interview — "only telling the amount of payment needed after requesting the prescription"), Seva amplifies the personal relationship advantage (Finding #1 from competitor observations — StarCare scored 5.0/5.0 on interaction quality, the highest of all locations, plus Finding #7 from patient interview — "after they sent one refill reminder, they were never heard from again"), and Milap leverages the chain weakness in relationships (Finding #3 — no pharmacy has a truly visible loyalty program, and name recognition was "never" observed at any chain). Together, they create a strategy that is <em>impossible for chains to replicate</em> — because chains don't have the personal relationships that make independent pharmacy unique.</div>
-  <h2>The Swastik Framework</h2>
-  <p>The Swastik framework (the ancient Sanskrit word meaning "conducive to well-being") represents the four directions of StarCare's strategy:</p>
+  <div class="pillar-card"><h3><span class="pillar-letter">1</span> Transparent Care (Vision)</h3><p><strong>Conclusion: Billing confusion is the #1 retention threat, not staff quality or product range.</strong> The 4.5-star Google vs. 2.6-star Yelp gap is entirely billing-related. This pattern is confirmed by JD Power data, which shows that "ease of ordering" and "insurance experience" are key metrics where chains underperform. Critically, the patient interview validated this: a long-term StarCare patient reported that "the most frustrating part of using any pharmacy was mainly them only telling the amount of payment needed after requesting the prescription." <strong>Implication:</strong> Every patient must receive a clear, written explanation of their copay before filling. Automated prior authorization alerts and post-visit satisfaction surveys via SMS will prevent billing surprises and catch issues before they become negative reviews. This pillar transforms StarCare's weakest review theme into a trust-building opportunity.</p></div>
+  <div class="pillar-card"><h3><span class="pillar-letter">2</span> Personalized Wellness (Service)</h3><p><strong>Conclusion: Personal relationships are the #1 loyalty driver, but they need to be structured to be measurable.</strong> Competitor observations confirm that StarCare already delivers the highest interaction quality of any pharmacy in Prosper (5.0/5.0 vs. 4.0 for CVS and 3.5-4.0 for H-E-B). JD Power data shows independent pharmacies (Health Mart 759, Good Neighbor 732) outscore national chains (643) by wide margins. But StarCare has no system to track whether a patient is still coming back. The patient interview revealed a critical gap: after receiving one refill reminder, the patient "was never heard from again." This confirms that StarCare's communication is sporadic, not systematic. <strong>Implication:</strong> A tiered loyalty program that rewards prescription refill consistency, OTC/wellness purchases, and referral behavior. Modeled on Apollo Pharmacy's CRM system, which achieved a 28% to 42% repeat purchase rate and 61% to 82% prescription refill compliance. Tiers: Seed to Herb to Wellness to StarCare.</p></div>
+  <div class="pillar-card"><h3><span class="pillar-letter">3</span> Community Connection (Connection)</h3><p><strong>Conclusion: Chains are weak in relationships, not in convenience.</strong> Competitor observations reveal that while chains score higher on convenience metrics (drive-thru, extended hours, app-based refills), they consistently score lower on staff-customer interaction quality. Name recognition was "never" observed at any chain location, while StarCare staff made small talk with every customer and proactively solved problems. The patient interview added a critical insight: when asked what reward he would value most, the interviewee selected "monthly pickup day for all refills" — suggesting that convenience and predictability matter more than points or discounts for delivery-only patients. <strong>Implication:</strong> Turn StarCare from a pharmacy into a <em>health partner</em>. Free blood pressure screenings at local schools. Immunization clinics at Prosper ISD events. Sponsorship of Prosper High School athletics. Personalized follow-up calls when a patient starts a new medication. This leverages StarCare's greatest competitive advantage: personal relationships. This pillar transforms StarCare's weakest review theme into a trust-building opportunity.</p></div>
+  <div class="key-insight"><strong>WHY THESE THREE CONCLUSIONS</strong>Each conclusion maps directly to a research finding: Transparent Care addresses the billing gap (Finding #5 from Yelp review analysis + Finding #6 from patient interview — "only telling the amount of payment needed after requesting the prescription"), Personalized Wellness amplifies the personal relationship advantage (Finding #1 from competitor observations — StarCare scored 5.0/5.0 on interaction quality, the highest of all locations, plus Finding #7 from patient interview — "after they sent one refill reminder, they were never heard from again"), and Community Connection leverages the chain weakness in relationships (Finding #3 — no pharmacy has a truly visible loyalty program, and name recognition was "never" observed at any chain). Together, they create a strategy that is <em>impossible for chains to replicate</em> — because chains don't have the personal relationships that make independent pharmacy unique.</div>
+  <h2>The Four Directions Framework</h2>
+  <p>The Four Directions framework represents the four directions of StarCare's strategy:</p>
   <table>
     <thead><tr><th>Direction</th><th>Pillar</th><th>Strategy</th><th>Metric</th></tr></thead>
     <tbody>
-      <tr><td><strong>North</strong></td><td>Drishti</td><td>Transparent billing and communication</td><td>Billing complaint rate</td></tr>
-      <tr><td><strong>East</strong></td><td>Seva</td><td>Tiered loyalty program</td><td>Prescription refill compliance</td></tr>
-      <tr><td><strong>South</strong></td><td>Milap</td><td>Community engagement</td><td>Community event attendance</td></tr>
+      <tr><td><strong>North</strong></td><td>Transparent Care</td><td>Transparent billing and communication</td><td>Billing complaint rate</td></tr>
+      <tr><td><strong>East</strong></td><td>Personalized Wellness</td><td>Tiered loyalty program</td><td>Prescription refill compliance</td></tr>
+      <tr><td><strong>South</strong></td><td>Community Connection</td><td>Community engagement</td><td>Community event attendance</td></tr>
       <tr><td><strong>West</strong></td><td>Foundation</td><td>Current operations (Rx, DME, Vet)</td><td>Revenue per patient</td></tr>
     </tbody>
   </table>
@@ -474,7 +474,7 @@
   <div class="section-label">Page 13 of 20</div>
   <h1>V. Proposed Strategic Plan</h1>
   <h2>A. Objectives and Rationale of the Proposed Strategic Plan</h2>
-  <p>Project Swastik has three measurable objectives over a six-month implementation period. These targets are based on the Apollo Pharmacy CRM benchmarks and JD Power retention data:</p>
+  <p>Project StarCare has three measurable objectives over a six-month implementation period. These targets are based on the Apollo Pharmacy CRM benchmarks and JD Power retention data:</p>
   <table>
     <thead><tr><th>Objective</th><th>Current Baseline</th><th>Target (6 Months)</th><th>How I'll Measure It</th></tr></thead>
     <tbody>
@@ -487,7 +487,7 @@
   </table>
   <h3>Rationale</h3>
   <p>These objectives are not arbitrary. They are based on benchmarks from Apollo Pharmacy's CRM system, which achieved similar improvements in a comparable independent pharmacy setting. The 42% to 78% return rate target is ambitious but achievable — Apollo went from 28% to 42% in their first six months with a basic CRM system. StarCare has an advantage Apollo didn't: a pre-existing culture of personal relationships. The chains score lowest in customer satisfaction (643/1,000 for CVS) because they lack personal relationships. StarCare has those relationships — the strategy is to make them measurable and consistent.</p>
-  <h2>Pillar 1: Drishti - Transparent Care</h2>
+  <h2>Pillar 1: Transparent Care</h2>
   <p><strong>The Problem:</strong> Billing and insurance confusion is the #1 driver of patient churn at StarCare. The gap between the 4.5-star Google rating and 2.6-star Yelp rating is entirely billing-related. This is the single biggest leak in StarCare's retention bucket.</p>
   <p><strong>What We'll Do:</strong></p>
   <ol>
@@ -503,12 +503,12 @@
 <div class="page">
   <div class="section-label">Page 14 of 20</div>
   <h1>V. Proposed Strategic Plan (continued)</h1>
-  <h2>Pillar 2: Seva - Personalized Wellness</h2>
+  <h2>Pillar 2: Personalized Wellness</h2>
   <p><strong>The Problem:</strong> StarCare has no formal loyalty program. Patients have no structured reason to return beyond habit or convenience. If a chain offers a discount nearby, they leave.</p>
   <p><strong>What We'll Do:</strong></p>
   <ol>
     <li><strong>Hybrid stamp/points card</strong> — Prescription refills earn stamps (5 refills = 1 free compounding service or health screening). OTC/wellness purchases earn points (1 point per $1 spent).</li>
-    <li><strong>Tiered benefits</strong> — Four tiers: Seed (new patient), Herb (3+ refills), Wellness (6+ refills + 5 OTC purchases), Swastik (12+ refills + referral). Each tier unlocks additional benefits.</li>
+    <li><strong>Tiered benefits</strong> — Four tiers: Seed (new patient), Herb (3+ refills), Wellness (6+ refills + 5 OTC purchases), StarCare (12+ refills + referral). Each tier unlocks additional benefits.</li>
     <li><strong>Referral rewards</strong> — Existing patients who refer a new patient receive a free health screening or product discount. This leverages StarCare's strength in personal relationships.</li>
   </ol>
   <p><strong>Tier Structure:</strong></p>
@@ -518,11 +518,11 @@
       <tr><td><strong>Seed</strong></td><td>New patient</td><td>Welcome kit, program intro</td><td>30%</td></tr>
       <tr><td><strong>Herb</strong></td><td>3+ refills</td><td>10% OTC discount, birthday health tip</td><td>40%</td></tr>
       <tr><td><strong>Wellness</strong></td><td>6+ refills + 5 OTC</td><td>Free health screening, priority service</td><td>20%</td></tr>
-      <tr><td><strong>Swastik</strong></td><td>12+ refills + referral</td><td>Annual wellness package, exclusive events</td><td>10%</td></tr>
+      <tr><td><strong>StarCare</strong></td><td>12+ refills + referral</td><td>Annual wellness package, exclusive events</td><td>10%</td></tr>
     </tbody>
   </table>
   <div class="key-insight"><strong>WHY THIS WORKS</strong>Modeled on Apollo Pharmacy's CRM system, which achieved a 28% to 42% repeat purchase rate and 61% to 82% prescription refill compliance. The tiered structure creates a progression that patients want to climb — each tier unlocks more valuable benefits, making it increasingly difficult to leave.</div>
-  <h2>Pillar 3: Milap - Community Connection</h2>
+  <h2>Pillar 3: Community Connection</h2>
   <p><strong>The Problem:</strong> StarCare is perceived as a pharmacy, not a health partner. Patients fill prescriptions but don't see StarCare as part of their health ecosystem. They don't know StarCare cares about their community — they just know StarCare fills prescriptions.</p>
   <p><strong>What We'll Do:</strong></p>
   <ol>
@@ -544,22 +544,22 @@
   <table>
     <thead><tr><th>Step</th><th>Pillar</th><th>Customer Experience</th></tr></thead>
     <tbody>
-      <tr><td>1</td><td>Drishti</td><td>Patient fills prescription with clear copay — no surprises</td></tr>
-      <tr><td>2</td><td>Seva</td><td>Patient earns stamp/points toward loyalty rewards</td></tr>
-      <tr><td>3</td><td>Milap</td><td>Patient receives follow-up call — feels valued</td></tr>
-      <tr><td>4</td><td>Seva</td><td>Patient returns for refill, redeems OTC discount</td></tr>
-      <tr><td>5</td><td>Milap</td><td>Patient attends community event, refers a friend</td></tr>
-      <tr><td>6</td><td>Seva</td><td>Referred patient becomes a Seed — flywheel continues</td></tr>
+      <tr><td>1</td><td>Transparent Care</td><td>Patient fills prescription with clear copay — no surprises</td></tr>
+      <tr><td>2</td><td>Personalized Wellness</td><td>Patient earns stamp/points toward loyalty rewards</td></tr>
+      <tr><td>3</td><td>Community Connection</td><td>Patient receives follow-up call — feels valued</td></tr>
+      <tr><td>4</td><td>Personalized Wellness</td><td>Patient returns for refill, redeems OTC discount</td></tr>
+      <tr><td>5</td><td>Community Connection</td><td>Patient attends community event, refers a friend</td></tr>
+      <tr><td>6</td><td>Personalized Wellness</td><td>Referred patient becomes a Seed — flywheel continues</td></tr>
     </tbody>
   </table>
-  <p>This flywheel is the engine of Project Swastik. Each pillar reinforces the others, creating a loyalty loop that is <strong>self-reinforcing and increasingly difficult to break</strong> as patients move through the tiers.</p>
+  <p>This flywheel is the engine of Project StarCare. Each pillar reinforces the others, creating a loyalty loop that is <strong>self-reinforcing and increasingly difficult to break</strong> as patients move through the tiers.</p>
   <h2>Implementation Timeline</h2>
   <div class="timeline">
-    <div class="timeline-item"><div class="week">Month 1 - Foundation</div><p><strong>Drishti launch:</strong> Implement pre-fill copay estimate process. Train pharmacy staff on billing transparency protocol. Set up SMS survey tool (Twilio or similar).</p></div>
-    <div class="timeline-item"><div class="week">Month 1-2 - Design</div><p><strong>Seva design:</strong> Design loyalty card (print). Develop tier structure and benefit catalog. Create referral reward program materials.</p></div>
-    <div class="timeline-item"><div class="week">Month 2 - Launch</div><p><strong>Seva launch:</strong> Begin distributing loyalty cards at point of sale. Start stamping cards for prescription refills. Begin tracking OTC purchase points.</p></div>
-    <div class="timeline-item"><div class="week">Month 2-3 - Community</div><p><strong>Milap launch:</strong> Schedule first blood pressure screening at Prosper ISD. Contact PHS athletics for sponsorship agreement. Begin personalized follow-up calls for new medications.</p></div>
-    <div class="timeline-item"><div class="week">Month 3-4 - Scale</div><p><strong>Milap expansion:</strong> Second community event. Launch immunization clinic partnership. Begin sponsorship visibility (jersey logos, banners).</p></div>
+    <div class="timeline-item"><div class="week">Month 1 - Foundation</div><p><strong>Transparent Care launch:</strong> Implement pre-fill copay estimate process. Train pharmacy staff on billing transparency protocol. Set up SMS survey tool (Twilio or similar).</p></div>
+    <div class="timeline-item"><div class="week">Month 1-2 - Design</div><p><strong>Personalized Wellness design:</strong> Design loyalty card (print). Develop tier structure and benefit catalog. Create referral reward program materials.</p></div>
+    <div class="timeline-item"><div class="week">Month 2 - Launch</div><p><strong>Personalized Wellness launch:</strong> Begin distributing loyalty cards at point of sale. Start stamping cards for prescription refills. Begin tracking OTC purchase points.</p></div>
+    <div class="timeline-item"><div class="week">Month 2-3 - Community</div><p><strong>Community Connection launch:</strong> Schedule first blood pressure screening at Prosper ISD. Contact PHS athletics for sponsorship agreement. Begin personalized follow-up calls for new medications.</p></div>
+    <div class="timeline-item"><div class="week">Month 3-4 - Scale</div><p><strong>Community Connection expansion:</strong> Second community event. Launch immunization clinic partnership. Begin sponsorship visibility (jersey logos, banners).</p></div>
     <div class="timeline-item"><div class="week">Month 4-5 - Optimize</div><p><strong>Data review:</strong> Analyze first 90 days of loyalty data. Adjust tier thresholds. Refine SMS survey questions based on response rates. Optimize copay estimate accuracy.</p></div>
     <div class="timeline-item"><div class="week">Month 5-6 - Sustain</div><p><strong>Full operations:</strong> All three pillars operating at full capacity. First quarterly loyalty report. Prepare mid-year review for DECA finals.</p></div>
   </div>
@@ -606,7 +606,7 @@
     <li><strong>Google Business Profile</strong> — Rating trends, review volume, review sentiment analysis</li>
     <li><strong>Community event logs</strong> — Attendance, new patient sign-ups, brand visibility metrics</li>
   </ol>
-  <div class="key-insight"><strong>DATA-DRIVEN DECISION MAKING</strong>Monthly KPI reviews will inform strategic adjustments. If the loyalty program enrollment is below target, the welcome incentive will be strengthened. If billing complaints remain above 10%, the pre-fill estimate process will be refined. If community events generate low attendance, the partnership strategy will be adjusted. Project Swastik is designed to be <em>iterative and responsive</em>.</div>
+  <div class="key-insight"><strong>DATA-DRIVEN DECISION MAKING</strong>Monthly KPI reviews will inform strategic adjustments. If the loyalty program enrollment is below target, the welcome incentive will be strengthened. If billing complaints remain above 10%, the pre-fill estimate process will be refined. If community events generate low attendance, the partnership strategy will be adjusted. Project StarCare is designed to be <em>iterative and responsive</em>.</div>
   <div class="page-number">Page 16 of 20</div>
 </div>
 
@@ -646,7 +646,7 @@
   <div class="section-label">Page 18 of 20</div>
   <h1>VI. Proposed Budget</h1>
   <h2>Costs and Rationale Associated with Proposed Strategies</h2>
-  <p>The total six-month Project Swastik budget is <strong>$6,400</strong>, broken down across the following categories:</p>
+  <p>The total six-month Project StarCare budget is <strong>$6,400</strong>, broken down across the following categories:</p>
   <table>
     <thead><tr><th>Category</th><th>Amount</th><th>Details</th></tr></thead>
     <tbody>
@@ -661,14 +661,14 @@
   </table>
   <h2>Budget Allocation by Pillar</h2>
   <div class="revenue-bar" style="height:40px">
-    <div class="segment" style="background:var(--teal);flex:0.23">Drishti 23%</div>
-    <div class="segment" style="background:var(--primary);flex:0.37">Seva 37%</div>
-    <div class="segment" style="background:var(--accent);flex:0.40">Milap 40%</div>
+    <div class="segment" style="background:var(--teal);flex:0.23">Transparent Care 23%</div>
+    <div class="segment" style="background:var(--primary);flex:0.37">Personalized Wellness 37%</div>
+    <div class="segment" style="background:var(--accent);flex:0.40">Community Connection 40%</div>
   </div>
   <div class="revenue-legend">
-    <span class="rx" style="background:var(--teal)">Drishti (billing transparency)</span>
-    <span class="otc" style="background:var(--primary)">Seva (loyalty program)</span>
-    <span class="dme" style="background:var(--accent)">Milap (community connection)</span>
+    <span class="rx" style="background:var(--teal)">Transparent Care (billing transparency)</span>
+    <span class="otc" style="background:var(--primary)">Personalized Wellness (loyalty program)</span>
+    <span class="dme" style="background:var(--accent)">Community Connection (community connection)</span>
   </div>
   <h2>Financial Viability and ROI</h2>
   <table>
@@ -682,7 +682,7 @@
       <tr><td>12-month ROI</td><td><strong>6,866%</strong></td></tr>
     </tbody>
   </table>
-  <div class="key-insight"><strong>THE INVESTMENT CASE</strong>Project Swastik requires a modest investment of $6,400 to generate an estimated $445,760 in annual revenue increase. The break-even point is approximately 5 days of increased prescription fills and OTC sales. This is one of the highest-ROI strategies possible for an independent pharmacy — because the investment is primarily in process design and materials, not in expensive technology or infrastructure.</div>
+  <div class="key-insight"><strong>THE INVESTMENT CASE</strong>Project StarCare requires a modest investment of $6,400 to generate an estimated $445,760 in annual revenue increase. The break-even point is approximately 5 days of increased prescription fills and OTC sales. This is one of the highest-ROI strategies possible for an independent pharmacy — because the investment is primarily in process design and materials, not in expensive technology or infrastructure.</div>
   <div class="page-number">Page 18 of 20</div>
 </div>
 
@@ -713,8 +713,8 @@
       <tr><td>Monthly prescription fills (current)</td><td>~1,200</td><td>Industry average for independent pharmacy</td></tr>
       <tr><td>Prescription fill growth (from retention)</td><td>+25%</td><td>Apollo Pharmacy CRM benchmark</td></tr>
       <tr><td>OTC spend increase (from loyalty incentives)</td><td>+33%</td><td>Apollo Pharmacy CRM benchmark</td></tr>
-      <tr><td>Referral conversion rate</td><td>15% of Swastik tier</td><td>Industry benchmark for independent pharmacy</td></tr>
-      <tr><td>Billing complaint reduction</td><td>-67%</td><td>Drishti pillar target</td></tr>
+      <tr><td>Referral conversion rate</td><td>15% of StarCare tier</td><td>Industry benchmark for independent pharmacy</td></tr>
+      <tr><td>Billing complaint reduction</td><td>-67%</td><td>Transparent Care pillar target</td></tr>
       <tr><td>OTC margin</td><td>45-60%</td><td>Pharmacy Market Research, 2024</td></tr>
       <tr><td>Average prescription value</td><td>$65</td><td>Industry average</td></tr>
       <tr><td>Average OTC transaction</td><td>$12 → $16</td><td>Projected from loyalty program</td></tr>
@@ -750,7 +750,7 @@
   <h1>VIII. Appendix</h1>
   <h2>Appendix A: Completed Observation Data</h2>
   <div class="appendix-section">
-    <p><strong>Note:</strong> Patient surveys and stakeholder interviews were not completed due to StarCare's unresponsiveness to outreach attempts. All primary research data consists of competitor observations conducted November 13-14, 2026. Below is the complete observation dataset.</p>
+    <p><strong>Note:</strong> A stakeholder interview with Peter Nguyen, a physics teacher and StarCare patient, was conducted on November 15, 2026. All primary research data consists of competitor observations conducted November 13-14, 2026, and this stakeholder interview. Below is the complete observation dataset.</p>
     <h4>Observation Checklist (12 Metrics Recorded Per Visit)</h4>
     <ol>
       <li>Date and time of observation</li>

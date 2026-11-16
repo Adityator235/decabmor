@@ -13,7 +13,7 @@
       <div class="deca-line"></div>
     </div>
     <div class="cover-divider"></div>
-    <div class="cover-title">"Project Swastik": Rebuilding Customer Loyalty at StarCare Pharmacy Through Personalized Care, Transparent Communication, and Community Connection</div>
+    <div class="cover-title">"Project StarCare": Rebuilding Customer Loyalty at StarCare Pharmacy Through Personalized Care, Transparent Communication, and Community Connection</div>
     <div class="cover-meta">
       <strong>Business:</strong> StarCare Pharmacy (StarcareRx)<br>
       <strong>Location:</strong> 210 S. Preston Rd, Suite B, Prosper, TX 75078<br>

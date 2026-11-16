@@ -63,7 +63,7 @@ def get_nav_bar():
   <div class="nav-divider"></div>
   <img src="{DECA}" alt="DECA" class="nav-deca">
   <div class="nav-divider"></div>
-  <span class="nav-title">Project Swastik - BMOR 2026-2027</span>
+  <span class="nav-title">Project StarCare - BMOR 2026-2027</span>
 </div>'''
 
 def get_nav_controls(curr, total):
@@ -110,7 +110,7 @@ cover_full = f'''<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StarCareRx - Project Swastik</title>
+<title>StarCareRx - Project StarCare</title>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 {CSS}
@@ -141,7 +141,7 @@ index_html = f'''<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StarCareRx - Project Swastik</title>
+<title>StarCareRx - Project StarCare</title>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 {CSS}

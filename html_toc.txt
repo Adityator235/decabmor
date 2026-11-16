@@ -1,6 +1,6 @@
 <div class="toc-page">
   <h1>Table of Contents</h1>
-  <div class="toc-subtitle">Project Swastik - StarCareRx DECA BMOR Entry</div>
+  <div class="toc-subtitle">Project StarCare - StarCareRx DECA BMOR Entry</div>
 
   <div class="toc-section">
     <h2>I. Executive Summary</h2>
@@ -24,11 +24,11 @@
     <p>Page 9 - Primary research findings: what drives loyalty in independent pharmacy</p>
     <p>Page 10 - Primary research findings: pain points and switching behavior</p>
     <p>Page 11 - Secondary research findings: national trends in pharmacy loyalty</p>
-    <p>Page 12 - Conclusions: the three pillars of Project Swastik</p>
+    <p>Page 12 - Conclusions: the three pillars of Project StarCare</p>
   </div>
   <div class="toc-divider"></div>
   <div class="toc-section">
-    <h2>V. Strategic Plan: Project Swastik</h2>
+    <h2>V. Strategic Plan: Project StarCare</h2>
     <p>Page 13 - Strategic objectives and the Swastik Framework</p>
     <p>Page 14 - Pillar 1: Transparent Care (Drishti)</p>
     <p>Page 15 - Pillar 2: Personalized Wellness (Seva)</p>
@@ -40,7 +40,7 @@
   <div class="toc-divider"></div>
   <div class="toc-section">
     <h2>VI. Proposed Budget</h2>
-    <p>Page 20 - Six-month Project Swastik budget breakdown</p>
+    <p>Page 20 - Six-month Project StarCare budget breakdown</p>
   </div>
   <div class="toc-divider"></div>
   <div class="toc-section">
