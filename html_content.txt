@@ -235,7 +235,7 @@
   <p>Three primary research methods were selected to gather data directly from StarCare's patients and competitive environment:</p>
   <ol>
     <li><strong>Competitor Observations</strong> — Systematic observation of three Prosper-area pharmacy locations (Prosper Pharmacy, CVS, H-E-B) using a standardized 12-metric checklist. Two visits per location (weekday evening + Saturday morning), 6 total observations. Measures wait times, staff-customer interactions, loyalty program visibility, and OTC product placement.</li>
-    <li><strong>Stakeholder Interview</strong> — Semi-structured interview with a long-term StarCare patient (November 15, 2026). Explores current retention challenges, billing pain points, and willingness to adopt a loyalty program. The interviewee is a 4-year StarCare patient who uses only home delivery, representing StarCare's 90% delivery-only patient base.</li>
+    <li><strong>Stakeholder Interview</strong> — Semi-structured interview with Peter Nguyen, a physics teacher at Panther Creek High School and 4-year StarCare patient (November 15, 2026). Explores current retention challenges, billing pain points, and willingness to adopt a loyalty program. Mr. Nguyen uses only home delivery and represents StarCare's 90% delivery-only patient base.</li>
     <li><strong>Google Maps Review Analysis</strong> — Systematic coding of 160+ Google Maps reviews for StarCare Pharmacy. Coded by theme (staff, billing, delivery, compounding) and sentiment (positive/negative/neutral). Provides quantitative patient sentiment data at scale.</li>
   </ol>
   <p>Each method was chosen to answer a different question that secondary data cannot address. Observations capture real competitor behavior in the Prosper pharmacy market. The patient interview provides qualitative depth about what delivery-only patients value. Together, they form a data set that validates or challenges the secondary research findings.</p>
@@ -246,7 +246,7 @@
     <tbody>
       <tr><td><strong>Secondary Research</strong></td><td>Oct 16-18</td><td>JD Power study analysis, Census data review, StarCare website/Google Maps analysis, ConcertAI data quality research</td><td>~8 hrs</td></tr>
       <tr><td><strong>Competitor Observations</strong></td><td>Nov 13-14</td><td>2 visits per location (Prosper Pharmacy, CVS, H-E-B) — one weekday evening (4:30-7:30 PM), one Saturday morning (10 AM-1:30 PM). 12 metrics recorded per visit using standardized observation checklist.</td><td>~6 hrs</td></tr>
-      <tr><td><strong>Stakeholder Interview</strong></td><td>Nov 15</td><td>Semi-structured interview with long-term StarCare patient (Peter Nguyen, physics teacher and 4-year patient). 12 questions covering background, loyalty drivers, repeat engagement, pain points, and loyalty program interest. Patient represents 90% delivery-only patient base.</td><td>~1 hr</td></tr>
+      <tr><td><strong>Stakeholder Interview</strong></td><td>Nov 15</td><td>Semi-structured interview with Peter Nguyen, a physics teacher at Panther Creek High School and 4-year StarCare patient. 12 questions covering background, loyalty drivers, repeat engagement, pain points, and loyalty program interest. Patient represents 90% delivery-only patient base.</td><td>~1 hr</td></tr>
       <tr><td><strong>Data Analysis &amp; Write-up</strong></td><td>Nov 15-16</td><td>Cross-reference observation and interview data with secondary findings, finalize conclusions, complete entry.</td><td>~5 hrs</td></tr>
     </tbody>
   </table>
